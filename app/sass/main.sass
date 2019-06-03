@@ -1,10 +1,18 @@
 @import "_fonts.sass"
 @import "_vars.sass"
 @import "_libs.sass"
+@import "_constructor.sass"
 
 *
 	padding: 0
 	margin: 0
+
+.container
+	margin: 0 auto
+	width: 1200px
+	
+a
+	text-decoration: none
 
 .button
 	display: inline-block
@@ -35,6 +43,7 @@
 		border-bottom-left-radius: 2px
 		border-bottom-right-radius: 2px
 		left: 0
+
 	&:focus, &:hover
 		text-decoration: none
 		color: #fff
@@ -93,6 +102,112 @@ b, strong
 	
 // Default Styles
 
+// Header
 
+.section-header
+	.section-inner
+	.top-line
+		color: $dark
+		box-shadow: 0px 0px 4px #000
+	.top-line__menu
+		display: flex
+		li
+			padding: 18px 15px
+			a
+				color: $dark
+				font-size: 16px
+				&:hover
+					color: $accent
+	.top-line-wrapper
+		display: flex
+		justify-content: center
+		background: #fff
+	.top-line__city
+		font-size: 14px
+		color: $accent
+		padding: 18px 5px
+		margin-left: 20px
+		.fas
+			margin-right: 4px
+			font-size: 16px
+	.tel-icon
+		position: absolute
+		left: -45px
+		top: 0
+		font-size: 16px
+		padding: 18px 0px 18px 15px
+		color: $accent
+	.top-line__tel
+		position: relative
+		font-size: 14px
+		padding: 7px 5px
+		margin-left: 50px
+	.top-line__tel-first
+		color: $accent
+	.top-line__tel-second
+
+	.top-line__email
+		font-size: 14px
+		display: flex
+		padding: 18px 10px
+		margin-left: 30px
+		.fas
+			color: $accent
+			padding-top: 4px
+			padding-right: 10px
+			font-size: 16px
+	.top-line__callback
+		cursor: pointer
+		background: $accent
+		padding: 10px 26px
+		border-radius: 3px
+		color: #fff
+		letter-spacing: 2px
+		align-self: flex-start
+		text-transform: uppercase
+		margin-top: 10px
+		font-size: 12px
+		margin-left: 30px
+		&:hover
+			box-shadow: 0px 0px 10px 0 #000
+	.bottom-line-wrapper
+		display: flex
+	.bottom-line
+		background: #fff
+	.bottom-line__logo
+		display: block
+	.bottom-line__search
+		display: flex
+		margin-left: 79px
+		margin-top: 10px
+		position: relative
+		span
+			position: absolute
+			right: 215px
+			top: 9px
+			color: #666
+			align-self: flex-start
+		input
+			background: #e6e6e6
+			padding: 12px 15px
+			width: 410px
+			border: none
+			align-self: flex-start
+		.bottom-line__basket
+			padding: 7px 70px 7px 35px
+			background: #fff
+			box-shadow: 0px 0px 5px #000
+			align-self: flex-start
+			position: relative
+			text-transform: uppercase
+			letter-spacing: 3px
+			cursor: pointer
+			img
+				right: 28px
+				top: 9px
+				position: absolute
+	.menu
+
+// Header_
 
 @import "_media"
