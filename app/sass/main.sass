@@ -70,7 +70,7 @@ a
 	line-height: 1.4
 
 li
-	list-style: none
+	list-style-type: none
 
 .text-center
 	text-align: center
@@ -351,8 +351,6 @@ b, strong
 			right: 100%
 		.line-text:after 
 			left: 100%
-	.container
-		width: 1200px
 	.direction-thousands
 		+font1('FuturaDemiC', 600)
 		color: $accent
@@ -367,12 +365,11 @@ b, strong
 		white-space: nowrap
 		margin-top: 20px
 		margin-bottom: 35px
-
 	
 	.direction-cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: space-evenly
 	.direction-card
 		margin-bottom: 20px
 		overflow: hidden
@@ -449,7 +446,7 @@ b, strong
 	.direction-card-content__icon
 	.direction-card:last-child
 		background: $accent
-	.direction-card:last-child
+		margin-bottom: 65px
 	.direction-card__catalog
 		background: $accent
 		letter-spacing: 4px
@@ -461,4 +458,220 @@ b, strong
 		cursor: pointer
 		
 // Duration
+
+
+// Advantages
+.section-advantages
+	background: linear-gradient(45deg, #e7ecee, #f4f8f9)
+	border-top: 35px solid #f3f3f3
+	.section-inner
+	.advantages-threeblocks
+		display: flex
+		align-items: center
+		justify-content: space-around
+	.advantages-block
+		display: flex
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		width: 337px
+	.advantages-block:first-child
+		margin-bottom: 50px
+		margin-top: 44px
+	.advantages-block:last-child
+		margin-top: 25px
+	.advantages-block__icon
+	.advantages-block__title
+		+font('FuturaDemiC', 600, 20px)
+		text-transform: uppercase
+		color: $accent
+		letter-spacing: 2px
+	.advantages-block__list
+		text-align: left
+		margin-top: 15px
+		margin-left: 60px
+		line-height: 1.25
+		li
+			list-style-type: disc
+			color: $accent
+			margin-top: 10px
+			span
+				font-size: 14px
+				text-transform: uppercase
+			
+// Advantages_
+
+// Request
+
+.section-request
+	background: url('../img/@2x/request.png') no-repeat
+	background-size: cover
+	.section-inner
+	.request-wrapper
+		display: flex
+		justify-content: space-between
+		position: relative
+
+	.request-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: #fff
+		margin-bottom: 30px
+		margin-top: 35px 
+	.request-inputs
+		display: flex
+		margin-top: 45px
+		z-index: 10
+		input
+			align-self: flex-start
+			text-transform: uppercase
+			font-size: 14px
+			color: #888aa7
+			background: #d6d9e2
+			width: 240px
+			padding: 10px 13px
+			border: none
+			margin-right: 10px
+			&::placeholder
+				color: #888aa7
+				text-transform: uppercase
+	.request-button
+		align-self: flex-start
+		white-space: nowrap
+		padding: 6px 20px
+		text-align: center
+		background: $accent
+		cursor: pointer
+		text-transform: uppercase
+		font-size: 14px
+		color: #fff
+		&:hover
+			box-shadow: 0px 0px 3px #000
+	.request-computer
+		position: absolute
+		right: 0
+		top: -70px
+		img
+			width: 200px
+
+// Request_
+
+
+// Manufacts
+
+.section-manufact
+	.section-inner
+	.manufact-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			margin-top: 35px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+			text-transform: uppercase
+			font-size: 22px
+			color: $accent
+			letter-spacing: 3px
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	
+	.manufacts
+	.manufacts-blocks
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+	.manufact-block
+		margin-top: 50px
+		padding-left: 10px
+		padding-right: 10px
+		&:last-child
+			margin-bottom: 130px
+	.manufact-block__img
+			
+
+// Manufacts_
+
+// twoblocks
+
+.section-twoblocks
+	.section-inner
+	.twoblocks
+		display: flex
+	.twoblocks-block
+		width: 50%
+	.twoblocks-block-wrapper
+		position: relative
+		&:hover .twoblocks-block__bgwoman:after
+			background: rgba($accent, .55)
+			transition: background 1s ease
+		&:hover .twoblocks-block__bgcupboard:after
+			background: rgba(#fff, .22)
+			transition: background 1s ease
+	.twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
+		position: absolute
+		width: 572px
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			height: 358px
+		img
+			width: 574px
+			height: 358px
+	.twoblocks-block__content
+		position: absolute
+		z-index: 10
+		right: 20px
+		top: 200px
+		width: 200px
+	.twoblocks-block__title
+		+font('FuturaDemiC', 600, 22px)
+		color: #fff
+		text-transform: uppercase
+	.twoblock-block__button
+		letter-spacing: 2px
+		color: #fff
+		padding: 6px 15px
+		text-transform: uppercase
+		margin-top: 15px
+		border: 1px solid #fff
+		cursor: pointer
+		font-size: 20px
+		width: 130px
+		text-align: center
+		&:hover
+			transition: all .5s ease
+			color: #000000
+			background: #fff
+	.twoblocks-block__cupboard, .twoblocks-block__woman
+		position: absolute
+		z-index: 10
+		top: -76px
+		left: 50px
+	.twoblocks-block__woman
+		top: -105px
+
+	
+// twoblocks_
+
+//
 @import "_media"
