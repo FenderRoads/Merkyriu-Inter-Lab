@@ -1,7 +1,7 @@
 $(function() {
   // Slider
 
-  $(".owl-carousel").owlCarousel({
+  $(".carousel1").owlCarousel({
     loop: true,
     dots: true,
     autoplay: true,
