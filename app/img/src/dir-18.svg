@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:12.7085;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:10.893;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:12.7085;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st3{display:none;fill:none;stroke:#000000;stroke-width:12.7085;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:10.893;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<g>
+			<polyline class="st0" points="584.4,589.1 565.8,575.6 354.5,618.1 			"/>
+			<path class="st0" d="M584.4,589.1"/>
+			<path class="st0" d="M473.6,639"/>
+			<polyline class="st0" points="355.1,618.4 384.2,656.6 473.6,639 			"/>
+			<polyline class="st0" points="541,470.9 567.6,423.7 603.6,442.4 550.7,356.8 490.8,263.4 			"/>
+			<path class="st0" d="M541,470.9"/>
+			<path class="st0" d="M509,527.9"/>
+			<polyline class="st0" points="492.1,615.4 473.6,590.9 509,527.9 			"/>
+			<line class="st0" x1="549.2" y1="549.9" x2="517.1" y2="610.2"/>
+			<path class="st0" d="M549.2,549.9"/>
+			<path class="st0" d="M596.8,460.3"/>
+			<line class="st0" x1="605.1" y1="444.5" x2="599.1" y2="455.8"/>
+			<line class="st0" x1="605.1" y1="256.9" x2="485.1" y2="454.1"/>
+			<polyline class="st0" points="567.4,256 463.9,425.9 486.4,455.8 			"/>
+			<line class="st0" x1="562.6" y1="557.2" x2="589.1" y2="592.5"/>
+			<path class="st0" d="M507,483.2"/>
+			<line class="st0" x1="463.9" y1="425.9" x2="507" y2="483.2"/>
+			<line class="st0" x1="457.5" y1="264.7" x2="567.6" y2="423.7"/>
+			<polygon class="st0" points="232.4,250.3 263.8,277.5 715.9,245.4 670.5,220.6 			"/>
+			<polyline class="st0" points="236.8,254.1 221.3,255.6 242.2,275.2 257.9,272.4 			"/>
+			<polyline class="st0" points="702.1,236.8 710.8,232.5 693,220.6 684.6,226.1 			"/>
+		</g>
+		<path class="st1" d="M420.6,664.8c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4c0-2.6,1-4.9,2.7-6.6c1.7-1.7,4-2.7,6.6-2.7
+			C416.4,655.4,420.6,659.6,420.6,664.8z"/>
+	</g>
+	<polygon points="414.3,647.5 402.3,651 374.4,615 385.6,610.5 	"/>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="767.4" y1="513.5" x2="767.4" y2="537.9"/>
+		<polygon class="st3" points="-244.2,386.7 -91.1,444.2 210.3,318.3 52.7,280.1 		"/>
+		<polygon class="st3" points="-244.2,515.3 -91.1,572.8 210.3,446.9 52.7,408.7 		"/>
+		<polygon class="st3" points="-242.8,524.3 -91.7,594.9 210.3,449.9 54.4,412.2 		"/>
+		<line class="st0" x1="580.4" y1="565.2" x2="580.4" y2="743.4"/>
+		<line class="st0" x1="456.7" y1="500.3" x2="456.7" y2="666.1"/>
+		<line class="st0" x1="898.3" y1="476" x2="898.3" y2="635"/>
+		<g>
+			<circle class="st4" cx="568" cy="751.4" r="13.6"/>
+		</g>
+		<g>
+			<circle class="st4" cx="445.8" cy="672.9" r="11.6"/>
+		</g>
+		<g>
+			<circle class="st4" cx="889.4" cy="642.3" r="11.6"/>
+		</g>
+	</g>
+	<polygon class="st0" points="454.8,498.3 562.6,557.2 578.3,565.7 896.5,474 766.1,409.1 507.1,483.4 	"/>
+	<polygon class="st0" points="456.7,630.8 578.3,698 896.5,606.2 766.1,541.3 	"/>
+</g>
+</svg>
