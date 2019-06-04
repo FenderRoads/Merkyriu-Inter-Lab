@@ -85,7 +85,6 @@ gulp.task('img1x', function() {
 });
 gulp.task('img2x', function() {
 	return gulp.src('app/img/src/**/*.*')
-	.pipe(imageResize({ width: '100%' }))
 	.pipe(imagemin())
 	.pipe(gulp.dest('app/img/@2x/'))
 });
@@ -99,7 +98,7 @@ gulp.task('cleanimg', function() {
 if (gulpVersion == 3) {
 
 	// Img Processing Task for Gulp 3
-	gulp.task('img', ['img1x', 'img2x']);
+	gulp.task('img', ['img2x']);
 	
 	var taskArr = ['styles', 'scripts', 'browser-sync'];
 	gmWatch && taskArr.unshift('img');
@@ -118,7 +117,7 @@ if (gulpVersion == 3) {
 if (gulpVersion == 4) {
 
 	// Img Processing Task for Gulp 4
-	gulp.task('img', gulp.parallel('img1x', 'img2x'));
+	gulp.task('img', gulp.parallel('img2x'));
 
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));

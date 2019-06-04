@@ -9,7 +9,9 @@
 
 .container
 	margin: 0 auto
-	width: 1200px
+	width: 1145px 
+	padding-left: 15px
+	padding-right: 15px
 	
 a
 	text-decoration: none
@@ -120,19 +122,18 @@ b, strong
 					color: $accent
 	.top-line-wrapper
 		display: flex
-		justify-content: center
+		justify-content: space-around
 		background: #fff
 	.top-line__city
 		font-size: 14px
 		color: $accent
 		padding: 18px 5px
-		margin-left: 20px
 		.fas
 			margin-right: 4px
 			font-size: 16px
 	.tel-icon
 		position: absolute
-		left: -45px
+		left: -36px
 		top: 0
 		font-size: 16px
 		padding: 18px 0px 18px 15px
@@ -141,7 +142,6 @@ b, strong
 		position: relative
 		font-size: 14px
 		padding: 7px 5px
-		margin-left: 50px
 	.top-line__tel-first
 		color: $accent
 	.top-line__tel-second
@@ -150,7 +150,6 @@ b, strong
 		font-size: 14px
 		display: flex
 		padding: 18px 10px
-		margin-left: 30px
 		.fas
 			color: $accent
 			padding-top: 4px
@@ -167,7 +166,6 @@ b, strong
 		text-transform: uppercase
 		margin-top: 10px
 		font-size: 12px
-		margin-left: 30px
 		&:hover
 			box-shadow: 0px 0px 10px 0 #000
 	.bottom-line-wrapper
@@ -178,8 +176,8 @@ b, strong
 		display: block
 	.bottom-line__search
 		display: flex
-		margin-left: 79px
 		margin-top: 10px
+		margin-left: 52px
 		position: relative
 		span
 			position: absolute
@@ -194,7 +192,7 @@ b, strong
 			border: none
 			align-self: flex-start
 		.bottom-line__basket
-			padding: 7px 70px 7px 35px
+			padding: 7px 60px 7px 35px
 			background: #fff
 			box-shadow: 0px 0px 5px #000
 			align-self: flex-start
@@ -206,8 +204,115 @@ b, strong
 				right: 28px
 				top: 9px
 				position: absolute
+	.menu-wrapper
+		background: $accent
 	.menu
+		ul
+			display: flex
+			justify-content: space-around
+			li
+				padding: 20px 50px
+				box-sizing: border-box
+				border: 2px solid transparent
+				&:hover 
+					border-bottom: 2px solid #fff
+					transition: all .5s ease
+					box-sizing: border-box
+				a
+					color: #fff
+					text-transform: uppercase
+					+font('FuturaDemiC', 600, 16px)
+					box-sizing: border-box
+					&:hover
+						transition: all .5s ease
+						box-sizing: border-box
 
 // Header_
 
+
+// Slider
+
+.section-slider
+	.section-inner
+	.carousel1
+	.owl-dots
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -50px
+		.owl-dot.active
+			span
+				background: $accent
+				transform: scale(1.2)
+				transition: all .3s ease
+		.owl-dot
+			span
+				background: rgba($accent, .5)
+			
+
+
+	.item
+	.slider-item-bg
+		background: url("../img/@2x/bg-slider-new-1.png") no-repeat
+		background-size: cover
+	.left-side
+		margin-top: 60px
+	.right-side
+		width: 75%
+	.slider-item
+		display: flex
+		background-size: cover
+		color: #fff
+		.slider-item__title-site
+			+font('FuturaDemiC', 600, 23px)
+			text-transform: uppercase
+			letter-spacing: 3px
+		.slider-item__title
+			margin-top: 15px
+			+font1('FuturaDemiC', 600)
+			text-transform: uppercase
+			letter-spacing: 3px
+		.slider-item__post-title
+			letter-spacing: 1px
+			font-size: 21px
+		.slider-item__arguments
+			display: flex
+			margin-top: 25px
+			margin-bottom: 60px
+		.yearoffoun
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-left: 50px
+			.yearoffoun-icon
+				img
+					width: 50px
+					height: 60px
+			.yearoffoun-title
+				text-transform: uppercase
+				+font('FuturaDemiC', 600, 24px)
+				color: #fff
+				letter-spacing: 2px
+			.yearoffoun-year
+				text-transform: uppercase
+				+font('FuturaMediumC', 600, 40px)
+				color: $accent
+		.ourexp
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-left: 40px
+			.ourexp-icon
+				width: 50px
+				height: 60px
+			.ourexp-title
+				text-transform: uppercase
+				+font('FuturaDemiC', 600, 24px)
+				color: #fff
+				letter-spacing: 2px
+			.ourexp-year
+				text-transform: uppercase
+				+font('FuturaMediumC', 600, 40px)
+				color: $accent
+// Slider_
 @import "_media"
