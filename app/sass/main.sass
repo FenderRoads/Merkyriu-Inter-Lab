@@ -135,6 +135,7 @@ b, strong
 	.top-line__city
 		font-size: 14px
 		color: $accent
+		+font1('FuturaDemiC', 600)
 		padding: 18px 5px
 		z-index: 10
 		position: relative
@@ -158,6 +159,7 @@ b, strong
 		padding: 7px 7px	
 	.top-line__tel-first
 		color: $accent
+		+font1('FuturaDemiC', 600)
 	.top-line__tel-second
 
 	.top-line__email
@@ -165,6 +167,7 @@ b, strong
 		font-size: 14px
 		display: flex
 		padding: 18px 10px
+		+font1('FuturaDemiC', 600)
 		.fas
 			color: $accent
 			padding-top: 4px
@@ -176,7 +179,6 @@ b, strong
 		cursor: pointer
 		background: $accent
 		padding: 10px 26px
-		border-radius: 3px
 		color: #fff
 		letter-spacing: 2px
 		align-self: flex-start
@@ -188,15 +190,20 @@ b, strong
 			transition: all .25s ease
 	.bottom-line-wrapper
 		display: flex
+		justify-content: space-between
 	.bottom-line
 		background: #fff
 	.bottom-line__logo
 		display: block
 		margin-top: 10px
+		img
+			width: 400px
+	.bottom-line__dn-tel
+		display: none
 	.bottom-line__search
 		display: flex
 		margin-top: 20px
-		margin-left: 52px
+		margin-right: 16px
 		position: relative
 		span
 			position: absolute
@@ -227,6 +234,8 @@ b, strong
 				position: absolute
 	.menu-wrapper
 		background: $accent
+	.dn-menu
+		display: none
 	.menu
 		ul
 			display: flex
@@ -317,7 +326,7 @@ b, strong
 			.yearoffoun-year
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
-				color: $accent
+				color: #1f3d62
 		.ourexp
 			display: flex
 			flex-direction: column
@@ -334,7 +343,7 @@ b, strong
 			.ourexp-year
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
-				color: $accent
+				color: #1f3d62
 // Slider_
 
 // Duration
@@ -382,10 +391,13 @@ b, strong
 		background: #e6ebed
 		text-align: center
 		margin: auto
-		width: 250px
+		width: 276px
 		white-space: nowrap
 		margin-top: 20px
 		margin-bottom: 35px
+		letter-spacing: 3px
+	.dn-direction-wrapper
+		display: none
 	
 	.direction-cards
 		display: flex
@@ -413,7 +425,7 @@ b, strong
 			bottom: 0
 			left: 0
 			right: 0
-			background: rgba($accent, .85)
+			background: rgba(#1d4f84, .90)
 			height: 271px
 	.direction-card-content
 		display: flex
@@ -463,9 +475,11 @@ b, strong
 			transition: all .5s ease
 	.direction-card-content-rightside
 		position: absolute
-		bottom: 50px
-		right: 34px
+		bottom: 67px
+		right: 4px
 	.direction-card-content__icon
+		img
+			width: 85%
 	.direction-card:last-child
 		background: $accent
 		margin-bottom: 65px
@@ -536,6 +550,7 @@ b, strong
 			span
 				font-size: 14px
 				text-transform: uppercase
+				color: #000
 			
 // Advantages_
 
@@ -591,7 +606,7 @@ b, strong
 	.request-computer
 		position: absolute
 		right: 0
-		top: -70px
+		top: -28px
 		img
 			width: 200px
 
@@ -657,14 +672,9 @@ b, strong
 		display: flex
 	.twoblocks-block
 		width: 50%
+		height: 358px
 	.twoblocks-block-wrapper
 		position: relative
-		&:hover .twoblocks-block__bgwoman:after
-			background: rgba($accent, .55)
-			transition: background 1s ease
-		&:hover .twoblocks-block__bgcupboard:after
-			background: rgba(#fff, .22)
-			transition: background 1s ease
 	.twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
 		position: absolute
 		width: 572px
@@ -763,7 +773,7 @@ b, strong
 	.map-block-line
 		height: 1px
 		position: absolute
-		bottom: 194px
+		bottom: 200px
 		background: $accent
 		width: 100%
 	.map-block-wrapper
@@ -781,9 +791,9 @@ b, strong
 		position: relative
 		display: flex
 		flex-direction: column
-		justify-content: space-evenly
+		justify-content: space-around
 		height: 377px
-		font-size: 20px
+		font-size: 18px
 		.fas
 			color: $accent
 			position: absolute
@@ -833,6 +843,8 @@ b, strong
 						transition: color .25s ease
 	.fourblocks-company
 		margin-top: 50px
+	.dn-item
+		display: none 
 	.fourblocks-company__list
 
 	.fourblocks-specializations
@@ -854,7 +866,7 @@ b, strong
 		margin-bottom: 100px
 	.fourblocks-last-mode
 		text-transform: uppercase
-		+font('FuturaDemiC', 600, 16px)
+		font-size: 16px
 	.mode-title
 		color: $accent
 	.mode-clocks
@@ -869,11 +881,14 @@ b, strong
 
 	.soc-bottomblock
 	.soc-bottomblock__button
-		padding: 9px 25px
+		padding: 12px 29px
 		background: $accent
 		color: #fff
+		font-size: 12px
 	.soc-bottomblock__socbuttons
 		margin-top: 10px
+		padding-top: 10px
+		position: relative
 		.fab
 			font-size: 30px
 			color: #000
@@ -882,8 +897,13 @@ b, strong
 			&:hover
 				color: $accent
 				transition: color .25s ease
+		.socbuttons
+			position: absolute
+			right: -5px
 
 
-	
 // Footer_
+
+
+
 @import "_media"

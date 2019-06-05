@@ -37,15 +37,16 @@
       margin-top: 15px
       letter-spacing: 1px
       white-space: nowrap
+      font-size: 11.5px
     .top-line__email
-      padding-top: 16px
-      padding-left: 18px
+      padding: 18px 13px 0px 16px
       white-space: nowrap
     .bottom-line__logo
       img
         width: 271px
     .bottom-line__search
       margin-top: 8px
+      margin-right: -2px
       input
         width: 260px
       span
@@ -99,17 +100,6 @@
         width: 429px
         height: 549px
 
-  // .section-direction
-  //   .direction
-  //   .direction-cards
-  //     justify-content: flex-start
-  //   .direction-card
-  //   .direction-card-wrapper
-  //     width: 250px
-  //     height: 251px
-  //   .direction-card-content
-  //     width: 250px
-  //     height: 231px
 
 
 
@@ -123,7 +113,6 @@
       img
         width: 731px
         height: 578px
-    .advantages-threeblocks
     .advantages-block
     .advantages-block__title
       font-size: 15px
@@ -228,16 +217,380 @@
         li
           a
             font-size: 14px
-
-
-
+  .section-direction
+    .direction-cards
+      justify-content: space-between
+    .direction-card
+      height: 180px
+    .direction-card-wrapper
+      width: 240px
+      height: 180px
+      .direction-card-content
+        width: 220px
+        height: 160px
+      .icon-1
+        bottom: 49px
+        right: -17px
+      .icon-2
+        bottom: 50px
+        right: -38px
+      .icon-3
+        bottom: 51px
+        right: -11px
+      .icon-4
+        bottom: 54px
+        right: -43px
+      .icon-5
+        bottom: 45px
+        right: -52px
+      .icon-6
+        bottom: 41px
+        right: -51px
+      .icon-7
+        bottom: 51px
+        right: -36px
+      .icon-8
+        bottom: 51px
+        right: -38px
+      .icon-9
+        bottom: 50px
+        right: -51px
+      .icon-10
+        bottom: 52px
+        right: -28px
+      .icon-11
+        bottom: 51px
+        right: -35px
+      .icon-12
+        bottom: 51px
+        right: -47px
+      .icon-13
+        bottom: 46px
+        right: -62px
+      .icon-14
+        bottom: 51px
+        right: -37px
+      .icon-15
+        bottom: 52px
+        right: -69px
+      .icon-16
+        bottom: 42px
+        right: -30px
+      .icon-17
+        bottom: 46px
+        right: -40px
+      .icon-18
+        bottom: 24px
+        right: -72px
+      .icon-19
+        bottom: 60px
+        right: -38px
+      .icon-20
+        bottom: 60px
+        right: -45px
+      .direction-card-content__title
+        width: 180px
+        font-size: 14px
+        margin-top: 11px
+      .direction-card-content__icon
+        img
+          width: 55%
+      .direction-card-content__button
+        font-size: 13px
+        padding: 4px 5px
+        width: 100px
+      .direction-card-content__number
+        margin-bottom: 5px
+        margin-left: 11px
+      .direction-card-content__button
+        margin-left: 11px
+      .direction-card__catalog
+        height: 180px
+        line-height: 5.2
 
 @media only screen and (max-width: 780px)
   .container
     width: 320px
+  .section-slider
+    display: none
+  .section-header
+    .menu
+      display: none
+    .menu-wrapper
+    .dn-menu
+      display: flex
+      justify-content: space-between
+      padding: 15px 0px
+      position: relative
+    .dn-menu__vertline
+      position: absolute
+      height: 42px
+      width: 1px
+      background: #fff
+      top: 15px
+      left: 167px
+    .dn-menu__twobuttons
+      display: flex
+      .dn-menu__hamb
+        width: 42px
+        height: 42px
+        border: 1px solid #fff
+        position: relative
+        margin-right: 10px
+        span
+          width: 27px
+          height: 2px
+          background: #fff
+          position: absolute
+          top: 19px
+          left: 8px
+          &:after, &:before
+            content: ''
+            width: 27px
+            height: 2px
+            background: #fff
+            position: absolute
+            top: 19px
+            left: 7px
+          &:after
+            top: -8px
+            left: 0px
+          &:before
+            top: 9px
+            left: 0px
+        &:hover  
+
+    .dn-menu__onebutton
+    .dn-menu__search, .dn-menu__basket
+      width: 42px
+      height: 42px
+      border: 1px solid #fff
+      text-align: center
+      color: #fff
+      font-size: 18px
+      line-height: 2.6
+    
+    .top-line
+      display: none
+    .bottom-line__search
+      display: none
+
+
+    .bottom-line__logo
+      text-align: center
+    .bottom-line__dn-tel
+      display: flex
+      justify-content: space-around
+      font-size: 18px
+      padding: 8px 0px
+      .dn-tel-first
+        color: $accent
+      .dn-tel-second
+        color: #000
+      .dn-tel-icon
+        .fas
+          color: $accent
+    .bottom-line-wrapper
+      flex-direction: column
+
+  .section-direction
+    .direction-title
+      display: none
+    .direction-thousands
+      display: none
+    .dn-direction-wrapper
+      display: block
+      padding: 20px 0px
+    .dn-direction-button
+      display: block
+      text-transform: uppercase
+      text-align: center
+      border: 2px solid $accent
+      color: $accent
+      background: transparent
+      padding: 13px 20px
+      font-size: 17px
+      &:hover
+        color: #fff
+        background: $accent
+        transition: all .5s ease
+    .direction-card
+      height: 200px
+      .direction-card-wrapper
+        width: 320px
+        height: 200px
+        .direction-card-content
+          width: 300px
+          height: 180px
+        .icon-1
+          bottom: 45px
+          right: 25px
+        .icon-2
+          bottom: 44px
+          right: 6px
+        .icon-3
+          bottom: 42px
+          right: 21px
+        .icon-4
+          bottom: 53px
+          right: 1px
+        .icon-5
+          bottom: 31px
+          right: -7px
+        .icon-6
+          bottom: 38px
+          right: -5px
+        .icon-7
+          bottom: 46px
+          right: 0px
+        .icon-8
+          bottom: 45px
+          right: 3px
+        .icon-9
+          bottom: 39px
+          right: -10px
+        .icon-10
+          bottom: 18px
+          right: 11px
+        .icon-11
+          bottom: 36px
+          right: 0px
+        .icon-12
+          bottom: 37px
+          right: -11px
+        .icon-13
+          bottom: 40px
+          right: -12px
+        .icon-14
+          bottom: 42px
+          right: 5px
+        .icon-15
+          bottom: 38px
+          right: -18px
+        .icon-16
+          bottom: 38px
+          right: 11px
+        .icon-17
+          bottom: 40px
+          right: 0px
+        .icon-18
+          bottom: 13px
+          right: -13px
+        .icon-19
+          bottom: 43px
+          right: 1px
+        .icon-20
+          bottom: 44px
+          right: -4px
+        .direction-card__catalog
+          height: 200px
+          line-height: 5.75
+        .direction-card-content__icon
+          img
+            width: 85%
 
 
 
+  
+  .section-advantages
+    display: none
+  .section-request
+    display: none
+  .section-manufact
+    display: none
+  .section-twoblocks
+    height: 625px
+    .twoblocks
+      flex-direction: column
+      .twoblocks-block
+        margin-top: 50px
+        width: 100%
+        height: 235px
+    .twoblocks-block__bgwoman
+      width: 320px
+      img
+        width: 320px
+        height: 235px
+      &:after
+        height: 235px
+    .twoblocks-block__content
+      top: 90px
+      right: -20px
+    .twoblocks-block__woman
+      width: 120px
+      top: -2px
+      left: -1px
+      img
+        width: 120px
+    .twoblocks-block__bgcupboard
+      width: 320px
+      img
+        width: 320px
+        height: 235px
+      &:after
+        height: 235px
+    .twoblocks-block__cupboard
+      width: 120px
+      top: 22px
+      left: 0px
+      img
+        width: 120px
+
+
+  .section-map
+    box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
+    .section-inner 
+      background: 0
+      height: 668px
+    .map-title
+      .line
+        margin-bottom: 0px
+      .line-text
+        margin-top: 35px
+    .map-block
+      width: 320px
+      top: 57px
+    .map-block-wrapper
+      width: 320px
+    .map-block-titleside
+    .map-block__title
+      font-size: 22px
+    .map-block__tel
+      font-size: 22px
+    .map-block__address
+      font-size: 15px
+      .fas
+        font-size: 20px
+        top: 2px
+        left: -26px
+
+
+  .section-footer
+    background: #e7e7e7
+    .footer-logo
+      display: block
+      bottom: 0
+      left: 20px
+    .footer-fourblocks
+      justify-content: center
+      text-align: center
+    .dn-item
+      display: block
+    .fourblocks-company
+      text-align: center
+      margin-bottom: 75px
+      ul
+        li
+          a
+            font-size: 22px
+            text-transform: uppercase
+            color: #000
+    .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
+      display: none
+    
+
+
+    
 
 
 
