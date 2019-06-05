@@ -223,9 +223,222 @@
 @media only screen and (max-width: 780px)
   .container
     width: 320px
+  .section-slider
+    display: none
+  .section-header
+    .menu
+      display: none
+    .menu-wrapper
+    .dn-menu
+      display: flex
+      justify-content: space-between
+      padding: 15px 0px
+      position: relative
+    .dn-menu__vertline
+      position: absolute
+      height: 42px
+      width: 1px
+      background: #fff
+      top: 15px
+      left: 167px
+    .dn-menu__twobuttons
+      display: flex
+      .dn-menu__hamb
+        width: 42px
+        height: 42px
+        border: 1px solid #fff
+        position: relative
+        margin-right: 10px
+        span
+          width: 27px
+          height: 2px
+          background: #fff
+          position: absolute
+          top: 19px
+          left: 8px
+          &:after, &:before
+            content: ''
+            width: 27px
+            height: 2px
+            background: #fff
+            position: absolute
+            top: 19px
+            left: 7px
+          &:after
+            top: -8px
+            left: 0px
+          &:before
+            top: 9px
+            left: 0px
+
+    .dn-menu__onebutton
+    .dn-menu__search, .dn-menu__basket
+      width: 42px
+      height: 42px
+      border: 1px solid #fff
+      text-align: center
+      color: #fff
+      font-size: 18px
+      line-height: 2.6
+    
+    .top-line
+      display: none
+    .bottom-line__search
+      display: none
+
+
+    .bottom-line__logo
+      text-align: center
+    .bottom-line__dn-tel
+      display: flex
+      justify-content: space-around
+      font-size: 18px
+      padding: 8px 0px
+      .dn-tel-first
+        color: $accent
+      .dn-tel-second
+        color: #000
+      .dn-tel-icon
+        .fas
+          color: $accent
+    .bottom-line-wrapper
+      flex-direction: column
+  .section-direction
+    .direction-title
+      display: none
+    .direction-thousands
+      display: none
+    .dn-direction-wrapper
+      display: block
+      padding: 20px 0px
+    .dn-direction-button
+      display: block
+      text-transform: uppercase
+      text-align: center
+      border: 2px solid $accent
+      color: $accent
+      background: transparent
+      padding: 13px 20px
+      font-size: 17px
+      &:hover
+        color: #fff
+        background: $accent
+        transition: all .5s ease
+    .direction-card-wrapper
+      width: 320px
+      height: 271px
+    .direction-card-content
+      width: 300px
+      height: 251px
+    .direction-card-content-rightside
+      bottom: 56px
+      right: 10px
+    .icon18
+      bottom: 35px
+      right: 3px
 
 
 
+  
+  .section-advantages
+    display: none
+  .section-request
+    display: none
+  .section-manufact
+    display: none
+  .section-twoblocks
+    height: 625px
+    .twoblocks
+      flex-direction: column
+      .twoblocks-block
+        margin-top: 50px
+        width: 100%
+        height: 235px
+    .twoblocks-block__bgwoman
+      width: 320px
+      img
+        width: 320px
+        height: 235px
+      &:after
+        height: 235px
+    .twoblocks-block__content
+      top: 90px
+      right: -20px
+    .twoblocks-block__woman
+      width: 120px
+      top: -2px
+      left: -1px
+      img
+        width: 120px
+    .twoblocks-block__bgcupboard
+      width: 320px
+      img
+        width: 320px
+        height: 235px
+      &:after
+        height: 235px
+    .twoblocks-block__cupboard
+      width: 120px
+      top: 22px
+      left: 0px
+      img
+        width: 120px
+
+
+  .section-map
+    box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
+    .section-inner 
+      background: 0
+      height: 668px
+    .map-title
+      .line
+        margin-bottom: 0px
+      .line-text
+        margin-top: 35px
+    .map-block
+      width: 320px
+      top: 57px
+    .map-block-wrapper
+      width: 320px
+    .map-block-titleside
+    .map-block__title
+      font-size: 22px
+    .map-block__tel
+      font-size: 22px
+    .map-block__address
+      font-size: 15px
+      .fas
+        font-size: 20px
+        top: 2px
+        left: -26px
+
+
+  .section-footer
+    background: #e7e7e7
+    .footer-logo
+      display: block
+      bottom: 0
+      left: 20px
+    .footer-fourblocks
+      justify-content: center
+      text-align: center
+    .dn-item
+      display: block
+    .fourblocks-company
+      text-align: center
+      margin-bottom: 75px
+      ul
+        li
+          a
+            font-size: 22px
+            text-transform: uppercase
+            color: #000
+    .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
+      display: none
+    
+
+
+    
 
 
 
