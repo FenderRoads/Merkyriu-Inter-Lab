@@ -109,10 +109,19 @@ b, strong
 .section-header
 	.section-inner
 	.top-line
+		position: relative
 		color: $dark
-		box-shadow: 0px 0px 4px #000
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			box-shadow: 0px 0px 25px rgba(#000, .15)
 	.top-line__menu
 		display: flex
+		z-index: 10
 		li
 			padding: 18px 15px
 			a
@@ -128,9 +137,12 @@ b, strong
 		font-size: 14px
 		color: $accent
 		padding: 18px 5px
+		z-index: 10
 		.fas
 			margin-right: 4px
 			font-size: 16px
+		a
+			padding: 0px 20px 0px 0px
 	.tel-icon
 		position: absolute
 		left: -36px
@@ -139,14 +151,16 @@ b, strong
 		padding: 18px 0px 18px 15px
 		color: $accent
 	.top-line__tel
+		z-index: 10
 		position: relative
 		font-size: 14px
-		padding: 7px 5px
+		padding: 5px 7px	
 	.top-line__tel-first
 		color: $accent
 	.top-line__tel-second
 
 	.top-line__email
+		z-index: 10
 		font-size: 14px
 		display: flex
 		padding: 18px 10px
@@ -156,6 +170,8 @@ b, strong
 			padding-right: 10px
 			font-size: 16px
 	.top-line__callback
+		display: block
+		z-index: 10
 		cursor: pointer
 		background: $accent
 		padding: 10px 26px
@@ -167,16 +183,18 @@ b, strong
 		margin-top: 10px
 		font-size: 12px
 		&:hover
-			box-shadow: 0px 0px 10px 0 #000
+			box-shadow: 0px 0px 10px rgba(#000, .5)
+			transition: all .25s ease
 	.bottom-line-wrapper
 		display: flex
 	.bottom-line
 		background: #fff
 	.bottom-line__logo
 		display: block
+		margin-top: 10px
 	.bottom-line__search
 		display: flex
-		margin-top: 10px
+		margin-top: 20px
 		margin-left: 52px
 		position: relative
 		span
@@ -192,9 +210,10 @@ b, strong
 			border: none
 			align-self: flex-start
 		.bottom-line__basket
+			display: block
 			padding: 7px 60px 7px 35px
 			background: #fff
-			box-shadow: 0px 0px 5px #000
+			box-shadow: 0px 0px 20px rgba(#000, .25)
 			align-self: flex-start
 			position: relative
 			text-transform: uppercase
@@ -424,6 +443,7 @@ b, strong
 		margin-bottom: 15px
 		margin-left: 15px
 	.direction-card-content__button
+		display: block
 		border: 1px solid #fff
 		padding: 4px 10px
 		width: 145px
@@ -465,21 +485,37 @@ b, strong
 	background: linear-gradient(45deg, #e7ecee, #f4f8f9)
 	border-top: 35px solid #f3f3f3
 	.section-inner
+	.container
+		position: relative
+	.advantages-frame
+		position: absolute
+		top: -65px
+		width: 1115px
+		left: 24px
+		img
+			width: 1125px
 	.advantages-threeblocks
 		display: flex
-		align-items: center
 		justify-content: space-around
+		z-index: 10
 	.advantages-block
 		display: flex
 		flex-direction: column
 		justify-content: center
 		text-align: center
 		width: 337px
+		z-index: 10
 	.advantages-block:first-child
 		margin-bottom: 50px
-		margin-top: 44px
+		margin-top: 50px
+		.advantages-block__list
+			margin-top: 33px
 	.advantages-block:last-child
-		margin-top: 25px
+		height: 260px
+		margin-top: 40px
+	.advantages-block:nth-child(2)
+		height: 240px
+		margin-top: 40px
 	.advantages-block__icon
 	.advantages-block__title
 		+font('FuturaDemiC', 600, 20px)
@@ -506,6 +542,8 @@ b, strong
 .section-request
 	background: url('../img/@2x/request.png') no-repeat
 	background-size: cover
+	position: relative
+	z-index: 16
 	.section-inner
 	.request-wrapper
 		display: flex
@@ -536,6 +574,7 @@ b, strong
 				color: #888aa7
 				text-transform: uppercase
 	.request-button
+		display: block
 		align-self: flex-start
 		white-space: nowrap
 		padding: 6px 20px
@@ -546,7 +585,7 @@ b, strong
 		font-size: 14px
 		color: #fff
 		&:hover
-			box-shadow: 0px 0px 3px #000
+			box-shadow: 0px 0px 10px rgba(#000, .25)
 	.request-computer
 		position: absolute
 		right: 0
@@ -610,6 +649,7 @@ b, strong
 // twoblocks
 
 .section-twoblocks
+	height: 400px
 	.section-inner
 	.twoblocks
 		display: flex
@@ -648,6 +688,7 @@ b, strong
 		color: #fff
 		text-transform: uppercase
 	.twoblock-block__button
+		display: block
 		letter-spacing: 2px
 		color: #fff
 		padding: 6px 15px
@@ -673,5 +714,174 @@ b, strong
 	
 // twoblocks_
 
-//
+// Map
+.section-map
+	.section-inner
+		background: url('../img/@2x/map.png') no-repeat
+		background-size: cover
+		height: 768px
+	.map-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			letter-spacing: 2px
+			margin-bottom: 35px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.container
+		position: relative
+	.map-block
+		width: 440px
+		height: 519px
+		background: #fff
+		position: absolute
+		top: 100px
+		left: 0
+		box-shadow: 20px 20px 0 rgba(#fff, .7)
+	.map-block-line
+		height: 1px
+		position: absolute
+		bottom: 194px
+		background: $accent
+		width: 100%
+	.map-block-wrapper
+	.map-block-titleside
+		text-align: right
+		margin-top: 50px
+		margin-right: 50px
+	.map-block__title
+		font-size: 28px
+		color: #888aa7
+	.map-block__tel
+		+font('FuturaBookC', bold, 28px)
+		color: $accent
+	.map-block__address
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: space-evenly
+		height: 377px
+		font-size: 20px
+		.fas
+			color: $accent
+			position: absolute
+			top: 6px
+			left: -30px
+			font-size: 22px
+	.map-block-topblock
+		height: 150px
+		padding: 0px 80px
+	.topblock-address
+		position: relative
+	.topblock-tel
+		position: relative
+
+	.map-block-bottomblock
+		height: 150px
+		padding: 0px 80px
+	.bottomblock-address
+		position: relative
+	.bottomblock-tel
+		position: relative
+
+// twoblock_
+
+// Footer
+
+.section-footer
+	.section-inner
+	.container
+		position: relative
+	.footer-logo
+		position: absolute
+		bottom: 40px
+		left: 0
+	.footer-fourblocks
+		display: flex
+		justify-content: space-between
+		ul
+			li
+				margin-top: 6px
+				a
+					color: #000
+					font-size: 16px
+					&:hover
+						text-decoration: underline
+						color: $accent
+						transition: color .25s ease
+	.fourblocks-company
+		margin-top: 50px
+	.fourblocks-company__list
+
+	.fourblocks-specializations
+		margin-top: 50px
+	.fourblocks-specializations__list
+
+	.fourblocks-directions
+		margin-top: 50px
+
+	.fourblocks-directions__list
+
+	.fourblocks-last
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-top: 50px
+		text-align: right
+		height: 352px
+		margin-bottom: 100px
+	.fourblocks-last-mode
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 16px)
+	.mode-title
+		color: $accent
+	.mode-clocks
+
+	.fourblocks-last-soc
+	.soc-topblock
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 16px)
+		margin-bottom: 17px
+	.soc-topblock__email
+	.soc-topblock__tel
+
+	.soc-bottomblock
+	.soc-bottomblock__button
+		padding: 9px 25px
+		background: $accent
+		color: #fff
+	.soc-bottomblock__socbuttons
+		margin-top: 10px
+		.fab
+			font-size: 30px
+			color: #000
+			margin-right: 10px
+			margin-top: 5px
+			&:hover
+				color: $accent
+				transition: color .25s ease
+
+
+	
+// Footer_
 @import "_media"
