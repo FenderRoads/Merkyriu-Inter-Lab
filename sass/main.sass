@@ -135,6 +135,7 @@ b, strong
 	.top-line__city
 		font-size: 14px
 		color: $accent
+		+font1('FuturaDemiC', 600)
 		padding: 18px 5px
 		z-index: 10
 		position: relative
@@ -158,6 +159,7 @@ b, strong
 		padding: 7px 7px	
 	.top-line__tel-first
 		color: $accent
+		+font1('FuturaDemiC', 600)
 	.top-line__tel-second
 
 	.top-line__email
@@ -165,6 +167,7 @@ b, strong
 		font-size: 14px
 		display: flex
 		padding: 18px 10px
+		+font1('FuturaDemiC', 600)
 		.fas
 			color: $accent
 			padding-top: 4px
@@ -176,7 +179,6 @@ b, strong
 		cursor: pointer
 		background: $accent
 		padding: 10px 26px
-		border-radius: 3px
 		color: #fff
 		letter-spacing: 2px
 		align-self: flex-start
@@ -188,17 +190,20 @@ b, strong
 			transition: all .25s ease
 	.bottom-line-wrapper
 		display: flex
+		justify-content: space-between
 	.bottom-line
 		background: #fff
 	.bottom-line__logo
 		display: block
 		margin-top: 10px
+		img
+			width: 400px
 	.bottom-line__dn-tel
 		display: none
 	.bottom-line__search
 		display: flex
 		margin-top: 20px
-		margin-left: 52px
+		margin-right: 16px
 		position: relative
 		span
 			position: absolute
@@ -321,7 +326,7 @@ b, strong
 			.yearoffoun-year
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
-				color: $accent
+				color: #1f3d62
 		.ourexp
 			display: flex
 			flex-direction: column
@@ -338,7 +343,7 @@ b, strong
 			.ourexp-year
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
-				color: $accent
+				color: #1f3d62
 // Slider_
 
 // Duration
@@ -386,10 +391,11 @@ b, strong
 		background: #e6ebed
 		text-align: center
 		margin: auto
-		width: 250px
+		width: 276px
 		white-space: nowrap
 		margin-top: 20px
 		margin-bottom: 35px
+		letter-spacing: 3px
 	.dn-direction-wrapper
 		display: none
 	
@@ -419,7 +425,7 @@ b, strong
 			bottom: 0
 			left: 0
 			right: 0
-			background: rgba($accent, .85)
+			background: rgba(#1d4f84, .90)
 			height: 271px
 	.direction-card-content
 		display: flex
@@ -469,9 +475,11 @@ b, strong
 			transition: all .5s ease
 	.direction-card-content-rightside
 		position: absolute
-		bottom: 50px
-		right: 34px
+		bottom: 67px
+		right: 4px
 	.direction-card-content__icon
+		img
+			width: 85%
 	.direction-card:last-child
 		background: $accent
 		margin-bottom: 65px
@@ -542,6 +550,7 @@ b, strong
 			span
 				font-size: 14px
 				text-transform: uppercase
+				color: #000
 			
 // Advantages_
 
@@ -597,7 +606,7 @@ b, strong
 	.request-computer
 		position: absolute
 		right: 0
-		top: -70px
+		top: -28px
 		img
 			width: 200px
 
@@ -666,12 +675,6 @@ b, strong
 		height: 358px
 	.twoblocks-block-wrapper
 		position: relative
-		&:hover .twoblocks-block__bgwoman:after
-			background: rgba($accent, .55)
-			transition: background 1s ease
-		&:hover .twoblocks-block__bgcupboard:after
-			background: rgba(#fff, .22)
-			transition: background 1s ease
 	.twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
 		position: absolute
 		width: 572px
@@ -770,7 +773,7 @@ b, strong
 	.map-block-line
 		height: 1px
 		position: absolute
-		bottom: 194px
+		bottom: 200px
 		background: $accent
 		width: 100%
 	.map-block-wrapper
@@ -788,9 +791,9 @@ b, strong
 		position: relative
 		display: flex
 		flex-direction: column
-		justify-content: space-evenly
+		justify-content: space-around
 		height: 377px
-		font-size: 20px
+		font-size: 18px
 		.fas
 			color: $accent
 			position: absolute
@@ -863,7 +866,7 @@ b, strong
 		margin-bottom: 100px
 	.fourblocks-last-mode
 		text-transform: uppercase
-		+font('FuturaDemiC', 600, 16px)
+		font-size: 16px
 	.mode-title
 		color: $accent
 	.mode-clocks
@@ -878,11 +881,14 @@ b, strong
 
 	.soc-bottomblock
 	.soc-bottomblock__button
-		padding: 9px 25px
+		padding: 12px 29px
 		background: $accent
 		color: #fff
+		font-size: 12px
 	.soc-bottomblock__socbuttons
 		margin-top: 10px
+		padding-top: 10px
+		position: relative
 		.fab
 			font-size: 30px
 			color: #000
@@ -891,12 +897,12 @@ b, strong
 			&:hover
 				color: $accent
 				transition: color .25s ease
+		.socbuttons
+			position: absolute
+			right: -5px
 
 
 // Footer_
-
-
-
 
 @media only screen and (max-width: 1170px)
   .container
@@ -931,15 +937,16 @@ b, strong
       margin-top: 15px
       letter-spacing: 1px
       white-space: nowrap
+      font-size: 11.5px
     .top-line__email
-      padding-top: 16px
-      padding-left: 18px
+      padding: 18px 13px 0px 16px
       white-space: nowrap
     .bottom-line__logo
       img
         width: 271px
     .bottom-line__search
       margin-top: 8px
+      margin-right: -2px
       input
         width: 260px
       span
@@ -1110,6 +1117,96 @@ b, strong
         li
           a
             font-size: 14px
+  .section-direction
+    .direction-cards
+      justify-content: space-between
+    .direction-card
+      height: 180px
+    .direction-card-wrapper
+      width: 240px
+      height: 180px
+      .direction-card-content
+        width: 220px
+        height: 160px
+      .icon-1
+        bottom: 49px
+        right: -17px
+      .icon-2
+        bottom: 50px
+        right: -38px
+      .icon-3
+        bottom: 51px
+        right: -11px
+      .icon-4
+        bottom: 54px
+        right: -43px
+      .icon-5
+        bottom: 45px
+        right: -52px
+      .icon-6
+        bottom: 41px
+        right: -51px
+      .icon-7
+        bottom: 51px
+        right: -36px
+      .icon-8
+        bottom: 51px
+        right: -38px
+      .icon-9
+        bottom: 50px
+        right: -51px
+      .icon-10
+        bottom: 52px
+        right: -28px
+      .icon-11
+        bottom: 51px
+        right: -35px
+      .icon-12
+        bottom: 51px
+        right: -47px
+      .icon-13
+        bottom: 46px
+        right: -62px
+      .icon-14
+        bottom: 51px
+        right: -37px
+      .icon-15
+        bottom: 52px
+        right: -69px
+      .icon-16
+        bottom: 42px
+        right: -30px
+      .icon-17
+        bottom: 46px
+        right: -40px
+      .icon-18
+        bottom: 24px
+        right: -72px
+      .icon-19
+        bottom: 60px
+        right: -38px
+      .icon-20
+        bottom: 60px
+        right: -45px
+      .direction-card-content__title
+        width: 180px
+        font-size: 14px
+        margin-top: 11px
+      .direction-card-content__icon
+        img
+          width: 55%
+      .direction-card-content__button
+        font-size: 13px
+        padding: 4px 5px
+        width: 100px
+      .direction-card-content__number
+        margin-bottom: 5px
+        margin-left: 11px
+      .direction-card-content__button
+        margin-left: 11px
+      .direction-card__catalog
+        height: 180px
+        line-height: 5.2
 
 @media only screen and (max-width: 780px)
   .container
@@ -1161,6 +1258,7 @@ b, strong
           &:before
             top: 9px
             left: 0px
+        &:hover  
 
     .dn-menu__onebutton
     .dn-menu__search, .dn-menu__basket
@@ -1194,6 +1292,7 @@ b, strong
           color: $accent
     .bottom-line-wrapper
       flex-direction: column
+
   .section-direction
     .direction-title
       display: none
@@ -1215,18 +1314,80 @@ b, strong
         color: #fff
         background: $accent
         transition: all .5s ease
-    .direction-card-wrapper
-      width: 320px
-      height: 271px
-    .direction-card-content
-      width: 300px
-      height: 251px
-    .direction-card-content-rightside
-      bottom: 56px
-      right: 10px
-    .icon18
-      bottom: 35px
-      right: 3px
+    .direction-card
+      height: 200px
+      .direction-card-wrapper
+        width: 320px
+        height: 200px
+        .direction-card-content
+          width: 300px
+          height: 180px
+        .icon-1
+          bottom: 45px
+          right: 25px
+        .icon-2
+          bottom: 44px
+          right: 6px
+        .icon-3
+          bottom: 42px
+          right: 21px
+        .icon-4
+          bottom: 53px
+          right: 1px
+        .icon-5
+          bottom: 31px
+          right: -7px
+        .icon-6
+          bottom: 38px
+          right: -5px
+        .icon-7
+          bottom: 46px
+          right: 0px
+        .icon-8
+          bottom: 45px
+          right: 3px
+        .icon-9
+          bottom: 39px
+          right: -10px
+        .icon-10
+          bottom: 18px
+          right: 11px
+        .icon-11
+          bottom: 36px
+          right: 0px
+        .icon-12
+          bottom: 37px
+          right: -11px
+        .icon-13
+          bottom: 40px
+          right: -12px
+        .icon-14
+          bottom: 42px
+          right: 5px
+        .icon-15
+          bottom: 38px
+          right: -18px
+        .icon-16
+          bottom: 38px
+          right: 11px
+        .icon-17
+          bottom: 40px
+          right: 0px
+        .icon-18
+          bottom: 13px
+          right: -13px
+        .icon-19
+          bottom: 43px
+          right: 1px
+        .icon-20
+          bottom: 44px
+          right: -4px
+        .direction-card__catalog
+          height: 200px
+          line-height: 5.75
+        .direction-card-content__icon
+          img
+            width: 85%
 
 
 
@@ -1326,7 +1487,5 @@ b, strong
             color: #000
     .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
       display: none
-
-
 
 @import "_media"
