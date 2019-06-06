@@ -285,13 +285,6 @@ b, strong
 
 // Header_
 
-.name-page
-	display: none
-	.h3
-		color: #000
-		font-size: 16px
-		margin: 50px 0px
-
 
 // Slider
 
@@ -960,4 +953,246 @@ b, strong
 // Footer_
 
 
+
+// Contacts.
+.section-contacts
+	.section-inner
+	.contacts-wrapper
+	.contacts
+	.contacts-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			margin-bottom: 30px
+			letter-spacing: 4px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.contacts-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin-top: 30px
+			text-transform: none
+			letter-spacing: 2px
+	.contacts-block
+		width: 750px
+		height: 362px
+		background: #fefefd
+		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		padding: 20px
+		margin:
+			left: auto
+			right: auto
+			bottom: 150px
+	.contacts-block-wrapper
+		border: 1px solid $accent
+		display: flex
+		justify-content: space-between
+		padding: 20px
+	.contacts-block__list-1
+		li
+			a
+				font-size: 18px
+				color: $accent
+				text-transform: uppercase
+				+font1('FuturaDemiC', 600)
+	.contacts-block__list-2
+		li
+			a
+				font-size: 18px
+				color: $accent
+
+
+// Contacts_
+
+// Delivery
+
+.section-delivery
+	.delivery-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-delivery-wrapper
+		display: none
+	.delivery-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.delivery-wrapper
+	.delivery
+		width: 1095px
+		height: 357px
+		box-shadow: 0px 0px 80px 0px rgba(#000, .25)
+		padding: 20px 25px
+		margin-top: 80px
+		margin-bottom: 140px
+	.delivery-block
+		border: 1px solid $accent
+	.delivery-block__text
+		color: #000
+		padding: 50px 40px
+		font-size: 16px
+		text-transform: uppercase
+		text-align: center
+		line-height: 1.8
+	.delivery-block__texttitle
+		display: none
+
+
+
+// Delivery_
+
+
+// Form
+
+.section-form
+	.form-page
+	.form-block__title
+		display: none
+	.form-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-form-wrapper
+		display: none
+	.dn-form-button
+	.form-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		margin-bottom: 110px
+		margin-top: 20px
+	.form-page
+		padding: 30px 0px
+		.h3-page
+			color: #000
+			font-size: 16px
+			text-transform: none
+			letter-spacing: 2px
+
+	.form
+	.form-block
+		display: flex
+		flex-direction: column
+		width: 500px
+		padding: 55px 0px
+		margin:
+			top: 0px
+			left: auto
+			right: auto
+			bottom: 0
+	.form-block__inputs
+		display: flex
+		flex-direction: column
+		input
+			height: 40px
+			border: 1px solid $accent
+			margin-bottom: 20px
+			box-sizing: border-box
+			letter-spacing: 2px
+			padding: 0px 15px
+			background: transparent
+			&::placeholder
+				letter-spacing: 1.5px
+				text-transform: uppercase
+		textarea
+			height: 100px
+			resize: none
+			padding: 15px
+			box-sizing: border-box
+			background: transparent
+			&::placeholder
+				text-transform: uppercase
+
+	.form-block__bottom
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+	.sentence
+		width: 100%
+		padding: 10px 0px
+		text-align: center
+		text-transform: uppercase
+		letter-spacing: 3px
+		background: $accent
+		color: #fff
+		display: block
+	.star
+		text-transform: uppercase
+		margin-top: 10px
+		font-size: 14px
+	.checkbox
+		margin-top: 5px
+		text-transform: uppercase
+		font-size: 14px
+		
+
+
+// Form
 @import "_media"
