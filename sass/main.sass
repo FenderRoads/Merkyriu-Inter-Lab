@@ -15,6 +15,29 @@
 a
 	text-decoration: none
 
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background: #e0e0e0
+	z-index: 12
+	border-radius: 10em
+	color: #666666
+	font-size: 24px
+	width: 60px
+	height: 60px
+	text-align: center
+	line-height: 60px
+	cursor: pointer
+	transition: all .25s ease
+	opacity: .5
+	&:hover
+		color: #ffffff
+		background-color: $accent
+		opacity: .9
+	&.active
+		right: 25px
+
 .button
 	display: inline-block
 	border: none
@@ -237,6 +260,8 @@ b, strong
 		background: $accent
 	.dn-menu
 		display: none
+	.drop-down-menu
+		display: none
 	.menu
 		ul
 			display: flex
@@ -259,6 +284,13 @@ b, strong
 						box-sizing: border-box
 
 // Header_
+
+.name-page
+	display: none
+	.h3
+		color: #000
+		font-size: 16px
+		margin: 50px 0px
 
 
 // Slider
@@ -1251,6 +1283,18 @@ b, strong
   .section-slider
     display: none
   .section-header
+    .drop-down-menu
+      display: none
+      color: #fff
+      white-space: nowrap
+      li
+        padding: 10px 0px
+        border-bottom: 1px solid #fff
+        &:last-child
+          border: none
+        a
+          text-transform: uppercase
+          color: #fff
     .menu
       display: none
     .menu-wrapper
@@ -1276,12 +1320,12 @@ b, strong
         margin-right: 10px
         display: block
         span
-          width: 27px
+          width: 19px
           height: 2px
           background: #fff
           position: absolute
           top: 19px
-          left: 8px
+          left: 15px
           &:after, &:before
             content: ''
             width: 27px
@@ -1292,14 +1336,15 @@ b, strong
             left: 7px
           &:after
             top: -8px
-            left: 0px
+            left: -7px
           &:before
+            width: 12px
             top: 9px
-            left: 0px
+            left: 6px
         &:hover  
 
     .dn-menu__onebutton
-    .dn-menu__search, .dn-menu__basket
+    .dn-menu__basket
       display: block
       width: 42px
       height: 42px
@@ -1308,7 +1353,22 @@ b, strong
       color: #fff
       font-size: 18px
       line-height: 2.6
-    
+    .dn-menu__search
+      position: relative
+      input
+        width: 44px
+        height: 44px
+        border: 1px solid #fff
+        background: transparent
+        color: #ffffff
+        box-sizing: border-box
+        padding: 0px 10px
+      .fas
+        position: absolute
+        transition: all .2s linear
+        top: 13px
+        left: 13px
+        color: #fff
     .top-line
       display: none
     .bottom-line__search

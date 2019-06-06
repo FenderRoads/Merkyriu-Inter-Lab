@@ -328,6 +328,18 @@
   .section-slider
     display: none
   .section-header
+    .drop-down-menu
+      display: none
+      color: #fff
+      white-space: nowrap
+      li
+        padding: 10px 0px
+        border-bottom: 1px solid #fff
+        &:last-child
+          border: none
+        a
+          text-transform: uppercase
+          color: #fff
     .menu
       display: none
     .menu-wrapper
@@ -353,12 +365,12 @@
         margin-right: 10px
         display: block
         span
-          width: 27px
+          width: 19px
           height: 2px
           background: #fff
           position: absolute
           top: 19px
-          left: 8px
+          left: 15px
           &:after, &:before
             content: ''
             width: 27px
@@ -369,14 +381,15 @@
             left: 7px
           &:after
             top: -8px
-            left: 0px
+            left: -7px
           &:before
+            width: 12px
             top: 9px
-            left: 0px
+            left: 6px
         &:hover  
 
     .dn-menu__onebutton
-    .dn-menu__search, .dn-menu__basket
+    .dn-menu__basket
       display: block
       width: 42px
       height: 42px
@@ -385,7 +398,22 @@
       color: #fff
       font-size: 18px
       line-height: 2.6
-    
+    .dn-menu__search
+      position: relative
+      input
+        width: 44px
+        height: 44px
+        border: 1px solid #fff
+        background: transparent
+        color: #ffffff
+        box-sizing: border-box
+        padding: 0px 10px
+      .fas
+        position: absolute
+        transition: all .2s linear
+        top: 13px
+        left: 13px
+        color: #fff
     .top-line
       display: none
     .bottom-line__search
