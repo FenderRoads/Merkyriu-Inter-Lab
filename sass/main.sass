@@ -147,7 +147,7 @@ b, strong
 			padding: 0px 20px 0px 0px
 	.tel-icon
 		position: absolute
-		left: -36px
+		left: -40px
 		top: 0
 		font-size: 16px
 		padding: 18px 0px 18px 15px
@@ -228,10 +228,11 @@ b, strong
 			text-transform: uppercase
 			letter-spacing: 3px
 			cursor: pointer
-			img
+			.fas
 				right: 28px
 				top: 9px
 				position: absolute
+				font-size: 19px
 	.menu-wrapper
 		background: $accent
 	.dn-menu
@@ -267,7 +268,7 @@ b, strong
 	.carousel1
 	.owl-dots
 		position: absolute
-		bottom: 0
+		bottom: 8px
 		left: 50%
 		margin-left: -50px
 		.owl-dot.active
@@ -286,7 +287,7 @@ b, strong
 		background: url("../img/@2x/bg-slider-new-1.png") no-repeat
 		background-size: cover
 	.left-side
-		margin-top: 60px
+		margin-top: 53px
 	.right-side
 		width: 75%
 	.slider-item
@@ -315,6 +316,7 @@ b, strong
 			align-items: center
 			margin-left: 50px
 			.yearoffoun-icon
+				margin-bottom: 15px
 				img
 					width: 50px
 					height: 60px
@@ -327,6 +329,8 @@ b, strong
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
 				color: #1f3d62
+				line-height: 1.2
+
 		.ourexp
 			display: flex
 			flex-direction: column
@@ -335,6 +339,7 @@ b, strong
 			.ourexp-icon
 				width: 50px
 				height: 60px
+				margin-bottom: 15px
 			.ourexp-title
 				text-transform: uppercase
 				+font('FuturaDemiC', 600, 24px)
@@ -344,6 +349,7 @@ b, strong
 				text-transform: uppercase
 				+font('FuturaMediumC', 600, 40px)
 				color: #1f3d62
+				line-height: 1.2
 // Slider_
 
 // Duration
@@ -477,6 +483,9 @@ b, strong
 		position: absolute
 		bottom: 67px
 		right: 4px
+	.icon-18
+		bottom: 51px
+		right: -6px
 	.direction-card-content__icon
 		img
 			width: 85%
@@ -659,7 +668,21 @@ b, strong
 		&:last-child
 			margin-bottom: 130px
 	.manufact-block__img
-			
+		background-image: url('../img/@2x/philips-grey-new.png')
+		background-size: 184px 37px
+		background-size: center
+		width: 184px
+		height: 37px 
+		img
+			width: 184px
+			height: 37px
+		&:hover
+			background-image: url('../img/@2x/philips-new.png')
+			background-repeat: no-repeat
+			background-size: 184px 37px
+			background-size: center
+			width: 184px
+			height: 37px 
 
 // Manufacts_
 
@@ -769,7 +792,7 @@ b, strong
 		position: absolute
 		top: 100px
 		left: 0
-		box-shadow: 20px 20px 0 rgba(#fff, .7)
+		box-shadow: 20px 30px 0 rgba(#fff, .7)
 	.map-block-line
 		height: 1px
 		position: absolute
@@ -931,7 +954,7 @@ b, strong
       align-self: flex-start
       padding: 16px 0px 0px 40px
       .tel-icon
-        left: 0px
+        left: 3px
     .top-line__callback
       padding: 10px 5px
       margin-top: 15px
@@ -954,7 +977,7 @@ b, strong
 
       .bottom-line__basket
         padding: 7px 40px 7px 15px
-        img
+        .fas
           right: 15px
     .menu
       ul
@@ -1058,12 +1081,26 @@ b, strong
     .manufact-block
       align-self: flex-start
       .manufact-block__img
+        background-image: url('../img/@2x/philips-grey-new.png')
+        background-size: 110px 27px
+        background-position: center
+        width: 110px
+        height: 27px 
         img
-          width: 131px
+          width: 184px
+          height: 37px
+        &:hover
+          background-image: url('../img/@2x/philips-new.png')
+          background-repeat: no-repeat
+          background-size: 110px 27px
+          background-position: center
+          width: 110px
+          height: 27px 
         
 
 
   .section-twoblocks
+    height: 330px
     .twoblocks
     .twoblocks-block
     .twoblocks-block-wrapper
@@ -1206,7 +1243,7 @@ b, strong
         margin-left: 11px
       .direction-card__catalog
         height: 180px
-        line-height: 5.2
+        line-height: 5.1
 
 @media only screen and (max-width: 780px)
   .container
@@ -1237,6 +1274,7 @@ b, strong
         border: 1px solid #fff
         position: relative
         margin-right: 10px
+        display: block
         span
           width: 27px
           height: 2px
@@ -1262,6 +1300,7 @@ b, strong
 
     .dn-menu__onebutton
     .dn-menu__search, .dn-menu__basket
+      display: block
       width: 42px
       height: 42px
       border: 1px solid #fff
@@ -1285,6 +1324,7 @@ b, strong
       padding: 8px 0px
       .dn-tel-first
         color: $accent
+        font-weight: bold
       .dn-tel-second
         color: #000
       .dn-tel-icon
@@ -1316,6 +1356,10 @@ b, strong
         transition: all .5s ease
     .direction-card
       height: 200px
+      .direction-card__catalog
+          height: 200px
+          line-height: 7.5
+          font-size: 28px
       .direction-card-wrapper
         width: 320px
         height: 200px
@@ -1382,9 +1426,6 @@ b, strong
         .icon-20
           bottom: 44px
           right: -4px
-        .direction-card__catalog
-          height: 200px
-          line-height: 5.75
         .direction-card-content__icon
           img
             width: 85%
@@ -1399,49 +1440,59 @@ b, strong
   .section-manufact
     display: none
   .section-twoblocks
-    height: 625px
+    height: 555px
     .twoblocks
       flex-direction: column
       .twoblocks-block
         margin-top: 50px
         width: 100%
-        height: 235px
+        height: 205px
     .twoblocks-block__bgwoman
       width: 320px
       img
         width: 320px
-        height: 235px
+        height: 205px
       &:after
-        height: 235px
+        height: 205px
     .twoblocks-block__content
       top: 90px
-      right: -20px
+      right: -37px
+      .twoblocks-block__title
+        font-size: 14px
+        width: 70px
+      .twoblock-block__button
+        width: 100px
+        padding: 4px 10px
+        white-space: nowrap
+        font-size: 15px
     .twoblocks-block__woman
       width: 120px
-      top: -2px
-      left: -1px
+      top: -32px
+      left: 18px
       img
         width: 120px
     .twoblocks-block__bgcupboard
       width: 320px
       img
         width: 320px
-        height: 235px
+        height: 205px
       &:after
-        height: 235px
+        height: 205px
     .twoblocks-block__cupboard
       width: 120px
-      top: 22px
-      left: 0px
+      top: -18px
+      left: 19px
       img
         width: 120px
+        height: 223px
+    
 
 
   .section-map
     box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
     .section-inner 
       background: 0
-      height: 668px
+      height: 630px
     .map-title
       .line
         margin-bottom: 0px
@@ -1450,6 +1501,7 @@ b, strong
     .map-block
       width: 320px
       top: 57px
+      box-shadow: 20px 30px 0 rgba(255,255,255,.7), 0px 0px 50px 0px rgba(#000, .15)
     .map-block-wrapper
       width: 320px
     .map-block-titleside
@@ -1479,6 +1531,7 @@ b, strong
     .fourblocks-company
       text-align: center
       margin-bottom: 75px
+      margin-top: 15px
       ul
         li
           a
