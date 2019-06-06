@@ -285,13 +285,6 @@ b, strong
 
 // Header_
 
-.name-page
-	display: none
-	.h3
-		color: #000
-		font-size: 16px
-		margin: 50px 0px
-
 
 // Slider
 
@@ -959,646 +952,247 @@ b, strong
 
 // Footer_
 
-@media only screen and (max-width: 1170px)
-  .container
-    width: 760px
-  .section-header
-    .top-line-wrapper
-      justify-content: flex-start
-    .top-line__menu
-      height: 62px
-      li
-        white-space: nowrap
-        align-self: flex-start
-        padding: 16px 8px
-        a
-          font-size: 12px
-    .top-line__city
-      align-self: flex-start
-      width: 50px
-      padding: 20px 0px 0px 20px
-      line-height: 1.1
-      .fas
-        left: 3px
-    .top-line__tel
-      font-size: 12px
-      white-space: nowrap
-      align-self: flex-start
-      padding: 16px 0px 0px 40px
-      .tel-icon
-        left: 3px
-    .top-line__callback
-      padding: 10px 5px
-      margin-top: 15px
-      letter-spacing: 1px
-      white-space: nowrap
-      font-size: 11.5px
-    .top-line__email
-      padding: 18px 13px 0px 16px
-      white-space: nowrap
-    .bottom-line__logo
-      img
-        width: 271px
-    .bottom-line__search
-      margin-top: 8px
-      margin-right: -2px
-      input
-        width: 260px
-      span
-        right: 160px
-
-      .bottom-line__basket
-        padding: 7px 40px 7px 15px
-        .fas
-          right: 15px
-    .menu
-      ul
-        li
-          padding: 15px 20px
-          a
-            font-size: 14px
-            white-space: nowrap
-            
 
 
-  .section-slider
-    .slider-item__title
-      letter-spacing: 2px
-      font-size: 10px
-    .left-side
-      z-index: 10
-    .slider-item
-      .slider-item__title-site
-        font-size: 20px
-      .slider-item__post-title
-        font-size: 18px
-      .yearoffoun
-        margin-left: 0px
-        .yearoffoun-title
-          font-size: 22px
-          white-space: nowrap
-        .yearoffoun-year
-          font-size: 30px
-      .ourexp
-        .ourexp-title
-          font-size: 22px
-        .ourexp-year
-          font-size: 30px
-          white-space: nowrap
-    .right-side
-      position: relative
-      width: 429px
-      img
-        position: absolute
-        left: -130px
-        top: -19px
-        width: 429px
-        height: 549px
+// Contacts.
+.section-contacts
+	.section-inner
+	.contacts-wrapper
+	.contacts
+	.contacts-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			margin-bottom: 30px
+			letter-spacing: 4px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.contacts-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin-top: 30px
+			text-transform: none
+			letter-spacing: 2px
+	.contacts-block
+		width: 750px
+		height: 362px
+		background: #fefefd
+		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		padding: 20px
+		margin:
+			left: auto
+			right: auto
+			bottom: 150px
+	.contacts-block-wrapper
+		border: 1px solid $accent
+		display: flex
+		justify-content: space-between
+		padding: 20px
+	.contacts-block__list-1
+		li
+			a
+				font-size: 18px
+				color: $accent
+				text-transform: uppercase
+				+font1('FuturaDemiC', 600)
+	.contacts-block__list-2
+		li
+			a
+				font-size: 18px
+				color: $accent
 
 
+// Contacts_
 
+// Delivery
 
-
-  
-  .section-advantages
-    .advantages-frame
-      display: none
-      width: 731px
-      left: 24px
-      img
-        width: 731px
-        height: 578px
-    .advantages-block
-    .advantages-block__title
-      font-size: 15px
-    .advantages-block__list
-      li
-        span
-          font-size: 12px
-    .advantages-block:first-child
-      margin-top: 38px
-      .advantages-block__list
-        margin-top: 14px
-    .advantages-block:last-child
-      margin-top: 39px
-      .advantages-block__list
-        margin-top: 11px
-    .advantages-block:nth-child(2)
-      margin-top: 40px
-
-
-
-
-  .section-request
-    .request-wrapper
-    .request-title
-      font-size: 18px
-    .request-inputs
-      input
-        width: 130px
-    .request-button
-      padding: 6px 7px
-      white-space: normal
-      width: 106px
-      margin-bottom: 10px
+.section-delivery
+	.delivery-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-delivery-wrapper
+		display: none
+	.delivery-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.delivery-wrapper
+	.delivery
+		width: 1095px
+		height: 357px
+		box-shadow: 0px 0px 80px 0px rgba(#000, .25)
+		padding: 20px 25px
+		margin-top: 80px
+		margin-bottom: 140px
+	.delivery-block
+		border: 1px solid $accent
+	.delivery-block__text
+		color: #000
+		padding: 50px 40px
+		font-size: 16px
+		text-transform: uppercase
+		text-align: center
+		line-height: 1.8
+	.delivery-block__texttitle
+		display: none
 
 
 
-
-  .section-manufact
-    .section-inner
-    .manufacts
-    .manufacts-blocks
-      height: 250px
-    .manufact-block
-      align-self: flex-start
-      .manufact-block__img
-        background-image: url('../img/@2x/philips-grey-new.png')
-        background-size: 110px 27px
-        background-position: center
-        width: 110px
-        height: 27px 
-        img
-          width: 184px
-          height: 37px
-        &:hover
-          background-image: url('../img/@2x/philips-new.png')
-          background-repeat: no-repeat
-          background-size: 110px 27px
-          background-position: center
-          width: 110px
-          height: 27px 
-        
+// Delivery_
 
 
-  .section-twoblocks
-    height: 330px
-    .twoblocks
-    .twoblocks-block
-    .twoblocks-block-wrapper
-    .twoblocks-block__bgwoman
-      width: 380px
-      img
-        width: 380px
-    .twoblocks-block__content
-      right: -10px
-    .twoblocks-block__title
-    .twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
-      &:after
-        height: 280px
-      img
-        height: 280px
-    .twoblock-block__button
-    .twoblocks-block__content
-      top: 120px
-      .twoblocks-block__title
-        font-size: 20px
-      .twoblock-block__button
-        font-size: 18px
-    .twoblocks-block__woman
-      width: 160px
-      top: -37px
-      left: 13px
-      img
-        width: 160px
-    .twoblocks-block__bgcupboard
-      width: 380px
-      img
-        width: 380px
-    .twoblocks-block__cupboard
-      width: 160px
-      top: -4px
-      left: 12px
-      img
-        width: 160px
+// Form
+
+.section-form
+	.form-page
+	.form-block__title
+		display: none
+	.form-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-form-wrapper
+		display: none
+	.dn-form-button
+	.form-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		margin-bottom: 110px
+		margin-top: 20px
+	.form-page
+		padding: 30px 0px
+		.h3-page
+			color: #000
+			font-size: 16px
+			text-transform: none
+			letter-spacing: 2px
+
+	.form
+	.form-block
+		display: flex
+		flex-direction: column
+		width: 500px
+		padding: 55px 0px
+		margin:
+			top: 0px
+			left: auto
+			right: auto
+			bottom: 0
+	.form-block__inputs
+		display: flex
+		flex-direction: column
+		input
+			height: 40px
+			border: 1px solid $accent
+			margin-bottom: 20px
+			box-sizing: border-box
+			letter-spacing: 2px
+			padding: 0px 15px
+			background: transparent
+			&::placeholder
+				letter-spacing: 1.5px
+				text-transform: uppercase
+		textarea
+			height: 100px
+			resize: none
+			padding: 15px
+			box-sizing: border-box
+			background: transparent
+			&::placeholder
+				text-transform: uppercase
+
+	.form-block__bottom
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+	.sentence
+		width: 100%
+		padding: 10px 0px
+		text-align: center
+		text-transform: uppercase
+		letter-spacing: 3px
+		background: $accent
+		color: #fff
+		display: block
+	.star
+		text-transform: uppercase
+		margin-top: 10px
+		font-size: 14px
+	.checkbox
+		margin-top: 5px
+		text-transform: uppercase
+		font-size: 14px
+		
 
 
-
-
-
-
-  .section-footer
-    .footer-logo
-      img
-        width: 310px
-    .footer-fourblocks
-      ul
-        li
-          a
-            font-size: 14px
-  .section-direction
-    .direction-cards
-      justify-content: space-between
-    .direction-card
-      height: 180px
-    .direction-card-wrapper
-      width: 240px
-      height: 180px
-      .direction-card-content
-        width: 220px
-        height: 160px
-      .icon-1
-        bottom: 49px
-        right: -17px
-      .icon-2
-        bottom: 50px
-        right: -38px
-      .icon-3
-        bottom: 51px
-        right: -11px
-      .icon-4
-        bottom: 54px
-        right: -43px
-      .icon-5
-        bottom: 45px
-        right: -52px
-      .icon-6
-        bottom: 41px
-        right: -51px
-      .icon-7
-        bottom: 51px
-        right: -36px
-      .icon-8
-        bottom: 51px
-        right: -38px
-      .icon-9
-        bottom: 50px
-        right: -51px
-      .icon-10
-        bottom: 52px
-        right: -28px
-      .icon-11
-        bottom: 51px
-        right: -35px
-      .icon-12
-        bottom: 51px
-        right: -47px
-      .icon-13
-        bottom: 46px
-        right: -62px
-      .icon-14
-        bottom: 51px
-        right: -37px
-      .icon-15
-        bottom: 52px
-        right: -69px
-      .icon-16
-        bottom: 42px
-        right: -30px
-      .icon-17
-        bottom: 46px
-        right: -40px
-      .icon-18
-        bottom: 24px
-        right: -72px
-      .icon-19
-        bottom: 60px
-        right: -38px
-      .icon-20
-        bottom: 60px
-        right: -45px
-      .direction-card-content__title
-        width: 180px
-        font-size: 14px
-        margin-top: 11px
-      .direction-card-content__icon
-        img
-          width: 55%
-      .direction-card-content__button
-        font-size: 13px
-        padding: 4px 5px
-        width: 100px
-      .direction-card-content__number
-        margin-bottom: 5px
-        margin-left: 11px
-      .direction-card-content__button
-        margin-left: 11px
-      .direction-card__catalog
-        height: 180px
-        line-height: 5.1
-
-@media only screen and (max-width: 780px)
-  .container
-    width: 320px
-  .section-slider
-    display: none
-  .section-header
-    .drop-down-menu
-      display: none
-      color: #fff
-      white-space: nowrap
-      li
-        padding: 10px 0px
-        border-bottom: 1px solid #fff
-        &:last-child
-          border: none
-        a
-          text-transform: uppercase
-          color: #fff
-    .menu
-      display: none
-    .menu-wrapper
-    .dn-menu
-      display: flex
-      justify-content: space-between
-      padding: 15px 0px
-      position: relative
-    .dn-menu__vertline
-      position: absolute
-      height: 42px
-      width: 1px
-      background: #fff
-      top: 15px
-      left: 167px
-    .dn-menu__twobuttons
-      display: flex
-      .dn-menu__hamb
-        width: 42px
-        height: 42px
-        border: 1px solid #fff
-        position: relative
-        margin-right: 10px
-        display: block
-        span
-          width: 19px
-          height: 2px
-          background: #fff
-          position: absolute
-          top: 19px
-          left: 15px
-          &:after, &:before
-            content: ''
-            width: 27px
-            height: 2px
-            background: #fff
-            position: absolute
-            top: 19px
-            left: 7px
-          &:after
-            top: -8px
-            left: -7px
-          &:before
-            width: 12px
-            top: 9px
-            left: 6px
-        &:hover  
-
-    .dn-menu__onebutton
-    .dn-menu__basket
-      display: block
-      width: 42px
-      height: 42px
-      border: 1px solid #fff
-      text-align: center
-      color: #fff
-      font-size: 18px
-      line-height: 2.6
-    .dn-menu__search
-      position: relative
-      input
-        width: 44px
-        height: 44px
-        border: 1px solid #fff
-        background: transparent
-        color: #ffffff
-        box-sizing: border-box
-        padding: 0px 10px
-      .fas
-        position: absolute
-        transition: all .2s linear
-        top: 13px
-        left: 13px
-        color: #fff
-    .top-line
-      display: none
-    .bottom-line__search
-      display: none
-
-
-    .bottom-line__logo
-      text-align: center
-    .bottom-line__dn-tel
-      display: flex
-      justify-content: space-around
-      font-size: 18px
-      padding: 8px 0px
-      .dn-tel-first
-        color: $accent
-        font-weight: bold
-      .dn-tel-second
-        color: #000
-      .dn-tel-icon
-        .fas
-          color: $accent
-    .bottom-line-wrapper
-      flex-direction: column
-
-  .section-direction
-    .direction-title
-      display: none
-    .direction-thousands
-      display: none
-    .dn-direction-wrapper
-      display: block
-      padding: 20px 0px
-    .dn-direction-button
-      display: block
-      text-transform: uppercase
-      text-align: center
-      border: 2px solid $accent
-      color: $accent
-      background: transparent
-      padding: 13px 20px
-      font-size: 17px
-      &:hover
-        color: #fff
-        background: $accent
-        transition: all .5s ease
-    .direction-card
-      height: 200px
-      .direction-card__catalog
-          height: 200px
-          line-height: 7.5
-          font-size: 28px
-      .direction-card-wrapper
-        width: 320px
-        height: 200px
-        .direction-card-content
-          width: 300px
-          height: 180px
-        .icon-1
-          bottom: 45px
-          right: 25px
-        .icon-2
-          bottom: 44px
-          right: 6px
-        .icon-3
-          bottom: 42px
-          right: 21px
-        .icon-4
-          bottom: 53px
-          right: 1px
-        .icon-5
-          bottom: 31px
-          right: -7px
-        .icon-6
-          bottom: 38px
-          right: -5px
-        .icon-7
-          bottom: 46px
-          right: 0px
-        .icon-8
-          bottom: 45px
-          right: 3px
-        .icon-9
-          bottom: 39px
-          right: -10px
-        .icon-10
-          bottom: 18px
-          right: 11px
-        .icon-11
-          bottom: 36px
-          right: 0px
-        .icon-12
-          bottom: 37px
-          right: -11px
-        .icon-13
-          bottom: 40px
-          right: -12px
-        .icon-14
-          bottom: 42px
-          right: 5px
-        .icon-15
-          bottom: 38px
-          right: -18px
-        .icon-16
-          bottom: 38px
-          right: 11px
-        .icon-17
-          bottom: 40px
-          right: 0px
-        .icon-18
-          bottom: 13px
-          right: -13px
-        .icon-19
-          bottom: 43px
-          right: 1px
-        .icon-20
-          bottom: 44px
-          right: -4px
-        .direction-card-content__icon
-          img
-            width: 85%
-
-
-
-  
-  .section-advantages
-    display: none
-  .section-request
-    display: none
-  .section-manufact
-    display: none
-  .section-twoblocks
-    height: 555px
-    .twoblocks
-      flex-direction: column
-      .twoblocks-block
-        margin-top: 50px
-        width: 100%
-        height: 205px
-    .twoblocks-block__bgwoman
-      width: 320px
-      img
-        width: 320px
-        height: 205px
-      &:after
-        height: 205px
-    .twoblocks-block__content
-      top: 90px
-      right: -37px
-      .twoblocks-block__title
-        font-size: 14px
-        width: 70px
-      .twoblock-block__button
-        width: 100px
-        padding: 4px 10px
-        white-space: nowrap
-        font-size: 15px
-    .twoblocks-block__woman
-      width: 120px
-      top: -32px
-      left: 18px
-      img
-        width: 120px
-    .twoblocks-block__bgcupboard
-      width: 320px
-      img
-        width: 320px
-        height: 205px
-      &:after
-        height: 205px
-    .twoblocks-block__cupboard
-      width: 120px
-      top: -18px
-      left: 19px
-      img
-        width: 120px
-        height: 223px
-    
-
-
-  .section-map
-    box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
-    .section-inner 
-      background: 0
-      height: 630px
-    .map-title
-      .line
-        margin-bottom: 0px
-      .line-text
-        margin-top: 35px
-    .map-block
-      width: 320px
-      top: 57px
-      box-shadow: 20px 30px 0 rgba(255,255,255,.7), 0px 0px 50px 0px rgba(#000, .15)
-    .map-block-wrapper
-      width: 320px
-    .map-block-titleside
-    .map-block__title
-      font-size: 22px
-    .map-block__tel
-      font-size: 22px
-    .map-block__address
-      font-size: 15px
-      .fas
-        font-size: 20px
-        top: 2px
-        left: -26px
-
-
-  .section-footer
-    background: #e7e7e7
-    .footer-logo
-      display: block
-      bottom: 0
-      left: 20px
-    .footer-fourblocks
-      justify-content: center
-      text-align: center
-    .dn-item
-      display: block
-    .fourblocks-company
-      text-align: center
-      margin-bottom: 75px
-      margin-top: 15px
-      ul
-        li
-          a
-            font-size: 22px
-            text-transform: uppercase
-            color: #000
-    .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
-      display: none
-
+// Form
 @import "_media"

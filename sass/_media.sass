@@ -321,6 +321,28 @@
       .direction-card__catalog
         height: 180px
         line-height: 5.1
+  .section-contacts
+    .contacts-block
+      width: 717px
+      margin:
+        left: auto
+        right: auto
+        bottom: 100px
+    .contacts-block-wrapper
+
+  .section-delivery
+    .delivery
+      width: 710px
+      height: 429px
+    .delivery-block
+    .delivery-block__text
+      padding: 30px 15px
+
+  .section-form
+    .form-title
+      .line
+        font-size: 21px
+
 
 @media only screen and (max-width: 780px)
   .container
@@ -553,7 +575,7 @@
         width: 100%
         height: 205px
     .twoblocks-block__bgwoman
-      width: 320px
+      width: 300px
       img
         width: 320px
         height: 205px
@@ -561,7 +583,8 @@
         height: 205px
     .twoblocks-block__content
       top: 90px
-      right: -37px
+      right: 26px
+      width: 130px
       .twoblocks-block__title
         font-size: 14px
         width: 70px
@@ -577,7 +600,7 @@
       img
         width: 120px
     .twoblocks-block__bgcupboard
-      width: 320px
+      width: 300px
       img
         width: 320px
         height: 205px
@@ -645,6 +668,176 @@
             color: #000
     .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
       display: none
+
+
+
+
+  .section-contacts
+    .contacts-wrapper
+      width: 100%
+      background: #fff
+      box-shadow: 0 0 80px 0 rgba(0,0,0,.2)
+      position: relative
+    .contacts-block
+      width: 320px
+      height: 336px
+      box-shadow: none
+      padding: 20px 0px
+      margin:
+        left: auto
+        right: auto
+        bottom: 0px
+    .contacts-block-wrapper
+      padding: 20px 0px
+      border: none
+    .contacts-block__list-1
+      li
+        a
+          font-size: 12px
+    .contacts-block__list-2
+      text-align: right
+      li
+        a
+          font-size: 12px
+    .contacts-vertline-1, .contacts-vertline-2
+      width: 100%
+      height: 1px
+      background: $accent
+      position: absolute
+    .contacts-vertline-1
+      bottom: 26px
+    .contacts-vertline-2
+      top: 26px
+    .contacts-page
+      .h3-page
+        margin-top: 15px
+        text-align: center
+    .contacts-title
+      display: none
+    .dn-contacts-wrapper
+      display: block
+      padding: 20px 0px
+    .dn-contacts-button
+      display: block
+      text-transform: uppercase
+      text-align: center
+      border: 2px solid $accent
+      color: $accent
+      background: transparent
+      padding: 13px 20px
+      font-size: 17px
+      &:hover
+        color: #fff
+        background: $accent
+        transition: all .5s ease
+
+  .section-delivery
+    background: #fcfcfc
+    .delivery-wrapper
+      background: #fff
+    .delivery
+      width: 320px
+      height: 878px
+      padding: 0
+      position: relative
+      margin-top: 20px
+      box-shadow: none
+      margin-bottom: 50px
+    .delivery-block
+      padding:
+        top: 70px
+        left: 0
+        right: 0
+        bottom: 0
+      border: none
+    .delivery-block__text
+      padding: 0
+      text-align: left
+    .delivery-title
+      display: none
+    .delivery-block__texttitle
+      display: block
+      position: absolute
+      top: 25px
+      left: 72px
+      +font('FuturaDemiC', 600, 17px)
+      color: $accent
+    .dn-delivery-wrapper
+      display: block
+    .dn-delivery-button
+      display: block
+      text-transform: uppercase
+      text-align: center
+      border: 2px solid $accent
+      color: $accent
+      background: transparent
+      padding: 13px 20px
+      font-size: 17px
+      &:hover
+        color: #fff
+        background: $accent
+        transition: all .5s ease
+    .delivery-page
+      .h3-page
+        text-align: center
+        margin: 0px
+        padding: 13px
+
+  .section-form
+    .form-block__title
+      font-size: 14px
+    .form-title
+      display: none
+    .form-block
+      width: 100%
+      position: relative
+      padding: 100px 0px 55px 0px
+    .dn-form-wrapper
+      display: block
+      padding: 20px 0px 0px 0px
+    .dn-form-button
+      display: block
+      text-transform: uppercase
+      text-align: center
+      border: 2px solid $accent
+      color: $accent
+      background: transparent
+      padding: 13px 20px
+      font-size: 17px
+      &:hover
+        color: #fff
+        background: $accent
+        transition: all .5s ease
+    .form-page 
+      padding:
+        top: 30px
+        bottom: 0px
+      .h3-page
+        text-align: center
+    .form-wrapper
+      background: #fff
+      box-shadow: none
+      margin-bottom: 0px
+    .form-block__title
+      text-transform: uppercase
+      display: block
+      color: #000
+      font-size: 16px
+      position: absolute
+      top: 5px
+      left: 0
+      text-align: center
+    .form-block__bottom
+      .checkbox
+        span
+          line-height: 1
+
+
+
+
+@media only screen and (max-width: 320px)
+  .container
+    width: 100%
     
 
 
