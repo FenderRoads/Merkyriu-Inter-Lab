@@ -31,7 +31,7 @@
       align-self: flex-start
       padding: 16px 0px 0px 40px
       .tel-icon
-        left: 0px
+        left: 3px
     .top-line__callback
       padding: 10px 5px
       margin-top: 15px
@@ -54,7 +54,7 @@
 
       .bottom-line__basket
         padding: 7px 40px 7px 15px
-        img
+        .fas
           right: 15px
     .menu
       ul
@@ -158,12 +158,26 @@
     .manufact-block
       align-self: flex-start
       .manufact-block__img
+        background-image: url('../img/@2x/philips-grey-new.png')
+        background-size: 110px 27px
+        background-position: center
+        width: 110px
+        height: 27px 
         img
-          width: 131px
+          width: 184px
+          height: 37px
+        &:hover
+          background-image: url('../img/@2x/philips-new.png')
+          background-repeat: no-repeat
+          background-size: 110px 27px
+          background-position: center
+          width: 110px
+          height: 27px 
         
 
 
   .section-twoblocks
+    height: 330px
     .twoblocks
     .twoblocks-block
     .twoblocks-block-wrapper
@@ -306,7 +320,7 @@
         margin-left: 11px
       .direction-card__catalog
         height: 180px
-        line-height: 5.2
+        line-height: 5.1
 
 @media only screen and (max-width: 780px)
   .container
@@ -337,6 +351,7 @@
         border: 1px solid #fff
         position: relative
         margin-right: 10px
+        display: block
         span
           width: 27px
           height: 2px
@@ -362,6 +377,7 @@
 
     .dn-menu__onebutton
     .dn-menu__search, .dn-menu__basket
+      display: block
       width: 42px
       height: 42px
       border: 1px solid #fff
@@ -385,6 +401,7 @@
       padding: 8px 0px
       .dn-tel-first
         color: $accent
+        font-weight: bold
       .dn-tel-second
         color: #000
       .dn-tel-icon
@@ -416,6 +433,10 @@
         transition: all .5s ease
     .direction-card
       height: 200px
+      .direction-card__catalog
+          height: 200px
+          line-height: 7.5
+          font-size: 28px
       .direction-card-wrapper
         width: 320px
         height: 200px
@@ -482,9 +503,6 @@
         .icon-20
           bottom: 44px
           right: -4px
-        .direction-card__catalog
-          height: 200px
-          line-height: 5.75
         .direction-card-content__icon
           img
             width: 85%
@@ -499,49 +517,59 @@
   .section-manufact
     display: none
   .section-twoblocks
-    height: 625px
+    height: 555px
     .twoblocks
       flex-direction: column
       .twoblocks-block
         margin-top: 50px
         width: 100%
-        height: 235px
+        height: 205px
     .twoblocks-block__bgwoman
       width: 320px
       img
         width: 320px
-        height: 235px
+        height: 205px
       &:after
-        height: 235px
+        height: 205px
     .twoblocks-block__content
       top: 90px
-      right: -20px
+      right: -37px
+      .twoblocks-block__title
+        font-size: 14px
+        width: 70px
+      .twoblock-block__button
+        width: 100px
+        padding: 4px 10px
+        white-space: nowrap
+        font-size: 15px
     .twoblocks-block__woman
       width: 120px
-      top: -2px
-      left: -1px
+      top: -32px
+      left: 18px
       img
         width: 120px
     .twoblocks-block__bgcupboard
       width: 320px
       img
         width: 320px
-        height: 235px
+        height: 205px
       &:after
-        height: 235px
+        height: 205px
     .twoblocks-block__cupboard
       width: 120px
-      top: 22px
-      left: 0px
+      top: -18px
+      left: 19px
       img
         width: 120px
+        height: 223px
+    
 
 
   .section-map
     box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
     .section-inner 
       background: 0
-      height: 668px
+      height: 630px
     .map-title
       .line
         margin-bottom: 0px
@@ -550,6 +578,7 @@
     .map-block
       width: 320px
       top: 57px
+      box-shadow: 20px 30px 0 rgba(255,255,255,.7), 0px 0px 50px 0px rgba(#000, .15)
     .map-block-wrapper
       width: 320px
     .map-block-titleside
@@ -579,6 +608,7 @@
     .fourblocks-company
       text-align: center
       margin-bottom: 75px
+      margin-top: 15px
       ul
         li
           a
