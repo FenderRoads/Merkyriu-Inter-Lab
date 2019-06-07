@@ -1194,5 +1194,346 @@ b, strong
 		
 
 
-// Form
+// Form_
+
+// About company
+
+.section-company
+	.company-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.company-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-company-wrapper
+		display: none
+	.company-wrapper
+	.company
+	.company-blocks
+		display: flex
+		justify-content: space-around
+		padding:
+			top: 50px
+			bottom: 80px
+	.company-blocks__block
+		text-align: center
+		text-transform: uppercase
+	.company-block__icon
+	.company-block__title
+		+font('FuturaDemiC', 600, 21px)
+	.company-block__year
+		+font('FuturaMediumC', bold, 40px)
+		color: #2e3f61
+	
+
+.section-geography
+	padding: 40px 0px 70px 0px
+	.geography-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.geography
+		background: url('../img/@2x/geography-new.png') no-repeat
+		background-position: center
+		background-size: contain
+		height: 700px
+		width: 100%
+		margin: 0 auto
+// About company_
+
+
+// Basket
+
+.section-basket
+	.basket-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-basket-wrapper
+		display: none
+	.basket
+	.basket-button
+		display: none
+	.basket-blocks
+		margin-bottom: 150px
+	.basket-block-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 90px 0px rgba(#000, .20)
+		margin-top: 50px
+	.basket-block
+		display: flex
+
+	.basket-block__img
+		width: 322px
+		height: 322px
+		margin: 20px 0px
+		img
+			width: 322px
+			height: 322px
+	.basket-block__info
+		width: 586px
+		margin: 65px 0px 0px 60px
+		position: relative
+		.info-title
+			+font('FuturaDemiC', 600, 23px)
+			color: $accent
+			border: 1px solid $accent
+			padding: 15px 60px
+			text-transform: uppercase
+			width: 463px
+			text-align: center
+			line-height: 1.45
+			letter-spacing: 2px
+		.info-manufacturer
+			display: flex
+			justify-content: space-between
+			margin-top: 35px
+			width: 450px
+		.info-manufacturer__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			line-height: 1.65
+			letter-spacing: 2px
+			box-sizing: border-box
+			padding-top: 3px
+		.info-manufacturer__img
+
+		.info-quantity
+			display: flex
+			justify-content: space-between
+			width: 374px
+		.info-quantity__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			box-sizing: border-box
+			padding: 15px 0px 0px 0px
+			letter-spacing: 2px
+		.info-quantity__buttons
+			display: flex
+			box-sizing: border-box
+			padding: 21px 0px 0px 0px
+		.info-quantity__plus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.info-quantity__number
+			text-transform: uppercase
+			font-size: 30px
+			color: $accent
+			line-height: 0.8
+			box-sizing: border-box
+			padding: 0px 10px 5px 10px
+		.info-quantity__minus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.info-close
+			position: absolute
+			right: -85px
+			bottom: 172px
+			font-size: 22px
+			color: $accent
+			width: 31px
+			height: 31px
+			text-align: center
+			line-height: 1.6
+			border: 1px solid transparent
+			&:hover
+				border: 1px solid $accent
+				transition: border .25s ease
+
+	
+// Basket_
+
+// News
+
+.section-news
+	.news-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-news-wrapper
+		display: none
+	.news-wrapper
+		margin-top: 50px
+		margin-bottom: 170px
+	.news
+	.news-block
+	.news-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: $accent
+		text-transform: uppercase
+	.news-block__date
+		font-size: 13px
+		text-transform: uppercase
+		color: $accent
+	.news-block__text1
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 15px
+	.news-block__text2
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 35px
+	.news-block__images
+		display: flex
+		justify-content: space-between
+		margin-top: 75px
+	.news-block__img
+		width: 340px
+		height: 226px
+		img
+			width: 340px
+			height: 226px
+
+
+	
+// News_
+
+
+// Newslist
+
+.section-newslist
+	background: #fcfcfc
+	.newslist-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-newslist-wrapper
+		display: none
+	.newslist-wrapper
+		padding-bottom: 140px
+	.newslist
+	.newslist-block
+		box-shadow: 0px 0px 70px 0px rgba(#000, .2)
+		margin-bottom: 20px
+		background: #fff
+		display: flex
+		justify-content: space-between
+		position: relative
+		padding: 23px 23px 20px 30px
+		width: 930px
+		margin-left: auto
+		margin-right: auto
+	.newslist-block__date
+		position: absolute
+		bottom: 11px
+		right: 23px
+		color: $accent
+		font-size: 13px
+		text-transform: uppercase
+	.newslist-block-left
+	.left-title
+		+font('FuturaDemiC', 600, 17px)
+		color: $accent
+		text-transform: uppercase
+	.left-text
+		font-size: 16px
+		margin-top: 20px
+		width: 556px
+	.left-button
+		width: 245px
+		background: transparent
+		border: 1px solid $accent
+		color: $accent
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 16px)
+		letter-spacing: 2px
+		text-align: center
+		padding: 10px 0px
+		margin-top: 20px
+		&:hover
+			background: $accent
+			color: #fff
+			transition: all .5s ease
+
+	.newslist-block-right
+		width: 340px
+		height: 226px
+		.right-img
+			width: 340px
+			height: 226px
+			img
+				width: 340px
+				height: 226px
+
+
+
+	
+// Newslist_
 @import "_media"

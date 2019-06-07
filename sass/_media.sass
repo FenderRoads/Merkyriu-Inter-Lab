@@ -344,6 +344,62 @@
         font-size: 21px
 
 
+  .section-company
+    .company-blocks
+      padding:
+        top: 50px
+        bottom: 0px
+
+  .section-basket
+    .basket-block__info
+      margin: 55px 0px 0px 45px
+      .info-title
+        width: 315px
+        font-size: 16px
+        padding: 15px 30px
+      .info-manufacturer
+        width: 400px
+        .info-manufacturer__img
+          box-sizing: border-box
+          padding: 3px 0px 0px 0px
+          img
+            width: 80%
+        .info-quantity__title
+          font-size: 19px
+        .info-manufacturer__title
+          font-size: 19px
+      .info-quantity
+        width: 325px
+      .info-close
+        right: 24px
+        bottom: 130px
+    .basket-block__img
+      width: 250px
+      height: 250px
+      img
+        width: 250px
+        height: 250px
+
+  .section-news
+    .news-block__img
+      width: 225px
+      height: 150px
+      img
+        width: 225px
+        height: 150px
+    .news-wrapper
+      margin-bottom: 100px
+      margin-top: 10px
+    .news-block__images
+      margin-top: 35px
+    .news-block__text1
+      font-size: 15px
+    .news-block__text2
+      font-size: 15px
+        
+
+
+
 @media only screen and (max-width: 780px)
   .container
     width: 320px
@@ -832,8 +888,168 @@
         span
           line-height: 1
 
+  .section-company
+    .company-blocks
+      justify-content: center
+      flex-wrap: wrap
+      padding:
+        top: 25px
+        bottom: 0px
+    .company-title
+      display: none
+    .company-page
+      .h3-page
+        text-align: center
+        font-size: 18px
+        padding: 30px 0px 0px 0px
+    .dn-company-wrapper
+      display: block
+      padding: 20px 0px
+      .dn-company-button
+        display: block
+        text-transform: uppercase
+        text-align: center
+        border: 2px solid $accent
+        color: $accent
+        background: transparent
+        padding: 13px 20px
+        font-size: 17px
+        &:hover
+          color: #fff
+          background: $accent
+          transition: all .5s ease
 
+  .section-geography
+    display: none
 
+  .company-html
+    display: block
+    background: #e6edef
+    border-bottom: 35px solid #ececec
+    .advantages-threeblocks
+      justify-content: center
+      flex-wrap: wrap
+    .advantages-block:first-child
+    .advantages-block:nth-child(2)
+      margin-top: 0
+    .advantages-block:last-child
+      margin-top: 33px
+      margin-bottom: 28px
+    
+  .section-basket
+    .basket-block
+      flex-direction: column
+      background: #efefef
+      box-shadow: 0px 0px 118px 40px rgba(#000, .10)
+    .basket-blocks
+      margin-bottom: 0px
+    .basket-button
+      display: block
+      margin-left: auto
+      margin-right: auto
+      background: #005487
+      letter-spacing: 2px
+      text-transform: uppercase
+      width: 320px
+      color: #ffffff
+      font-size: 14px
+      text-align: center
+      padding: 10px 5px
+    .basket-block-wrapper
+      box-shadow: none
+      background: none
+      margin-top: 5px
+      margin-bottom: 25px
+    .dn-basket-wrapper
+      display: block
+      padding: 20px 0px
+      .dn-basket-button
+        display: block
+        text-transform: uppercase
+        text-align: center
+        border: 2px solid $accent
+        color: $accent
+        background: transparent
+        padding: 13px 20px
+        font-size: 17px
+        &:hover
+          color: #fff
+          background: $accent
+          transition: all .5s ease
+    .basket-page
+      text-align: center
+    .basket-block__img
+      margin-top: 50px
+      margin-left: 35px
+      margin-bottom: 40px
+      margin-right: 0
+    .basket-block__info
+      width: 100%
+      margin: 0
+      .info-manufacturer
+        display: none
+      .info-quantity
+        display: none
+      .info-title
+        width: 100%
+        padding: 0
+        border: none
+        font-size: 19px
+        margin-bottom: 15px
+      .info-close
+        right: -3px
+        top: -328px
+        
+  .section-news
+    background: #fcfcfc
+    .news-block__img
+      width: 225px
+      height: 150px
+      img
+        width: 225px
+        height: 150px
+    .news-wrapper
+      margin-bottom: 20px
+      margin-top: 10px
+      border-bottom: 35px solid #ededed
+      background: #fff
+    .news-block__images
+      display: none
+    .news-block
+      position: relative
+      padding-bottom: 65px
+      padding-top: 20px
+    .news-page
+      text-align: center
+    .news-block__date
+      position: absolute
+      bottom: 20px
+      right: 0
+    .dn-news-wrapper
+      display: block
+      padding-bottom: 10px
+      .dn-news-button
+        display: block
+        text-transform: uppercase
+        text-align: center
+        border: 2px solid $accent
+        color: $accent
+        background: transparent
+        padding: 13px 20px
+        font-size: 17px
+        &:hover
+          color: #fff
+          background: $accent
+          transition: all .5s ease
+    .news-block__text1
+      font-size: 16px
+      text-align: left
+    .news-block__text2
+      font-size: 16px
+      text-align: left
+    .news-block__title
+      text-align: center
+    
 
 @media only screen and (max-width: 320px)
   .container
