@@ -8,6 +8,22 @@
   .container
     width: 760px
   .section-header
+    height: 185px
+    .top-line
+      height: 67px
+    .topline-fixed
+      margin-left: -393px
+      height: 67px
+    .top-line-bg
+      height: 67px
+    .menu-wrapper-fixed
+      margin-left: -585px
+      top: 67px
+    .menu-wrapper-bg
+      height: 60px
+      top: 67px
+    .menu-wrapper-fixed
+      margin-left: -393px
     .top-line-wrapper
       justify-content: flex-start
     .top-line__menu
@@ -31,7 +47,7 @@
       align-self: flex-start
       padding: 16px 0px 0px 40px
       .tel-icon
-        left: 3px
+        left: 0px
     .top-line__callback
       padding: 10px 5px
       margin-top: 15px
@@ -54,7 +70,7 @@
 
       .bottom-line__basket
         padding: 7px 40px 7px 15px
-        .fas
+        img
           right: 15px
     .menu
       ul
@@ -195,7 +211,7 @@
         height: 280px
     .twoblock-block__button
     .twoblocks-block__content
-      top: 120px
+      top: 135px
       .twoblocks-block__title
         font-size: 20px
       .twoblock-block__button
@@ -406,7 +422,9 @@
   .section-slider
     display: none
   .section-header
+    height: 180px
     .drop-down-menu
+      background: rgba($accent, .5)
       display: none
       color: #fff
       white-space: nowrap
@@ -421,6 +439,24 @@
     .menu
       display: none
     .menu-wrapper
+      top: 106px
+      left: 50%
+      margin-left: -174px
+      position: fixed
+    .menu-wrapper-bg
+      top: 106px
+      height: 75px
+      position: fixed
+    .menu-wrapper-bg-mobile
+      top: 106px
+      height: 75px
+      position: fixed
+      display: block
+      width: 100%
+      background: $accent
+    .menu-wrapper-fixed
+      top: 106px
+      margin-left: -174px
     .dn-menu
       display: flex
       justify-content: space-between
@@ -474,8 +510,11 @@
       border: 1px solid #fff
       text-align: center
       color: #fff
-      font-size: 18px
-      line-height: 2.6
+      line-height: 3.3
+
+      img
+        width: 20px
+        height: 24px
     .dn-menu__search
       position: relative
       input
@@ -511,8 +550,26 @@
       .dn-tel-second
         color: #000
       .dn-tel-icon
-        .fas
-          color: $accent
+        padding-top: 3px
+        box-sizing: border-box
+        img
+          width: 20px
+          height: 20px
+    .bottom-line
+      height: 106px
+      z-index: 1001
+      position: fixed
+      top: 0
+      left: 50%
+      margin-left: -173px
+    .bottom-line-bg
+      background: #fff
+      width: 100%
+      height: 106px
+      top: 0
+      z-index: 1000
+      position: fixed
+      display: block
     .bottom-line-wrapper
       flex-direction: column
 
@@ -638,7 +695,7 @@
       &:after
         height: 205px
     .twoblocks-block__content
-      top: 90px
+      top: 100px
       right: 26px
       width: 130px
       .twoblocks-block__title

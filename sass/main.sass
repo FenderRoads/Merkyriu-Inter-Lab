@@ -129,10 +129,20 @@ b, strong
 // Header
 
 .section-header
+	height: 207.05px
 	.section-inner
+	.top-line-bg
+		background: #fff
+		width: 100%
+		height: 60px
+		z-index: 1000
+		position: fixed
+		display: none
 	.top-line
 		position: relative
 		color: $dark
+		background: #fff
+		z-index: 1001
 		&:after
 			content: ''
 			position: absolute
@@ -140,7 +150,17 @@ b, strong
 			bottom: 0
 			right: 0
 			left: 0
-			box-shadow: 0px 0px 25px rgba(#000, .15)
+			box-shadow: 0px 0px 25px rgba(#000, .1)
+			width: 100%
+	.topline-fixed
+		position: fixed
+		z-index: 1000
+		top: 0
+		left: 50%
+		margin-left: -585px
+		opacity: 1
+		transition: opacity .25s ease
+
 	.top-line__menu
 		display: flex
 		z-index: 10
@@ -168,13 +188,20 @@ b, strong
 			left: -15px
 		a
 			padding: 0px 20px 0px 0px
+			&:active
+				color: $accent
+			&:visited
+				color: $accent
 	.tel-icon
 		position: absolute
 		left: -40px
 		top: 0
-		font-size: 16px
+		width: 20px
+		height: 20px
 		padding: 18px 0px 18px 15px
-		color: $accent
+		img
+			width: 20px
+			height: 20px
 	.top-line__tel
 		z-index: 10
 		position: relative
@@ -191,11 +218,12 @@ b, strong
 		display: flex
 		padding: 18px 10px
 		+font1('FuturaDemiC', 600)
-		.fas
+		img
 			color: $accent
-			padding-top: 4px
+			padding-top: 2px
 			padding-right: 10px
-			font-size: 16px
+			width: 20px
+			height: 20px
 	.top-line__callback
 		display: block
 		z-index: 10
@@ -214,6 +242,8 @@ b, strong
 	.bottom-line-wrapper
 		display: flex
 		justify-content: space-between
+	.bottom-line-bg
+		display: none
 	.bottom-line
 		background: #fff
 	.bottom-line__logo
@@ -251,13 +281,34 @@ b, strong
 			text-transform: uppercase
 			letter-spacing: 3px
 			cursor: pointer
-			.fas
+			img
 				right: 28px
-				top: 9px
+				top: 7px
 				position: absolute
-				font-size: 19px
+				width: 20px
+				height: 24px
+				
+	.menu-wrapper-bg
+		background: $accent
+		height: 70px
+		top: 60px
+		position: fixed
+		width: 100%
+		z-index: 1000
+		display: none
+	.menu-wrapper-bg-mobile
+		display: none
 	.menu-wrapper
 		background: $accent
+		z-index: 1001
+	.menu-wrapper-fixed
+		position: fixed
+		top: 60px
+		left: 50%
+		margin-left: -585px
+		opacity: 1
+		transition: opacity .25s ease
+		
 	.dn-menu
 		display: none
 	.drop-down-menu
@@ -445,7 +496,7 @@ b, strong
 		width: 359px
 		height: 271px
 		&:hover .img-wrapper:after
-			background: rgba($accent, .3)
+			background: rgba(#7A9CB0, .90)
 			transition: background .5s ease
 	.img-wrapper
 		position: absolute
@@ -747,6 +798,7 @@ b, strong
 		+font('FuturaDemiC', 600, 22px)
 		color: #fff
 		text-transform: uppercase
+		line-height: 1.3
 	.twoblock-block__button
 		display: block
 		letter-spacing: 2px
@@ -756,9 +808,10 @@ b, strong
 		margin-top: 15px
 		border: 1px solid #fff
 		cursor: pointer
-		font-size: 20px
+		font-size: 19px
 		width: 130px
 		text-align: center
+
 		&:hover
 			transition: all .5s ease
 			color: #000000
@@ -777,7 +830,7 @@ b, strong
 // Map
 .section-map
 	.section-inner
-		background: url('../img/@2x/map.png') no-repeat
+		background: url('../img/@2x/map-new.png') no-repeat
 		background-size: cover
 		height: 768px
 	.map-title
