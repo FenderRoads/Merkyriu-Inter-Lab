@@ -24,36 +24,36 @@ $(function() {
     $(".drop-down-menu").toggle(500);
   });
 
-  $(".dn-menu__search").on("click", function() {
-    $("#search")
-      .css({
-        "-webkit-transition": "all .2s linear",
-        "width": "212px"
-      })
-      .focusout(function() {
-        $("#search").css({
-          "-webkit-transition": "all .2s linear",
-          "width": "44px"
-        });
-        $("#searchfas").css({
-          "-webkit-transition": "all .2s linear",
-          "left": "14px"
-        });
-        $('.dn-menu__vertline').css({
-          "-webkit-transition": "all .2s linear",
-          "opacity": "1"
-        })
-      });
-    $("#searchfas")
-      .css({
-        "-webkit-transition": "all .2s linear",
-        "left": "183px"
-      })
-    $('.dn-menu__vertline').css({
-      "-webkit-transition": "all .2s linear",
-      "opacity": "0"
-    })
-  });
+  // $(".dn-menu__search").on("click", function() {
+  //   $("#search")
+  //     .css({
+  //       "-webkit-transition": "all .2s linear",
+  //       "width": "212px"
+  //     })
+  //     .focusout(function() {
+  //       $("#search").css({
+  //         "-webkit-transition": "all .2s linear",
+  //         "width": "44px"
+  //       });
+  //       $("#searchfas").css({
+  //         "-webkit-transition": "all .2s linear",
+  //         "left": "14px"
+  //       });
+  //       $('.dn-menu__vertline').css({
+  //         "-webkit-transition": "all .2s linear",
+  //         "opacity": "1"
+  //       })
+  //     });
+  //   $("#searchfas")
+  //     .css({
+  //       "-webkit-transition": "all .2s linear",
+  //       "left": "183px"
+  //     })
+  //   $('.dn-menu__vertline').css({
+  //     "-webkit-transition": "all .2s linear",
+  //     "opacity": "0"
+  //   })
+  // });
 
   // Mobile menu_
 

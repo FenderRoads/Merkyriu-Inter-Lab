@@ -901,6 +901,11 @@ b, strong
 			top: 6px
 			left: -30px
 			font-size: 22px
+		img
+			position: absolute
+			top: 2px
+			left: -30px
+			font-size: 22px
 	.map-block-topblock
 		height: 150px
 		padding: 0px 80px
@@ -908,6 +913,9 @@ b, strong
 		position: relative
 	.topblock-tel
 		position: relative
+		img
+			width: 24px
+			height: 24px
 
 	.map-block-bottomblock
 		height: 150px
@@ -916,6 +924,9 @@ b, strong
 		position: relative
 	.bottomblock-tel
 		position: relative
+		img
+			width: 24px
+			height: 24px
 
 // twoblock_
 
@@ -1012,6 +1023,9 @@ b, strong
 	.section-inner
 	.contacts-wrapper
 	.contacts
+		padding-top: 35px
+	.dn-contacts-wrapper
+		display: none
 	.contacts-title
 		position: relative
 		text-align: center
@@ -1051,7 +1065,7 @@ b, strong
 		width: 750px
 		height: 362px
 		background: #fefefd
-		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		box-shadow: 0px 0px 80px 0px rgba(#000, .1)
 		padding: 20px
 		margin:
 			left: auto
@@ -1120,7 +1134,7 @@ b, strong
 	.delivery
 		width: 1095px
 		height: 357px
-		box-shadow: 0px 0px 80px 0px rgba(#000, .25)
+		box-shadow: 0px 0px 80px 0px rgba(#000, .12)
 		padding: 20px 25px
 		margin-top: 80px
 		margin-bottom: 140px
@@ -1155,6 +1169,7 @@ b, strong
 			text-align: center
 			text-transform: uppercase
 			letter-spacing: 3px
+			color: $accent
 		.line-text 
 			display: inline-block
 			position: relative
@@ -1194,7 +1209,7 @@ b, strong
 		display: flex
 		flex-direction: column
 		width: 500px
-		padding: 55px 0px
+		padding: 47px 0px
 		margin:
 			top: 0px
 			left: auto
@@ -1217,7 +1232,7 @@ b, strong
 		textarea
 			height: 100px
 			resize: none
-			padding: 15px
+			padding: 10px 15px
 			box-sizing: border-box
 			background: transparent
 			&::placeholder
@@ -1267,7 +1282,7 @@ b, strong
 			text-align: center
 			text-transform: uppercase
 			letter-spacing: 3px
-			color: $accent
+			color: #27598d
 		.line-text 
 			display: inline-block
 			position: relative
@@ -1372,17 +1387,18 @@ b, strong
 	.basket-block__img
 		width: 322px
 		height: 322px
-		margin: 20px 0px
+		margin: 30px 0px 40px 0px
 		img
 			width: 322px
 			height: 322px
+			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
 	.basket-block__info
 		width: 586px
 		margin: 65px 0px 0px 60px
 		position: relative
 		.info-title
 			+font('FuturaDemiC', 600, 23px)
-			color: $accent
+			color: #27598d
 			border: 1px solid $accent
 			padding: 15px 60px
 			text-transform: uppercase
@@ -1458,6 +1474,7 @@ b, strong
 			text-align: center
 			line-height: 1.6
 			border: 1px solid transparent
+			cursor: pointer
 			&:hover
 				border: 1px solid $accent
 				transition: border .25s ease
@@ -1468,11 +1485,14 @@ b, strong
 // News
 
 .section-news
+	background: #f6f6f6
+	.section-inner
+		background: #fff
 	.news-page
 		.h3-page
 			color: #000
 			font-size: 16px
-			padding: 30px 0px
+			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
 	.dn-news-wrapper
@@ -1480,12 +1500,16 @@ b, strong
 	.news-wrapper
 		margin-top: 50px
 		margin-bottom: 170px
+		padding-top: 35px
+		padding-bottom: 75px
+		box-shadow: 0px 70px 80px rgba(#000, .1)
 	.news
 	.news-block
 	.news-block__title
 		+font('FuturaDemiC', 600, 18px)
 		color: $accent
 		text-transform: uppercase
+		letter-spacing: 2px
 	.news-block__date
 		font-size: 13px
 		text-transform: uppercase
@@ -1507,6 +1531,7 @@ b, strong
 	.news-block__img
 		width: 340px
 		height: 226px
+		box-shadow: 0px 11px 10px rgba(#000, .1)
 		img
 			width: 340px
 			height: 226px
@@ -1532,8 +1557,9 @@ b, strong
 	.newslist-wrapper
 		padding-bottom: 140px
 	.newslist
+		padding-top: 40px
 	.newslist-block
-		box-shadow: 0px 0px 70px 0px rgba(#000, .2)
+		box-shadow: 0px 0px 70px 0px rgba(#000, .1)
 		margin-bottom: 20px
 		background: #fff
 		display: flex
