@@ -8,6 +8,22 @@
   .container
     width: 760px
   .section-header
+    height: 185px
+    .top-line
+      height: 67px
+    .topline-fixed
+      margin-left: -393px
+      height: 67px
+    .top-line-bg
+      height: 67px
+    .menu-wrapper-fixed
+      margin-left: -585px
+      top: 67px
+    .menu-wrapper-bg
+      height: 60px
+      top: 67px
+    .menu-wrapper-fixed
+      margin-left: -393px
     .top-line-wrapper
       justify-content: flex-start
     .top-line__menu
@@ -31,7 +47,7 @@
       align-self: flex-start
       padding: 16px 0px 0px 40px
       .tel-icon
-        left: 3px
+        left: 0px
     .top-line__callback
       padding: 10px 5px
       margin-top: 15px
@@ -39,7 +55,7 @@
       white-space: nowrap
       font-size: 11.5px
     .top-line__email
-      padding: 18px 13px 0px 16px
+      padding: 18px 11px 0 14px
       white-space: nowrap
     .bottom-line__logo
       img
@@ -54,7 +70,7 @@
 
       .bottom-line__basket
         padding: 7px 40px 7px 15px
-        .fas
+        img
           right: 15px
     .menu
       ul
@@ -195,7 +211,7 @@
         height: 280px
     .twoblock-block__button
     .twoblocks-block__content
-      top: 120px
+      top: 135px
       .twoblocks-block__title
         font-size: 20px
       .twoblock-block__button
@@ -348,7 +364,7 @@
     .company-blocks
       padding:
         top: 50px
-        bottom: 0px
+        bottom: 20px
 
   .section-basket
     .basket-block__info
@@ -389,7 +405,7 @@
         height: 150px
     .news-wrapper
       margin-bottom: 100px
-      margin-top: 10px
+      margin-top: 30px
     .news-block__images
       margin-top: 35px
     .news-block__text1
@@ -397,7 +413,33 @@
     .news-block__text2
       font-size: 15px
         
-
+  .section-newslist
+    .newslist-wrapper
+      padding-bottom: 100px
+    .newslist-block
+      width: 640px
+    .newslist-block-right
+      width: 240px
+      height: 159px
+      margin-top: 41px
+      .right-img
+        width: 240px
+        height: 159px
+        img
+          width: 240px
+          height: 159px
+    .newslist-block__date
+      bottom: 16px
+    .newslist-block-left
+      .left-title
+        font-size: 13px
+      .left-text
+        width: 361px
+        font-size: 13px
+      .left-button
+        width: 220px
+        font-size: 14px
+    .newslist-block-right
 
 
 @media only screen and (max-width: 780px)
@@ -406,7 +448,9 @@
   .section-slider
     display: none
   .section-header
+    height: 180px
     .drop-down-menu
+      background: rgba($accent, .5)
       display: none
       color: #fff
       white-space: nowrap
@@ -421,6 +465,24 @@
     .menu
       display: none
     .menu-wrapper
+      top: 106px
+      left: 50%
+      margin-left: -174px
+      position: fixed
+    .menu-wrapper-bg
+      top: 106px
+      height: 75px
+      position: fixed
+    .menu-wrapper-bg-mobile
+      top: 106px
+      height: 75px
+      position: fixed
+      display: block
+      width: 100%
+      background: $accent
+    .menu-wrapper-fixed
+      top: 106px
+      margin-left: -174px
     .dn-menu
       display: flex
       justify-content: space-between
@@ -443,12 +505,12 @@
         margin-right: 10px
         display: block
         span
-          width: 19px
+          width: 23px
           height: 2px
           background: #fff
           position: absolute
           top: 19px
-          left: 15px
+          left: 14px
           &:after, &:before
             content: ''
             width: 27px
@@ -458,12 +520,13 @@
             top: 19px
             left: 7px
           &:after
+            width: 30px
             top: -8px
             left: -7px
           &:before
-            width: 12px
-            top: 9px
-            left: 6px
+            width: 16px
+            top: 8px
+            left: 7px
         &:hover  
 
     .dn-menu__onebutton
@@ -474,26 +537,27 @@
       border: 1px solid #fff
       text-align: center
       color: #fff
-      font-size: 18px
-      line-height: 2.6
+      line-height: 3.3
+
+      img
+        width: 20px
+        height: 24px
     .dn-menu__search
       position: relative
-      input
-        width: 44px
-        height: 44px
-        border: 1px solid #fff
-        background: transparent
-        color: #ffffff
-        box-sizing: border-box
-        padding: 0px 10px
+      width: 42px
+      height: 42px
+      border: 1px solid #fff
+      font-size: 18px
       .fas
         position: absolute
         transition: all .2s linear
-        top: 13px
+        top: 12px
         left: 13px
         color: #fff
     .top-line
       display: none
+    .top-line__email
+      padding: 18px 9px 0px 16px
     .bottom-line__search
       display: none
 
@@ -511,8 +575,26 @@
       .dn-tel-second
         color: #000
       .dn-tel-icon
-        .fas
-          color: $accent
+        padding-top: 3px
+        box-sizing: border-box
+        img
+          width: 20px
+          height: 20px
+    .bottom-line
+      height: 106px
+      z-index: 1001
+      position: fixed
+      top: 0
+      left: 50%
+      margin-left: -173px
+    .bottom-line-bg
+      background: #fff
+      width: 100%
+      height: 106px
+      top: 0
+      z-index: 1000
+      position: fixed
+      display: block
     .bottom-line-wrapper
       flex-direction: column
 
@@ -638,7 +720,7 @@
       &:after
         height: 205px
     .twoblocks-block__content
-      top: 90px
+      top: 100px
       right: 26px
       width: 130px
       .twoblocks-block__title
@@ -744,15 +826,17 @@
         right: auto
         bottom: 0px
     .contacts-block-wrapper
-      padding: 20px 0px
+      padding: 0px
       border: none
     .contacts-block__list-1
       li
+        margin-top: 2px
         a
           font-size: 12px
     .contacts-block__list-2
       text-align: right
       li
+        margin-top: 2px
         a
           font-size: 12px
     .contacts-vertline-1, .contacts-vertline-2
@@ -791,6 +875,8 @@
     background: #fcfcfc
     .delivery-wrapper
       background: #fff
+      padding-bottom: 10px
+      box-shadow: 0px 70px 80px rgba(#000, .05)
     .delivery
       width: 320px
       height: 878px
@@ -814,7 +900,7 @@
     .delivery-block__texttitle
       display: block
       position: absolute
-      top: 25px
+      top: 15px
       left: 72px
       +font('FuturaDemiC', 600, 17px)
       color: $accent
@@ -837,7 +923,7 @@
       .h3-page
         text-align: center
         margin: 0px
-        padding: 13px
+        padding: 20px 0px
 
   .section-form
     .form-block__title
@@ -866,14 +952,14 @@
         transition: all .5s ease
     .form-page 
       padding:
-        top: 30px
+        top: 20px
         bottom: 0px
       .h3-page
         text-align: center
     .form-wrapper
       background: #fff
-      box-shadow: none
       margin-bottom: 0px
+      box-shadow: 0px 70px 70px rgba(#000, .1)
     .form-block__title
       text-transform: uppercase
       display: block
@@ -883,6 +969,9 @@
       top: 5px
       left: 0
       text-align: center
+    .form-block__inputs
+      textarea
+        height: 150px
     .form-block__bottom
       .checkbox
         span
@@ -894,7 +983,7 @@
       flex-wrap: wrap
       padding:
         top: 25px
-        bottom: 0px
+        bottom: 20px
     .company-title
       display: none
     .company-page
@@ -937,6 +1026,9 @@
       margin-bottom: 28px
     
   .section-basket
+    .basket
+      padding-bottom: 60px
+      box-shadow: 0px -140px 80px rgba(#000, .05) inset
     .basket-block
       flex-direction: column
       background: #efefef
@@ -962,7 +1054,7 @@
       margin-bottom: 25px
     .dn-basket-wrapper
       display: block
-      padding: 20px 0px
+      padding: 0px 0px 20px 0px
       .dn-basket-button
         display: block
         text-transform: uppercase
@@ -1011,8 +1103,9 @@
     .news-wrapper
       margin-bottom: 20px
       margin-top: 10px
-      border-bottom: 35px solid #ededed
       background: #fff
+      padding-top: 0px
+      padding-bottom: 20px
     .news-block__images
       display: none
     .news-block
@@ -1021,6 +1114,8 @@
       padding-top: 20px
     .news-page
       text-align: center
+      .h3-page
+        padding-top: 20px
     .news-block__date
       position: absolute
       bottom: 20px
@@ -1028,6 +1123,7 @@
     .dn-news-wrapper
       display: block
       padding-bottom: 10px
+      padding-top: 15px
       .dn-news-button
         display: block
         text-transform: uppercase
@@ -1050,7 +1146,42 @@
     .news-block__title
       text-align: center
     
+  .section-newslist
+    .newslist-wrapper
+      padding-bottom: 0px
+      background: #fff
+    .newslist-block
+      width: 320px
+      padding: 0
+      box-shadow: none
+      padding-top: 23px
+      padding-bottom: 7px
+    .newslist
+      padding: 0
+    .newslist-block-right
+      display: none
+    .newslist-block__date
+      bottom: 16px
+      bottom: 74px
+    .newslist-block-wrapper
+      border-bottom: 30px solid #ebebeb
+    .newslist-block-left
+      .left-title
+        font-size: 18px
+        text-align: center
+      .left-text
+        width: 100%
+        font-size: 17px
+      .left-button
+        width: 100%
+        font-size: 15px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 55px
+    .newslist-block-right
 
+
+    
 @media only screen and (max-width: 320px)
   .container
     width: 100%
