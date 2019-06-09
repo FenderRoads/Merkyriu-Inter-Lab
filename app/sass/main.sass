@@ -913,9 +913,10 @@ b, strong
 		position: relative
 	.topblock-tel
 		position: relative
-		img
-			width: 24px
-			height: 24px
+		.fa-phone
+			top: 2px
+			left: -32px
+		
 
 	.map-block-bottomblock
 		height: 150px
@@ -924,9 +925,9 @@ b, strong
 		position: relative
 	.bottomblock-tel
 		position: relative
-		img
-			width: 24px
-			height: 24px
+		.fa-phone
+			top: 2px
+			left: -32px
 
 // twoblock_
 
@@ -1947,4 +1948,294 @@ b, strong
 
 	
 // Service_
+
+// Commodity
+
+.section-commodity
+	.commodity-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.commodity-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+			padding-top: 70px
+			padding-bottom: 30px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-commodity-wrapper
+		display: none
+	.dn-commodity-button
+	.commodity-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 80px rgba(#000, .2)
+		padding-top: 50px
+		padding-bottom: 60px
+	.commodity
+	.commodity-block
+		display: flex
+	.commodity-block-img
+		width: 322px
+		height: 322px
+		img
+			width: 322px
+			height: 322px
+			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
+	.commodity-block__info
+		margin-left: 55px
+		.commodity-title
+			+font('FuturaDemiC', 600, 18px)
+			color: #27598d
+			border: 1px solid $accent
+			padding: 10px 0px
+			text-transform: uppercase
+			width: 634px
+			text-align: center
+			line-height: 1.45
+			letter-spacing: 2px
+		.commodity-manufacturer
+			display: flex
+			justify-content: space-between
+			margin-top: 35px
+			width: 450px
+		.commodity-manufacturer__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			line-height: 1.65
+			letter-spacing: 2px
+			box-sizing: border-box
+			padding-top: 3px
+		.commodity-manufacturer__img
+
+		.commodity-quantity
+			display: flex
+			justify-content: space-between
+			width: 374px
+		.commodity-quantity__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			box-sizing: border-box
+			padding: 15px 0px 0px 0px
+			letter-spacing: 2px
+		.commodity-quantity__buttons
+			display: flex
+			box-sizing: border-box
+			padding: 21px 0px 0px 0px
+		.commodity-quantity__plus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.commodity-quantity__number
+			text-transform: uppercase
+			font-size: 30px
+			color: $accent
+			line-height: 0.8
+			box-sizing: border-box
+			padding: 0px 10px 5px 10px
+		.commodity-quantity__minus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+
+		.commodity-text
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 14px
+			margin-top: 18px
+		.commodity-buttons
+			display: flex
+			text-align: center
+			text-transform: uppercase
+			color: #fff
+			margin-top: 20px
+			.commodity-buttons__first
+				width: 250px
+				background: $accent
+				padding: 8px 0px
+				cursor: pointer
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)
+					transition: box-shadow .25s ease
+			.commodity-buttons__second
+				width: 250px
+				background: rgba($accent, .2)
+				padding: 8px 0px
+				cursor: pointer
+			.commodity-buttons__third
+				width: 250px
+				background: rgba($accent, .4)
+				padding: 8px 0px
+				cursor: pointer
+
+	.commodity-table
+		display: flex
+	.commodity-table-block
+		display: flex
+		padding: 20px 50px
+		border: 1px solid $accent
+		text-transform: uppercase
+		color: #000
+		letter-spacing: 2px
+		width: 281px
+		.feature
+			display: block
+			li
+				padding: 6px 0px
+		.value
+			margin-left: 35px
+			li
+				padding: 6px 0px
+	.commodity-table-block:nth-child(2)
+		border-left: 1px solid transparent
+		border-right: 1px solid transparent
+
+
+	
+// Commodity_
+
+// Postcommodity
+
+.section-postcommodity
+	.postcommodity-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+			padding-top: 60px
+			padding-bottom: 40px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.postcommodity-wrapper
+		margin-bottom: 190px
+	.postcommodity
+	.postcommodity-blocks
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	.postcommodity-block
+		padding: 15px
+		background: #efefef
+		width: 226px
+	.postcommodity-block__img
+		width: 210px
+		height: 210px
+		img
+			width: 210px
+			height: 210px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.postcommodity-block-info
+	.postcommodity-block__title
+		+font('FuturaDemiC', 600, 17px)
+		text-align: center
+		color: #27598d
+		margin-top: 20px
+		text-transform: uppercase
+	.postcommodity-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 14px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.postcommodity-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 14px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	
+	.postcommodity-block__buttons
+		display: flex
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		.buttons-first
+			padding: 8px 0px
+			width: 128px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 128px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+
+	
+// Postcommodity_
 @import "_media"
