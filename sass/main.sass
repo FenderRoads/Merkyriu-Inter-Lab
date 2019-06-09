@@ -1235,6 +1235,7 @@ b, strong
 			padding: 10px 15px
 			box-sizing: border-box
 			background: transparent
+			border: 1px solid $accent
 			&::placeholder
 				text-transform: uppercase
 
@@ -1615,4 +1616,335 @@ b, strong
 
 	
 // Newslist_
+
+
+// Reviews
+
+.section-reviews
+	.reviews-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 20px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.reviews-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-reviews-wrapper
+		display: none
+	.dn-reviews-button
+	.reviews
+	.reviews-blocks
+		padding-top: 35px
+		padding-bottom: 100px
+	.reviews-block
+		width: 1000px
+		padding: 35px
+		padding: 30px
+		box-shadow: 0px 0px 70px rgba(#000, .1)
+	.reviews-block-nested
+		display: flex
+		border: 1px solid $accent
+	.reviews-block-wrapper
+		margin-bottom: 40px
+	.reviews-block-leftside
+		width: 200px
+		height: 223px
+		margin: 19px 25px
+		img
+			width: 200px
+			height: 223px
+	.reviews-blocks-rightside
+		.rightside-title
+			position: relative
+			+font('FuturaDemiC', 600, 20px)
+			color: #27598d
+			text-transform: uppercase
+			margin-top: 23px
+			letter-spacing: 1px
+			span
+				position: absolute
+				bottom: -6px
+				left: 0
+				height: 1px
+				width: 145px
+				background: $accent
+		.rightside-text
+			color: #000
+			font-size: 14px
+			margin-top: 16px
+			letter-spacing: 1px
+			font-weight: bold
+			span:last-child
+				margin-top: 15px
+				display: block
+
+	
+// Reviews_
+
+// Stockitem
+
+.section-stockitem
+	background: #f6f6f6
+	.section-inner
+		background: #fff
+	.stockitem-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 0px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-stockitem-wrapper
+		display: none
+	.stockitem-wrapper
+		margin-top: 50px
+		margin-bottom: 170px
+		padding-top: 35px
+		padding-bottom: 75px
+		box-shadow: 0px 70px 80px rgba(#000, .1)
+	.stockitem
+	.stockitem-block
+	.stockitem-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: $accent
+		text-transform: uppercase
+		letter-spacing: 2px
+	.stockitem-block__text1
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 15px
+	.stockitem-block__text2
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 35px
+	.stockitem-block__images
+		display: flex
+		justify-content: space-between
+		margin-top: 75px
+	.stockitem-block__img
+		width: 340px
+		height: 226px
+		box-shadow: 0px 11px 10px rgba(#000, .1)
+		img
+			width: 340px
+			height: 226px
+
+// Stockitem_
+
+// Stock
+
+.section-stock
+	.stock-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 20px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.stock-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-stock-wrapper
+		display: none
+	.stock-wrapper
+		padding-bottom: 140px
+	.stock
+	.stock-blocks
+	.stock-block
+		display: flex
+		padding: 30px 0px
+	.stock-block-wrapper
+		background: #ffffff
+		margin-top: 40px
+		box-shadow: 0px 0px 150px rgba(#000, .1)
+	.stock-block-leftside
+		width: 355px
+		height: 249px
+		img
+			width: 355px
+			height: 249px
+	.stock-block-rightside
+		padding-left: 20px
+		.rightside-title
+			+font('FuturaDemiC', 600, 18px)
+			color: $accent
+			text-transform: uppercase
+		.rightside-text
+			font-weight: bold
+			margin-top: 15px
+		.rightside-button
+			margin-top: 24px
+			text-transform: uppercase
+			text-align: center
+			background: transparent
+			border: 2px solid $accent
+			letter-spacing: 2px
+			padding: 10px 0px
+			width: 250px
+			+font('FuturaDemiC', 600, 16px)
+			cursor: pointer
+			margin-left: auto
+			&:hover
+				color: #ffffff
+				background: $accent
+				transition: all .5s ease
+
+
+	
+// Stock_
+
+
+// Service
+
+.section-service
+	.service-title-second
+		display: none
+	.service-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.service-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-service-wrapper
+		display: none
+	.service-wrapper
+	.service
+	
+	.service-block
+		box-shadow: 0px 0px 80px rgba(#000, .1)
+		padding: 25px
+		margin-top: 17px
+	.service-block__text
+		text-align: center
+		font-weight: bold
+	
+	.service-cards-title
+		+font('FuturaDemiC', 600, 18px)
+		text-transform: uppercase
+		color: #27598d
+		margin-top: 40px
+	
+	.service-cards-wrapper
+
+	.service-cards
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-top: 50px
+		padding-bottom: 60px
+	.service-card
+		position: relative
+		box-shadow: 0px 0px 80px rgba(#000, .12)
+		width: 355px
+		height: 319px
+		margin-bottom: 70px
+	.service-card__bg-img
+		width: 355px
+		height: 244px
+		box-shadow: 0px 50px 50px rgba(#000, .05)
+		img
+			width: 355px
+			height: 244px
+	.service-card__img
+		position: absolute
+		top: 31px
+		left: 21px
+		width: 110px
+		height: 165px
+		img
+			width: 110px
+			height: 165px
+	.service-card__bottom
+		.bottom-title
+			text-align: center
+			+font('FuturaDemiC', 600, 16px)
+			text-transform: uppercase
+			color: #343434
+			padding: 10px
+			border: 2px solid $accent
+			border-top: 1px solid $accent
+			
+
+	
+// Service_
 @import "_media"
