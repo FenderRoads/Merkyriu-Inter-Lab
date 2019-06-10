@@ -774,9 +774,15 @@ b, strong
 		height: 358px
 	.twoblocks-block-wrapper
 		position: relative
+		&:hover .twoblocks-block__bgwoman:after
+			background: rgba(#7697ac, .45)
+			transition: background .5s ease
+		&:hover .twoblocks-block__bgcupboard:after
+			background: rgba(#7697ac, .45)
+			transition: background .5s ease
 	.twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
 		position: absolute
-		width: 572px
+		width: 574px
 		&:after
 			position: absolute
 			content: ''
@@ -785,6 +791,7 @@ b, strong
 			left: 0
 			right: 0
 			height: 358px
+			background: rgba($accent, .85)
 		img
 			width: 574px
 			height: 358px
@@ -2100,11 +2107,17 @@ b, strong
 				background: rgba($accent, .2)
 				padding: 8px 0px
 				cursor: pointer
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)
+					transition: box-shadow .25s ease
 			.commodity-buttons__third
 				width: 250px
 				background: rgba($accent, .4)
 				padding: 8px 0px
 				cursor: pointer
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)
+					transition: box-shadow .25s ease
 
 	.commodity-table
 		display: flex
@@ -2167,6 +2180,7 @@ b, strong
 	.postcommodity-wrapper
 		margin-bottom: 190px
 	.postcommodity
+
 	.postcommodity-blocks
 		display: flex
 		justify-content: space-between
@@ -2238,4 +2252,543 @@ b, strong
 
 	
 // Postcommodity_
+
+// Tiles
+
+.section-tiles
+	.tiles-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.tiles-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+
+
+	.dn-tiles-wrapper
+		display: none
+
+
+	.tiles-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+	.tiles
+	.tiles-flex
+		display: flex
+
+
+	.tiles-sidebar
+		width: 247px
+	.tiles-sidebar__button
+		width: 244px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
+		text-transform: uppercase
+		color: $accent
+		text-align: center
+		font-size: 18px
+		cursor: pointer
+		margin-bottom: 15px
+	.tiles-sidebar__list
+		.main-list
+			& > li
+				position: relative
+				text-transform: uppercase
+				border: 1px solid $accent
+				text-align: center
+				color: #000
+				font-size: 14px
+				padding: 10px 0px
+				border-bottom: 1px solid transparent
+			& > li:last-child
+				border-bottom: 1px solid $accent
+			& > li:nth-child(7)
+				border: 5px solid $accent
+			.elem-7-level-2
+				margin-top: 10px
+				padding-bottom: 0px
+				background: $accent
+				color: #fff
+				li
+					text-align: left
+					padding: 3px 26px
+				.elem-6-level-3
+					
+
+
+
+
+	.tiles-catalog
+		margin-left: 60px
+		width: 100%
+	.tiles-catalog__settings
+		padding: 15px 15px
+		display: flex
+		background: #7697ac
+		box-shadow: 0px 0px 60px rgba(#000, .1)
+		select
+			background: transparent
+			border: 1px solid #fff
+			color: #fff
+			margin-left: 10px
+			text-transform: uppercase
+			font-size: 14px
+			outline: none
+			option
+				background: #7697ac
+				outline: none
+	.settings-sorting
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 293px
+		select
+			width: 130px
+	.settings-sorting__title
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 2px
+		white-space: nowrap
+	.settings-display
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 280px
+		margin-left: 28px
+		.fas
+			font-size: 24px
+			color: #9bbbcf
+			margin-left: 6px
+			margin-top: 2px
+			cursor: pointer
+			&.list-active
+				color: #fff
+
+	.settings-display__title
+		+font('FuturaDemiC', 600, 16px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		white-space: nowrap
+		padding-top: 2px
+		box-sizing: border-box
+	.settings-display__buttons
+		line-height: 1.5
+	.settings-displaynumber
+		display: flex
+		color: #fff
+		margin-left: 28px
+		select
+			width: 44px
+	.settings-displaynumber__title
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+	.tiles-catalog__cards-wrapper
+		margin-top: 15px
+	.tiles-catalog__cards
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	.tiles-block
+		padding: 15px
+		background: #efefef
+		width: 235px
+		margin-bottom: 25px
+	.tiles-block__img
+		width: 219px
+		height: 219px
+		img
+			width: 219px
+			height: 219px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.tiles-block-info
+	.tiles-block__title
+		+font('FuturaDemiC', 600, 17px)
+		text-align: center
+		color: #27598d
+		margin-top: 20px
+		text-transform: uppercase
+	.tiles-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 14px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.tiles-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 14px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	
+	.tiles-block__buttons
+		display: flex
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		.buttons-first
+			padding: 8px 0px
+			width: 128px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 128px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+	
+	.tiles-catalog-togglepages
+		display: flex
+		justify-content: center
+		margin-top: 90px
+		.togglepages__button
+			color: #d1d1d1
+			font-size: 21px
+			width: 32px
+			height: 32px
+			text-align: center
+			line-height: 1.5
+			border: 1px solid transparent
+			cursor: pointer
+			&.toggle-active
+				border: 1px solid $accent
+				color: $accent
+				font-weight: bold
+
+	.tiles-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+
+
+
+// Tiles_
+
+// Tilesrow
+
+.section-tilesrow
+	.tilesrow-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.tilesrow-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+
+
+	.dn-tilesrow-wrapper
+		display: none
+
+
+	.tilesrow-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+	.tilesrow
+	.tilesrow-flex
+		display: flex
+
+
+	.tilesrow-sidebar
+		width: 247px
+	.tilesrow-sidebar__button
+		width: 244px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
+		text-transform: uppercase
+		color: $accent
+		text-align: center
+		font-size: 18px
+		cursor: pointer
+		margin-bottom: 15px
+	.tilesrow-sidebar__list
+		.main-list
+			& > li
+				position: relative
+				text-transform: uppercase
+				border: 1px solid $accent
+				text-align: center
+				color: #000
+				font-size: 14px
+				padding: 10px 0px
+				border-bottom: 1px solid transparent
+			& > li:last-child
+				border-bottom: 1px solid $accent
+			& > li:nth-child(7)
+				border: 5px solid $accent
+			.elem-7-level-2
+				margin-top: 10px
+				padding-bottom: 0px
+				background: $accent
+				color: #fff
+				li
+					text-align: left
+					padding: 3px 26px
+				.elem-6-level-3
+					
+
+
+
+
+	.tilesrow-catalog
+		margin-left: 60px
+		width: 100%
+	.tilesrow-catalog__settings
+		padding: 15px 15px
+		display: flex
+		background: #7697ac
+		box-shadow: 0px 0px 60px rgba(#000, .1)
+		select
+			background: transparent
+			border: 1px solid #fff
+			color: #fff
+			margin-left: 10px
+			text-transform: uppercase
+			font-size: 14px
+			outline: none
+			option
+				background: #7697ac
+				outline: none
+	.settings-sorting
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 293px
+		select
+			width: 130px
+	.settings-sorting__title
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 2px
+		white-space: nowrap
+	.settings-display
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 280px
+		margin-left: 28px
+		.fas
+			font-size: 24px
+			color: #9bbbcf
+			margin-left: 6px
+			margin-top: 2px
+			cursor: pointer
+			&.list-active
+				color: #fff
+
+	.settings-display__title
+		+font('FuturaDemiC', 600, 16px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		white-space: nowrap
+		padding-top: 2px
+		box-sizing: border-box
+	.settings-display__buttons
+		line-height: 1.5
+	.settings-displaynumber
+		display: flex
+		color: #fff
+		margin-left: 28px
+		select
+			width: 44px
+	.settings-displaynumber__title
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+	.tilesrow-catalog__cards-wrapper
+		margin-top: 15px
+	.tilesrow-catalog__cards
+	.tilesrow-block
+		padding: 20px 20px 35px 20px
+		background: #efefef
+		width: 800px
+		margin-bottom: 25px
+		display: flex
+	.tilesrow-block__img
+		width: 219px
+		height: 219px
+		img
+			width: 219px
+			height: 219px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.tilesrow-block-info
+		margin-left: 30px
+	.tilesrow-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: #27598d
+		text-transform: uppercase
+	.tilesrow-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		width: 245px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 17px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.tilesrow-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 17px
+		width: 245px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	.tilesrow-block__description
+		margin-top: 16px
+		margin-bottom: 20px
+		line-height: 1.4
+		+font('FuturaLightC', 200, 14px)
+		text-transform: uppercase
+		width: 380px
+	.tilesrow-block__buttons
+		display: flex
+		justify-content: space-between
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		font-size: 15px
+		letter-spacing: 2px
+		width: 510px
+		.buttons-first
+			padding: 8px 0px
+			width: 230px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 230px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+	
+	.tilesrow-catalog-togglepages
+		display: flex
+		justify-content: center
+		margin-top: 60px
+		.togglepages__button
+			color: #d1d1d1
+			font-size: 21px
+			width: 32px
+			height: 32px
+			text-align: center
+			line-height: 1.5
+			border: 1px solid transparent
+			cursor: pointer
+			&.toggle-active
+				border: 1px solid $accent
+				color: $accent
+				font-weight: bold
+
+	.tilesrow-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+
+// Tilestow_
 @import "_media"
