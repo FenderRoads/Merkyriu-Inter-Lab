@@ -572,6 +572,8 @@
         font-size: 17px
       .commodity-quantity__title
         font-size: 17px
+      .commodity-quantity__buttons
+        padding: 15px 0px 0px 0px
     .commodity-manufacturer__img
       img
         width: 135px
@@ -609,7 +611,416 @@
     .postcommodity-block__buttons
       font-size: 9px 
 
-@media only screen and (max-width: 780px)
+
+  .section-tiles
+    .tiles-sidebar
+      width: 200px
+    .tiles-sidebar__button
+      width: 198px
+      padding: 8px 0px
+      border: 2px solid $accent
+      font-size: 17px
+      margin-bottom: 15px
+    .tiles-sidebar__list
+      .main-list
+        & > li
+          position: relative
+          text-transform: uppercase
+          border: 1px solid $accent
+          text-align: center
+          color: #000
+          font-size: 12px
+          padding: 10px 0px
+          border-bottom: 1px solid transparent
+        & > li:last-child
+          border-bottom: 1px solid $accent
+        & > li:nth-child(7)
+          border: 5px solid $accent
+        .elem-7-level-2
+          margin-top: 10px
+          padding-bottom: 0px
+          background: $accent
+          color: #fff
+          li
+            text-align: left
+            padding: 3px 26px
+          .elem-6-level-3
+
+
+    .tiles-catalog
+      margin-left: 10px
+      width: 555px
+    .tiles-catalog__settings
+      padding: 16px 5px
+      display: flex
+      background: #7697ac
+      box-shadow: 0px 0px 60px rgba(#000, .1)
+      select
+        background: transparent
+        border: 1px solid #fff
+        color: #fff
+        margin-left: 0px
+        text-transform: uppercase
+        font-size: 9px
+        outline: none
+        align-self: flex-start
+        option
+          background: #7697ac
+          outline: none
+    .settings-sorting
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 293px
+      select
+        width: 94px
+    .settings-sorting__title
+      text-transform: uppercase
+      font-size: 10px
+      letter-spacing: 2px
+      white-space: nowrap
+    .settings-display
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 280px
+      margin-left: 10px
+      .fas
+        font-size: 16px
+        color: #9bbbcf
+        margin-left: 6px
+        margin-top: -1px
+        cursor: pointer
+        &.list-active
+          color: #fff
+
+    .settings-display__title
+      +font('FuturaDemiC', 600, 9px)
+      text-transform: uppercase
+      letter-spacing: 2px
+      white-space: nowrap
+      padding-top: 2px
+      box-sizing: border-box
+    .settings-display__buttons
+      line-height: 1.5
+      display: flex
+    .settings-displaynumber
+      display: flex
+      color: #fff
+      margin-left: 10px
+      select
+        width: 30px
+    .settings-displaynumber__title
+      text-transform: uppercase
+      letter-spacing: 2px
+      font-size: 9px
+    
+
+    .tiles-block
+      width: 150px
+      padding: 7px
+    .tiles-block__img
+      width: 135px
+      height: 135px
+      img
+        width: 135px
+        height: 135px
+        box-shadow: 15px 15px 0px rgba(#fff, .5) 
+    .tiles-block__title
+      font-size: 12px
+    .tiles-block__manufacturer
+      .manufacturer-title
+        font-size: 11px
+        line-height: 2
+      .manufacturer-img
+        img
+          width: 60px
+          height: 15px
+    .tiles-block__code
+      font-size: 11px
+    .tiles-block__buttons
+      font-size: 9px 
+
+
+  .section-tilesrow
+    .tilesrow-sidebar
+      width: 200px
+    .tilesrow-sidebar__button
+      width: 198px
+      padding: 8px 0px
+      border: 2px solid $accent
+      font-size: 17px
+      margin-bottom: 15px
+    .tilesrow-sidebar__list
+      .main-list
+        & > li
+          position: relative
+          text-transform: uppercase
+          border: 1px solid $accent
+          text-align: center
+          color: #000
+          font-size: 12px
+          padding: 10px 0px
+          border-bottom: 1px solid transparent
+        & > li:last-child
+          border-bottom: 1px solid $accent
+        & > li:nth-child(7)
+          border: 5px solid $accent
+        .elem-7-level-2
+          margin-top: 10px
+          padding-bottom: 0px
+          background: $accent
+          color: #fff
+          li
+            text-align: left
+            padding: 3px 26px
+          .elem-6-level-3
+
+
+    .tilesrow-catalog
+      margin-left: 10px
+      width: 555px
+    .tilesrow-catalog__settings
+      padding: 16px 5px
+      display: flex
+      background: #7697ac
+      box-shadow: 0px 0px 60px rgba(#000, .1)
+      select
+        background: transparent
+        border: 1px solid #fff
+        color: #fff
+        margin-left: 0px
+        text-transform: uppercase
+        font-size: 9px
+        outline: none
+        align-self: flex-start
+        option
+          background: #7697ac
+          outline: none
+    .settings-sorting
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 293px
+      select
+        width: 94px
+    .settings-sorting__title
+      text-transform: uppercase
+      font-size: 10px
+      letter-spacing: 2px
+      white-space: nowrap
+    .settings-display
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 280px
+      margin-left: 10px
+      .fas
+        font-size: 16px
+        color: #9bbbcf
+        margin-left: 6px
+        margin-top: -1px
+        cursor: pointer
+        &.list-active
+          color: #fff
+
+    .settings-display__title
+      +font('FuturaDemiC', 600, 9px)
+      text-transform: uppercase
+      letter-spacing: 2px
+      white-space: nowrap
+      padding-top: 2px
+      box-sizing: border-box
+    .settings-display__buttons
+      line-height: 1.5
+      display: flex
+    .settings-displaynumber
+      display: flex
+      color: #fff
+      margin-left: 10px
+      select
+        width: 30px
+    .settings-displaynumber__title
+      text-transform: uppercase
+      letter-spacing: 2px
+      font-size: 9px
+    
+
+    .tilesrow-block
+      width: 515px
+    .tilesrow-block__img
+      width: 135px
+      height: 135px
+      img
+        width: 135px
+        height: 135px
+        box-shadow: 15px 15px 0px rgba(#fff, .5) 
+    .tilesrow-block__title
+      font-size: 13px
+    .tilesrow-block__manufacturer
+      font-size: 14px
+      .manufacturer-img
+    .tilesrow-block__code
+      font-size: 14px
+    .tilesrow-block__description
+      margin-top: 10px
+      margin-bottom: 13px
+      font-size: 13px
+      width: 330px
+    .tilesrow-block__buttons
+      height: 35px
+      width: 325px
+      font-size: 14px
+      .buttons-first
+        width: 150px
+        padding: 5px 0px
+      .buttons-second
+        width: 150px
+        padding: 5px 0px
+  
+  .section-tilescouches
+    .tilescouches-sidebar
+      width: 200px
+    .tilescouches-sidebar__button
+      width: 198px
+      padding: 8px 0px
+      border: 2px solid $accent
+      font-size: 17px
+      margin-bottom: 15px
+    .tilescouches-sidebar__list
+      .main-list
+        & > li
+          position: relative
+          text-transform: uppercase
+          border: 1px solid $accent
+          text-align: center
+          color: #000
+          font-size: 12px
+          padding: 10px 0px
+          border-bottom: 1px solid transparent
+        & > li:last-child
+          border-bottom: 1px solid $accent
+        & > li:nth-child(7)
+          border: 5px solid $accent
+        .elem-7-level-2
+          margin-top: 10px
+          padding-bottom: 0px
+          background: $accent
+          color: #fff
+          li
+            text-align: left
+            padding: 3px 26px
+          .elem-6-level-3
+    .tilescouches-catalog
+      margin-left: 10px
+    .tilescouches-catalog__cards
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    .tilescouches-block
+      position: relative
+      width: 170px
+      height: 155px
+      margin-bottom: 20px
+      &:hover::before
+    .tilescouches-block__bg-img
+      width: 170px
+      height: 155px
+      img
+        width: 170px
+        height: 155px
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba($accent, .75)
+    .tilescouches-block__info
+      color: #fff
+      position: absolute
+      bottom: 5px
+      left: 17px
+    .info-title
+      text-transform: uppercase
+      +font('FuturaMediumC', 500, 11px)
+      text-align: center
+      border: 1px solid #fff
+      padding: 8px 10px
+    .info-more
+      font-size: 10px
+      margin-top: 3px
+    .tilescouches-block__img
+      position: absolute
+      top: 18px
+      left: 30px
+      width: 115px
+      height: 73px
+      img
+        width: 115px
+        height: 73px
+
+  .section-dixion
+    .dixion-top
+      display: flex
+      justify-content: space-between
+      margin-top: 40px
+      margin-bottom: 40px
+    .dixion-logo
+      margin-top: 55px
+      width: 270px
+      height: 106px
+      box-shadow: 0px 0px 80px rgba(#000, .15)
+      img
+        width: 270px
+        height: 106px
+        position: relative
+      &:before
+        content: ''
+        top: 10px
+        left: 10px
+        height: 138px
+        border: 1px solid $accent
+        position: absolute
+    .dixion-text
+      font-size: 15px
+      width: 455px
+      line-height: 1.5
+
+
+    .dixion-block
+      width: 220px
+      height: 201px
+      margin-bottom: 50px
+
+    .dixion-block__bg-img
+      width: 220px
+      height: 201px
+      img
+        width: 220px
+        height: 201px
+    .dixion-block__img
+      position: absolute
+      top: 22px
+      left: 35px
+      width: 160px
+      height: 102px
+      img
+        width: 160px
+        height: 102px
+    .dixion-block__info
+      bottom: 8px
+      left: 32px
+      .info-title
+        font-size: 12px
+      .info-more
+        font-size: 10px
+    .dixion-wrapper
+      padding-bottom: 30px
+
+
+@media only screen and (max-width: 780px) 
   .container
     width: 320px
   .section-slider
@@ -1590,6 +2001,8 @@
       img
         width: 300px
         height: 300px
+    .commodity-quantity__buttons
+      padding: 15px 0px 0px 0px
     .commodity-block
       display: block
     .commodity-title
@@ -1675,6 +2088,122 @@
       .buttons-second
         width: 143px 
     
+  .section-tiles
+    .tiles-wrapper
+      box-shadow: 0px 60px 70px rgba(#000, .05)
+      padding-bottom: 50px
+    .tiles-title
+      display: none
+    .tiles-catalog
+      display: none
+    .tiles-flex
+    .tiles-sidebar
+      width: 100%
+    .tiles-sidebar__button
+      display: none
+    .tiles-sidebar__list
+      .main-list
+        & > li
+          font-size: 16px
+
+  .section-tilesrow
+    .tilesrow-wrapper
+      box-shadow: 0px 60px 70px rgba(#000, .05)
+      padding-bottom: 50px
+    .tilesrow-title
+      display: none
+    .tilesrow-catalog
+      display: none
+    .tilesrow-flex
+    .tilesrow-sidebar
+      width: 100%
+    .tilesrow-sidebar__button
+      display: none
+    .tilesrow-sidebar__list
+      .main-list
+        & > li
+          font-size: 16px
+
+  .section-tilescouches
+    .tilescouches-wrapper
+      box-shadow: 0px 60px 70px rgba(#000, .05)
+      padding-bottom: 50px
+    .tilescouches-title
+      display: none
+    .tilescouches-catalog
+      display: none
+    .tilescouches-flex
+    .tilescouches-sidebar
+      width: 100%
+    .tilescouches-sidebar__button
+      display: none
+    .tilescouches-sidebar__list
+      .main-list
+        & > li
+          font-size: 16px
+
+
+  .section-dixion
+    .dixion-top
+      display: block
+      margin-top: 40px
+      margin-bottom: 40px
+    .dixion-logo
+      margin-top: 35px
+      width: 320px
+        height: 126px
+      box-shadow: 0px 0px 80px rgba(#000, .15)
+      img
+        width: 320px
+        height: 126px
+        position: relative
+      &:before
+        content: ''
+        top: 10px
+        left: 10px
+        height: 138px
+        border: 1px solid $accent
+        position: absolute
+    .dixion-text
+      font-size: 15px
+      width: 100%
+      line-height: 1.5
+      margin-top: 60px
+      text-align: center
+
+
+    .dixion-block
+      width: 320px
+      height: 293px
+      margin-bottom: 50px
+
+    .dixion-block__bg-img
+      width: 320px
+      height: 293px
+      img
+        width: 320px
+        height: 293px
+    .dixion-block__img
+      position: absolute
+      top: 22px
+      left: 35px
+      width: 160px
+      height: 102px
+      img
+        width: 235px
+        height: 160px
+    .dixion-block__info
+      bottom: 9px
+      left: 30px
+      .info-title
+        font-size: 20px
+      .info-more
+        font-size: 15px
+    .dixion-wrapper
+      padding-bottom: 30px
+
+
+
 
 
     
