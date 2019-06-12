@@ -93,27 +93,30 @@ $(function() {
 
   // Accordeon
 
-  // $('.main-list > li').hide().prev().on('click', function() {
-  //   $('.elem-7-level-2').not(this).slideUp(500)
-  //   $(this).next().not(":visible").slideDown()
+  // $('#accordion > li').on('click', function() {
+  //   $('#accordion > li > ul').hide().slideUp();
+  //   $(this).parent().next().slideDown();
   // })
-
+  
+  $('.accordion').accordion({
+    singleOpen: true,
+    transitionSpeed: 500
+  })
   // Accordeon_
 
   // Range
 
-  $("input[name=multirange]").nativeMultiple({
-    stylesheet: "slider",
-    onCreate: function() {
-      console.log(this);
-    },
-    onChange: function(first_value, second_value) {
-      console.log("onchange", [first_value, second_value]);
-    },
-    onSlide: function(first_value, second_value) {
-      console.log("onslide", [first_value, second_value]);
+  $('#slider-range').slider({
+    range: true,
+    min: 0,
+    max: 600,
+    values: [135, 500],
+    slide: function( event, ui ) {
+      $( "#amount1" ).val(ui.values[ 0 ]);
+      $( "#amount2" ).val(ui.values[ 1 ]);
     }
-  });
+  })
+
 
   // Range_
 });
