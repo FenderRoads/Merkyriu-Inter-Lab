@@ -120,32 +120,73 @@
 							<div class="search-sidebar__button">Фильтр</div>
 							<div class="search-sidebar__properties">
 								<div class="properties-manufacturer">
-									<div class="manufacturer-title"></div>
+									<div class="manufacturer-title">производитель</div>
 									<div class="manufacturer-checkbox">
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
+
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
 									</div>
 								</div>
 								<div class="properties-other">
-									<div class="other-title"></div>
+									<div class="other-title">другие свойства</div>
 									<div class="other-checkbox">
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
-										<input type="checkbox"><span>Название</span>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
+
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox"/>
+											<div class="control_indicator"></div>
+										</label>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox" />
+											<div class="control_indicator"></div>
+										</label>
+										<label class="control control-checkbox">
+											<span>Название</span>
+											<input type="checkbox"/>
+											<div class="control_indicator"></div>
+										</label>
 									</div>
 								</div>
 								<div class="properties-range">
-									<div class="range-title"></div>
+									<div class="range-title">свойство в интервале</div>
 									<div class="range-inputs">
-										<div class="range-value1"></div>
-										<div class="range-value2"></div>
+										<div class="range-range">
+											<div>
+												<label for="amount">ОТ</label>
+												<input type="text" id="amount1" readonly>
+											</div>
+											<div>
+												<label for="amount">ДО</label>
+												<input type="text" id="amount2" readonly>
+											</div>
+										</div>
+										<div id="slider-range"></div>
 									</div>
-									<div class="range-range">
-										<input type="range" min="0" max="600" step="20" value="0,10" name="multirange">
-									</div>
+									<div class="properties-filter">Фильтровать</div>
 								</div>
 							</div>
 						</div>
@@ -165,8 +206,8 @@
 								<div class="settings-display">
 									<div class="settings-display__title">Отобразить каталог:</div>
 									<div class="settings-display__buttons">
-										<i class="fas fa-th-list"></i>
-										<i class="fas fa-th-large list-active"></i>
+										<i class="fas fa-th-list list-active"></i>
+										<i class="fas fa-th-large"></i>
 									</div>
 								</div>
 								<div class="settings-displaynumber">
@@ -326,10 +367,10 @@
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
 

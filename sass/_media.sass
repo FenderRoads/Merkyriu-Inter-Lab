@@ -76,7 +76,7 @@
     .menu
       ul
         li
-          padding: 15px 20px
+          padding: 17px 20px
           a
             font-size: 14px
             white-space: nowrap
@@ -147,6 +147,8 @@
         margin-top: 11px
     .advantages-block:nth-child(2)
       margin-top: 40px
+    .hor-lines-1, .hor-lines-2
+      display: none
 
 
 
@@ -229,10 +231,10 @@
         width: 380px
     .twoblocks-block__cupboard
       width: 160px
-      top: -4px
+      top: -22px
       left: 12px
       img
-        width: 160px
+        width: 170px
 
 
 
@@ -614,6 +616,8 @@
 
 
   .section-tiles
+    .tiles-wrapper
+      padding-bottom: 30px
     .tiles-sidebar
       width: 200px
     .tiles-sidebar__button
@@ -622,37 +626,37 @@
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
-    .tiles-sidebar__list
-      .main-list
-        & > li
-          position: relative
-          text-transform: uppercase
-          border: 1px solid $accent
-          text-align: center
-          color: #000
-          font-size: 12px
-          padding: 10px 0px
-          border-bottom: 1px solid transparent
-        & > li:last-child
-          border-bottom: 1px solid $accent
-        & > li:nth-child(7)
-          border: 5px solid $accent
-        .elem-7-level-2
-          margin-top: 10px
-          padding-bottom: 0px
-          background: $accent
-          color: #fff
-          li
-            text-align: left
-            padding: 3px 26px
-          .elem-6-level-3
+    .accordion-wrapper
+      .accordion
+        .accordion-content
+          font-size: 13px
+          & > div
+            padding: 3px 9px
+          & > .accordion > .accordion-title-2
+            padding: 3px 0px
+          & > .accordion > .accordion-content-2 > div
+            padding: 3px 20px
+      .accordion-title
+        font-size: 12px
+      .accordion:nth-child(16)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(18)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(9)
+        .accordion-title
+          padding-top: 7px
+
+      .accordion-content
+
 
 
     .tiles-catalog
       margin-left: 10px
       width: 555px
     .tiles-catalog__settings
-      padding: 16px 5px
+      padding: 15px 5px
       display: flex
       background: #7697ac
       box-shadow: 0px 0px 60px rgba(#000, .1)
@@ -684,7 +688,7 @@
       display: flex
       justify-content: space-between
       color: #fff
-      width: 280px
+      width: 240px
       margin-left: 10px
       .fas
         font-size: 16px
@@ -696,7 +700,7 @@
           color: #fff
 
     .settings-display__title
-      +font('FuturaDemiC', 600, 9px)
+      +font('FuturaDemiC', 600, 10px)
       text-transform: uppercase
       letter-spacing: 2px
       white-space: nowrap
@@ -714,7 +718,7 @@
     .settings-displaynumber__title
       text-transform: uppercase
       letter-spacing: 2px
-      font-size: 9px
+      font-size: 10px
     
 
     .tiles-block
@@ -752,37 +756,36 @@
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
-    .tilesrow-sidebar__list
-      .main-list
-        & > li
-          position: relative
-          text-transform: uppercase
-          border: 1px solid $accent
-          text-align: center
-          color: #000
-          font-size: 12px
-          padding: 10px 0px
-          border-bottom: 1px solid transparent
-        & > li:last-child
-          border-bottom: 1px solid $accent
-        & > li:nth-child(7)
-          border: 5px solid $accent
-        .elem-7-level-2
-          margin-top: 10px
-          padding-bottom: 0px
-          background: $accent
-          color: #fff
-          li
-            text-align: left
-            padding: 3px 26px
-          .elem-6-level-3
+    .tilesrow-wrapper
+      padding-bottom: 70px
+    .accordion-wrapper
+      .accordion
+        .accordion-content
+          font-size: 13px
+          & > div
+            padding: 3px 9px
+          & > .accordion > .accordion-title-2
+            padding: 3px 0px
+          & > .accordion > .accordion-content-2 > div
+            padding: 3px 20px
+      .accordion-title
+        font-size: 12px
+      .accordion:nth-child(16)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(18)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(9)
+        .accordion-title
+          padding-top: 7px
 
 
     .tilesrow-catalog
       margin-left: 10px
       width: 555px
     .tilesrow-catalog__settings
-      padding: 16px 5px
+      padding: 15px 5px
       display: flex
       background: #7697ac
       box-shadow: 0px 0px 60px rgba(#000, .1)
@@ -814,7 +817,7 @@
       display: flex
       justify-content: space-between
       color: #fff
-      width: 280px
+      width: 240px
       margin-left: 10px
       .fas
         font-size: 16px
@@ -826,7 +829,7 @@
           color: #fff
 
     .settings-display__title
-      +font('FuturaDemiC', 600, 9px)
+      +font('FuturaDemiC', 600, 10px)
       text-transform: uppercase
       letter-spacing: 2px
       white-space: nowrap
@@ -844,7 +847,7 @@
     .settings-displaynumber__title
       text-transform: uppercase
       letter-spacing: 2px
-      font-size: 9px
+      font-size: 10px
     
 
     .tilesrow-block
@@ -888,30 +891,30 @@
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
-    .tilescouches-sidebar__list
-      .main-list
-        & > li
-          position: relative
-          text-transform: uppercase
-          border: 1px solid $accent
-          text-align: center
-          color: #000
-          font-size: 12px
-          padding: 10px 0px
-          border-bottom: 1px solid transparent
-        & > li:last-child
-          border-bottom: 1px solid $accent
-        & > li:nth-child(7)
-          border: 5px solid $accent
-        .elem-7-level-2
-          margin-top: 10px
-          padding-bottom: 0px
-          background: $accent
-          color: #fff
-          li
-            text-align: left
-            padding: 3px 26px
-          .elem-6-level-3
+    .accordion-wrapper
+      .accordion
+        .accordion-content
+          font-size: 13px
+          & > div
+            padding: 3px 9px
+          & > .accordion > .accordion-title-2
+            padding: 3px 0px
+          & > .accordion > .accordion-content-2 > div
+            padding: 3px 20px
+      .accordion-title
+        font-size: 12px
+      .accordion:nth-child(16)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(18)
+        .accordion-title
+          padding-top: 8px
+      .accordion:nth-child(9)
+        .accordion-title
+          padding-top: 7px
+
+
+
     .tilescouches-catalog
       margin-left: 10px
     .tilescouches-catalog__cards
@@ -978,12 +981,14 @@
         height: 106px
         position: relative
       &:before
-        content: ''
-        top: 10px
-        left: 10px
-        height: 138px
-        border: 1px solid $accent
+        content: ""
         position: absolute
+        top: 14px
+        left: 14px
+        width: 270px
+        height: 106px
+        border: 1px solid #3392bc
+        transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 455px
@@ -993,8 +998,9 @@
     .dixion-block
       width: 220px
       height: 201px
-      margin-bottom: 50px
-
+      margin-bottom: 30px
+    .dixion-blocks
+      padding-bottom: 0px
     .dixion-block__bg-img
       width: 220px
       height: 201px
@@ -1012,13 +1018,187 @@
         height: 102px
     .dixion-block__info
       bottom: 8px
-      left: 32px
+      left: 22px
       .info-title
         font-size: 12px
       .info-more
         font-size: 10px
     .dixion-wrapper
       padding-bottom: 30px
+
+  .section-search
+    .search-page
+      .h3-page
+        color: #000
+        font-size: 16px
+        padding: 30px 0px 10px 0px
+        text-transform: none
+        letter-spacing: 2px
+    .search-title
+      text-align: center
+      position: relative
+      .line
+        overflow: hidden
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 3px
+        color: $accent
+      .line-text 
+        display: inline-block
+        position: relative
+        padding: 0 10px
+        vertical-align: middle
+      .line-text:before,
+      .line-text:after
+        content: ""
+        position: absolute
+        top: 50%
+        width: 5000px
+        height: 2px
+        margin: -1px 0 0
+        background: $accent
+      .line-text:before 
+        right: 100%
+      .line-text:after 
+        left: 100%
+    
+
+    .search-sidebar
+      width: 200px
+      .search-sidebar__button
+        width: 198px
+        padding: 7.5px 0px
+      .search-sidebar__properties
+        padding: 7px 10px
+        .properties-manufacturer
+          .manufacturer-title
+            font-size: 16px
+          .manufacturer-checkbox
+            .control-checkbox
+              font-size: 12px
+        .properties-other
+          .other-title
+            font-size: 16px
+          .other-checkbox
+            .control-checkbox
+              font-size: 12px
+        .properties-range
+          .range-title
+            font-size: 15px
+          .range-range
+            width: 171px
+            input
+              width: 40px
+              padding: 1px
+        .properties-filter
+          width: 138px
+
+        
+
+    .search-wrapper
+      margin-top: 20px
+      padding-bottom: 90px
+
+    .search-catalog
+      margin-left: 10px
+      width: 555px
+      .search-catalog__settings
+        padding: 15px 5px
+        display: flex
+        background: #7697ac
+        box-shadow: 0px 0px 60px rgba(#000, .1)
+        select
+          background: transparent
+          border: 1px solid #fff
+          color: #fff
+          margin-left: 0px
+          text-transform: uppercase
+          font-size: 9px
+          outline: none
+          align-self: flex-start
+          option
+            background: #7697ac
+            outline: none
+      .settings-sorting
+        display: flex
+        justify-content: space-between
+        color: #fff
+        width: 280px
+        select
+          width: 94px
+      .settings-sorting__title
+        text-transform: uppercase
+        font-size: 10px
+        letter-spacing: 2px
+        white-space: nowrap
+      .settings-display
+        display: flex
+        justify-content: space-between
+        color: #fff
+        width: 240px
+        margin-left: 10px
+        .fas
+          font-size: 16px
+          color: #9bbbcf
+          margin-left: 6px
+          margin-top: -1px
+          cursor: pointer
+          &.list-active
+            color: #fff
+
+      .settings-display__title
+        +font('FuturaDemiC', 600, 10px)
+        text-transform: uppercase
+        letter-spacing: 2px
+        white-space: nowrap
+        padding-top: 2px
+        box-sizing: border-box
+      .settings-display__buttons
+        line-height: 1.5
+        display: flex
+      .settings-displaynumber
+        display: flex
+        color: #fff
+        margin-left: 10px
+        select
+          width: 30px
+      .settings-displaynumber__title
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-size: 10px
+      
+
+      .search-block
+        width: 515px
+      .search-block__img
+        width: 135px
+        height: 135px
+        img
+          width: 135px
+          height: 135px
+          box-shadow: 15px 15px 0px rgba(#fff, .5) 
+      .search-block__title
+        font-size: 13px
+      .search-block__manufacturer
+        font-size: 14px
+        .manufacturer-img
+      .search-block__code
+        font-size: 14px
+      .search-block__description
+        margin-top: 10px
+        margin-bottom: 13px
+        font-size: 13px
+        width: 330px
+      .search-block__buttons
+        height: 35px
+        width: 325px
+        font-size: 14px
+        .buttons-first
+          width: 150px
+          padding: 5px 0px
+        .buttons-second
+          width: 150px
+          padding: 5px 0px
 
 
 @media only screen and (max-width: 780px) 
@@ -1298,6 +1478,7 @@
         height: 205px
       &:after
         height: 205px
+        width: 320px
     .twoblocks-block__content
       top: 100px
       right: 26px
@@ -1323,6 +1504,7 @@
         height: 205px
       &:after
         height: 205px
+        width: 320px
     .twoblocks-block__cupboard
       width: 120px
       top: -18px
@@ -1563,8 +1745,8 @@
         height: 150px
     .form-block__bottom
       .checkbox
-        span
-          line-height: 1
+        label
+          font-size: 14px
 
   .section-company
     .company-blocks
@@ -2102,10 +2284,9 @@
       width: 100%
     .tiles-sidebar__button
       display: none
-    .tiles-sidebar__list
-      .main-list
-        & > li
-          font-size: 16px
+    .accordion-wrapper 
+      .accordion-title
+        font-size: 16px
 
   .section-tilesrow
     .tilesrow-wrapper
@@ -2120,10 +2301,18 @@
       width: 100%
     .tilesrow-sidebar__button
       display: none
-    .tilesrow-sidebar__list
-      .main-list
-        & > li
-          font-size: 16px
+    .accordion-wrapper 
+      .accordion-title
+        font-size: 16px
+      .accordion:nth-child(16)
+        .accordion-title
+          padding-top: 12px
+      .accordion:nth-child(18)
+        .accordion-title
+          padding-top: 12px
+      .accordion:nth-child(9)
+        .accordion-title
+          padding-top: 12px
 
   .section-tilescouches
     .tilescouches-wrapper
@@ -2138,10 +2327,18 @@
       width: 100%
     .tilescouches-sidebar__button
       display: none
-    .tilescouches-sidebar__list
-      .main-list
-        & > li
-          font-size: 16px
+    .accordion-wrapper 
+      .accordion-title
+        font-size: 16px
+      .accordion:nth-child(16)
+        .accordion-title
+          padding-top: 12px
+      .accordion:nth-child(18)
+        .accordion-title
+          padding-top: 12px
+      .accordion:nth-child(9)
+        .accordion-title
+          padding-top: 12px
 
 
   .section-dixion
@@ -2159,12 +2356,14 @@
         height: 126px
         position: relative
       &:before
-        content: ''
-        top: 10px
-        left: 10px
-        height: 138px
-        border: 1px solid $accent
+        content: ""
         position: absolute
+        top: 15px
+        left: 15px
+        width: 320px
+        height: 126px
+        border: 1px solid #3392bc
+        transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 100%
@@ -2201,8 +2400,55 @@
       .info-more
         font-size: 15px
     .dixion-wrapper
-      padding-bottom: 30px
+      padding-bottom: 0px
 
+  .section-search
+    .search-wrapper
+      box-shadow: 0px 60px 70px rgba(#000, .05)
+      padding-bottom: 50px
+    .search-title
+      display: none
+    .search-catalog
+      display: none
+    .search-flex
+    .search-sidebar__button
+      display: none
+    .search-sidebar__list
+      .main-list
+        & > li
+          font-size: 16px
+
+
+    .search-sidebar
+      width: 100%
+      .search-sidebar__properties
+        padding: 7px 30px
+        .properties-manufacturer
+          .manufacturer-title
+            font-size: 18px
+          .manufacturer-checkbox
+            .control-checkbox
+              font-size: 14px
+        .properties-other
+          .other-title
+            font-size: 18px
+          .other-checkbox
+            .control-checkbox
+              font-size: 14px
+        .properties-range
+          text-align: center
+          .range-title
+            font-size: 18px
+          .range-range
+            width: 185px
+            margin-left: auto
+            margin-right: auto
+            input
+              width: 40px
+              padding: 1px
+        .properties-filter
+          width: 138px
+          margin-top: 24px
 
 
 
