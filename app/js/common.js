@@ -106,6 +106,8 @@ $(function() {
 
   // Range
 
+
+
   $('#slider-range').slider({
     range: true,
     min: 0,
@@ -114,8 +116,12 @@ $(function() {
     slide: function( event, ui ) {
       $( "#amount1" ).val(ui.values[ 0 ]);
       $( "#amount2" ).val(ui.values[ 1 ]);
+
+      $( ".amount3" ).val(ui.values[ 0 ]);
+      $( ".amount4" ).val(ui.values[ 1 ]);
     }
   })
+  $('.ui-slider-handle').append('<input type="text" class="nested-input amount3" placeholder="135" disabled><input type="text" class="nested-input amount4" placeholder="500" disabled>')
 
 
   // Range_

@@ -3231,6 +3231,7 @@ b, strong
 					height: 0.7em
 					top: -.31em
 					margin-left: -.6em
+					outline: none
 			.ui-slider-horizontal
 				height: .4em
 				border: none
@@ -3247,6 +3248,23 @@ b, strong
 					text-align: center
 					border: 1px solid $accent
 					margin-left: 7px
+			.nested-input
+				background: transparent
+				position: absolute
+				width: 30px
+				top: 18px
+				left: -10px
+				outline: none
+				border: none
+				text-align: center
+			#slider-range
+				span:nth-child(2)
+					.amount4
+						display: none
+				span:last-child
+					.amount3
+						display: none
+				
 		.properties-filter
 			text-align: center
 			letter-spacing: 1px
@@ -3255,7 +3273,7 @@ b, strong
 			background: $accent
 			width: 150px
 			color: #fff
-			margin-top: 30px
+			margin-top: 50px
 			margin-bottom: 8px
 			margin-left: auto
 			margin-right: auto
