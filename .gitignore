@@ -8,6 +8,6 @@
 /**/*.DS_Store
 /.vscode/
 *.md
-/app/sass
-/app/css
+/**/sass
+/**/css
 
