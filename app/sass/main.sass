@@ -1,0 +1,3483 @@
+@import "_fonts.sass"
+@import "_vars.sass"
+@import "_libs.sass"
+@import "_constructor.sass"
+
+*
+	padding: 0
+	margin: 0
+
+.container
+	margin: 0 auto
+	width: 1145px 
+	padding-left: 15px
+	padding-right: 15px
+a
+	text-decoration: none
+	
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background: #e0e0e0
+	z-index: 12
+	border-radius: 10em
+	color: #666666
+	font-size: 24px
+	width: 60px
+	height: 60px
+	text-align: center
+	line-height: 60px
+	cursor: pointer
+	transition: all .25s ease
+	opacity: .5
+	z-index: 9999
+	&:hover
+		color: #ffffff
+		background-color: $accent
+		opacity: .9
+	&.active
+		right: 25px
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.4
+
+li
+	list-style-type: none
+
+.text-center
+	text-align: center
+	
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: bold
+    
+	
+// Default Styles
+
+// Header
+
+.section-header
+	height: 207.05px
+	.section-inner
+	.top-line-bg
+		background: #fff
+		width: 100%
+		height: 60px
+		z-index: 1000
+		position: fixed
+		display: none
+	.top-line
+		position: relative
+		color: $dark
+		background: #fff
+		z-index: 1001
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			box-shadow: 0px 0px 25px rgba(#000, .1)
+			width: 100%
+	.topline-fixed
+		position: fixed
+		z-index: 1000
+		top: 0
+		left: 50%
+		margin-left: -585px
+		opacity: 1
+		transition: opacity .25s ease
+		
+	.top-line__menu
+		display: flex
+		z-index: 10
+		li
+			padding: 16px 15px
+			
+			a
+				color: $dark
+				font-size: 16px
+				&:hover
+					color: $accent
+	.top-line-wrapper
+		display: flex
+		justify-content: space-around
+		background: #fff
+	.top-line__city
+		font-size: 14px
+		color: $accent
+		+font1('FuturaDemiC', 600)
+		padding: 18px 5px
+		z-index: 10
+		position: relative
+		.fas
+			position: absolute
+			font-size: 16px
+			left: -15px
+		a
+			padding: 0px 20px 0px 0px
+			color: $accent
+			&:active
+				color: $accent
+			&:visited
+				color: $accent
+	.tel-icon
+		position: absolute
+		left: -40px
+		top: 0
+		width: 20px
+		height: 20px
+		padding: 18px 0px 18px 15px
+		img
+			width: 20px
+			height: 20px
+	.top-line__tel
+		z-index: 10
+		position: relative
+		font-size: 14px
+		padding: 7px 7px	
+	.top-line__tel-first
+		color: $accent
+		+font1('FuturaDemiC', 600)
+	.top-line__tel-second
+
+	.top-line__email
+		z-index: 10
+		font-size: 14px
+		display: flex
+		padding: 18px 10px
+		+font1('FuturaDemiC', 600)
+		img
+			color: $accent
+			padding-top: 2px
+			padding-right: 10px
+			width: 20px
+			height: 20px
+	.top-line__callback
+		display: block
+		z-index: 10
+		cursor: pointer
+		background: $accent
+		padding: 10px 26px
+		color: #fff
+		letter-spacing: 2px
+		align-self: flex-start
+		text-transform: uppercase
+		margin-top: 10px
+		font-size: 12px
+		&:hover
+			box-shadow: 0px 0px 10px rgba(#000, .5)
+			transition: all .25s ease
+	.bottom-line-wrapper
+		display: flex
+		justify-content: space-between
+	.bottom-line-bg
+		display: none
+	.bottom-line
+		background: #fff
+	.bottom-line__logo
+		display: block
+		margin-top: 10px
+		img
+			width: 400px
+	.bottom-line__dn-tel
+		display: none
+	.bottom-line__search
+		display: flex
+		margin-top: 20px
+		margin-right: 16px
+		position: relative
+		span
+			position: absolute
+			right: 200px
+			top: 9px
+			color: #666
+			align-self: flex-start
+		input
+			background: #e6e6e6
+			padding: 12px 15px
+			width: 410px
+			border: none
+			align-self: flex-start
+		.bottom-line__basket
+			display: block
+			color: #000
+			padding: 7px 60px 7px 35px
+			background: #fff
+			box-shadow: 0px 0px 20px rgba(#000, .25)
+			align-self: flex-start
+			position: relative
+			text-transform: uppercase
+			letter-spacing: 3px
+			cursor: pointer
+			img
+				right: 28px
+				top: 7px
+				position: absolute
+				width: 20px
+				height: 24px
+				
+	.menu-wrapper-bg
+		background: $accent
+		height: 70px
+		top: 60px
+		position: fixed
+		width: 100%
+		z-index: 1000
+		display: none
+	.menu-wrapper-bg-mobile
+		display: none
+	.menu-wrapper
+		background: $accent
+		z-index: 1001
+	.menu-wrapper-fixed
+		position: fixed
+		top: 60px
+		left: 50%
+		margin-left: -585px
+		opacity: 1
+		transition: opacity .25s ease
+		
+	.dn-menu
+		display: none
+	.drop-down-menu
+		display: none
+	.menu
+		ul
+			display: flex
+			justify-content: space-around
+			li
+				padding: 21px 51px
+				box-sizing: border-box
+				border-bottom: 2px solid transparent
+				&:hover 
+					transition: all .5s ease
+					box-sizing: border-box
+					border-bottom: 2px solid #fff
+				a
+					color: #fff
+					text-transform: uppercase
+					+font('FuturaDemiC', 600, 16px)
+					box-sizing: border-box
+					&:hover
+						transition: all .5s ease
+						box-sizing: border-box
+						
+
+// Header_
+
+
+// Slider
+
+.section-slider
+	.section-inner
+	.carousel1
+	.owl-dots
+		position: absolute
+		bottom: 8px
+		left: 50%
+		margin-left: -50px
+		.owl-dot.active
+			span
+				background: $accent
+				transform: scale(1.2)
+				transition: all .3s ease
+		.owl-dot
+			span
+				background: rgba($accent, .5)
+			
+
+
+	.item
+	.slider-item-bg
+		background: url("../img/@2x/bg-slider-new-1.png") no-repeat
+		background-size: cover
+	.left-side
+		margin-top: 53px
+	.right-side
+		width: 75%
+	.slider-item
+		display: flex
+		background-size: cover
+		color: #fff
+		.slider-item__title-site
+			+font('FuturaDemiC', 600, 23px)
+			text-transform: uppercase
+			letter-spacing: 3px
+		.slider-item__title
+			margin-top: 15px
+			+font1('FuturaDemiC', 600)
+			text-transform: uppercase
+			letter-spacing: 3px
+		.slider-item__post-title
+			letter-spacing: 1px
+			font-size: 21px
+		.slider-item__arguments
+			display: flex
+			margin-top: 25px
+			margin-bottom: 60px
+		.yearoffoun
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-left: 50px
+			.yearoffoun-icon
+				margin-bottom: 15px
+				img
+					width: 50px
+					height: 60px
+			.yearoffoun-title
+				text-transform: uppercase
+				+font('FuturaDemiC', 600, 24px)
+				color: #fff
+				letter-spacing: 2px
+			.yearoffoun-year
+				text-transform: uppercase
+				+font('FuturaMediumC', 600, 40px)
+				color: #1f3d62
+				line-height: 1.2
+
+		.ourexp
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-left: 40px
+			.ourexp-icon
+				width: 50px
+				height: 60px
+				margin-bottom: 15px
+			.ourexp-title
+				text-transform: uppercase
+				+font('FuturaDemiC', 600, 24px)
+				color: #fff
+				letter-spacing: 2px
+			.ourexp-year
+				text-transform: uppercase
+				+font('FuturaMediumC', 600, 40px)
+				color: #1f3d62
+				line-height: 1.2
+// Slider_
+
+// Duration
+
+.section-direction
+	background: #e6ebed
+	.section-inner
+	.direction-wrapper
+	.direction
+	.direction-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+			margin-top: 50px
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 1px
+			margin: -1px 0 0
+			background: #000
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.direction-thousands
+		+font1('FuturaDemiC', 600)
+		color: $accent
+		text-transform: uppercase
+		font-size: 20px
+		padding: 6px 15px
+		border: 1px solid rgba($accent, .4)
+		background: #e6ebed
+		text-align: center
+		margin: auto
+		width: 276px
+		white-space: nowrap
+		margin-top: 20px
+		margin-bottom: 35px
+		letter-spacing: 3px
+	.dn-direction-wrapper
+		display: none
+	
+	.direction-cards
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+	.direction-card
+		margin-bottom: 20px
+		overflow: hidden
+		&:hover .direction-card-content
+			border: 1px solid #fff
+			transition: border .5s ease
+	.direction-card-wrapper
+		position: relative
+		width: 359px
+		height: 271px
+		&:hover .img-wrapper:after
+			background: rgba(#799baf, .7)
+			transition: background .5s ease
+	.img-wrapper
+		position: absolute
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(#1d4f84, .90)
+			height: 271px
+	.direction-card-content
+		display: flex
+		position: absolute
+		z-index: 10
+		top: 0
+		width: 339px
+		height: 251px
+		box-sizing: border-box
+		margin: auto
+		bottom: 0
+		left: 0
+		right: 0
+		border: 1px solid transparent
+	.direction-card-content-leftside
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	.direction-card-content__title
+		color: #fff
+		font-size: 20px
+		text-transform: uppercase
+		margin-top: 15px
+		margin-left: 15px
+	.direction-card-content__number
+		font-size: 12px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 15px
+		margin-left: 15px
+	.direction-card-content__button
+		display: block
+		border: 1px solid #fff
+		padding: 4px 10px
+		width: 145px
+		text-align: center
+		text-transform: uppercase
+		color: #fff
+		font-size: 18px
+		letter-spacing: 2px
+		margin-bottom: 15px
+		margin-left: 15px
+		cursor: pointer
+		&:hover
+			color: #000
+			background: #fff
+			transition: all .5s ease
+	.direction-card-content-rightside
+		position: absolute
+		bottom: 67px
+		right: 4px
+	.icon-18
+		bottom: 51px
+		right: -6px
+	.direction-card-content__icon
+		img
+			width: 85%
+	.direction-card:last-child
+		background: $accent
+		margin-bottom: 65px
+	.direction-card__catalog
+		background: $accent
+		letter-spacing: 4px
+		text-transform: uppercase
+		text-align: center
+		color: #ffffff
+		font-size: 35px
+		line-height: 7.6
+		cursor: pointer
+		
+// Duration
+
+
+// Advantages
+.section-advantages
+	background: linear-gradient(45deg, #e7ecee, #f4f8f9)
+	border-top: 35px solid #f3f3f3
+	.section-inner
+	.container
+		position: relative
+	.advantages-frame
+		position: absolute
+		top: -65px
+		width: 1115px
+		left: 24px
+		img
+			width: 1125px
+	.advantages-threeblocks
+		display: flex
+		justify-content: space-around
+		z-index: 10
+	.advantages-block
+		display: flex
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		width: 337px
+		z-index: 10
+		position: relative
+	.advantages-block:first-child
+		margin-bottom: 50px
+		margin-top: 50px
+		.advantages-block__list
+			margin-top: 33px
+	.advantages-block:last-child
+		height: 260px
+		margin-top: 40px
+	.advantages-block:nth-child(2)
+		height: 240px
+		margin-top: 40px
+	.hor-lines-1
+		position: absolute
+		right: -13px
+		top: 26px
+		.hor-lines-1-wrapper
+			position: relative
+		.hor-lines-1-first
+			height: 90px
+			width: 1px
+			background: $accent
+			position: absolute
+			top: 67px
+		.hor-lines-1-second
+			position: absolute
+			height: 230px
+			width: 1px
+			background: $accent
+			margin-left: 15px
+			top: 0
+	.hor-lines-2
+		position: absolute
+		right: -14px
+		top: 35px
+		.hor-lines-2-wrapper
+			position: relative
+		.hor-lines-2-first
+			height: 230px
+			width: 1px
+			background: $accent
+			position: absolute
+			top: 0px
+		.hor-lines-2-second
+			position: absolute
+			height: 90px
+			width: 1px
+			background: $accent
+			margin-left: 15px
+			top: 67px
+
+		
+	.advantages-block__icon
+	.advantages-block__title
+		+font('FuturaDemiC', 600, 20px)
+		text-transform: uppercase
+		color: $accent
+		letter-spacing: 2px
+	.advantages-block__list
+		text-align: left
+		margin-top: 15px
+		margin-left: 60px
+		line-height: 1.25
+		li
+			list-style-type: disc
+			color: $accent
+			margin-top: 10px
+			span
+				font-size: 14px
+				text-transform: uppercase
+				color: #000
+			
+// Advantages_
+
+// Request
+
+.section-request
+	background: url('../img/@2x/request.png') no-repeat
+	background-size: cover
+	position: relative
+	z-index: 16
+	.section-inner
+	.request-wrapper
+		display: flex
+		justify-content: space-between
+		position: relative
+
+	.request-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: #fff
+		margin-bottom: 30px
+		margin-top: 35px 
+	.request-inputs
+		display: flex
+		margin-top: 45px
+		z-index: 10
+		input
+			align-self: flex-start
+			text-transform: uppercase
+			font-size: 14px
+			color: #888aa7
+			background: #d6d9e2
+			width: 240px
+			padding: 10px 13px
+			border: none
+			margin-right: 10px
+			&::placeholder
+				color: #888aa7
+				text-transform: uppercase
+	.request-button
+		display: block
+		align-self: flex-start
+		white-space: nowrap
+		padding: 6px 20px
+		text-align: center
+		background: $accent
+		cursor: pointer
+		text-transform: uppercase
+		font-size: 14px
+		color: #fff
+		&:hover
+			box-shadow: 0px 0px 10px rgba(#000, .25)
+	.request-computer
+		position: absolute
+		right: 0
+		top: -28px
+		img
+			width: 200px
+
+// Request_
+
+
+// Manufacts
+
+.section-manufact
+	.section-inner
+	.manufact-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			margin-top: 35px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+			text-transform: uppercase
+			font-size: 22px
+			color: $accent
+			letter-spacing: 3px
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	
+	.manufacts
+	.manufacts-blocks
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+	.manufact-block
+		margin-top: 50px
+		padding-left: 10px
+		padding-right: 10px
+		&:last-child
+			margin-bottom: 130px
+	.manufact-block__img
+		background-image: url('../img/@2x/philips-grey-new.png')
+		background-size: 184px 37px
+		background-size: center
+		width: 184px
+		height: 37px 
+		img
+			width: 184px
+			height: 37px
+		&:hover
+			background-image: url('../img/@2x/philips-new.png')
+			background-repeat: no-repeat
+			background-size: 184px 37px
+			background-size: center
+			width: 184px
+			height: 37px 
+
+// Manufacts_
+
+// twoblocks
+
+.section-twoblocks
+	height: 400px
+	.section-inner
+	.twoblocks
+		display: flex
+		padding-top: 25px
+	.twoblocks-block
+		width: 50%
+		height: 358px
+	.twoblocks-block-wrapper
+		position: relative
+		&:hover .twoblocks-block__bgwoman:after
+			background: rgba(#7697ac, .58)
+			transition: background .5s ease
+		&:hover .twoblocks-block__bgcupboard:after
+			background: rgba(#7697ac, .58)
+			transition: background .5s ease
+	.twoblocks-block__bgwoman, .twoblocks-block__bgcupboard
+		position: absolute
+		width: 574px
+		height: 340px
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			height: 340px
+			background: rgba($accent, .7)
+		img
+			width: 574px
+			height: 340px
+	.twoblocks-block__content
+		position: absolute
+		z-index: 10
+		right: 20px
+		top: 185px
+		width: 200px
+	.twoblocks-block__title
+		+font('FuturaDemiC', 600, 22px)
+		color: #fff
+		text-transform: uppercase
+		line-height: 1.3
+	.twoblock-block__button
+		display: block
+		letter-spacing: 2px
+		color: #fff
+		padding: 6px 15px
+		text-transform: uppercase
+		margin-top: 15px
+		border: 1px solid #fff
+		cursor: pointer
+		font-size: 19px
+		width: 130px
+		text-align: center
+
+		&:hover
+			transition: all .5s ease
+			color: #000000
+			background: #fff
+	.twoblocks-block__cupboard, .twoblocks-block__woman
+		position: absolute
+		z-index: 10
+		top: -94px
+		left: 50px
+	.twoblocks-block__woman
+		top: -123px
+
+	
+// twoblocks_
+
+// Map
+.section-map
+	.section-inner
+		background: url('../img/@2x/map-new.png') no-repeat
+		background-size: cover
+		height: 768px
+	.map-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			letter-spacing: 2px
+			margin-bottom: 35px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.container
+		position: relative
+	.map-block
+		width: 440px
+		height: 519px
+		background: #fff
+		position: absolute
+		top: 100px
+		left: 0
+		box-shadow: 20px 30px 0 rgba(#fff, .7)
+	.map-block-line
+		height: 1px
+		position: absolute
+		bottom: 200px
+		background: $accent
+		width: 100%
+	.map-block-wrapper
+	.map-block-titleside
+		text-align: right
+		margin-top: 50px
+		margin-right: 50px
+	.map-block__title
+		font-size: 28px
+		color: #888aa7
+	.map-block__tel
+		+font('FuturaBookC', bold, 28px)
+		color: $accent
+	.map-block__address
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		height: 377px
+		font-size: 18px
+		.fas
+			color: $accent
+			position: absolute
+			top: 6px
+			left: -30px
+			font-size: 22px
+		img
+			position: absolute
+			top: 2px
+			left: -30px
+			font-size: 22px
+	.map-block-topblock
+		height: 150px
+		padding: 0px 80px
+	.topblock-address
+		position: relative
+	.topblock-tel
+		position: relative
+		.fa-phone
+			top: 2px
+			left: -32px
+		
+
+	.map-block-bottomblock
+		height: 150px
+		padding: 0px 80px
+	.bottomblock-address
+		position: relative
+	.bottomblock-tel
+		position: relative
+		.fa-phone
+			top: 2px
+			left: -32px
+
+// twoblock_
+
+// Footer
+
+.section-footer
+	.section-inner
+	.container
+		position: relative
+	.footer-logo
+		position: absolute
+		bottom: 40px
+		left: 0
+	.footer-fourblocks
+		display: flex
+		justify-content: space-between
+		ul
+			li
+				margin-top: 6px
+				a
+					color: #000
+					font-size: 16px
+					&:hover
+						text-decoration: underline
+						color: $accent
+						transition: color .25s ease
+	.fourblocks-company
+		margin-top: 50px
+	.dn-item
+		display: none 
+	.fourblocks-company__list
+
+	.fourblocks-specializations
+		margin-top: 50px
+	.fourblocks-specializations__list
+
+	.fourblocks-directions
+		margin-top: 50px
+
+	.fourblocks-directions__list
+
+	.fourblocks-last
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-top: 50px
+		text-align: right
+		height: 352px
+		margin-bottom: 100px
+	.fourblocks-last-mode
+		text-transform: uppercase
+		font-size: 16px
+	.mode-title
+		color: $accent
+	.mode-clocks
+
+	.fourblocks-last-soc
+	.soc-topblock
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 16px)
+		margin-bottom: 17px
+	.soc-topblock__email
+	.soc-topblock__tel
+
+	.soc-bottomblock
+	.soc-bottomblock__button
+		padding: 12px 29px
+		background: $accent
+		color: #fff
+		font-size: 12px
+	.soc-bottomblock__socbuttons
+		margin-top: 10px
+		padding-top: 10px
+		position: relative
+		.fab
+			font-size: 30px
+			color: #000
+			margin-right: 10px
+			margin-top: 5px
+			&:hover
+				color: $accent
+				transition: color .25s ease
+		.socbuttons
+			position: absolute
+			right: -5px
+
+
+// Footer_
+
+
+
+// Contacts.
+.section-contacts
+	.section-inner
+	.contacts-wrapper
+	.contacts
+		padding-top: 35px
+	.dn-contacts-wrapper
+		display: none
+	.contacts-title
+		position: relative
+		text-align: center
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			color: $accent
+			margin-bottom: 30px
+			letter-spacing: 4px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.contacts-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin-top: 30px
+			text-transform: none
+			letter-spacing: 2px
+	.contacts-block
+		width: 750px
+		height: 362px
+		background: #fefefd
+		box-shadow: 0px 0px 80px 0px rgba(#000, .1)
+		padding: 20px
+		margin:
+			left: auto
+			right: auto
+			bottom: 150px
+	.contacts-block-wrapper
+		border: 1px solid $accent
+		display: flex
+		justify-content: space-between
+		padding: 20px
+	.contacts-block__list-1
+		li
+			a
+				font-size: 18px
+				color: $accent
+				text-transform: uppercase
+				+font1('FuturaDemiC', 600)
+	.contacts-block__list-2
+		li
+			a
+				font-size: 18px
+				color: $accent
+
+
+// Contacts_
+
+// Delivery
+
+.section-delivery
+	.delivery-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			margin: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-delivery-wrapper
+		display: none
+	.delivery-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.delivery-wrapper
+	.delivery
+		width: 1095px
+		height: 357px
+		box-shadow: 0px 0px 80px 0px rgba(#000, .12)
+		padding: 20px 25px
+		margin-top: 80px
+		margin-bottom: 140px
+	.delivery-block
+		border: 1px solid $accent
+	.delivery-block__text
+		color: #000
+		padding: 50px 40px
+		font-size: 16px
+		text-transform: uppercase
+		text-align: center
+		line-height: 1.8
+	.delivery-block__texttitle
+		display: none
+
+
+
+// Delivery_
+
+
+// Form
+
+.section-form
+	.form-page
+	.form-block__title
+		display: none
+	.form-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-form-wrapper
+		display: none
+	.dn-form-button
+	.form-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 80px 0px rgba(#000, .2)
+		margin-bottom: 110px
+		margin-top: 20px
+	.form-page
+		padding: 30px 0px
+		.h3-page
+			color: #000
+			font-size: 16px
+			text-transform: none
+			letter-spacing: 2px
+
+	.form
+	.form-block
+		display: flex
+		flex-direction: column
+		width: 500px
+		padding: 47px 0px
+		margin:
+			top: 0px
+			left: auto
+			right: auto
+			bottom: 0
+	.form-block__inputs
+		display: flex
+		flex-direction: column
+		input
+			height: 40px
+			border: 1px solid $accent
+			margin-bottom: 20px
+			box-sizing: border-box
+			letter-spacing: 2px
+			padding: 0px 15px
+			background: transparent
+			&::placeholder
+				letter-spacing: 1.5px
+				text-transform: uppercase
+		textarea
+			height: 100px
+			resize: none
+			padding: 10px 15px
+			box-sizing: border-box
+			background: transparent
+			border: 1px solid $accent
+			&::placeholder
+				text-transform: uppercase
+
+	.form-block__bottom
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+	.sentence
+		width: 100%
+		padding: 10px 0px
+		text-align: center
+		text-transform: uppercase
+		letter-spacing: 3px
+		background: $accent
+		color: #fff
+		display: block
+	.star
+		text-transform: uppercase
+		margin-top: 10px
+		font-size: 14px
+	.checkbox
+		margin-top: 10px
+		font-size: 16px
+		label
+			line-height: 1.2
+			text-transform: uppercase
+		
+
+
+// Form_
+
+// About company
+
+.section-company
+	.company-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.company-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: #27598d
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-company-wrapper
+		display: none
+	.company-wrapper
+	.company
+	.company-blocks
+		display: flex
+		justify-content: space-around
+		padding:
+			top: 50px
+			bottom: 80px
+	.company-blocks__block
+		text-align: center
+		text-transform: uppercase
+	.company-block__icon
+	.company-block__title
+		+font('FuturaDemiC', 600, 21px)
+	.company-block__year
+		+font('FuturaMediumC', bold, 40px)
+		color: #2e3f61
+	
+
+.section-geography
+	padding: 40px 0px 70px 0px
+	.geography-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.geography
+		background: url('../img/@2x/geography-new.png') no-repeat
+		background-position: center
+		background-size: contain
+		height: 700px
+		width: 100%
+		margin: 0 auto
+// About company_
+
+
+// Basket
+
+.section-basket
+	.basket-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-basket-wrapper
+		display: none
+	.basket
+		margin-bottom: 150px
+	.basket-button-wrapper
+		display: flex
+		justify-content: center
+		margin-top: 70px
+	.basket-button
+		display: block
+		background: #005487
+		letter-spacing: 2px
+		text-transform: uppercase
+		width: 385px
+		color: #ffffff
+		font-size: 18px
+		text-align: center
+		padding: 15px 5px
+		box-shadow: 0px 0px 60px rgba(#000, .2)
+	.basket-blocks
+	.basket-block-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 90px 0px rgba(#000, .20)
+		margin-top: 50px
+	.basket-block
+		display: flex
+
+	.basket-block__img
+		width: 322px
+		height: 322px
+		margin: 30px 0px 40px 0px
+		img
+			width: 322px
+			height: 322px
+			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
+	.basket-block__info
+		width: 586px
+		margin: 65px 0px 0px 60px
+		position: relative
+		.info-title
+			+font('FuturaDemiC', 600, 23px)
+			color: #27598d
+			border: 1px solid $accent
+			padding: 15px 60px
+			text-transform: uppercase
+			width: 463px
+			text-align: center
+			line-height: 1.45
+			letter-spacing: 2px
+		.info-manufacturer
+			display: flex
+			justify-content: space-between
+			margin-top: 35px
+			width: 450px
+		.info-manufacturer__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			line-height: 1.65
+			letter-spacing: 2px
+			box-sizing: border-box
+			padding-top: 3px
+		.info-manufacturer__img
+
+		.info-quantity
+			display: flex
+			justify-content: space-between
+			width: 374px
+		.info-quantity__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			box-sizing: border-box
+			padding: 15px 0px 0px 0px
+			letter-spacing: 2px
+		.info-quantity__buttons
+			display: flex
+			box-sizing: border-box
+			padding: 21px 0px 0px 0px
+		.info-quantity__plus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.info-quantity__number
+			text-transform: uppercase
+			font-size: 30px
+			color: $accent
+			line-height: 0.8
+			box-sizing: border-box
+			padding: 0px 10px 5px 10px
+		.info-quantity__minus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.info-close
+			position: absolute
+			right: -85px
+			bottom: 172px
+			font-size: 22px
+			color: $accent
+			width: 31px
+			height: 31px
+			text-align: center
+			line-height: 1.6
+			border: 1px solid transparent
+			cursor: pointer
+			&:hover
+				border: 1px solid $accent
+				transition: border .25s ease
+
+	
+// Basket_
+
+// News
+
+.section-news
+	background: #f6f6f6
+	.section-inner
+		background: #fff
+	.news-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 0px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-news-wrapper
+		display: none
+	.news-wrapper
+		margin-top: 50px
+		margin-bottom: 170px
+		padding-top: 35px
+		padding-bottom: 75px
+		box-shadow: 0px 70px 80px rgba(#000, .1)
+	.news
+	.news-block
+	.news-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: $accent
+		text-transform: uppercase
+		letter-spacing: 2px
+	.news-block__date
+		font-size: 13px
+		text-transform: uppercase
+		color: $accent
+	.news-block__text1
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 15px
+	.news-block__text2
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 35px
+	.news-block__images
+		display: flex
+		justify-content: space-between
+		margin-top: 75px
+	.news-block__img
+		width: 340px
+		height: 226px
+		box-shadow: 0px 11px 10px rgba(#000, .1)
+		img
+			width: 340px
+			height: 226px
+
+
+
+	
+// News_
+
+
+// Newslist
+
+.section-newslist
+	background: #fcfcfc
+	.newslist-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-newslist-wrapper
+		display: none
+	.newslist-wrapper
+		padding-bottom: 140px
+	.newslist
+		padding-top: 40px
+	.newslist-block
+		box-shadow: 0px 0px 70px 0px rgba(#000, .1)
+		margin-bottom: 20px
+		background: #fff
+		display: flex
+		justify-content: space-between
+		position: relative
+		padding: 23px 23px 20px 30px
+		width: 930px
+		margin-left: auto
+		margin-right: auto
+	.newslist-block__date
+		position: absolute
+		bottom: 11px
+		right: 23px
+		color: $accent
+		font-size: 13px
+		text-transform: uppercase
+	.newslist-block-left
+	.left-title
+		+font('FuturaDemiC', 600, 17px)
+		color: $accent
+		text-transform: uppercase
+	.left-text
+		font-size: 16px
+		margin-top: 20px
+		width: 556px
+	.left-button
+		width: 245px
+		background: transparent
+		border: 1px solid $accent
+		color: $accent
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 16px)
+		letter-spacing: 2px
+		text-align: center
+		padding: 10px 0px
+		margin-top: 20px
+		&:hover
+			background: $accent
+			color: #fff
+			transition: all .5s ease
+
+	.newslist-block-right
+		width: 340px
+		height: 226px
+		.right-img
+			width: 340px
+			height: 226px
+			img
+				width: 340px
+				height: 226px
+
+
+
+	
+// Newslist_
+
+
+// Reviews
+
+.section-reviews
+	.reviews-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 20px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.reviews-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-reviews-wrapper
+		display: none
+	.dn-reviews-button
+	.reviews
+	.reviews-blocks
+		padding-top: 35px
+		padding-bottom: 100px
+	.reviews-block
+		width: 1000px
+		padding: 35px
+		padding: 30px
+		box-shadow: 0px 0px 70px rgba(#000, .1)
+	.reviews-block-nested
+		display: flex
+		border: 1px solid $accent
+	.reviews-block-wrapper
+		margin-bottom: 40px
+	.reviews-block-leftside
+		width: 200px
+		height: 223px
+		margin: 19px 25px
+		img
+			width: 200px
+			height: 223px
+	.reviews-blocks-rightside
+		.rightside-title
+			position: relative
+			+font('FuturaDemiC', 600, 20px)
+			color: #27598d
+			text-transform: uppercase
+			margin-top: 23px
+			letter-spacing: 1px
+			span
+				position: absolute
+				bottom: -6px
+				left: 0
+				height: 1px
+				width: 145px
+				background: $accent
+		.rightside-text
+			color: #000
+			font-size: 14px
+			margin-top: 16px
+			letter-spacing: 1px
+			font-weight: bold
+			span:last-child
+				margin-top: 15px
+				display: block
+
+	
+// Reviews_
+
+// Stockitem
+
+.section-stockitem
+	background: #f6f6f6
+	.section-inner
+		background: #fff
+	.stockitem-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 0px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dn-stockitem-wrapper
+		display: none
+	.stockitem-wrapper
+		margin-top: 50px
+		margin-bottom: 170px
+		padding-top: 35px
+		padding-bottom: 75px
+		box-shadow: 0px 70px 80px rgba(#000, .1)
+	.stockitem
+	.stockitem-block
+	.stockitem-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: $accent
+		text-transform: uppercase
+		letter-spacing: 2px
+	.stockitem-block__text1
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 15px
+	.stockitem-block__text2
+		text-align: center
+		font-size: 17px
+		color: #000
+		margin-top: 35px
+	.stockitem-block__images
+		display: flex
+		justify-content: space-between
+		margin-top: 75px
+	.stockitem-block__img
+		width: 340px
+		height: 226px
+		box-shadow: 0px 11px 10px rgba(#000, .1)
+		img
+			width: 340px
+			height: 226px
+
+// Stockitem_
+
+// Stock
+
+.section-stock
+	.stock-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 20px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.stock-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-stock-wrapper
+		display: none
+	.stock-wrapper
+		padding-bottom: 140px
+	.stock
+	.stock-blocks
+	.stock-block
+		display: flex
+		padding: 30px 0px
+	.stock-block-wrapper
+		background: #ffffff
+		margin-top: 40px
+		box-shadow: 0px 0px 150px rgba(#000, .1)
+	.stock-block-leftside
+		width: 355px
+		height: 249px
+		img
+			width: 355px
+			height: 249px
+	.stock-block-rightside
+		padding-left: 20px
+		.rightside-title
+			+font('FuturaDemiC', 600, 18px)
+			color: $accent
+			text-transform: uppercase
+		.rightside-text
+			font-weight: bold
+			margin-top: 15px
+		.rightside-button
+			margin-top: 24px
+			text-transform: uppercase
+			text-align: center
+			background: transparent
+			border: 2px solid $accent
+			letter-spacing: 2px
+			padding: 10px 0px
+			width: 250px
+			+font('FuturaDemiC', 600, 16px)
+			cursor: pointer
+			margin-left: auto
+			&:hover
+				color: #ffffff
+				background: $accent
+				transition: all .5s ease
+
+
+	
+// Stock_
+
+
+// Service
+
+.section-service
+	.service-title-second
+		display: none
+	.service-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.service-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-service-wrapper
+		display: none
+	.service-wrapper
+	.service
+	
+	.service-block
+		box-shadow: 0px 0px 80px rgba(#000, .1)
+		padding: 25px
+		margin-top: 17px
+	.service-block__text
+		text-align: center
+		font-weight: bold
+	
+	.service-cards-title
+		+font('FuturaDemiC', 600, 18px)
+		text-transform: uppercase
+		color: #27598d
+		margin-top: 40px
+	
+	.service-cards-wrapper
+
+	.service-cards
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-top: 50px
+		padding-bottom: 60px
+	.service-card
+		position: relative
+		box-shadow: 0px 0px 80px rgba(#000, .12)
+		width: 355px
+		height: 319px
+		margin-bottom: 70px
+	.service-card__bg-img
+		width: 355px
+		height: 244px
+		box-shadow: 0px 50px 50px rgba(#000, .05)
+		img
+			width: 355px
+			height: 244px
+	.service-card__img
+		position: absolute
+		top: 31px
+		left: 21px
+		width: 110px
+		height: 165px
+		img
+			width: 110px
+			height: 165px
+	.service-card__bottom
+		.bottom-title
+			text-align: center
+			+font('FuturaDemiC', 600, 16px)
+			text-transform: uppercase
+			color: #343434
+			padding: 10px
+			border: 2px solid $accent
+			border-top: 1px solid $accent
+			
+
+	
+// Service_
+
+// Commodity
+
+.section-commodity
+	.commodity-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 30px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.commodity-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+			padding-top: 70px
+			padding-bottom: 30px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.dn-commodity-wrapper
+		display: none
+	.dn-commodity-button
+	.commodity-wrapper
+		background: #efefef
+		box-shadow: 0px 0px 80px rgba(#000, .2)
+		padding-top: 50px
+		padding-bottom: 60px
+	.commodity
+	.commodity-block
+		display: flex
+	.commodity-block-img
+		width: 322px
+		height: 322px
+		img
+			width: 322px
+			height: 322px
+			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
+	.commodity-block__info
+		margin-left: 55px
+		.commodity-title
+			+font('FuturaDemiC', 600, 18px)
+			color: #27598d
+			border: 1px solid $accent
+			padding: 10px 0px
+			text-transform: uppercase
+			width: 634px
+			text-align: center
+			line-height: 1.45
+			letter-spacing: 2px
+		.commodity-manufacturer
+			display: flex
+			justify-content: space-between
+			margin-top: 35px
+			width: 450px
+		.commodity-manufacturer__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			line-height: 1.65
+			letter-spacing: 2px
+			box-sizing: border-box
+			padding-top: 3px
+		.commodity-manufacturer__img
+
+		.commodity-quantity
+			display: flex
+			justify-content: space-between
+			width: 374px
+		.commodity-quantity__title
+			font-size: 20px
+			color: #7697ac
+			text-transform: uppercase
+			box-sizing: border-box
+			padding: 15px 0px 0px 0px
+			letter-spacing: 2px
+		.commodity-quantity__buttons
+			display: flex
+			box-sizing: border-box
+			padding: 21px 0px 0px 0px
+		.commodity-quantity__plus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer
+			.fas
+				font-size: 13px
+		.commodity-quantity__number
+			text-transform: uppercase
+			font-size: 30px
+			color: $accent
+			line-height: 0.8
+			box-sizing: border-box
+			padding: 0px 10px 5px 10px
+		.commodity-quantity__minus
+			border: 1px solid $accent
+			color: $accent
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 1.3
+			cursor: pointer					
+			.fas						
+				font-size: 13px
+												
+
+		.commodity-text					
+			text-transform: uppercase				
+			font-weight: bold
+			font-size: 14px												
+			margin-top: 18px
+		.commodity-buttons		
+			display: flex							
+			text-align: center						
+			text-transform: uppercase				
+			color: #fff						
+			margin-top: 20px											
+			.commodity-buttons__first												
+				width: 250px												
+				background: $accent															
+				padding: 8px 0px												
+				cursor: pointer										
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)					
+					transition: box-shadow .25s ease
+			.commodity-buttons__second						
+				width: 250px
+				background: rgba($accent, .2)																			
+				padding: 8px 0px
+				cursor: pointer			
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)
+					transition: box-shadow .25s ease
+			.commodity-buttons__third
+				width: 250px
+				background: rgba($accent, .4)
+				padding: 8px 0px
+				cursor: pointer
+				&:hover
+					box-shadow: 5px 5px 0px rgba($accent, .3)
+					transition: box-shadow .25s ease
+
+	.commodity-table
+		display: flex
+	.commodity-table-block
+		display: flex
+		padding: 20px 50px
+		border: 1px solid $accent
+		text-transform: uppercase
+		color: #000
+		letter-spacing: 2px
+		width: 281px
+		.feature
+			display: block
+			li
+				padding: 6px 0px
+		.value
+			margin-left: 35px
+			li
+				padding: 6px 0px
+	.commodity-table-block:nth-child(2)
+		border-left: 1px solid transparent
+		border-right: 1px solid transparent
+
+
+	
+// Commodity_
+
+// Postcommodity
+
+.section-postcommodity
+	.postcommodity-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+			padding-top: 60px
+			padding-bottom: 40px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	.postcommodity-wrapper
+		margin-bottom: 190px
+	.postcommodity
+
+	.postcommodity-blocks
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	.postcommodity-block
+		padding: 15px
+		background: #efefef
+		width: 226px
+	.postcommodity-block__img
+		width: 210px
+		height: 210px
+		img
+			width: 210px
+			height: 210px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.postcommodity-block-info
+	.postcommodity-block__title
+		+font('FuturaDemiC', 600, 17px)
+		text-align: center
+		color: #27598d
+		margin-top: 20px
+		text-transform: uppercase
+	.postcommodity-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 14px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.postcommodity-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 14px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	
+	.postcommodity-block__buttons
+		display: flex
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		.buttons-first
+			padding: 8px 0px
+			width: 128px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 128px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+
+	
+// Postcommodity_
+
+// Tiles
+
+.section-tiles
+	.tiles-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.tiles-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+
+
+	.dn-tiles-wrapper
+		display: none
+
+
+	.tiles-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+	.tiles
+	.tiles-flex
+		display: flex
+
+
+	.tiles-sidebar
+		width: 270px
+	.tiles-sidebar__button
+		width: 267px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
+		text-transform: uppercase
+		color: $accent
+		text-align: center
+		font-size: 18px
+		cursor: pointer
+		margin-bottom: 15px
+	.tiles-sidebar__list
+		.accordion-wrapper
+			border: 1px solid $accent
+		.accordion
+			border: 1px solid $accent
+			line-height: 1.65
+		.accordion-title
+		.accordion-content
+
+						
+
+
+
+
+	.tiles-catalog
+		margin-left: 40px
+		width: 100%
+	.tiles-catalog__settings
+		padding: 15px 15px
+		display: flex
+		background: #7697ac
+		box-shadow: 0px 0px 60px rgba(#000, .1)
+		select
+			background: transparent
+			border: 1px solid #fff
+			color: #fff
+			margin-left: 10px
+			text-transform: uppercase
+			font-size: 14px
+			outline: none
+			option
+				background: #7697ac
+				outline: none
+	.settings-sorting
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 293px
+		select
+			width: 130px
+	.settings-sorting__title
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 2px
+		white-space: nowrap
+	.settings-display
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 280px
+		margin-left: 28px
+		.fas
+			font-size: 24px
+			color: #9bbbcf
+			margin-left: 6px
+			margin-top: 2px
+			cursor: pointer
+			&.list-active
+				color: #fff
+
+	.settings-display__title
+		+font('FuturaDemiC', 600, 16px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		white-space: nowrap
+		padding-top: 2px
+		box-sizing: border-box
+	.settings-display__buttons
+		line-height: 1.5
+	.settings-displaynumber
+		display: flex
+		color: #fff
+		margin-left: 28px
+		select
+			width: 44px
+	.settings-displaynumber__title
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+	.tiles-catalog__cards-wrapper
+		margin-top: 15px
+	.tiles-catalog__cards
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	.tiles-block
+		padding: 15px
+		background: #efefef
+		width: 235px
+		margin-bottom: 25px
+	.tiles-block__img
+		width: 219px
+		height: 219px
+		img
+			width: 219px
+			height: 219px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.tiles-block-info
+	.tiles-block__title
+		+font('FuturaDemiC', 600, 17px)
+		text-align: center
+		color: #27598d
+		margin-top: 20px
+		text-transform: uppercase
+	.tiles-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 14px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.tiles-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 14px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	
+	.tiles-block__buttons
+		display: flex
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		.buttons-first
+			padding: 8px 0px
+			width: 128px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 128px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+	
+	.tiles-catalog-togglepages
+		display: flex
+		justify-content: center
+		margin-top: 90px
+		.togglepages__button
+			color: #d1d1d1
+			font-size: 21px
+			width: 32px
+			height: 32px
+			text-align: center
+			line-height: 1.5
+			border: 1px solid transparent
+			cursor: pointer
+			&.toggle-active
+				border: 1px solid $accent
+				color: $accent
+				font-weight: bold
+
+	.tiles-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+
+
+
+// Tiles_
+
+// Tilesrow
+
+.section-tilesrow
+	.tilesrow-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.tilesrow-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+
+
+	.dn-tilesrow-wrapper
+		display: none
+
+
+	.tilesrow-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+	.tilesrow
+	.tilesrow-flex
+		display: flex
+
+
+	.tilesrow-sidebar
+		width: 270px
+	.tilesrow-sidebar__button
+		width: 268px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
+		text-transform: uppercase
+		color: $accent
+		text-align: center
+		font-size: 18px
+		cursor: pointer
+		margin-bottom: 15px
+					
+
+
+	.tilesrow-catalog
+		margin-left: 40px
+		width: 100%
+
+
+	.tilesrow-catalog__settings
+		padding: 15px 15px
+		display: flex
+		background: #7697ac
+		box-shadow: 0px 0px 60px rgba(#000, .1)
+		select
+			background: transparent
+			border: 1px solid #fff
+			color: #fff
+			margin-left: 10px
+			text-transform: uppercase
+			font-size: 14px
+			outline: none
+			option
+				background: #7697ac
+				outline: none
+	.settings-sorting
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 293px
+		select
+			width: 130px
+	.settings-sorting__title
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 2px
+		white-space: nowrap
+	.settings-display
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 280px
+		margin-left: 28px
+		.fas
+			font-size: 24px
+			color: #9bbbcf
+			margin-left: 6px
+			margin-top: 2px
+			cursor: pointer
+			&.list-active
+				color: #fff
+
+	.settings-display__title
+		+font('FuturaDemiC', 600, 16px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		white-space: nowrap
+		padding-top: 2px
+		box-sizing: border-box
+	.settings-display__buttons
+		line-height: 1.5
+	.settings-displaynumber
+		display: flex
+		color: #fff
+		margin-left: 28px
+		select
+			width: 44px
+	.settings-displaynumber__title
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+	.tilesrow-catalog__cards-wrapper
+		margin-top: 15px
+	.tilesrow-catalog__cards
+	.tilesrow-block
+		padding: 20px 20px 35px 20px
+		background: #efefef
+		width: 800px
+		margin-bottom: 25px
+		display: flex
+	.tilesrow-block__img
+		width: 219px
+		height: 219px
+		img
+			width: 219px
+			height: 219px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.tilesrow-block-info
+		margin-left: 30px
+	.tilesrow-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: #27598d
+		text-transform: uppercase
+	.tilesrow-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		width: 245px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 17px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.tilesrow-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 17px
+		width: 245px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	.tilesrow-block__description
+		margin-top: 16px
+		margin-bottom: 20px
+		line-height: 1.4
+		+font('FuturaLightC', 200, 14px)
+		text-transform: uppercase
+		width: 380px
+	.tilesrow-block__buttons
+		display: flex
+		justify-content: space-between
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		font-size: 15px
+		letter-spacing: 2px
+		width: 510px
+		.buttons-first
+			padding: 8px 0px
+			width: 230px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px
+			width: 230px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+	
+	.tilesrow-catalog-togglepages
+		display: flex
+		justify-content: center
+		margin-top: 45px
+		.togglepages__button
+			color: #d1d1d1
+			font-size: 21px
+			width: 32px
+			height: 32px
+			text-align: center
+			line-height: 1.5
+			border: 1px solid transparent
+			cursor: pointer
+			&.toggle-active
+				border: 1px solid $accent
+				color: $accent
+				font-weight: bold
+
+	.tilesrow-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+
+// Tilesrow_
+
+
+// Tilescouches
+.section-tilescouches
+	.tilescouches-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.tilescouches-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+
+
+
+	.dn-tilescouches-wrapper
+		display: none
+
+
+	.tilescouches-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+	.tilescouches
+	.tilescouches-flex
+		display: flex
+
+
+	.tilescouches-sidebar
+		width: 270px
+	.tilescouches-sidebar__button
+		width: 268px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
+		text-transform: uppercase
+		color: $accent
+		text-align: center
+		font-size: 18px
+		cursor: pointer
+		margin-bottom: 15px
+
+
+
+	.tilescouches-catalog
+		margin-left: 40px
+		width: 100%
+	.tilescouches-catalog__cards
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.tilescouches-block
+		position: relative
+		width: 235px
+		height: 215px
+		margin-bottom: 40px
+		&:hover .tilescouches-block__bg-img:before
+			top: 15px
+			left: 15px
+		&:hover .tilescouches-block__bg-img:after
+			background: rgba(#7697ac, .8)
+			box-shadow: 0px 0px 70px rgba(#000, .1)
+			transition: background .5s ease
+			
+	.tilescouches-block__bg-img
+		width: 235px
+		height: 215px
+		position: relative
+		img
+			width: 235px
+			height: 215px
+		&:before
+			content: ""
+			position: absolute
+			top: 0px
+			left: 0px
+			width: 99%
+			height: 99%
+			border: 1px solid #3392bc
+			transition-duration: 0.2s
+		&:after
+			content: ''														
+			position: absolute					
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba($accent, .75)
+
+	.tilescouches-block__info
+		color: #fff
+		position: absolute
+		bottom: 5px
+		left: 22px
+	.info-title
+		text-transform: uppercase
+		+font('FuturaMediumC', 500, 16px)
+		text-align: center
+		border: 1px solid #fff
+		padding: 8px 10px
+	.info-more
+		text-transform: uppercase
+		text-decoration: underline
+		font-size: 12px
+		text-align: center
+		margin-top: 10px
+		cursor: pointer
+	.tilescouches-block__img
+		position: absolute
+		top: 18px
+		left: 30px
+		width: 170px
+		height: 109px
+		img
+			width: 170px
+			height: 109px
+
+
+
+
+
+
+
+	
+	.tilescouches-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+	
+// Tilescouches_
+
+
+// Dixion
+
+.section-dixion
+	.dixion-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.dixion-title
+		text-align: center
+		position: relative
+		em
+			font-style: normal
+			+font1('FuturaDemiC', 600)
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+	
+	.dixion-top
+		display: flex
+		justify-content: space-between
+		margin-top: 40px
+		margin-bottom: 40px
+	.dixion-logo
+		width: 470px
+		height: 185px
+		box-shadow: 0px 0px 80px rgba(#000, .15)
+		position: relative
+		img
+			width: 470px
+			height: 185px
+			position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 15px
+			left: 15px
+			width: 470px
+			height: 185px
+			border: 1px solid #3392bc
+			transition-duration: 0.2s
+
+	.dixion-text
+		width: 600px
+
+
+	.dixion-blocks-wrapper
+	.dixion-blocks
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-bottom: 90px
+	.dixion-block
+		position: relative
+		width: 345px
+		height: 315px
+		margin-bottom: 50px
+		&:hover .dixion-block__bg-img:before
+			top: 15px
+			left: 15px
+		&:hover .dixion-block__bg-img:after
+			background: rgba(#7697ac, .8)
+			box-shadow: 0px 0px 70px rgba(#000, .1)
+			transition: background .5s ease
+		&:hover::before
+			
+	.dixion-block__bg-img
+		width: 345px
+		height: 315px
+		img
+			width: 345px
+			height: 315px
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba($accent, .75)
+		&:before
+			content: ""
+			position: absolute
+			top: 0px
+			left: 0px
+			width: 99%
+			height: 99%
+			border: 1px solid #3392bc
+			transition-duration: 0.2s
+	.dixion-block__info
+		color: #fff
+		position: absolute
+		bottom: 15px
+		left: 38px
+		letter-spacing: 1px
+	.info-title
+		text-transform: uppercase
+		+font('FuturaMediumC', 500, 21px)
+		text-align: center
+		border: 1px solid #fff
+		padding: 8px 15px
+	.info-more
+		text-transform: uppercase
+		text-decoration: underline
+		font-size: 14px
+		text-align: center
+		margin-top: 10px
+		cursor: pointer
+	.dixion-block__img
+		position: absolute
+		top: 30px
+		left: 53px
+		width: 240px
+		height: 153px
+		img
+			width: 240px
+			height: 153px
+
+// Dixion_
+
+
+// Search
+
+.section-search
+	.search-page
+		.h3-page
+			color: #000
+			font-size: 16px
+			padding: 30px 0px 10px 0px
+			text-transform: none
+			letter-spacing: 2px
+	.search-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+			color: $accent
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
+
+	.search-wrapper
+		margin-top: 20px
+		padding-bottom: 150px
+
+	.search-flex
+		display: flex
+
+
+	.search-sidebar
+		width: 271px
+		.search-sidebar__button
+			width: 269px
+			padding: 14px 0px
+			border: 2px solid $accent
+			background: transparent
+			text-transform: uppercase
+			color: $accent
+			text-align: center
+			font-size: 18px
+			cursor: pointer
+			margin-bottom: 15px
+		.search-sidebar__properties
+			border: 1px solid $accent
+			padding: 7px 25px
+			.properties-manufacturer
+			.manufacturer-title
+				+font('FuturaDemiC', 600, 18px)
+				text-transform: uppercase
+				color: #27598d
+			.manufacturer-checkbox
+				input
+					margin-top: 6.5px
+					margin-right: 8px
+				& > div
+					display: flex
+				label
+					line-height: 1.2
+					margin-top: 10px
+					text-transform: uppercase
+					font-size: 14.5px
+					font-weight: bold
+
+					
+			.properties-other
+				margin-top: 35px
+			.other-title
+				+font('FuturaDemiC', 600, 18px)
+				text-transform: uppercase
+				color: #27598d
+			.other-checkbox
+				input
+					margin-top: 6.5px
+					margin-right: 8px
+				& > div
+					display: flex
+				label
+					line-height: 1.2
+					margin-top: 10px
+					text-transform: uppercase
+					font-size: 14.5px
+					font-weight: bold
+
+
+			.properties-range
+				margin-top: 35px
+			.range-title
+				+font('FuturaDemiC', 600, 17px)
+				text-transform: uppercase
+				color: #27598d
+				white-space: nowrap
+			.range-inputs
+				margin-top: 7px
+				#slider-range
+					background: #b9d2e2
+				.ui-slider-range
+					background: #b9d2e2
+				.ui-button, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, html .ui-button.ui-state-disabled:active, html .ui-button.ui-state-disabled:hover
+					border: 2px solid $accent
+					background: transparent
+					border-radius: 10em
+					width: 0.7em
+					height: 0.7em
+					top: -.31em
+					margin-left: -.6em
+					outline: none
+			.ui-slider-horizontal
+				height: .4em
+				border: none
+				border-radius: 0px
+				box-shadow: 0px 0px 60px rgba(#000, .4)
+			.range-range
+				display: flex
+				justify-content: space-between
+				width: 200px
+				margin-bottom: 20px
+				input
+					width: 50px
+					padding: 3px
+					text-align: center
+					border: 1px solid $accent
+					margin-left: 7px
+			.nested-input
+				background: transparent
+				position: absolute
+				width: 30px
+				top: 18px
+				left: -10px
+				outline: none
+				border: none
+				text-align: center
+			#slider-range
+				box-shadow: 0px 0px 20px rgba(#000, 0.25)
+				span:nth-child(2)
+					.amount4
+						display: none
+				span:last-child
+					.amount3
+						display: none
+				
+		.properties-filter
+			text-align: center
+			letter-spacing: 1px
+			text-transform: uppercase
+			padding: 6px 20px
+			background: $accent
+			width: 150px
+			color: #fff
+			margin-top: 50px
+			margin-bottom: 8px
+			margin-left: auto
+			margin-right: auto
+
+
+				
+					
+					
+	.search-catalog
+		margin-left: 40px
+		width: 857px
+
+
+	.search-catalog__settings
+		padding: 15.5px 15px
+		display: flex
+		background: #7697ac
+		box-shadow: 0px 0px 60px rgba(#000, .1)
+		select
+			background: transparent
+			border: 1px solid #fff
+			color: #fff
+			margin-left: 10px
+			text-transform: uppercase
+			font-size: 14px
+			outline: none
+			option
+				background: #7697ac
+				outline: none
+	.settings-sorting
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 293px
+		select
+			width: 130px
+	.settings-sorting__title
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 2px
+		white-space: nowrap
+	.settings-display
+		display: flex
+		justify-content: space-between
+		color: #fff
+		width: 280px
+		margin-left: 28px
+		.fas
+			font-size: 24px
+			color: #9bbbcf
+			margin-left: 6px
+			margin-top: 2px
+			cursor: pointer
+			&.list-active
+				color: #fff
+
+	.settings-display__title
+		+font('FuturaDemiC', 600, 16px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		white-space: nowrap
+		padding-top: 2px
+		box-sizing: border-box
+	.settings-display__buttons
+		line-height: 1.5
+	.settings-displaynumber
+		display: flex
+		color: #fff
+		margin-left: 28px
+		select
+			width: 44px
+	.settings-displaynumber__title
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+	.search-catalog__cards-wrapper
+		margin-top: 15px
+	.search-catalog__cards
+	.search-block
+		padding: 20px 20px 35px 20px
+		background: #efefef
+		width: 800px
+		margin-bottom: 25px
+		display: flex
+	.search-block__img
+		width: 219px
+		height: 219px
+		img
+			width: 219px
+			height: 219px
+			box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+	.search-block-info
+		margin-left: 30px
+	.search-block__title
+		+font('FuturaDemiC', 600, 18px)
+		color: #27598d
+		text-transform: uppercase
+	.search-block__manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		width: 245px
+		.manufacturer-title
+			text-transform: uppercase
+			font-size: 17px
+			color: #7697ac
+		.manufacturer-img
+			img
+				width: 90px
+				height: 22px
+
+	.search-block__code
+		display: flex
+		justify-content: space-between
+		font-size: 17px
+		width: 245px
+		.code-title
+			text-transform: uppercase
+			color: #7697ac
+		.code-vendorcode
+			text-transform: uppercase
+			color: #7697ac
+	.search-block__description
+		margin-top: 16px
+		margin-bottom: 20px
+		line-height: 1.4
+		+font('FuturaLightC', 200, 14px)
+		text-transform: uppercase
+		width: 380px
+	.search-block__buttons
+		display: flex
+		justify-content: space-between
+		text-align: center
+		text-transform: uppercase
+		+font('FuturaDemiC', 600, 12px)
+		margin-top: 5px
+		font-size: 15px
+		letter-spacing: 2px
+		width: 510px
+		.buttons-first
+			padding: 8px 0px
+			width: 230px
+			background: $accent
+			color: #fff
+			line-height: 1.9
+			cursor: pointer
+		.buttons-second
+			padding: 9px 0px	
+			width: 230px
+			background: transparent
+			border: 1px solid $accent
+			color: rgba($accent, .8)
+			cursor: pointer
+
+	
+	.search-catalog-togglepages
+		display: flex
+		justify-content: center
+		margin-top: 45px
+		.togglepages__button
+			color: #d1d1d1
+			font-size: 21px
+			width: 32px
+			height: 32px
+			text-align: center
+			line-height: 1.5
+			border: 1px solid transparent
+			cursor: pointer
+			&.toggle-active
+				border: 1px solid $accent
+				color: $accent
+				font-weight: bold
+
+	.search-catalog-seoblock
+		margin-top: 30px
+		.seoblock-title
+			+font('FuturaDemiC', 600, 22px)
+			text-transform: uppercase
+			color: $accent
+		.seoblock-text
+			font-weight: bold
+		span
+			display: block
+			margin-top: 10px
+
+// Search_	
+@import "_media"
