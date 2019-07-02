@@ -940,6 +940,7 @@ b, strong
 	.map-block__title
 		font-size: 28px
 		color: #888aa7
+		text-shadow: 18px 7px 0px rgba(#000, .07)
 	.map-block__tel
 		+font('FuturaBookC', bold, 28px)
 		color: $accent
@@ -1315,9 +1316,16 @@ b, strong
 	.checkbox
 		margin-top: 10px
 		font-size: 16px
+		line-height: 1.2
 		label
 			line-height: 1.2
 			text-transform: uppercase
+		span
+			text-transform: uppercase
+			display: block
+			margin-left: 21px
+			
+
 		
 
 
@@ -1669,6 +1677,7 @@ b, strong
 		text-align: center
 		padding: 10px 0px
 		margin-top: 20px
+		cursor: pointer
 		&:hover
 			background: $accent
 			color: #fff
@@ -3194,6 +3203,8 @@ b, strong
 				text-transform: uppercase
 				color: #27598d
 			.manufacturer-checkbox
+				display: flex
+				flex-direction: column
 				input
 					margin-top: 6.5px
 					margin-right: 8px
@@ -3205,6 +3216,7 @@ b, strong
 					text-transform: uppercase
 					font-size: 14.5px
 					font-weight: bold
+					align-self: flex-start
 
 					
 			.properties-other
@@ -3214,6 +3226,8 @@ b, strong
 				text-transform: uppercase
 				color: #27598d
 			.other-checkbox
+				display: flex
+				flex-direction: column
 				input
 					margin-top: 6.5px
 					margin-right: 8px
@@ -3225,6 +3239,7 @@ b, strong
 					text-transform: uppercase
 					font-size: 14.5px
 					font-weight: bold
+					align-self: flex-start
 
 
 			.properties-range
@@ -3295,6 +3310,7 @@ b, strong
 			margin-bottom: 8px
 			margin-left: auto
 			margin-right: auto
+			cursor: pointer
 
 
 				

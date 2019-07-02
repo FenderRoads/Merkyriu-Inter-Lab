@@ -1,10 +1,11 @@
+/* Form */
+
 .control {
     display: block;
     position: relative;
     padding-left: 25px;
     margin-bottom: 0px;
     padding-top: 0px;
-    cursor: pointer;
 	text-transform: none;
 }
     .control input {
@@ -20,6 +21,7 @@
     width: 13px;
     background: #ffffff;
     border: 1px solid #1d4f84;
+    cursor: pointer
 }
 .control-radio .control_indicator {
     border-radius: 0px;
@@ -61,5 +63,61 @@
     transform: rotate(45deg);
 }
 .control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #ffffff;
+}
+
+/* Form */
+
+.control-1 {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+	text-transform: none;
+}
+    .control-1 input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator-1 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background: #ffffff;
+    border: 1px solid #1d4f84;
+    cursor: pointer
+}
+.control-radio .control_indicator-1 {
+    border-radius: 0px;
+}
+
+.control-1 input:disabled ~ .control_indicator-1 {
+    background: transparent;
+    opacity: 6;
+    pointer-events: none;
+}
+.control_indicator-1:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control-1 input:checked ~ .control_indicator-1:after {
+    display: block;
+}
+.control-checkbox-1 .control_indicator-1:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #1d4f84;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox-1 input:disabled ~ .control_indicator-1:after {
     border-color: #ffffff;
 }
