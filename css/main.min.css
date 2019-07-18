@@ -9203,7 +9203,7 @@ b, strong {
 }
 
 .section-map .section-inner {
-  background: url("../img/@2x/map-new.png") no-repeat;
+  background: url("../img/@2x/map-new.png") no-repeat center;
   -webkit-background-size: cover;
           background-size: cover;
   height: 768px;
@@ -9569,7 +9569,7 @@ b, strong {
   padding: 20px;
 }
 
-.section-contacts .contacts-block__list-1 li a {
+.section-contacts .contacts-block__list-1 li div {
   font-size: 18px;
   color: #1d4f84;
   text-transform: uppercase;
@@ -9577,7 +9577,7 @@ b, strong {
   font-weight: 600;
 }
 
-.section-contacts .contacts-block__list-2 li a {
+.section-contacts .contacts-block__list-2 li div {
   font-size: 18px;
   color: #1d4f84;
 }
@@ -11233,32 +11233,40 @@ b, strong {
 }
 
 .section-commodity .commodity-table-block {
+  width: 380px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 50px;
+  padding: 20px 35px;
   border: 1px solid #1d4f84;
   text-transform: uppercase;
   color: #000;
   letter-spacing: 2px;
-  width: 281px;
 }
 
-.section-commodity .commodity-table-block .feature {
+.section-commodity .commodity-table-block .feature-value {
   display: block;
+  width: 100%;
 }
 
-.section-commodity .commodity-table-block .feature li {
+.section-commodity .commodity-table-block .feature-value li {
   padding: 6px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.section-commodity .commodity-table-block .value {
-  margin-left: 35px;
-}
-
-.section-commodity .commodity-table-block .value li {
-  padding: 6px 0px;
+.section-commodity .commodity-table-block .feature-value li span {
+  display: inline-block;
 }
 
 .section-commodity .commodity-table-block:nth-child(2) {
@@ -11765,7 +11773,7 @@ b, strong {
   cursor: pointer;
 }
 
-.section-tiles .tiles-catalog-togglepages {
+.tiles-catalog-togglepages {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11777,7 +11785,7 @@ b, strong {
   margin-top: 90px;
 }
 
-.section-tiles .tiles-catalog-togglepages .togglepages__button {
+.tiles-catalog-togglepages .togglepages__button {
   color: #d1d1d1;
   font-size: 21px;
   width: 32px;
@@ -11788,17 +11796,17 @@ b, strong {
   cursor: pointer;
 }
 
-.section-tiles .tiles-catalog-togglepages .togglepages__button.toggle-active {
+.tiles-catalog-togglepages .togglepages__button.toggle-active {
   border: 1px solid #1d4f84;
   color: #1d4f84;
   font-weight: bold;
 }
 
-.section-tiles .tiles-catalog-seoblock {
+.tiles-catalog-togglepages .tiles-catalog-seoblock {
   margin-top: 30px;
 }
 
-.section-tiles .tiles-catalog-seoblock .seoblock-title {
+.tiles-catalog-togglepages .tiles-catalog-seoblock .seoblock-title {
   font-family: "FuturaDemiC", sans-serif;
   font-weight: 600;
   font-size: 22px;
@@ -11806,11 +11814,11 @@ b, strong {
   color: #1d4f84;
 }
 
-.section-tiles .tiles-catalog-seoblock .seoblock-text {
+.tiles-catalog-togglepages .tiles-catalog-seoblock .seoblock-text {
   font-weight: bold;
 }
 
-.section-tiles .tiles-catalog-seoblock span {
+.tiles-catalog-togglepages .tiles-catalog-seoblock span {
   display: block;
   margin-top: 10px;
 }
@@ -12152,7 +12160,7 @@ b, strong {
   cursor: pointer;
 }
 
-.section-tilesrow .tilesrow-catalog-togglepages {
+.tilesrow-catalog-togglepages {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12164,7 +12172,7 @@ b, strong {
   margin-top: 45px;
 }
 
-.section-tilesrow .tilesrow-catalog-togglepages .togglepages__button {
+.tilesrow-catalog-togglepages .togglepages__button {
   color: #d1d1d1;
   font-size: 21px;
   width: 32px;
@@ -12175,17 +12183,17 @@ b, strong {
   cursor: pointer;
 }
 
-.section-tilesrow .tilesrow-catalog-togglepages .togglepages__button.toggle-active {
+.tilesrow-catalog-togglepages .togglepages__button.toggle-active {
   border: 1px solid #1d4f84;
   color: #1d4f84;
   font-weight: bold;
 }
 
-.section-tilesrow .tilesrow-catalog-seoblock {
+.tilesrow-catalog-togglepages .tilesrow-catalog-seoblock {
   margin-top: 30px;
 }
 
-.section-tilesrow .tilesrow-catalog-seoblock .seoblock-title {
+.tilesrow-catalog-togglepages .tilesrow-catalog-seoblock .seoblock-title {
   font-family: "FuturaDemiC", sans-serif;
   font-weight: 600;
   font-size: 22px;
@@ -12193,11 +12201,11 @@ b, strong {
   color: #1d4f84;
 }
 
-.section-tilesrow .tilesrow-catalog-seoblock .seoblock-text {
+.tilesrow-catalog-togglepages .tilesrow-catalog-seoblock .seoblock-text {
   font-weight: bold;
 }
 
-.section-tilesrow .tilesrow-catalog-seoblock span {
+.tilesrow-catalog-togglepages .tilesrow-catalog-seoblock span {
   display: block;
   margin-top: 10px;
 }
@@ -12365,17 +12373,21 @@ b, strong {
   color: #fff;
   position: absolute;
   bottom: 5px;
-  left: 22px;
+  left: 13px;
 }
 
 .section-tilescouches .info-title {
+  width: 209px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-transform: uppercase;
   font-family: "FuturaMediumC", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   border: 1px solid #fff;
-  padding: 8px 10px;
+  padding: 5px 10px;
+  line-height: 1.2;
 }
 
 .section-tilescouches .info-more {
@@ -12394,14 +12406,14 @@ b, strong {
 .section-tilescouches .tilescouches-block__img {
   position: absolute;
   top: 18px;
-  left: 30px;
-  width: 170px;
-  height: 109px;
+  left: 43px;
+  width: 150px;
+  height: 96px;
 }
 
 .section-tilescouches .tilescouches-block__img img {
-  width: 170px;
-  height: 109px;
+  width: 150px;
+  height: 96px;
 }
 
 .section-tilescouches .tilescouches-catalog-seoblock {
@@ -13918,7 +13930,7 @@ b, strong {
   .section-commodity .commodity-table .commodity-table-block {
     padding: 10px 11px;
     font-size: 12px;
-    width: 240px;
+    width: 253px;
   }
   .section-postcommodity .postcommodity-block {
     width: 150px;
@@ -14390,16 +14402,19 @@ b, strong {
     color: #fff;
     position: absolute;
     bottom: 5px;
-    left: 17px;
+    left: 12px;
   }
   .section-tilescouches .info-title {
+    width: 146px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-transform: uppercase;
     font-family: "FuturaMediumC", sans-serif;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
     border: 1px solid #fff;
-    padding: 8px 10px;
+    padding: 4px 10px;
   }
   .section-tilescouches .info-more {
     font-size: 10px;
@@ -14407,14 +14422,14 @@ b, strong {
   }
   .section-tilescouches .tilescouches-block__img {
     position: absolute;
-    top: 18px;
-    left: 30px;
-    width: 115px;
-    height: 73px;
+    top: 15px;
+    left: 37px;
+    width: 100px;
+    height: 64px;
   }
   .section-tilescouches .tilescouches-block__img img {
-    width: 115px;
-    height: 73px;
+    width: 100px;
+    height: 64px;
   }
   .section-dixion .dixion-top {
     display: -webkit-box;
@@ -15247,7 +15262,7 @@ b, strong {
   .section-contacts .contacts-block__list-1 li {
     margin-top: 2px;
   }
-  .section-contacts .contacts-block__list-1 li a {
+  .section-contacts .contacts-block__list-1 li div {
     font-size: 12px;
   }
   .section-contacts .contacts-block__list-2 {
@@ -15256,7 +15271,7 @@ b, strong {
   .section-contacts .contacts-block__list-2 li {
     margin-top: 2px;
   }
-  .section-contacts .contacts-block__list-2 li a {
+  .section-contacts .contacts-block__list-2 li div {
     font-size: 12px;
   }
   .section-contacts .contacts-vertline-1, .section-contacts .contacts-vertline-2 {
@@ -16062,9 +16077,9 @@ b, strong {
     height: 34px;
   }
   .section-commodity .commodity-table .commodity-table-block {
-    padding: 10px 26px;
+    padding: 10px 20px;
     font-size: 15px;
-    width: 300px;
+    width: 310px;
     margin: 0 auto;
   }
   .section-commodity .commodity-table .commodity-table-block:last-child, .section-commodity .commodity-table .commodity-table-block:nth-child(2) {
