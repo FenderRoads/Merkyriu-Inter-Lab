@@ -887,7 +887,7 @@ b, strong
 // Map
 .section-map
 	.section-inner
-		background: url('../img/@2x/map-new.png') no-repeat
+		background: url('../img/@2x/map-new.png') no-repeat center
 		background-size: cover
 		height: 768px
 	.map-title
@@ -1140,14 +1140,14 @@ b, strong
 		padding: 20px
 	.contacts-block__list-1
 		li
-			a
+			div
 				font-size: 18px
 				color: $accent
 				text-transform: uppercase
 				+font1('FuturaDemiC', 600)
 	.contacts-block__list-2
 		li
-			a
+			div
 				font-size: 18px
 				color: $accent
 
@@ -2270,21 +2270,24 @@ b, strong
 	.commodity-table
 		display: flex
 	.commodity-table-block
+		width: 380px
+		box-sizing: border-box
 		display: flex
-		padding: 20px 50px
+		padding: 20px 35px
 		border: 1px solid $accent
 		text-transform: uppercase
 		color: #000
 		letter-spacing: 2px
-		width: 281px
-		.feature
+		.feature-value
 			display: block
+			width: 100%
 			li
 				padding: 6px 0px
-		.value
-			margin-left: 35px
-			li
-				padding: 6px 0px
+				width: 100%
+				display: flex
+				justify-content: space-between
+				span
+					display: inline-block
 	.commodity-table-block:nth-child(2)
 		border-left: 1px solid transparent
 		border-right: 1px solid transparent
@@ -2625,23 +2628,23 @@ b, strong
 			cursor: pointer
 
 	
-	.tiles-catalog-togglepages
-		display: flex
-		justify-content: center
-		margin-top: 90px
-		.togglepages__button
-			color: #d1d1d1
-			font-size: 21px
-			width: 32px
-			height: 32px
-			text-align: center
-			line-height: 1.5
-			border: 1px solid transparent
-			cursor: pointer
-			&.toggle-active
-				border: 1px solid $accent
-				color: $accent
-				font-weight: bold
+.tiles-catalog-togglepages
+	display: flex
+	justify-content: center
+	margin-top: 90px
+	.togglepages__button
+		color: #d1d1d1
+		font-size: 21px
+		width: 32px
+		height: 32px
+		text-align: center
+		line-height: 1.5
+		border: 1px solid transparent
+		cursor: pointer
+		&.toggle-active
+			border: 1px solid $accent
+			color: $accent
+			font-weight: bold
 
 	.tiles-catalog-seoblock
 		margin-top: 30px
@@ -2881,23 +2884,23 @@ b, strong
 			cursor: pointer
 
 	
-	.tilesrow-catalog-togglepages
-		display: flex
-		justify-content: center
-		margin-top: 45px
-		.togglepages__button
-			color: #d1d1d1
-			font-size: 21px
-			width: 32px
-			height: 32px
-			text-align: center
-			line-height: 1.5
-			border: 1px solid transparent
-			cursor: pointer
-			&.toggle-active
-				border: 1px solid $accent
-				color: $accent
-				font-weight: bold
+.tilesrow-catalog-togglepages
+	display: flex
+	justify-content: center
+	margin-top: 45px
+	.togglepages__button
+		color: #d1d1d1
+		font-size: 21px
+		width: 32px
+		height: 32px
+		text-align: center
+		line-height: 1.5
+		border: 1px solid transparent
+		cursor: pointer
+		&.toggle-active
+			border: 1px solid $accent
+			color: $accent
+			font-weight: bold
 
 	.tilesrow-catalog-seoblock
 		margin-top: 30px
@@ -3034,13 +3037,16 @@ b, strong
 		color: #fff
 		position: absolute
 		bottom: 5px
-		left: 22px
+		left: 13px
 	.info-title
+		width: 209px
+		box-sizing: border-box
 		text-transform: uppercase
-		+font('FuturaMediumC', 500, 16px)
+		+font('FuturaMediumC', 500, 15px)
 		text-align: center
 		border: 1px solid #fff
-		padding: 8px 10px
+		padding: 5px 10px
+		line-height: 1.2
 	.info-more
 		text-transform: uppercase
 		text-decoration: underline
@@ -3053,12 +3059,12 @@ b, strong
 	.tilescouches-block__img
 		position: absolute
 		top: 18px
-		left: 30px
-		width: 170px
-		height: 109px
+		left: 43px
+		width: 150px
+		height: 96px
 		img
-			width: 170px
-			height: 109px
+			width: 150px
+			height: 96px
 
 
 
