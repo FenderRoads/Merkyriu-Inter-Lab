@@ -14,7 +14,10 @@
 	padding-right: 15px
 a
 	text-decoration: none
-	
+
+a, a:visited, a:hover, a:active
+	color: inherit
+
 h1
 	margin: 0
 	padding: 0
@@ -1456,6 +1459,33 @@ b, strong
 			a
 				color: #000000
 			span
+	.basket-title
+		text-align: center
+		position: relative
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+			color: $accent
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-basket-wrapper
 		display: none
 	.basket
@@ -1475,6 +1505,13 @@ b, strong
 		text-align: center
 		padding: 15px 5px
 		box-shadow: 0px 0px 60px rgba(#000, .2)
+	.basket-empty-title
+		font-size: 35px
+		color: $accent
+		margin: 0 auto
+		font-weight: 700
+		text-align: center
+		padding-top: 50px
 	.basket-blocks
 	.basket-block-wrapper
 		background: #efefef
@@ -1493,17 +1530,18 @@ b, strong
 			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
 	.basket-block__info
 		width: 586px
-		margin: 65px 0px 0px 60px
+		margin: 55px 0px 0px 60px
 		position: relative
 		.info-title
 			+font('FuturaDemiC', 600, 23px)
 			color: #27598d
 			border: 1px solid $accent
-			padding: 15px 60px
+			padding: 10px 0px
+			box-sizing: border-box
 			text-transform: uppercase
-			width: 463px
+			width: 585
 			text-align: center
-			line-height: 1.45
+			line-height: 1.1
 			letter-spacing: 2px
 		.info-manufacturer
 			display: flex
@@ -2063,7 +2101,7 @@ b, strong
 		position: relative
 		box-shadow: 0px 0px 80px rgba(#000, .12)
 		width: 355px
-		height: 319px
+		height: 361px
 		margin-bottom: 70px
 	.service-card__bg-img
 		width: 355px
@@ -2082,7 +2120,10 @@ b, strong
 			width: 110px
 			height: 165px
 	.service-card__bottom
+		display: table
 		.bottom-title
+			display: table-cell
+			vertical-align: middle
 			text-align: center
 			+font('FuturaDemiC', 600, 16px)
 			text-transform: uppercase
@@ -2090,6 +2131,9 @@ b, strong
 			padding: 10px
 			border: 2px solid $accent
 			border-top: 1px solid $accent
+			line-height: 1.1
+			height: 120px
+			box-sizing: border-box
 			
 
 	
@@ -2334,7 +2378,7 @@ b, strong
 
 	.postcommodity-blocks
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		flex-wrap: wrap
 	.postcommodity-block
 		padding: 15px
@@ -2355,6 +2399,13 @@ b, strong
 		color: #27598d
 		margin-top: 20px
 		text-transform: uppercase
+		height: 90px
+		line-height: 1.1
+		display: table
+		span
+			display: table-cell
+			vertical-align: middle
+			text-align: center
 	.postcommodity-block__manufacturer
 		display: flex
 		justify-content: space-between
@@ -2558,7 +2609,7 @@ b, strong
 		margin-top: 15px
 	.tiles-catalog__cards
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		flex-wrap: wrap
 	.tiles-block
 		padding: 15px
@@ -2580,6 +2631,13 @@ b, strong
 		color: #27598d
 		margin-top: 20px
 		text-transform: uppercase
+		height: 90px
+		line-height: 1.1
+		display: table
+		span
+			display: table-cell
+			vertical-align: middle
+			text-align: center
 	.tiles-block__manufacturer
 		display: flex
 		justify-content: space-between
@@ -2824,6 +2882,12 @@ b, strong
 		+font('FuturaDemiC', 600, 18px)
 		color: #27598d
 		text-transform: uppercase
+		line-height: 1.1
+		height: 65px
+		display: table
+		span
+			display: table-cell
+			vertical-align: middle
 	.tilesrow-block__manufacturer
 		display: flex
 		justify-content: space-between
@@ -2994,7 +3058,7 @@ b, strong
 	.tilescouches-catalog__cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: space-around
 	.tilescouches-block
 		position: relative
 		width: 235px
@@ -3164,7 +3228,7 @@ b, strong
 	.dixion-blocks
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: space-around
 		padding-bottom: 90px
 	.dixion-block
 		position: relative
@@ -3207,14 +3271,17 @@ b, strong
 		color: #fff
 		position: absolute
 		bottom: 15px
-		left: 38px
+		left: 21px
 		letter-spacing: 1px
 	.info-title
 		text-transform: uppercase
 		+font('FuturaMediumC', 500, 21px)
 		text-align: center
 		border: 1px solid #fff
-		padding: 8px 15px
+		padding: 8px 3px
+		width: 300px
+		box-sizing: border-box
+		line-height: 1.1
 	.info-more
 		text-transform: uppercase
 		text-decoration: underline
@@ -3225,12 +3292,12 @@ b, strong
 	.dixion-block__img
 		position: absolute
 		top: 30px
-		left: 53px
-		width: 240px
-		height: 153px
+		left: 76px
+		width: 195px
+		height: 125px
 		img
-			width: 240px
-			height: 153px
+			width: 195px
+			height: 125px
 
 // Dixion_
 
@@ -3510,6 +3577,13 @@ b, strong
 		+font('FuturaDemiC', 600, 18px)
 		color: #27598d
 		text-transform: uppercase
+		line-height: 1.1
+		height: 60px
+		display: table
+		span
+			display: table-cell
+			vertical-align: middle
+			
 	.search-block__manufacturer
 		display: flex
 		justify-content: space-between
