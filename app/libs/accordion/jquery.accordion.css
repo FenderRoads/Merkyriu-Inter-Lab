@@ -56,7 +56,7 @@
 .accordion-content {
     background: #27598d;
     color: #ffffff;
-    padding: 0px 0px
+    padding: 0px 0px;
 }
 
 .accordion > .accordion-title {
@@ -79,13 +79,13 @@
 
 .accordion-content > div {
     border: 1px solid transparent;
-    padding: 3px 23px;
-    white-space: nowrap;
+    padding: 6px 13px;
     cursor: pointer;
+    line-height: 1;
 }
 
 .accordion-content > .accordion > .accordion-title-2 {
-    padding: 3px 23px;
+    padding: 6px 13px;
 }
 
 
@@ -97,7 +97,7 @@
 
 
 .accordion-content > .accordion > .accordion-content-2 > div {
-    padding: 3px 50px;
+    padding: 6px 35px;
     border: 1px solid transparent;
     background: rgba(186, 202, 218, .6);
     color: #1d4f84;
@@ -106,8 +106,8 @@
 
 
 .accordion-content > div:hover {
-    background: rgba(186, 202, 218, .3);
-    border: 1px solid rgba(137, 193, 248, 0.5);
+    background: rgba(186, 202, 218, .4);
+    /* border: 1px solid rgba(137, 193, 248, 0.5); */
     transition: all .25s ease;
 }
 [data-control],

@@ -127,4 +127,11 @@ $(function() {
 
 
   // Range_
+
+
+  // Modal
+
+  $(".modalbox").fancybox()
+
+  // Modal_
 });
