@@ -252,7 +252,7 @@
             font-size: 14px
   .section-direction
     .direction-cards
-      justify-content: space-between
+      justify-content: space-around
     .direction-card
       height: 180px
     .direction-card-wrapper
@@ -325,6 +325,7 @@
         width: 180px
         font-size: 14px
         margin-top: 11px
+        margin-left: 8px
       .direction-card-content__icon
         img
           width: 55%
@@ -332,11 +333,11 @@
         font-size: 13px
         padding: 4px 5px
         width: 100px
+        margin-left: 7px
+        margin-bottom: 5px
       .direction-card-content__number
         margin-bottom: 5px
-        margin-left: 11px
-      .direction-card-content__button
-        margin-left: 11px
+        margin-left: 7px
       .direction-card__catalog
         height: 180px
         line-height: 6.05
@@ -631,7 +632,7 @@
     padding-bottom: 30px
   .tiles-sidebar
     margin-right: 10px
-    width: 200px
+    width: 198px
   .tiles-sidebar__button
     width: 198px
     padding: 8px 0px
@@ -640,6 +641,7 @@
     margin-bottom: 15px
   .accordion-wrapper
     .accordion
+      width: 198px
       .accordion-content
         font-size: 13px
         & > div
@@ -647,7 +649,7 @@
         & > .accordion > .accordion-title-2
           padding: 3px 0px
         & > .accordion > .accordion-content-2 > div
-          padding: 3px 20px
+          padding: 3px 10px
     .accordion-title
       font-size: 12px
     .accordion:nth-child(16)
@@ -660,8 +662,7 @@
       .accordion-title
         padding-top: 7px
 
-    .accordion-content
-
+  .accordion-content
 
 
   .tiles-catalog
@@ -683,53 +684,53 @@
       option
         background: #7697ac
         outline: none
-  .settings-sorting
-    display: flex
-    justify-content: space-between
-    color: #fff
-    width: 293px
-    select
-      width: 94px
-  .settings-sorting__title
-    text-transform: uppercase
-    font-size: 10px
-    letter-spacing: 2px
-    white-space: nowrap
-  .settings-display
-    display: flex
-    justify-content: space-between
-    color: #fff
-    width: 240px
-    margin-left: 10px
-    .fas
-      font-size: 16px
-      color: #9bbbcf
-      margin-left: 6px
-      margin-top: -1px
-      cursor: pointer
-      &.list-active
-        color: #fff
+    .settings-sorting
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 293px
+      select
+        width: 94px
+    .settings-sorting__title
+      text-transform: uppercase
+      font-size: 10px
+      letter-spacing: 2px
+      white-space: nowrap
+    .settings-display
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 240px
+      margin-left: 10px
+      .fas
+        font-size: 16px
+        color: #9bbbcf
+        margin-left: 6px
+        margin-top: -1px
+        cursor: pointer
+        &.list-active
+          color: #fff
 
-  .settings-display__title
-    +font('FuturaDemiC', 600, 10px)
-    text-transform: uppercase
-    letter-spacing: 2px
-    white-space: nowrap
-    padding-top: 2px
-    box-sizing: border-box
-  .settings-display__buttons
-    line-height: 1.5
-    display: flex
-  .settings-displaynumber
-    display: flex
-    color: #fff
-    margin-left: 10px
-    select
-      width: 30px
-  .settings-displaynumber__title
-    text-transform: uppercase
-    letter-spacing: 2px
-    font-size: 10px
+    .settings-display__title
+      +font('FuturaDemiC', 600, 10px)
+      text-transform: uppercase
+      letter-spacing: 2px
+      white-space: nowrap
+      padding-top: 2px
+      box-sizing: border-box
+    .settings-display__buttons
+      line-height: 1.5
+      display: flex
+    .settings-displaynumber
+      display: flex
+      color: #fff
+      margin-left: 10px
+      select
+        width: 30px
+    .settings-displaynumber__title
+      text-transform: uppercase
+      letter-spacing: 2px
+      font-size: 10px
   
 
   .tiles-block
@@ -760,42 +761,22 @@
 
 
   .section-tilesrow
+  .tilesrow-catalog
+    width: 555px
   .tilesrow-sidebar
     margin-right: 10px
-    width: 200px
+    width: 198
   .tilesrow-sidebar__button
-    width: 198px
+    width: 196px
     padding: 8px 0px
     border: 2px solid $accent
     font-size: 17px
     margin-bottom: 15px
   .tilesrow-wrapper
     padding-bottom: 70px
-  .accordion-wrapper
-    .accordion
-      .accordion-content
-        font-size: 13px
-        & > div
-          padding: 3px 9px
-        & > .accordion > .accordion-title-2
-          padding: 3px 0px
-        & > .accordion > .accordion-content-2 > div
-          padding: 3px 20px
-    .accordion-title
-      font-size: 12px
-    .accordion:nth-child(16)
-      .accordion-title
-        padding-top: 8px
-    .accordion:nth-child(18)
-      .accordion-title
-        padding-top: 8px
-    .accordion:nth-child(9)
-      .accordion-title
-        padding-top: 7px
+  
 
 
-  .tilesrow-catalog
-    width: 555px
   .tilesrow-catalog__settings
     padding: 15px 5px
     display: flex
@@ -813,53 +794,53 @@
       option
         background: #7697ac
         outline: none
-  .settings-sorting
-    display: flex
-    justify-content: space-between
-    color: #fff
-    width: 293px
-    select
-      width: 94px
-  .settings-sorting__title
-    text-transform: uppercase
-    font-size: 10px
-    letter-spacing: 2px
-    white-space: nowrap
-  .settings-display
-    display: flex
-    justify-content: space-between
-    color: #fff
-    width: 240px
-    margin-left: 10px
-    .fas
-      font-size: 16px
-      color: #9bbbcf
-      margin-left: 6px
-      margin-top: -1px
-      cursor: pointer
-      &.list-active
-        color: #fff
+    .settings-sorting
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 293px
+      select
+        width: 94px
+    .settings-sorting__title
+      text-transform: uppercase
+      font-size: 10px
+      letter-spacing: 2px
+      white-space: nowrap
+    .settings-display
+      display: flex
+      justify-content: space-between
+      color: #fff
+      width: 240px
+      margin-left: 10px
+      .fas
+        font-size: 16px
+        color: #9bbbcf
+        margin-left: 6px
+        margin-top: -1px
+        cursor: pointer
+        &.list-active
+          color: #fff
 
-  .settings-display__title
-    +font('FuturaDemiC', 600, 10px)
-    text-transform: uppercase
-    letter-spacing: 2px
-    white-space: nowrap
-    padding-top: 2px
-    box-sizing: border-box
-  .settings-display__buttons
-    line-height: 1.5
-    display: flex
-  .settings-displaynumber
-    display: flex
-    color: #fff
-    margin-left: 10px
-    select
-      width: 30px
-  .settings-displaynumber__title
-    text-transform: uppercase
-    letter-spacing: 2px
-    font-size: 10px
+    .settings-display__title
+      +font('FuturaDemiC', 600, 10px)
+      text-transform: uppercase
+      letter-spacing: 2px
+      white-space: nowrap
+      padding-top: 2px
+      box-sizing: border-box
+    .settings-display__buttons
+      line-height: 1.5
+      display: flex
+    .settings-displaynumber
+      display: flex
+      color: #fff
+      margin-left: 10px
+      select
+        width: 30px
+    .settings-displaynumber__title
+      text-transform: uppercase
+      letter-spacing: 2px
+      font-size: 10px
   
 
   .tilesrow-block
@@ -900,32 +881,12 @@
       margin-right: 10px
       width: 200px
     .tilescouches-sidebar__button
-      width: 198px
+      width: 196px
       padding: 8px 0px
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
-    .accordion-wrapper
-      .accordion
-        .accordion-content
-          font-size: 13px
-          & > div
-            padding: 3px 9px
-          & > .accordion > .accordion-title-2
-            padding: 3px 0px
-          & > .accordion > .accordion-content-2 > div
-            padding: 3px 20px
-      .accordion-title
-        font-size: 12px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 7px
+    
 
 
 
@@ -1082,9 +1043,9 @@
 
   .search-sidebar
     margin-right: 10px
-    width: 200px
+    width: 198px
     .search-sidebar__button
-      width: 198px
+      width: 196px
       padding: 7.5px 0px
     .search-sidebar__properties
       padding: 7px 10px
@@ -1137,53 +1098,53 @@
         option
           background: #7697ac
           outline: none
-    .settings-sorting
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 280px
-      select
-        width: 94px
-    .settings-sorting__title
-      text-transform: uppercase
-      font-size: 10px
-      letter-spacing: 2px
-      white-space: nowrap
-    .settings-display
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 240px
-      margin-left: 10px
-      .fas
-        font-size: 16px
-        color: #9bbbcf
-        margin-left: 6px
-        margin-top: -1px
-        cursor: pointer
-        &.list-active
-          color: #fff
+      .settings-sorting
+        display: flex
+        justify-content: space-between
+        color: #fff
+        width: 280px
+        select
+          width: 94px
+      .settings-sorting__title
+        text-transform: uppercase
+        font-size: 10px
+        letter-spacing: 2px
+        white-space: nowrap
+      .settings-display
+        display: flex
+        justify-content: space-between
+        color: #fff
+        width: 240px
+        margin-left: 10px
+        .fas
+          font-size: 16px
+          color: #9bbbcf
+          margin-left: 6px
+          margin-top: -1px
+          cursor: pointer
+          &.list-active
+            color: #fff
 
-    .settings-display__title
-      +font('FuturaDemiC', 600, 10px)
-      text-transform: uppercase
-      letter-spacing: 2px
-      white-space: nowrap
-      padding-top: 2px
-      box-sizing: border-box
-    .settings-display__buttons
-      line-height: 1.5
-      display: flex
-    .settings-displaynumber
-      display: flex
-      color: #fff
-      margin-left: 10px
-      select
-        width: 30px
-    .settings-displaynumber__title
-      text-transform: uppercase
-      letter-spacing: 2px
-      font-size: 10px
+      .settings-display__title
+        +font('FuturaDemiC', 600, 10px)
+        text-transform: uppercase
+        letter-spacing: 2px
+        white-space: nowrap
+        padding-top: 2px
+        box-sizing: border-box
+      .settings-display__buttons
+        line-height: 1.5
+        display: flex
+      .settings-displaynumber
+        display: flex
+        color: #fff
+        margin-left: 10px
+        select
+          width: 30px
+      .settings-displaynumber__title
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-size: 10px
     
 
     .search-block
@@ -2500,6 +2461,11 @@
       .properties-filter
         width: 138px
         margin-top: 50px
+  
+
+  .accordion-wrapper
+    .accordion
+      width: 100%
 
 
 

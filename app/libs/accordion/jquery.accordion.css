@@ -44,6 +44,7 @@
 .accordion {
     border: 1px solid #27598d;
     border-bottom: none;
+    width: 270px;
 }
 
 
@@ -97,7 +98,7 @@
 
 
 .accordion-content > .accordion > .accordion-content-2 > div {
-    padding: 6px 35px;
+    padding: 6px 25px;
     border: 1px solid transparent;
     background: rgba(186, 202, 218, .6);
     color: #1d4f84;
