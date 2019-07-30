@@ -150,7 +150,7 @@ b, strong
 		position: relative
 		color: $dark
 		background: #fff
-		z-index: 1001
+		z-index: 1000
 		&:after
 			content: ''
 			position: absolute
@@ -275,7 +275,7 @@ b, strong
 			align-self: flex-start
 		input
 			background: #e6e6e6
-			padding: 12px 15px
+			padding: 12px 50px 12px 15px
 			width: 410px
 			border: none
 			align-self: flex-start
@@ -342,7 +342,20 @@ b, strong
 					&:hover
 						transition: all .5s ease
 						box-sizing: border-box
-						
+
+
+.search-title-button
+	position: absolute
+	top: 0
+	right: 0
+	height: 100%
+	background: $accent
+	border: none
+	color: #fff
+	cursor: pointer
+.input-group
+	position: relative
+		
 
 // Header_
 
@@ -1342,6 +1355,15 @@ b, strong
 			text-transform: uppercase
 			display: block
 			margin-left: 21px
+	.form-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+		padding-bottom: 15px
 			
 
 		
@@ -2230,7 +2252,7 @@ b, strong
 		.commodity-quantity
 			display: flex
 			justify-content: space-between
-			width: 374px
+			width: 449px
 		.commodity-quantity__title
 			font-size: 20px
 			color: #7697ac
@@ -2314,6 +2336,7 @@ b, strong
 
 	.commodity-table
 		display: flex
+		justify-content: center
 	.commodity-table-block
 		width: 50%
 		box-sizing: border-box
@@ -3709,6 +3732,71 @@ b, strong
 		width: 7px
 		height: 2px
 	
+
+
+// Modal
+#returncall
+	width: 500px
+	.modal-title
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.modal-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+	.modal-dialog
+		width: 380px
+	.modal-body
+		input
+			display: block
+			margin: 0 auto
+			width: 100%
+			padding: 0px 10px
+			font-size: 16px
+			border: 1px solid #1d4f84
+			color: #333
+			margin-top: 15px
+			height: 40px
+			text-transform: uppercase
+			letter-spacing: 2px
+			background: transparent
+	.modal-footer
+		button
+			background: #1d4f84
+			color: #fff
+			border: none
+			width: 100%
+			padding: 12px 0px
+			text-transform: uppercase
+			letter-spacing: 2px
+			text-align: center
+			margin-top: 20px
+
+#gkpmodal
+	.form-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+		padding-bottom: 15px
+
+	
+
+
+
+
+
+
+// Modal_
+
 @import "_media"
 
 
