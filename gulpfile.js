@@ -48,8 +48,7 @@ gulp.task('scripts', function() {
 		'app/libs/owlcarousel/owl.carousel.min.js',
 		'app/libs/jquery ui/jquery-ui.min.js',
 		'app/libs/accordion/jquery.accordion.js',
-		'app/libs/fancybox/jquery.fancybox.min.js',
-		'app/js/common.js', // Always at the end
+		'app/libs/fancybox/jquery.fancybox.min.js' // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)

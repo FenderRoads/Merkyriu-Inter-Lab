@@ -84,9 +84,10 @@
 
 
   .section-slider
-    .slider-item__title
-      letter-spacing: 2px
-      font-size: 10px
+    .slider-item
+      .slider-item__title
+        letter-spacing: 2px
+        font-size: 21px
     .left-side
       z-index: 10
     .slider-item
@@ -177,21 +178,11 @@
     .manufact-block
       align-self: flex-start
       .manufact-block__img
-        background-image: url('../img/@2x/philips-grey-new.png')
-        background-size: 110px 27px
-        background-position: center
-        width: 110px
-        height: 27px 
+        width: 132px
+        height: 52px
         img
-          width: 184px
-          height: 37px
-        &:hover
-          background-image: url('../img/@2x/philips-new.png')
-          background-repeat: no-repeat
-          background-size: 110px 27px
-          background-position: center
-          width: 110px
-          height: 27px 
+          width: 132px
+          height: 52px
         
 
 
@@ -245,6 +236,7 @@
     .footer-logo
       img
         width: 310px
+        height: 46px
     .footer-fourblocks
       ul
         li
@@ -469,6 +461,7 @@
     .reviews-block-leftside
       width: 185px
       height: 206px
+      flex: 0 0 185px
       img
         width: 185px
         height: 206px
@@ -502,6 +495,7 @@
       width: 265px
       height: 176px
       margin-top: 4px
+      flex: 0 0 265px
       img
         width: 265px
         height: auto
@@ -539,14 +533,14 @@
       margin-bottom: 40px
       width: 235px
       height: 232px
-    .service-card__bg-img
+    .service-card__img
       width: 233px
       height: 162px
       box-shadow: 0px 50px 50px rgba(#000, .05)
       border: 1px solid $accent
       img
-        width: 233px
-        height: 162px
+        max-width: 175px
+        max-height: 142px
     .service-card__bottom
       .bottom-title
         text-align: center
@@ -562,6 +556,7 @@
 
   .section-commodity
     .commodity-block-img
+      flex: 0 0 250px
       img
         width: 250px
         height: 250px
@@ -570,7 +565,7 @@
         width: 410px
       .commodity-title
         font-size: 14px
-        width: 453px
+        width: 407px
       .commodity-text
         font-size: 11px
       .commodity-buttons
@@ -590,9 +585,10 @@
       .commodity-quantity__buttons
         padding: 15px 0px 0px 0px
     .commodity-manufacturer__img
+      min-height: 47px
       img
-        width: 135px
-        height: 34px
+        max-width: 120px
+        max-height: 47px
     .commodity-table
       .commodity-table-block
         padding: 10px 11px
@@ -620,9 +616,10 @@
       font-size: 11px
       line-height: 2
     .manufacturer-img
+      min-height: 26px
       img
-        width: 60px
-        height: 15px
+        max-width: 65px
+        max-height: 26px
   .postcommodity-block__code
     font-size: 11px
   .postcommodity-block__buttons
@@ -635,9 +632,10 @@
   .tiles-sidebar
     margin-right: 10px
     width: 198px
+    flex: 0 0 198px
   .tiles-sidebar__button
-    width: 198px
-    padding: 8px 0px
+    width: 99%
+    padding: 9px 0px
     border: 2px solid $accent
     font-size: 17px
     margin-bottom: 15px
@@ -690,14 +688,16 @@
       display: flex
       justify-content: space-between
       color: #fff
-      width: 293px
+      width: 260px
       select
         width: 94px
+        margin-top: 4px
     .settings-sorting__title
       text-transform: uppercase
       font-size: 10px
       letter-spacing: 2px
       white-space: nowrap
+      margin-top: 3px
     .settings-display
       display: flex
       justify-content: space-between
@@ -718,21 +718,27 @@
       text-transform: uppercase
       letter-spacing: 2px
       white-space: nowrap
-      padding-top: 2px
+      padding-top: 4px
       box-sizing: border-box
     .settings-display__buttons
       line-height: 1.5
       display: flex
+      margin-top: 4px
     .settings-displaynumber
       display: flex
       color: #fff
       margin-left: 10px
+      width: 125px
+      flex: 0 0 125px
       select
-        width: 30px
+        width: 40px
+        margin-top: 4px
+        flex: 0 0 40px
     .settings-displaynumber__title
       text-transform: uppercase
       letter-spacing: 2px
       font-size: 10px
+      margin-top: 4px
   
 
   .tiles-block
@@ -753,9 +759,10 @@
       font-size: 11px
       line-height: 2
     .manufacturer-img
+      min-height: 26px
       img
-        width: 60px
-        height: 15px
+        max-width: 65px
+        max-height: 26px
   .tiles-block__code
     font-size: 11px
   .tiles-block__buttons
@@ -767,10 +774,11 @@
     width: 555px
   .tilesrow-sidebar
     margin-right: 10px
-    width: 198
+    width: 198px
+    flex: 0 0 198px
   .tilesrow-sidebar__button
-    width: 196px
-    padding: 8px 0px
+    width: 99%
+    padding: 9px 0px
     border: 2px solid $accent
     font-size: 17px
     margin-bottom: 15px
@@ -796,53 +804,7 @@
       option
         background: #7697ac
         outline: none
-    .settings-sorting
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 293px
-      select
-        width: 94px
-    .settings-sorting__title
-      text-transform: uppercase
-      font-size: 10px
-      letter-spacing: 2px
-      white-space: nowrap
-    .settings-display
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 240px
-      margin-left: 10px
-      .fas
-        font-size: 16px
-        color: #9bbbcf
-        margin-left: 6px
-        margin-top: -1px
-        cursor: pointer
-        &.list-active
-          color: #fff
-
-    .settings-display__title
-      +font('FuturaDemiC', 600, 10px)
-      text-transform: uppercase
-      letter-spacing: 2px
-      white-space: nowrap
-      padding-top: 2px
-      box-sizing: border-box
-    .settings-display__buttons
-      line-height: 1.5
-      display: flex
-    .settings-displaynumber
-      display: flex
-      color: #fff
-      margin-left: 10px
-      select
-        width: 30px
-    .settings-displaynumber__title
-      text-transform: uppercase
-      letter-spacing: 2px
-      font-size: 10px
+    
   
 
   .tilesrow-block
@@ -860,8 +822,13 @@
   .tilesrow-block__manufacturer
     font-size: 14px
     .manufacturer-img
+      min-height: 35px
+      img
+        max-width: 89px
+        max-height: 35px
   .tilesrow-block__code
     font-size: 14px
+    margin-top: 4px
   .tilesrow-block__description
     margin-top: 10px
     margin-bottom: 13px
@@ -882,9 +849,10 @@
     .tilescouches-sidebar
       margin-right: 10px
       width: 200px
+      flex: 0 0 200px
     .tilescouches-sidebar__button
-      width: 196px
-      padding: 8px 0px
+      width: 99%
+      padding: 9px 0px
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
@@ -950,23 +918,23 @@
       margin-top: 40px
       margin-bottom: 40px
     .dixion-logo
-      margin-top: 55px
-      width: 270px
-      height: 106px
-      box-shadow: 0px 0px 80px rgba(#000, .15)
+      margin-top: 0px
+      min-height: 106px
       img
-        width: 270px
-        height: 106px
-        position: relative
-      &:before
-        content: ""
-        position: absolute
-        top: 14px
-        left: 14px
-        width: 270px
-        height: 106px
-        border: 1px solid #3392bc
-        transition-duration: 0.2s
+        display: block
+        width: 100%
+      & > div
+        max-width: 270px
+        max-height: 106px
+        &:before
+          content: ""
+          position: absolute
+          top: 14px
+          left: 14px
+          width: 100%
+          height: 100%
+          border: 1px solid #3392bc
+          transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 455px
@@ -1046,9 +1014,10 @@
   .search-sidebar
     margin-right: 10px
     width: 198px
+    flex: 0 0 198px
     .search-sidebar__button
-      width: 196px
-      padding: 7.5px 0px
+      width: 99%
+      padding: 9px 0px
     .search-sidebar__properties
       padding: 7px 10px
       .properties-manufacturer
@@ -1100,54 +1069,7 @@
         option
           background: #7697ac
           outline: none
-      .settings-sorting
-        display: flex
-        justify-content: space-between
-        color: #fff
-        width: 280px
-        select
-          width: 94px
-      .settings-sorting__title
-        text-transform: uppercase
-        font-size: 10px
-        letter-spacing: 2px
-        white-space: nowrap
-      .settings-display
-        display: flex
-        justify-content: space-between
-        color: #fff
-        width: 240px
-        margin-left: 10px
-        .fas
-          font-size: 16px
-          color: #9bbbcf
-          margin-left: 6px
-          margin-top: -1px
-          cursor: pointer
-          &.list-active
-            color: #fff
-
-      .settings-display__title
-        +font('FuturaDemiC', 600, 10px)
-        text-transform: uppercase
-        letter-spacing: 2px
-        white-space: nowrap
-        padding-top: 2px
-        box-sizing: border-box
-      .settings-display__buttons
-        line-height: 1.5
-        display: flex
-      .settings-displaynumber
-        display: flex
-        color: #fff
-        margin-left: 10px
-        select
-          width: 30px
-      .settings-displaynumber__title
-        text-transform: uppercase
-        letter-spacing: 2px
-        font-size: 10px
-    
+      
 
     .search-block
       width: 515px
@@ -1164,6 +1086,10 @@
     .search-block__manufacturer
       font-size: 14px
       .manufacturer-img
+        min-height: 26px
+        img
+          max-width: 65px
+          max-height: 26px
     .search-block__code
       font-size: 14px
     .search-block__description
@@ -1181,6 +1107,16 @@
       .buttons-second
         width: 150px
         padding: 5px 0px
+
+  .smart-filter
+    width: 198px
+  .smart-filter-title
+    font-size: 15px
+  .smart-filter-parameters-box-title
+    font-size: 11px
+  .smart-filter-checkbox-text
+    font-size: 13px
+    line-height: 1.2
 
 
 @media only screen and (max-width: 780px) 
@@ -1221,6 +1157,7 @@
       display: block
       width: 100%
       background: $accent
+      z-index: 1000
     .menu-wrapper-fixed
       top: 106px
       margin-left: -174px
@@ -1238,6 +1175,7 @@
       left: 167px
     .dn-menu__twobuttons
       display: flex
+      flex: 1 0 auto
       .dn-menu__hamb
         width: 42px
         height: 42px
@@ -1289,9 +1227,11 @@
       .fas
         position: absolute
         transition: all .2s linear
-        top: 12px
+        top: 1px
         left: 13px
         color: #fff
+        width: 43px
+        height: 42px
       input
         width: 44px
         height: 44px
@@ -1302,7 +1242,7 @@
         box-sizing: border-box
         font-size: 17px
         padding-left: 7px
-        padding-right: 32px
+        padding-right: 47px
     
     .top-line
       display: none
@@ -1510,7 +1450,6 @@
     box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
     .section-inner 
       background: 0
-      height: 630px
     .map-title
       .line
         margin-bottom: 0px
@@ -1518,8 +1457,6 @@
         margin-top: 35px
     .map-block
       width: 320px
-      top: 57px
-      box-shadow: 20px 30px 0 rgba(255,255,255,.7), 0px 0px 50px 0px rgba(#000, .15)
     .map-block-wrapper
       width: 320px
     .map-block-titleside
@@ -1533,15 +1470,10 @@
         font-size: 20px
         top: 2px
         left: -26px
-    .topblock-tel
+    .contacts-tel
       .fa-phone
         top: 2px
         left: -30px
-    .bottomblock-tel
-      .fa-phone
-        top: 2px
-        left: -30px
-
 
 
 
@@ -1556,6 +1488,10 @@
       text-align: center
     .dn-item
       display: block
+    .soc-bottomblock__button
+      font-size: 18px
+      padding: 7px 17px
+      margin-top: 6px
     .fourblocks-company
       text-align: center
       margin-bottom: 75px
@@ -1568,6 +1504,7 @@
             color: #000
     .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
       display: none
+    
 
 
 
@@ -1590,6 +1527,8 @@
     .contacts-block-wrapper
       padding: 0px
       border: none
+      a
+        font-size: 12px
     .contacts-block__list-1
       li
         margin-top: 2px
@@ -1726,7 +1665,7 @@
       text-transform: uppercase
       display: block
       color: #000
-      font-size: 16px
+      font-size: 15px
       position: absolute
       top: 5px
       left: 0
@@ -1905,13 +1844,10 @@
           color: #fff
           background: $accent
           transition: all .5s ease
-    .news-block__text1
+    p
       font-size: 16px
       text-align: left
-    .news-block__text2
-      font-size: 16px
-      text-align: left
-    .news-block__title
+    h2, h3, h4
       text-align: center
     
   .section-newslist
@@ -2163,14 +2099,14 @@
       margin-bottom: 40px
       width: 320px
       height: 320px
-    .service-card__bg-img
+    .service-card__img
       width: 316px
       height: 220px
       box-shadow: 0px 50px 50px rgba(#000, .05)
       border: 2px solid $accent
       img
-        width: 316px
-        height: 220px
+        max-width: 240px
+        max-height: 170px
     .service-card__bottom
       .bottom-title
         text-align: center
@@ -2185,6 +2121,7 @@
 
   .section-commodity
     .commodity-block-img
+      flex: 0 0 300px
       img
         width: 300px
         height: 300px
@@ -2222,9 +2159,10 @@
       .commodity-quantity__title
         font-size: 17px
     .commodity-manufacturer__img
+      min-height: 47px
       img
-        width: 135px
-        height: 34px
+        max-width: 135px
+        max-height: 47px
     .commodity-table
       flex-wrap: wrap
       .commodity-table-block
@@ -2268,9 +2206,10 @@
       font-size: 18px
       line-height: 1.65
     .manufacturer-img
+      min-height: 41px
       img
-        width: 100px
-        height: 25px
+        max-width: 105px
+        max-height: 41px
   .postcommodity-block__code
     font-size: 18px
   .postcommodity-block__buttons
@@ -2287,16 +2226,59 @@
   .tiles-title
     display: none
   .tiles-catalog
+    display: block
+    width: 320px
+  .tiles-catalog__settings
     display: none
   .tiles-flex
+    flex-wrap: wrap
   .tiles-sidebar
     margin-right: 0px
     width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
   .tiles-sidebar__button
-    display: none
+    display: block
   .accordion-wrapper 
     .accordion-title
       font-size: 16px
+  .tiles-block
+    width: 320px
+    padding: 15px
+    margin-bottom: 30px
+  .tiles-block__img
+    width: 270px
+    height: 270px
+    img
+      width: 270px
+      height: 270px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .tiles-title
+    .line
+      font-size: 19px
+  .tiles-block__title
+    font-size: 20px
+    margin-top: 25px
+    height: 108px
+  .tiles-block__manufacturer
+    .manufacturer-title
+      font-size: 18px
+      line-height: 1.65
+    .manufacturer-img
+      min-height: 41px
+      img
+        max-width: 105px
+        max-height: 41px
+  .tiles-block__code
+    font-size: 18px
+  .tiles-block__buttons
+    font-size: 13px
+    .buttons-first
+      width: 143px
+    .buttons-second
+      width: 143px 
+
+
 
   .section-tilesrow
   .tilesrow-wrapper
@@ -2306,12 +2288,16 @@
     display: none
   .tilesrow-catalog
     display: none
+  .tilesrow-catalog__settings
   .tilesrow-flex
+    flex-wrap: wrap
   .tilesrow-sidebar
     margin-right: 0px
     width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
   .tilesrow-sidebar__button
-    display: none
+    display: block
   .accordion-wrapper 
     .accordion-title
       font-size: 16px
@@ -2332,13 +2318,18 @@
     .tilescouches-title
       display: none
     .tilescouches-catalog
-      display: none
+      display: block
+    .tilescouches-catalog__settings
     .tilescouches-flex
+      flex-wrap: wrap
     .tilescouches-sidebar
       margin-right: 0px
       width: 100%
+      flex: 0 0 100%
+      margin-bottom: 20px
     .tilescouches-sidebar__button
-      display: none
+      display: block
+      width: 100%
     .accordion-wrapper 
       .accordion-title
         font-size: 16px
@@ -2354,28 +2345,31 @@
 
 
   .section-dixion
+    .dixion-title
+      .line
+        font-size: 18px
     .dixion-top
       display: block
       margin-top: 40px
       margin-bottom: 40px
     .dixion-logo
       margin-top: 35px
-      width: 320px
-        height: 126px
-      box-shadow: 0px 0px 80px rgba(#000, .15)
+      min-height: 126px
       img
-        width: 320px
-        height: 126px
-        position: relative
-      &:before
-        content: ""
-        position: absolute
-        top: 15px
-        left: 15px
-        width: 320px
-        height: 126px
-        border: 1px solid #3392bc
-        transition-duration: 0.2s
+        display: block
+        width: 100%
+      & > div
+        max-width: 320px
+        max-height: 126px
+        &:before
+          content: ""
+          position: absolute
+          top: 15px
+          left: 15px
+          width: 100%
+          height: 100%
+          border: 1px solid #3392bc
+          transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 100%
@@ -2422,19 +2416,59 @@
   .search-title
     display: none
   .search-catalog
+    display: block
+  .search-catalog__settings
     display: none
   .search-flex
+    flex-wrap: wrap
   .search-sidebar__button
-    display: none
+    display: block
   .search-sidebar__list
     .main-list
       & > li
         font-size: 16px
+  .search-block
+    width: 320px
+    padding: 15px
+    margin-bottom: 30px
+  .search-block__img
+    width: 270px
+    height: 270px
+    img
+      width: 270px
+      height: 270px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .search-title
+    .line
+      font-size: 19px
+  .search-block__title
+    font-size: 20px
+    margin-top: 25px
+    height: 108px
+  .search-block__manufacturer
+    .manufacturer-title
+      font-size: 18px
+      line-height: 1.65
+    .manufacturer-img
+      min-height: 41px
+      img
+        max-width: 105px
+        max-height: 41px
+  .search-block__code
+    font-size: 18px
+  .search-block__buttons
+    font-size: 13px
+    .buttons-first
+      width: 143px
+    .buttons-second
+      width: 143px 
 
 
   .search-sidebar
     margin-right: 0px
     width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
     .search-sidebar__properties
       padding: 7px 30px
       .properties-manufacturer
@@ -2475,6 +2509,13 @@
 
   #returncall
     width: 100%
+    .modal-footer
+      .error
+        line-height: 1
+        margin-top: 15px
+  #gkpmodal
+    .form-block__bottom
+
 
 
 

@@ -15,12 +15,15 @@
 a
 	text-decoration: none
 
-a, a:visited, a:hover, a:active
-	color: inherit
+a 
+	color: #333
+	&:visited, &:active
+		color: inherit
 
-h1
+h1, h2, h3, h4, h5, h6
 	margin: 0
 	padding: 0
+	font-size: 100%
 
 .top
 	position: fixed
@@ -33,12 +36,13 @@ h1
 	font-size: 24px
 	width: 60px
 	height: 60px
-	text-align: center
-	line-height: 60px
 	cursor: pointer
 	transition: all .25s ease
 	opacity: .5
 	z-index: 9999
+	display: flex
+	justify-content: center
+	align-items: center
 	&:hover
 		color: #ffffff
 		background-color: $accent
@@ -146,6 +150,7 @@ b, strong
 		z-index: 1000
 		position: fixed
 		display: none
+		top: 0
 	.top-line
 		position: relative
 		color: $dark
@@ -219,7 +224,9 @@ b, strong
 	.top-line__tel-first
 		color: $accent
 		+font1('FuturaDemiC', 600)
+		display: block
 	.top-line__tel-second
+		display: block
 
 	.top-line__email
 		z-index: 10
@@ -233,6 +240,8 @@ b, strong
 			padding-right: 10px
 			width: 20px
 			height: 20px
+		.email
+			display: block
 	.top-line__callback
 		display: block
 		z-index: 10
@@ -346,13 +355,14 @@ b, strong
 
 .search-title-button
 	position: absolute
-	top: 0
+	top: 1px
 	right: 0
-	height: 100%
 	background: $accent
 	border: none
 	color: #fff
 	cursor: pointer
+	height: 42px
+	width: 44px
 .input-group
 	position: relative
 		
@@ -402,9 +412,11 @@ b, strong
 			+font1('FuturaDemiC', 600)
 			text-transform: uppercase
 			letter-spacing: 3px
+			font-size: 30px
 		.slider-item__post-title
 			letter-spacing: 1px
 			font-size: 21px
+			line-height: 1.3
 		.slider-item__arguments
 			display: flex
 			margin-top: 25px
@@ -464,6 +476,7 @@ b, strong
 		color: $accent
 		letter-spacing: 2px
 		text-transform: uppercase
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -507,7 +520,7 @@ b, strong
 	.direction-cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-evenly
+		justify-content: space-around
 	.direction-card
 		margin-bottom: 20px
 		overflow: hidden
@@ -770,6 +783,7 @@ b, strong
 	.manufact-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -802,28 +816,26 @@ b, strong
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+		padding-bottom: 130px
 	.manufact-block
 		margin-top: 50px
 		padding-left: 10px
 		padding-right: 10px
-		&:last-child
-			margin-bottom: 130px
+		width: calc(100%/6)
+		&:hover .manufact-block__img img
+			transform: scale(1.2)
+			transition: all .5s ease	
 	.manufact-block__img
-		background-image: url('../img/@2x/philips-grey-new.png')
-		background-size: 184px 37px
-		background-size: center
-		width: 184px
-		height: 37px 
+		min-height: 90px
+		display: inline-block
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 184px
-			height: 37px
-		&:hover
-			background-image: url('../img/@2x/philips-new.png')
-			background-repeat: no-repeat
-			background-size: 184px 37px
-			background-size: center
-			width: 184px
-			height: 37px 
+			max-width: 210px
+			max-height: 83px
+			transition: all .5s ease	
 
 // Manufacts_
 
@@ -885,7 +897,6 @@ b, strong
 		font-size: 19px
 		width: 130px
 		text-align: center
-
 		&:hover
 			transition: all .5s ease
 			color: #000000
@@ -906,10 +917,10 @@ b, strong
 	.section-inner
 		background: url('../img/@2x/map-new.png') no-repeat center
 		background-size: cover
-		height: 768px
 	.map-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -939,23 +950,15 @@ b, strong
 		position: relative
 	.map-block
 		width: 440px
-		height: 519px
-		background: #fff
-		position: absolute
-		top: 100px
-		left: 0
-		box-shadow: 20px 30px 0 rgba(#fff, .7)
-	.map-block-line
-		height: 1px
-		position: absolute
-		bottom: 200px
-		background: $accent
-		width: 100%
+		padding: 50px 0px 80px 0px
 	.map-block-wrapper
+		background: #ffffff
+		box-shadow: 20px 30px 0 rgba(#fff, .7)
+		padding-top: 20px
+		padding-bottom: 10px
 	.map-block-titleside
 		text-align: right
-		margin-top: 50px
-		margin-right: 50px
+		padding-right: 50px
 	.map-block__title
 		font-size: 28px
 		color: #888aa7
@@ -968,7 +971,6 @@ b, strong
 		display: flex
 		flex-direction: column
 		justify-content: space-around
-		height: 377px
 		font-size: 18px
 		.fas
 			color: $accent
@@ -981,29 +983,22 @@ b, strong
 			top: 2px
 			left: -30px
 			font-size: 22px
-	.map-block-topblock
-		height: 150px
+	.map-block-contacts
+		height: 170px
 		padding: 0px 80px
-	.topblock-address
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&:last-child:not(:first-child)
+			border-top: 1px solid $accent
+	.contacts-address
 		position: relative
-	.topblock-tel
+	.contacts-tel
 		position: relative
 		.fa-phone
 			top: 2px
 			left: -32px
-		
-
-	.map-block-bottomblock
-		height: 150px
-		padding: 0px 80px
-	.bottomblock-address
-		position: relative
-	.bottomblock-tel
-		position: relative
-		.fa-phone
-			top: 2px
-			left: -32px
-
+	
 // twoblock_
 
 // Footer
@@ -1016,6 +1011,9 @@ b, strong
 		position: absolute
 		bottom: 40px
 		left: 0
+		img
+			width: 447px
+			height: 66px
 	.footer-fourblocks
 		display: flex
 		justify-content: space-between
@@ -1105,6 +1103,7 @@ b, strong
 	.contacts-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1137,12 +1136,10 @@ b, strong
 			margin-top: 30px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.contacts-block
 		width: 750px
-		height: 362px
 		background: #fefefd
 		box-shadow: 0px 0px 80px 0px rgba(#000, .1)
 		padding: 20px
@@ -1155,6 +1152,13 @@ b, strong
 		display: flex
 		justify-content: space-between
 		padding: 20px
+		li
+			line-height: 1.1
+			margin: 4px 0px
+			a
+				font-size: 18px
+				color: $accent
+				line-height: 1.1
 	.contacts-block__list-1
 		li
 			div
@@ -1167,6 +1171,7 @@ b, strong
 			div
 				font-size: 18px
 				color: $accent
+				
 
 
 // Contacts_
@@ -1181,7 +1186,6 @@ b, strong
 			margin: 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.dn-delivery-wrapper
@@ -1189,11 +1193,13 @@ b, strong
 	.delivery-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
 			text-transform: uppercase
 			letter-spacing: 3px
+			color: $accent
 		.line-text 
 			display: inline-block
 			position: relative
@@ -1246,6 +1252,7 @@ b, strong
 	.form-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1258,7 +1265,7 @@ b, strong
 			padding: 0 10px
 			vertical-align: middle
 			width: 100%
-			max-width: 700px
+			max-width: 760px
 			min-width: 500px
 		.line-text:before,
 		.line-text:after
@@ -1288,7 +1295,6 @@ b, strong
 			font-size: 16px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 
@@ -1330,7 +1336,7 @@ b, strong
 	.form-block__bottom
 		display: flex
 		flex-direction: column
-		margin-top: 20px
+		position: relative
 	.sentence
 		width: 100%
 		padding: 10px 0px
@@ -1340,6 +1346,7 @@ b, strong
 		background: $accent
 		color: #fff
 		display: block
+		margin-top: 50px
 	.star
 		text-transform: uppercase
 		margin-top: 10px
@@ -1363,7 +1370,10 @@ b, strong
 		font-size: 24px
 		text-align: center
 		color: #ef3e36
-		padding-bottom: 15px
+		position: absolute
+		top: 4px
+		right: 0
+		left: 0
 			
 
 		
@@ -1381,12 +1391,12 @@ b, strong
 			padding: 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.company-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1437,6 +1447,7 @@ b, strong
 	.geography-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1480,14 +1491,13 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
-			font-weight: 600
 			a
 				color: #000000
 			span
 	.basket-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1500,7 +1510,7 @@ b, strong
 			vertical-align: middle
 			color: $accent
 			width: 100%
-			max-width: 700px
+			max-width: 760px
 			min-width: 500px
 		.line-text:before,
 		.line-text:after
@@ -1654,6 +1664,35 @@ b, strong
 	background: #f6f6f6
 	.section-inner
 		background: #fff
+	.news-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.news-page
 		.h3-page
 			color: #000
@@ -1661,7 +1700,6 @@ b, strong
 			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1679,27 +1717,43 @@ b, strong
 		box-shadow: 0px 70px 80px rgba(#000, .1)
 	.news
 	.news-block
-	.news-block__title
-		+font('FuturaDemiC', 600, 18px)
+	h2, h3, h4
+		+font1('FuturaDemiC', 600)
 		color: $accent
 		text-transform: uppercase
 		letter-spacing: 2px
-		h2
-			font-size: 18px
+		line-height: 1.2
+		margin: 15px 0px 5px 0px
+	h2
+		font-size: 18px
+	h3
+		font-size: 16px
+	h4
+		font-size: 14px
 	.news-block__date
 		font-size: 13px
 		text-transform: uppercase
 		color: $accent
-	.news-block__text1
-		text-align: center
+	p
 		font-size: 17px
 		color: #000
 		margin-top: 15px
-	.news-block__text2
-		text-align: center
-		font-size: 17px
-		color: #000
-		margin-top: 35px
+		margin: 5px 0px
+		line-height: 1.4
+	ul
+		font-size: 18px
+		padding-left: 20px
+		margin: 5px 0px
+		line-height: 1.4
+		li
+			list-style: disc outside
+			margin: 3px 0px
+	ol
+		font-size: 18px
+		margin: 5px 0px
+		line-height: 1.4
+		li
+			margin: 3px 0px
 	.news-block__images
 		display: flex
 		justify-content: space-between
@@ -1726,16 +1780,40 @@ b, strong
 		.h3-page
 			color: #000
 			font-size: 16px
-			padding: 30px 0px
+			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
-	.h1-block
-		padding-top: 10px
-		h1
-			font-size: 19px
+	.newslist-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px 0px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-newslist-wrapper
 		display: none
 	.newslist-wrapper
@@ -1814,12 +1892,12 @@ b, strong
 			padding: 30px 0px 20px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.reviews-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1865,6 +1943,7 @@ b, strong
 		width: 200px
 		height: 223px
 		margin: 19px 25px
+		flex: 0 0 200px
 		img
 			width: 200px
 			height: 223px
@@ -1909,7 +1988,6 @@ b, strong
 			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1917,33 +1995,63 @@ b, strong
 		padding-bottom: 0px
 		h1
 			font-size: 19px
+	.stockitem-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px 0px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-stockitem-wrapper
 		display: none
 	.stockitem-wrapper
-		margin-top: 30px
+		margin-top: 20px
 		margin-bottom: 170px
 		padding-top: 35px
 		padding-bottom: 75px
 		box-shadow: 0px 70px 80px rgba(#000, .1)
 	.stockitem
 	.stockitem-block
-	.stockitem-block__title
-		+font('FuturaDemiC', 600, 18px)
+	h2, h3, h4
+		+font1('FuturaDemiC', 600)
 		color: $accent
 		text-transform: uppercase
 		letter-spacing: 2px
-		h2
-			font-size: 18px
-	.stockitem-block__text1
-		text-align: center
+		line-height: 1.2
+	h2
+		font-size: 18px
+	h3
+		font-size: 16px
+	h4
+		font-size: 14px
+	p
 		font-size: 17px
 		color: #000
 		margin-top: 15px
-	.stockitem-block__text2
-		text-align: center
-		font-size: 17px
-		color: #000
-		margin-top: 35px
+		margin: 5px 0px
+		line-height: 1.4
 	.stockitem-block__images
 		display: flex
 		justify-content: space-between
@@ -1968,7 +2076,6 @@ b, strong
 			padding: 30px 0px 20px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1979,6 +2086,8 @@ b, strong
 	.stock-title
 		text-align: center
 		position: relative
+		font-size: 25px
+		padding: 0px 0px 25px 0px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2019,6 +2128,7 @@ b, strong
 	.stock-block-leftside
 		width: 355px
 		height: 249px
+		flex: 0 0 355px
 		img
 			width: 355px
 			height: 249px
@@ -2069,12 +2179,12 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.service-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2140,6 +2250,17 @@ b, strong
 		img
 			width: 351px
 			height: 244px
+	.service-card__img
+		width: 351px
+		height: 244px
+		box-shadow: 0px 50px 50px rgba(#000, .05)
+		border: 2px solid $accent
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			max-width: 260px
+			max-height: 200px
 	.service-card__bottom
 		display: table
 		.bottom-title
@@ -2172,12 +2293,12 @@ b, strong
 			padding: 30px 0px 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.commodity-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2218,6 +2339,7 @@ b, strong
 	.commodity-block-img
 		width: 322px
 		height: 322px
+		flex: 0 0 322px
 		img
 			width: 322px
 			height: 322px
@@ -2234,105 +2356,113 @@ b, strong
 			text-align: center
 			line-height: 1.1
 			letter-spacing: 2px
-		.commodity-manufacturer
-			display: flex
-			justify-content: space-between
-			margin-top: 35px
-			width: 450px
-		.commodity-manufacturer__title
-			font-size: 20px
-			color: #7697ac
-			text-transform: uppercase
-			line-height: 1.65
-			letter-spacing: 2px
-			box-sizing: border-box
-			padding-top: 3px
-		.commodity-manufacturer__img
+	.commodity-manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 35px
+		width: 450px
+	.commodity-manufacturer__title
+		font-size: 20px
+		color: #7697ac
+		text-transform: uppercase
+		line-height: 1.65
+		letter-spacing: 2px
+		box-sizing: border-box
+		padding-top: 3px
+		align-self: center
+	.commodity-manufacturer__img
+		min-height: 55px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 140px
+			max-height: 55px
 
-		.commodity-quantity
-			display: flex
-			justify-content: space-between
-			width: 449px
-		.commodity-quantity__title
-			font-size: 20px
-			color: #7697ac
-			text-transform: uppercase
-			box-sizing: border-box
-			padding: 15px 0px 0px 0px
-			letter-spacing: 2px
-		.commodity-quantity__buttons
-			display: flex
-			box-sizing: border-box
-			padding: 21px 0px 0px 0px
-		.commodity-quantity__plus
-			border: 1px solid $accent
-			color: $accent
-			width: 20px
-			height: 20px
-			text-align: center
-			line-height: 1.3
+	.commodity-quantity
+		display: flex
+		justify-content: space-between
+		width: 449px
+	.commodity-quantity__title
+		font-size: 20px
+		color: #7697ac
+		text-transform: uppercase
+		box-sizing: border-box
+		padding: 15px 0px 0px 0px
+		letter-spacing: 2px
+	.commodity-quantity__buttons
+		display: flex
+		box-sizing: border-box
+		padding: 21px 0px 0px 0px
+	.commodity-quantity__plus
+		border: 1px solid $accent
+		color: $accent
+		width: 20px
+		height: 20px
+		text-align: center
+		line-height: 1.3
+		cursor: pointer
+		.fas
+			font-size: 13px
+	.commodity-quantity__number
+		text-transform: uppercase
+		font-size: 30px
+		color: $accent
+		line-height: 0.8
+		box-sizing: border-box
+		padding: 0px 10px 5px 10px
+	.commodity-quantity__minus
+		border: 1px solid $accent
+		color: $accent
+		width: 20px
+		height: 20px
+		text-align: center
+		line-height: 1.3
+		cursor: pointer					
+		.fas						
+			font-size: 13px
+											
+
+	.commodity-text					
+		text-transform: uppercase				
+		font-size: 14px												
+		margin-top: 18px
+	.commodity-buttons		
+		display: flex							
+		text-align: center						
+		text-transform: uppercase				
+		color: #fff						
+		margin-top: 20px
+		a
+			color: #fff												
+		.commodity-buttons__first
+			display: block												
+			width: 250px												
+			background: $accent															
+			padding: 8px 0px												
+			cursor: pointer										
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)					
+				transition: box-shadow .25s ease
+		.commodity-buttons__second
+			display: block						
+			width: 250px
+			background: rgba($accent, .2)																			
+			padding: 8px 0px
+			cursor: pointer			
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)
+				transition: box-shadow .25s ease
+		.commodity-buttons__third
+			display: block
+			width: 250px
+			background: rgba($accent, .4)
+			padding: 8px 0px
 			cursor: pointer
-			.fas
-				font-size: 13px
-		.commodity-quantity__number
-			text-transform: uppercase
-			font-size: 30px
-			color: $accent
-			line-height: 0.8
-			box-sizing: border-box
-			padding: 0px 10px 5px 10px
-		.commodity-quantity__minus
-			border: 1px solid $accent
-			color: $accent
-			width: 20px
-			height: 20px
-			text-align: center
-			line-height: 1.3
-			cursor: pointer					
-			.fas						
-				font-size: 13px
-												
-
-		.commodity-text					
-			text-transform: uppercase				
-			font-weight: bold
-			font-size: 14px												
-			margin-top: 18px
-		.commodity-buttons		
-			display: flex							
-			text-align: center						
-			text-transform: uppercase				
-			color: #fff						
-			margin-top: 20px
-			a
-				color: #fff												
-			.commodity-buttons__first
-				display: block												
-				width: 250px												
-				background: $accent															
-				padding: 8px 0px												
-				cursor: pointer										
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)					
-					transition: box-shadow .25s ease
-			.commodity-buttons__second
-				display: block						
-				width: 250px
-				background: rgba($accent, .2)																			
-				padding: 8px 0px
-				cursor: pointer			
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)
-					transition: box-shadow .25s ease
-			.commodity-buttons__third
-				display: block
-				width: 250px
-				background: rgba($accent, .4)
-				padding: 8px 0px
-				cursor: pointer
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)
-					transition: box-shadow .25s ease
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)
+				transition: box-shadow .25s ease
 
 	.commodity-table
 		display: flex
@@ -2379,6 +2509,7 @@ b, strong
 .postcommodity-title
 	text-align: center
 	position: relative
+	font-size: 25px
 	.line
 		overflow: hidden
 		text-align: center
@@ -2448,9 +2579,14 @@ b, strong
 		font-size: 14px
 		color: #7697ac
 	.manufacturer-img
+		min-height: 43px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
 		img
-			width: 90px
-			height: 22px
+			max-width: 110px
+			max-height: 43px
 
 .postcommodity-block__code
 	display: flex
@@ -2500,12 +2636,12 @@ b, strong
 		padding: 30px 0px 10px 0px
 		text-transform: none
 		letter-spacing: 2px
-		font-weight: 600
 		a
 			color: #000000
 .tiles-title
 	text-align: center
 	position: relative
+	font-size: 25px
 	.line
 		overflow: hidden
 		text-align: center
@@ -2548,6 +2684,7 @@ b, strong
 .tiles-sidebar
 	margin-right: 40px
 	width: 270px
+	flex: 0 0 270px
 .tiles-sidebar__button
 	width: 267px
 	padding: 14px 0px
@@ -2584,13 +2721,14 @@ b, strong
 		background: transparent
 		border: 1px solid #fff
 		color: #fff
-		margin-left: 10px
+		margin-left: 5px
 		text-transform: uppercase
 		font-size: 14px
 		outline: none
 		option
 			background: #7697ac
 			outline: none
+
 .settings-sorting
 	display: flex
 	justify-content: space-between
@@ -2632,7 +2770,8 @@ b, strong
 	color: #fff
 	margin-left: 28px
 	select
-		width: 44px
+		width: 49px
+		flex: 0 0 49px
 .settings-displaynumber__title
 	text-transform: uppercase
 	letter-spacing: 2px
@@ -2679,15 +2818,22 @@ b, strong
 		text-transform: uppercase
 		font-size: 14px
 		color: #7697ac
+		align-self: center
 	.manufacturer-img
+		min-height: 43px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
 		img
-			width: 90px
-			height: 22px
+			max-width: 110px
+			max-height: 43px
 
 .tiles-block__code
 	display: flex
 	justify-content: space-between
 	font-size: 14px
+	margin-top: 4px
 	.code-title
 		text-transform: uppercase
 		color: #7697ac
@@ -2765,12 +2911,12 @@ b, strong
 		padding: 30px 0px 10px 0px
 		text-transform: none
 		letter-spacing: 2px
-		font-weight: 600
 		a
 			color: #000000
 .tilesrow-title
 	text-align: center
 	position: relative
+	font-size: 25px
 	.line
 		overflow: hidden
 		text-align: center
@@ -2813,6 +2959,7 @@ b, strong
 .tilesrow-sidebar
 	margin-right: 40px
 	width: 270px
+	flex: 0 0 270px
 .tilesrow-sidebar__button
 	width: 268px
 	padding: 14px 0px
@@ -2829,7 +2976,7 @@ b, strong
 
 .tilesrow-catalog
 	width: 100%
-
+	
 
 .tilesrow-catalog__settings
 	padding: 15px 15px
@@ -2840,58 +2987,13 @@ b, strong
 		background: transparent
 		border: 1px solid #fff
 		color: #fff
-		margin-left: 10px
+		margin-left: 5px
 		text-transform: uppercase
 		font-size: 14px
 		outline: none
 		option
 			background: #7697ac
 			outline: none
-.settings-sorting
-	display: flex
-	justify-content: space-between
-	color: #fff
-	width: 293px
-	select
-		width: 130px
-.settings-sorting__title
-	text-transform: uppercase
-	font-size: 18px
-	letter-spacing: 2px
-	white-space: nowrap
-.settings-display
-	display: flex
-	justify-content: space-between
-	color: #fff
-	width: 280px
-	margin-left: 28px
-	.fas
-		font-size: 24px
-		color: #9bbbcf
-		margin-left: 6px
-		margin-top: 2px
-		cursor: pointer
-		&.list-active
-			color: #fff
-
-.settings-display__title
-	+font('FuturaDemiC', 600, 16px)
-	text-transform: uppercase
-	letter-spacing: 2px
-	white-space: nowrap
-	padding-top: 2px
-	box-sizing: border-box
-.settings-display__buttons
-	line-height: 1.5
-.settings-displaynumber
-	display: flex
-	color: #fff
-	margin-left: 28px
-	select
-		width: 44px
-.settings-displaynumber__title
-	text-transform: uppercase
-	letter-spacing: 2px
 
 
 .tilesrow-catalog__cards-wrapper
@@ -2927,21 +3029,28 @@ b, strong
 	display: flex
 	justify-content: space-between
 	margin-top: 10px
-	width: 245px
+	width: 300px
 	.manufacturer-title
 		text-transform: uppercase
 		font-size: 17px
 		color: #7697ac
+		align-self: center
 	.manufacturer-img
+		min-height: 43px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
 		img
-			width: 90px
-			height: 22px
+			max-width: 110px
+			max-height: 43px
 
 .tilesrow-block__code
 	display: flex
 	justify-content: space-between
 	font-size: 17px
-	width: 245px
+	width: 300px
+	margin-top: 2px
 	.code-title
 		text-transform: uppercase
 		color: #7697ac
@@ -3025,12 +3134,13 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
+
 			a
 				color: #000000
 	.tilescouches-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -3066,6 +3176,8 @@ b, strong
 	.tilescouches-wrapper
 		margin-top: 20px
 		padding-bottom: 150px
+		.direction-card-content-rightside
+			display: none
 	.tilescouches
 	.tilescouches-flex
 		display: flex
@@ -3074,6 +3186,7 @@ b, strong
 	.tilescouches-sidebar
 		margin-right: 40px
 		width: 270px
+		flex: 0 0 270px
 	.tilescouches-sidebar__button
 		width: 268px
 		padding: 14px 0px
@@ -3199,12 +3312,13 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
+
 			a
 				color: #000000
 	.dixion-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		em
 			font-style: normal
 			+font1('FuturaDemiC', 600)
@@ -3239,23 +3353,29 @@ b, strong
 		margin-top: 40px
 		margin-bottom: 40px
 	.dixion-logo
-		width: 470px
-		height: 185px
-		box-shadow: 0px 0px 80px rgba(#000, .15)
+		min-height: 185px
 		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 470px
-			height: 185px
+			display: block
+			width: 100%
+		& > div
+			max-width: 470px
+			max-height: 185px
 			position: relative
-		&:before
-			content: ""
-			position: absolute
-			top: 15px
-			left: 15px
-			width: 470px
-			height: 185px
-			border: 1px solid #3392bc
-			transition-duration: 0.2s
+			box-shadow: 0px 0px 80px rgba(#000, .15)
+			&:before
+				content: ""
+				position: absolute
+				top: 15px
+				left: 15px
+				width: 100%
+				height: 100%
+				border: 1px solid #3392bc
+				transition-duration: 0.2s
+				z-index: -2
 
 	.dixion-text
 		width: 600px
@@ -3350,12 +3470,12 @@ b, strong
 		padding: 30px 0px 10px 0px
 		text-transform: none
 		letter-spacing: 2px
-		font-weight: 600
 		a
 			color: #000000
 .search-title
 	text-align: center
 	position: relative
+	font-size: 25px
 	.line
 		overflow: hidden
 		text-align: center
@@ -3392,6 +3512,7 @@ b, strong
 .search-sidebar
 	margin-right: 40px
 	width: 271px
+	flex: 0 0 271px
 	.search-sidebar__button
 		width: 269px
 		padding: 14px 0px
@@ -3529,68 +3650,6 @@ b, strong
 	width: 100%
 
 
-.search-catalog__settings
-	padding: 15.5px 15px
-	display: flex
-	background: #7697ac
-	box-shadow: 0px 0px 60px rgba(#000, .1)
-	select
-		background: transparent
-		border: 1px solid #fff
-		color: #fff
-		margin-left: 10px
-		text-transform: uppercase
-		font-size: 14px
-		outline: none
-		option
-			background: #7697ac
-			outline: none
-.settings-sorting
-	display: flex
-	justify-content: space-between
-	color: #fff
-	width: 293px
-	select
-		width: 130px
-.settings-sorting__title
-	text-transform: uppercase
-	font-size: 18px
-	letter-spacing: 2px
-	white-space: nowrap
-.settings-display
-	display: flex
-	justify-content: space-between
-	color: #fff
-	width: 280px
-	margin-left: 28px
-	.fas
-		font-size: 24px
-		color: #9bbbcf
-		margin-left: 6px
-		margin-top: 2px
-		cursor: pointer
-		&.list-active
-			color: #fff
-
-.settings-display__title
-	+font('FuturaDemiC', 600, 16px)
-	text-transform: uppercase
-	letter-spacing: 2px
-	white-space: nowrap
-	padding-top: 2px
-	box-sizing: border-box
-.settings-display__buttons
-	line-height: 1.5
-.settings-displaynumber
-	display: flex
-	color: #fff
-	margin-left: 28px
-	select
-		width: 44px
-.settings-displaynumber__title
-	text-transform: uppercase
-	letter-spacing: 2px
-
 
 .search-catalog__cards-wrapper
 	margin-top: 15px
@@ -3632,9 +3691,14 @@ b, strong
 		font-size: 17px
 		color: #7697ac
 	.manufacturer-img
+		min-height: 43px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
 		img
-			width: 90px
-			height: 22px
+			max-width: 110px
+			max-height: 43px
 
 .search-block__code
 	display: flex
@@ -3727,10 +3791,36 @@ b, strong
 		font-size: 19px
 	.smart-filter-parameters-box-title-text
 		color: #fff
+		font-size: 14px
 	.smart-filter-angles:after, .smart-filter-angles:before
-		background: red
+		background: #fff
 		width: 7px
 		height: 2px
+	.smart-filter-parameters-box-container
+		display: flex
+		justify-content: space-around
+		padding-top: 20px
+		.btn
+			border: 1px solid #fff
+			background: transparent
+			color: #fff
+			width: 45%
+			font-size: 14px
+			padding: 6px 0px
+			transition: all .5s ease
+			letter-spacing: 1px
+			&:hover
+				background: #fff
+				color: #000
+				transition: all .5s ease
+	.tiles-sidebar__button
+		.accordion-content
+			&:hover
+				background: $accent
+	.smart-filter-checkbox-text
+		font-size: 15px
+
+	
 	
 
 
@@ -3749,8 +3839,13 @@ b, strong
 		font-size: 24px
 		text-align: center
 		color: #ef3e36
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
 	.modal-dialog
 		width: 380px
+		margin: 0 auto
 	.modal-body
 		input
 			display: block
@@ -3762,10 +3857,12 @@ b, strong
 			color: #333
 			margin-top: 15px
 			height: 40px
-			text-transform: uppercase
 			letter-spacing: 2px
 			background: transparent
+			&::placeholder
+				text-transform: uppercase
 	.modal-footer
+		position: relative
 		button
 			background: #1d4f84
 			color: #fff
@@ -3775,7 +3872,7 @@ b, strong
 			text-transform: uppercase
 			letter-spacing: 2px
 			text-align: center
-			margin-top: 20px
+			margin-top: 40px
 
 #gkpmodal
 	.form-ok
