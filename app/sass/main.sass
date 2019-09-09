@@ -291,7 +291,7 @@ b, strong
 		.bottom-line__basket
 			display: block
 			color: #000
-			padding: 7px 60px 7px 35px
+			padding: 8px 60px 8px 35px
 			background: #fff
 			box-shadow: 0px 0px 20px rgba(#000, .25)
 			align-self: flex-start
@@ -336,26 +336,23 @@ b, strong
 			display: flex
 			justify-content: space-around
 			li
-				padding: 21px 51px
-				box-sizing: border-box
-				border-bottom: 2px solid transparent
-				&:hover 
-					transition: all .5s ease
-					box-sizing: border-box
-					border-bottom: 2px solid #fff
 				a
+					display: block
 					color: #fff
 					text-transform: uppercase
 					+font('FuturaDemiC', 600, 16px)
 					box-sizing: border-box
+					padding: 21px 51px
+					border-bottom: 2px solid transparent
 					&:hover
 						transition: all .5s ease
+						border-bottom: 2px solid #fff
 						box-sizing: border-box
 
 
 .search-title-button
 	position: absolute
-	top: 1px
+	top: 0
 	right: 0
 	background: $accent
 	border: none
@@ -524,6 +521,7 @@ b, strong
 	.direction-card
 		margin-bottom: 20px
 		overflow: hidden
+		align-self: flex-start
 		&:hover .direction-card-content
 			border: 1px solid #fff
 			transition: border .5s ease
@@ -915,8 +913,15 @@ b, strong
 // Map
 .section-map
 	.section-inner
-		background: url('../img/@2x/map-new.png') no-repeat center
-		background-size: cover
+		overflow: hidden
+		position: relative
+		iframe
+			display: block
+			min-height: 415px
+			max-height: 590px
+			height: 100%
+			position: absolute
+			border: none
 	.map-title
 		position: relative
 		text-align: center
@@ -947,10 +952,10 @@ b, strong
 		.line-text:after 
 			left: 100%
 	.container
-		position: relative
 	.map-block
 		width: 440px
 		padding: 50px 0px 80px 0px
+		position: relative
 	.map-block-wrapper
 		background: #ffffff
 		box-shadow: 20px 30px 0 rgba(#fff, .7)
@@ -1013,7 +1018,6 @@ b, strong
 		left: 0
 		img
 			width: 447px
-			height: 66px
 	.footer-fourblocks
 		display: flex
 		justify-content: space-between
@@ -2468,7 +2472,7 @@ b, strong
 		display: flex
 		justify-content: center
 	.commodity-table-block
-		width: 50%
+		width: 75%
 		box-sizing: border-box
 		display: flex
 		padding: 15px 15px
@@ -2484,7 +2488,7 @@ b, strong
 				display: flex
 				justify-content: space-between
 				line-height: 1
-				font-size: 15px
+				font-size: 16px
 				div
 					width: 45%
 					display: flex
@@ -2578,6 +2582,7 @@ b, strong
 		text-transform: uppercase
 		font-size: 14px
 		color: #7697ac
+		align-self: center
 	.manufacturer-img
 		min-height: 43px
 		position: relative
@@ -2781,13 +2786,12 @@ b, strong
 	margin-top: 15px
 .tiles-catalog__cards
 	display: flex
-	justify-content: space-around
 	flex-wrap: wrap
 .tiles-block
 	padding: 15px
 	background: #efefef
 	width: 240px
-	margin-bottom: 25px
+	margin: 0px 4px 25px 4px
 .tiles-block__img
 	width: 224px
 	height: 219px
@@ -3285,17 +3289,17 @@ b, strong
 
 
 	
-	.tilescouches-catalog-seoblock
-		margin-top: 30px
-		.seoblock-title
-			+font('FuturaDemiC', 600, 22px)
-			text-transform: uppercase
-			color: $accent
-		.seoblock-text
-			font-weight: bold
-		span
-			display: block
-			margin-top: 10px
+.tilescouches-catalog-seoblock
+	margin-top: 30px
+	.seoblock-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	.seoblock-text
+		font-weight: bold
+	span
+		display: block
+		margin-top: 10px
 	
 // Tilescouches_
 
@@ -3305,6 +3309,8 @@ b, strong
 .section-dixion
 	.dixion
 		padding-bottom: 80px
+		.direction-card-content-rightside
+			display: none
 	.dixion-page
 		.h3-page
 			color: #000
@@ -3824,7 +3830,7 @@ b, strong
 	
 
 
-// Modal
+// Modall
 #returncall
 	width: 500px
 	.modal-title
@@ -3886,7 +3892,6 @@ b, strong
 		padding-bottom: 15px
 
 	
-
 
 
 

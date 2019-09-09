@@ -28,17 +28,10 @@
     cursor: pointer;
 }
 
-.accordion:nth-child(16) > .accordion-title {
-    padding-top: 6px
+.accordion:nth-child(16) > .accordion-title,.accordion:nth-child(18) > .accordion-title,.accordion:nth-child(6) > .accordion-title,.accordion:nth-child(9) > .accordion-title,.accordion:nth-child(11) > .accordion-title {
+    padding-top: 6px;
 }
 
-.accordion:nth-child(18) > .accordion-title {
-    padding-top: 6px
-}
-
-.accordion:nth-child(9) > .accordion-title {
-    
-}
 
 
 .accordion {
@@ -60,6 +53,10 @@
     padding: 0px 0px;
 }
 
+.accordion-content a{
+    color: #ffffff;
+}
+
 .accordion > .accordion-title {
     height: 50px;
     box-sizing: border-box;
@@ -70,8 +67,7 @@
 .accordion > .accordion-title {
     height: 50px;
     box-sizing: border-box;
-    padding-top: 14px;
-    
+    padding: 14px 20px 0px 20px;
 }
 
 .accordion-content > div {
@@ -93,7 +89,7 @@
 .accordion.open > .accordion-title {
     border: 3px solid #1d4f84;
     transition: all .1s ease;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 
@@ -123,31 +119,37 @@
 
 [data-accordion] [data-control] {
     position: relative;
-    padding-right: 0px;
 }
 
-[data-accordion] > [data-control]:after {
+[data-accordion] > [data-control].accordion-title:after {
     content: "";
     position: absolute;
-    right: 10px;
-    top: 12px;
-    font-size: 25px;
-    font-weight: 200;
-    color: #444;
-    height: 15px;
-    width: 24px;
-    background: url('../images/down.png') center center no-repeat;
-    background-size: 50%;
+    right: -18px;
+    top: 8px;
+    height: 30px;
+    width: 30px;
+    background: url('../../img/@2x/arrow_down.png') center center no-repeat;
+    background-size: 100%;
+    transition: all .5s ease
 }
 
-[data-accordion].open > [data-control]:after {
+[data-accordion].open > [data-control].accordion-title:after {
     -webkit-transform: rotate(-180deg); 
     -ms-transform: rotate(-180deg); 
-    transform: rotate(-180deg); 
+    transform: rotate(-180deg);
+    transition: all .5s ease 
 }
 
 
-
+@media only screen and (max-width: 1200px) {
+    [data-accordion] > [data-control].accordion-title:after {
+        height: 25px;
+        width: 25px;
+    }
+    .accordion > .accordion-title {
+        padding: 14px 10px 0px 10px;
+    }
+}
 
 @media only screen and (max-width: 780px) {
     .accordion-title {

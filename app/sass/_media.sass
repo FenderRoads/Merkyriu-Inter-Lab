@@ -8,7 +8,7 @@
   .container
     width: 760px
   .section-header
-    height: 185px
+    height: 182px
     .top-line
       height: 67px
     .topline-fixed
@@ -20,7 +20,7 @@
       margin-left: -585px
       top: 67px
     .menu-wrapper-bg
-      height: 60px
+      height: 57px
       top: 67px
     .menu-wrapper-fixed
       margin-left: -393px
@@ -76,10 +76,10 @@
     .menu
       ul
         li
-          padding: 16px 20px
           a
             font-size: 14px
             white-space: nowrap
+            padding: 16px 20px
             
 
 
@@ -178,11 +178,10 @@
     .manufact-block
       align-self: flex-start
       .manufact-block__img
-        width: 132px
-        height: 52px
+        max-height: 52px
         img
-          width: 132px
-          height: 52px
+          max-width: 132px
+          max-height: 52px
         
 
 
@@ -236,7 +235,6 @@
     .footer-logo
       img
         width: 310px
-        height: 46px
     .footer-fourblocks
       ul
         li
@@ -594,7 +592,7 @@
         padding: 10px 11px
         .feature-value
           li
-            font-size: 12px
+            font-size: 13px
 
   .section-postcommodity
   .postcommodity-blocks
@@ -652,15 +650,9 @@
           padding: 3px 10px
     .accordion-title
       font-size: 12px
-    .accordion:nth-child(16)
-      .accordion-title
+    .accordion:nth-child(16), .accordion:nth-child(18), .accordion:nth-child(6), .accordion:nth-child(9), .accordion:nth-child(11), .accordion:nth-child(9)
+      &.accordion-title
         padding-top: 8px
-    .accordion:nth-child(18)
-      .accordion-title
-        padding-top: 8px
-    .accordion:nth-child(9)
-      .accordion-title
-        padding-top: 7px
 
   .accordion-content
 
@@ -744,6 +736,7 @@
   .tiles-block
     width: 165px
     padding: 7px
+    margin: 0px 3px 25px 3px
   .tiles-block__img
     width: 150px
     height: 150px
@@ -1455,6 +1448,7 @@
         margin-bottom: 0px
       .line-text
         margin-top: 35px
+        margin-bottom: 15px
     .map-block
       width: 320px
     .map-block-wrapper
@@ -2170,7 +2164,9 @@
         font-size: 15px
         width: 100%
         margin: 0 auto
-
+        .feature-value
+          li
+            font-size: 12px
       .commodity-table-block:nth-child(2)
         border-left: 1px solid $accent
         margin-top: 10px
@@ -2245,7 +2241,7 @@
   .tiles-block
     width: 320px
     padding: 15px
-    margin-bottom: 30px
+    margin: 0px 0px 30px 0px
   .tiles-block__img
     width: 270px
     height: 270px
@@ -2301,16 +2297,14 @@
   .accordion-wrapper 
     .accordion-title
       font-size: 16px
-    .accordion:nth-child(16)
-      .accordion-title
-        padding-top: 12px
-    .accordion:nth-child(18)
-      .accordion-title
-        padding-top: 12px
-    .accordion:nth-child(9)
-      .accordion-title
-        padding-top: 12px
+    
 
+    .accordion:nth-child(6), .accordion:nth-child(9), .accordion:nth-child(11)
+      .accordion-title
+        padding-top: 14px
+    .accordion:nth-child(16), .accordion:nth-child(18)
+      .accordion-title
+        padding-top: 5px
   .section-tilescouches
     .tilescouches-wrapper
       box-shadow: 0px 60px 70px rgba(#000, .05)
@@ -2333,15 +2327,6 @@
     .accordion-wrapper 
       .accordion-title
         font-size: 16px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 12px
 
 
   .section-dixion
