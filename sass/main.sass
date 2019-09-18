@@ -14,10 +14,16 @@
 	padding-right: 15px
 a
 	text-decoration: none
-	
-h1
+
+a 
+	color: #333
+	&:visited, &:active
+		color: inherit
+
+h1, h2, h3, h4, h5, h6
 	margin: 0
 	padding: 0
+	font-size: 100%
 
 .top
 	position: fixed
@@ -30,12 +36,13 @@ h1
 	font-size: 24px
 	width: 60px
 	height: 60px
-	text-align: center
-	line-height: 60px
 	cursor: pointer
 	transition: all .25s ease
 	opacity: .5
 	z-index: 9999
+	display: flex
+	justify-content: center
+	align-items: center
 	&:hover
 		color: #ffffff
 		background-color: $accent
@@ -143,11 +150,12 @@ b, strong
 		z-index: 1000
 		position: fixed
 		display: none
+		top: 0
 	.top-line
 		position: relative
 		color: $dark
 		background: #fff
-		z-index: 1001
+		z-index: 1000
 		&:after
 			content: ''
 			position: absolute
@@ -216,7 +224,9 @@ b, strong
 	.top-line__tel-first
 		color: $accent
 		+font1('FuturaDemiC', 600)
+		display: block
 	.top-line__tel-second
+		display: block
 
 	.top-line__email
 		z-index: 10
@@ -230,6 +240,8 @@ b, strong
 			padding-right: 10px
 			width: 20px
 			height: 20px
+		.email
+			display: block
 	.top-line__callback
 		display: block
 		z-index: 10
@@ -272,14 +284,14 @@ b, strong
 			align-self: flex-start
 		input
 			background: #e6e6e6
-			padding: 12px 15px
+			padding: 12px 50px 12px 15px
 			width: 410px
 			border: none
 			align-self: flex-start
 		.bottom-line__basket
 			display: block
 			color: #000
-			padding: 7px 60px 7px 35px
+			padding: 8px 60px 8px 35px
 			background: #fff
 			box-shadow: 0px 0px 20px rgba(#000, .25)
 			align-self: flex-start
@@ -324,22 +336,33 @@ b, strong
 			display: flex
 			justify-content: space-around
 			li
-				padding: 21px 51px
-				box-sizing: border-box
-				border-bottom: 2px solid transparent
-				&:hover 
-					transition: all .5s ease
-					box-sizing: border-box
-					border-bottom: 2px solid #fff
 				a
+					display: block
 					color: #fff
 					text-transform: uppercase
 					+font('FuturaDemiC', 600, 16px)
 					box-sizing: border-box
+					padding: 21px 51px
+					border-bottom: 2px solid transparent
 					&:hover
 						transition: all .5s ease
+						border-bottom: 2px solid #fff
 						box-sizing: border-box
-						
+
+
+.search-title-button
+	position: absolute
+	top: 0
+	right: 0
+	background: $accent
+	border: none
+	color: #fff
+	cursor: pointer
+	height: 42px
+	width: 44px
+.input-group
+	position: relative
+		
 
 // Header_
 
@@ -386,9 +409,11 @@ b, strong
 			+font1('FuturaDemiC', 600)
 			text-transform: uppercase
 			letter-spacing: 3px
+			font-size: 30px
 		.slider-item__post-title
 			letter-spacing: 1px
 			font-size: 21px
+			line-height: 1.3
 		.slider-item__arguments
 			display: flex
 			margin-top: 25px
@@ -448,6 +473,7 @@ b, strong
 		color: $accent
 		letter-spacing: 2px
 		text-transform: uppercase
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -491,10 +517,11 @@ b, strong
 	.direction-cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-evenly
+		justify-content: space-around
 	.direction-card
 		margin-bottom: 20px
 		overflow: hidden
+		align-self: flex-start
 		&:hover .direction-card-content
 			border: 1px solid #fff
 			transition: border .5s ease
@@ -537,8 +564,10 @@ b, strong
 		color: #fff
 		font-size: 20px
 		text-transform: uppercase
-		margin-top: 15px
+		margin-top: 20px
 		margin-left: 15px
+		line-height: 1.1
+		padding-right: 15px
 	.direction-card-content__number
 		font-size: 12px
 		color: #fff
@@ -753,6 +782,7 @@ b, strong
 	.manufact-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -785,28 +815,26 @@ b, strong
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+		padding-bottom: 130px
 	.manufact-block
 		margin-top: 50px
 		padding-left: 10px
 		padding-right: 10px
-		&:last-child
-			margin-bottom: 130px
+		width: calc(100%/6)
+		&:hover .manufact-block__img img
+			transform: scale(1.2)
+			transition: all .5s ease	
 	.manufact-block__img
-		background-image: url('../img/@2x/philips-grey-new.png')
-		background-size: 184px 37px
-		background-size: center
-		width: 184px
-		height: 37px 
+		min-height: 90px
+		display: inline-block
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 184px
-			height: 37px
-		&:hover
-			background-image: url('../img/@2x/philips-new.png')
-			background-repeat: no-repeat
-			background-size: 184px 37px
-			background-size: center
-			width: 184px
-			height: 37px 
+			max-width: 210px
+			max-height: 83px
+			transition: all .5s ease	
 
 // Manufacts_
 
@@ -868,7 +896,6 @@ b, strong
 		font-size: 19px
 		width: 130px
 		text-align: center
-
 		&:hover
 			transition: all .5s ease
 			color: #000000
@@ -887,12 +914,19 @@ b, strong
 // Map
 .section-map
 	.section-inner
-		background: url('../img/@2x/map-new.png') no-repeat center
-		background-size: cover
-		height: 768px
+		overflow: hidden
+		position: relative
+		iframe
+			display: block
+			min-height: 415px
+			max-height: 590px
+			height: 100%
+			position: absolute
+			border: none
 	.map-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -919,26 +953,18 @@ b, strong
 		.line-text:after 
 			left: 100%
 	.container
-		position: relative
 	.map-block
 		width: 440px
-		height: 519px
-		background: #fff
-		position: absolute
-		top: 100px
-		left: 0
-		box-shadow: 20px 30px 0 rgba(#fff, .7)
-	.map-block-line
-		height: 1px
-		position: absolute
-		bottom: 200px
-		background: $accent
-		width: 100%
+		padding: 50px 0px 80px 0px
+		position: relative
 	.map-block-wrapper
+		background: #ffffff
+		box-shadow: 20px 30px 0 rgba(#fff, .7)
+		padding-top: 20px
+		padding-bottom: 10px
 	.map-block-titleside
 		text-align: right
-		margin-top: 50px
-		margin-right: 50px
+		padding-right: 50px
 	.map-block__title
 		font-size: 28px
 		color: #888aa7
@@ -951,7 +977,6 @@ b, strong
 		display: flex
 		flex-direction: column
 		justify-content: space-around
-		height: 377px
 		font-size: 18px
 		.fas
 			color: $accent
@@ -964,29 +989,22 @@ b, strong
 			top: 2px
 			left: -30px
 			font-size: 22px
-	.map-block-topblock
-		height: 150px
+	.map-block-contacts
+		height: 170px
 		padding: 0px 80px
-	.topblock-address
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&:last-child:not(:first-child)
+			border-top: 1px solid $accent
+	.contacts-address
 		position: relative
-	.topblock-tel
+	.contacts-tel
 		position: relative
 		.fa-phone
 			top: 2px
 			left: -32px
-		
-
-	.map-block-bottomblock
-		height: 150px
-		padding: 0px 80px
-	.bottomblock-address
-		position: relative
-	.bottomblock-tel
-		position: relative
-		.fa-phone
-			top: 2px
-			left: -32px
-
+	
 // twoblock_
 
 // Footer
@@ -999,6 +1017,8 @@ b, strong
 		position: absolute
 		bottom: 40px
 		left: 0
+		img
+			width: 447px
 	.footer-fourblocks
 		display: flex
 		justify-content: space-between
@@ -1088,6 +1108,7 @@ b, strong
 	.contacts-title
 		position: relative
 		text-align: center
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1120,12 +1141,10 @@ b, strong
 			margin-top: 30px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.contacts-block
 		width: 750px
-		height: 362px
 		background: #fefefd
 		box-shadow: 0px 0px 80px 0px rgba(#000, .1)
 		padding: 20px
@@ -1138,6 +1157,13 @@ b, strong
 		display: flex
 		justify-content: space-between
 		padding: 20px
+		li
+			line-height: 1.1
+			margin: 4px 0px
+			a
+				font-size: 18px
+				color: $accent
+				line-height: 1.1
 	.contacts-block__list-1
 		li
 			div
@@ -1150,6 +1176,7 @@ b, strong
 			div
 				font-size: 18px
 				color: $accent
+				
 
 
 // Contacts_
@@ -1164,7 +1191,6 @@ b, strong
 			margin: 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.dn-delivery-wrapper
@@ -1172,11 +1198,13 @@ b, strong
 	.delivery-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
 			text-transform: uppercase
 			letter-spacing: 3px
+			color: $accent
 		.line-text 
 			display: inline-block
 			position: relative
@@ -1229,6 +1257,7 @@ b, strong
 	.form-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1240,6 +1269,9 @@ b, strong
 			position: relative
 			padding: 0 10px
 			vertical-align: middle
+			width: 100%
+			max-width: 760px
+			min-width: 500px
 		.line-text:before,
 		.line-text:after
 			content: ""
@@ -1268,7 +1300,6 @@ b, strong
 			font-size: 16px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 
@@ -1310,7 +1341,7 @@ b, strong
 	.form-block__bottom
 		display: flex
 		flex-direction: column
-		margin-top: 20px
+		position: relative
 	.sentence
 		width: 100%
 		padding: 10px 0px
@@ -1320,6 +1351,7 @@ b, strong
 		background: $accent
 		color: #fff
 		display: block
+		margin-top: 50px
 	.star
 		text-transform: uppercase
 		margin-top: 10px
@@ -1335,6 +1367,18 @@ b, strong
 			text-transform: uppercase
 			display: block
 			margin-left: 21px
+	.form-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+		position: absolute
+		top: 4px
+		right: 0
+		left: 0
 			
 
 		
@@ -1352,12 +1396,12 @@ b, strong
 			padding: 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.company-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1408,6 +1452,7 @@ b, strong
 	.geography-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1451,11 +1496,40 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
-			font-weight: 600
 			a
 				color: #000000
 			span
+	.basket-title
+		text-align: center
+		position: relative
+		font-size: 25px
+		.line
+			overflow: hidden
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 3px
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+			color: $accent
+			width: 100%
+			max-width: 760px
+			min-width: 500px
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-basket-wrapper
 		display: none
 	.basket
@@ -1475,6 +1549,13 @@ b, strong
 		text-align: center
 		padding: 15px 5px
 		box-shadow: 0px 0px 60px rgba(#000, .2)
+	.basket-empty-title
+		font-size: 35px
+		color: $accent
+		margin: 0 auto
+		font-weight: 700
+		text-align: center
+		padding-top: 50px
 	.basket-blocks
 	.basket-block-wrapper
 		background: #efefef
@@ -1493,17 +1574,18 @@ b, strong
 			box-shadow: 15px 15px 0px 0px rgba(#fff, .5)
 	.basket-block__info
 		width: 586px
-		margin: 65px 0px 0px 60px
+		margin: 55px 0px 0px 60px
 		position: relative
 		.info-title
 			+font('FuturaDemiC', 600, 23px)
 			color: #27598d
 			border: 1px solid $accent
-			padding: 15px 60px
+			padding: 10px 0px
+			box-sizing: border-box
 			text-transform: uppercase
-			width: 463px
+			width: 585
 			text-align: center
-			line-height: 1.45
+			line-height: 1.1
 			letter-spacing: 2px
 		.info-manufacturer
 			display: flex
@@ -1587,6 +1669,35 @@ b, strong
 	background: #f6f6f6
 	.section-inner
 		background: #fff
+	.news-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.news-page
 		.h3-page
 			color: #000
@@ -1594,7 +1705,6 @@ b, strong
 			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1612,27 +1722,43 @@ b, strong
 		box-shadow: 0px 70px 80px rgba(#000, .1)
 	.news
 	.news-block
-	.news-block__title
-		+font('FuturaDemiC', 600, 18px)
+	h2, h3, h4
+		+font1('FuturaDemiC', 600)
 		color: $accent
 		text-transform: uppercase
 		letter-spacing: 2px
-		h2
-			font-size: 18px
+		line-height: 1.2
+		margin: 15px 0px 5px 0px
+	h2
+		font-size: 18px
+	h3
+		font-size: 16px
+	h4
+		font-size: 14px
 	.news-block__date
 		font-size: 13px
 		text-transform: uppercase
 		color: $accent
-	.news-block__text1
-		text-align: center
+	p
 		font-size: 17px
 		color: #000
 		margin-top: 15px
-	.news-block__text2
-		text-align: center
-		font-size: 17px
-		color: #000
-		margin-top: 35px
+		margin: 5px 0px
+		line-height: 1.4
+	ul
+		font-size: 18px
+		padding-left: 20px
+		margin: 5px 0px
+		line-height: 1.4
+		li
+			list-style: disc outside
+			margin: 3px 0px
+	ol
+		font-size: 18px
+		margin: 5px 0px
+		line-height: 1.4
+		li
+			margin: 3px 0px
 	.news-block__images
 		display: flex
 		justify-content: space-between
@@ -1659,16 +1785,40 @@ b, strong
 		.h3-page
 			color: #000
 			font-size: 16px
-			padding: 30px 0px
+			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
-	.h1-block
-		padding-top: 10px
-		h1
-			font-size: 19px
+	.newslist-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px 0px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-newslist-wrapper
 		display: none
 	.newslist-wrapper
@@ -1747,12 +1897,12 @@ b, strong
 			padding: 30px 0px 20px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.reviews-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1798,6 +1948,7 @@ b, strong
 		width: 200px
 		height: 223px
 		margin: 19px 25px
+		flex: 0 0 200px
 		img
 			width: 200px
 			height: 223px
@@ -1842,7 +1993,6 @@ b, strong
 			padding: 30px 0px 0px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1850,33 +2000,63 @@ b, strong
 		padding-bottom: 0px
 		h1
 			font-size: 19px
+	.stockitem-title
+		text-align: center
+		position: relative
+		color: $accent
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-size: 25px
+		padding: 25px 0px 0px 0px
+		.line
+			overflow: hidden
+			text-align: center
+		.line-text 
+			display: inline-block
+			position: relative
+			padding: 0 10px
+			vertical-align: middle
+		.line-text:before,
+		.line-text:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 5000px
+			height: 2px
+			margin: -1px 0 0
+			background: $accent
+		.line-text:before 
+			right: 100%
+		.line-text:after 
+			left: 100%
 	.dn-stockitem-wrapper
 		display: none
 	.stockitem-wrapper
-		margin-top: 30px
+		margin-top: 20px
 		margin-bottom: 170px
 		padding-top: 35px
 		padding-bottom: 75px
 		box-shadow: 0px 70px 80px rgba(#000, .1)
 	.stockitem
 	.stockitem-block
-	.stockitem-block__title
-		+font('FuturaDemiC', 600, 18px)
+	h2, h3, h4
+		+font1('FuturaDemiC', 600)
 		color: $accent
 		text-transform: uppercase
 		letter-spacing: 2px
-		h2
-			font-size: 18px
-	.stockitem-block__text1
-		text-align: center
+		line-height: 1.2
+	h2
+		font-size: 18px
+	h3
+		font-size: 16px
+	h4
+		font-size: 14px
+	p
 		font-size: 17px
 		color: #000
 		margin-top: 15px
-	.stockitem-block__text2
-		text-align: center
-		font-size: 17px
-		color: #000
-		margin-top: 35px
+		margin: 5px 0px
+		line-height: 1.4
 	.stockitem-block__images
 		display: flex
 		justify-content: space-between
@@ -1901,7 +2081,6 @@ b, strong
 			padding: 30px 0px 20px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.h1-block
@@ -1912,6 +2091,8 @@ b, strong
 	.stock-title
 		text-align: center
 		position: relative
+		font-size: 25px
+		padding: 0px 0px 25px 0px
 		.line
 			overflow: hidden
 			text-align: center
@@ -1952,6 +2133,7 @@ b, strong
 	.stock-block-leftside
 		width: 355px
 		height: 249px
+		flex: 0 0 355px
 		img
 			width: 355px
 			height: 249px
@@ -2002,12 +2184,12 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.service-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2063,33 +2245,44 @@ b, strong
 		position: relative
 		box-shadow: 0px 0px 80px rgba(#000, .12)
 		width: 355px
-		height: 319px
+		height: 361px
 		margin-bottom: 70px
 	.service-card__bg-img
-		width: 355px
+		width: 351px
 		height: 244px
 		box-shadow: 0px 50px 50px rgba(#000, .05)
+		border: 2px solid $accent
 		img
-			width: 355px
+			width: 351px
 			height: 244px
 	.service-card__img
-		position: absolute
-		top: 31px
-		left: 21px
-		width: 110px
-		height: 165px
+		width: 351px
+		height: 244px
+		box-shadow: 0px 50px 50px rgba(#000, .05)
+		border: 2px solid $accent
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 110px
-			height: 165px
+			max-width: 260px
+			max-height: 200px
 	.service-card__bottom
+		display: table
 		.bottom-title
+			display: table-cell
+			vertical-align: middle
 			text-align: center
 			+font('FuturaDemiC', 600, 16px)
 			text-transform: uppercase
 			color: #343434
+			box-sizing: border-box
+			width: 355px
 			padding: 10px
 			border: 2px solid $accent
 			border-top: 1px solid $accent
+			line-height: 1.1
+			height: 114px
+			box-sizing: border-box
 			
 
 	
@@ -2105,12 +2298,12 @@ b, strong
 			padding: 30px 0px 30px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
 			a
 				color: #000000
 	.commodity-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2151,6 +2344,7 @@ b, strong
 	.commodity-block-img
 		width: 322px
 		height: 322px
+		flex: 0 0 322px
 		img
 			width: 322px
 			height: 322px
@@ -2165,132 +2359,150 @@ b, strong
 			text-transform: uppercase
 			width: 634px
 			text-align: center
-			line-height: 1.45
+			line-height: 1.1
 			letter-spacing: 2px
-		.commodity-manufacturer
-			display: flex
-			justify-content: space-between
-			margin-top: 35px
-			width: 450px
-		.commodity-manufacturer__title
-			font-size: 20px
-			color: #7697ac
-			text-transform: uppercase
-			line-height: 1.65
-			letter-spacing: 2px
-			box-sizing: border-box
-			padding-top: 3px
-		.commodity-manufacturer__img
+	.commodity-manufacturer
+		display: flex
+		justify-content: space-between
+		margin-top: 35px
+		width: 450px
+	.commodity-manufacturer__title
+		font-size: 20px
+		color: #7697ac
+		text-transform: uppercase
+		line-height: 1.65
+		letter-spacing: 2px
+		box-sizing: border-box
+		padding-top: 3px
+		align-self: center
+	.commodity-manufacturer__img
+		min-height: 55px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 140px
+			max-height: 55px
 
-		.commodity-quantity
-			display: flex
-			justify-content: space-between
-			width: 374px
-		.commodity-quantity__title
-			font-size: 20px
-			color: #7697ac
-			text-transform: uppercase
-			box-sizing: border-box
-			padding: 15px 0px 0px 0px
-			letter-spacing: 2px
-		.commodity-quantity__buttons
-			display: flex
-			box-sizing: border-box
-			padding: 21px 0px 0px 0px
-		.commodity-quantity__plus
-			border: 1px solid $accent
-			color: $accent
-			width: 20px
-			height: 20px
-			text-align: center
-			line-height: 1.3
+	.commodity-quantity
+		display: flex
+		justify-content: space-between
+		width: 449px
+	.commodity-quantity__title
+		font-size: 20px
+		color: #7697ac
+		text-transform: uppercase
+		box-sizing: border-box
+		padding: 15px 0px 0px 0px
+		letter-spacing: 2px
+	.commodity-quantity__buttons
+		display: flex
+		box-sizing: border-box
+		padding: 21px 0px 0px 0px
+	.commodity-quantity__plus
+		border: 1px solid $accent
+		color: $accent
+		width: 20px
+		height: 20px
+		text-align: center
+		line-height: 1.3
+		cursor: pointer
+		.fas
+			font-size: 13px
+	.commodity-quantity__number
+		text-transform: uppercase
+		font-size: 30px
+		color: $accent
+		line-height: 0.8
+		box-sizing: border-box
+		padding: 0px 10px 5px 10px
+	.commodity-quantity__minus
+		border: 1px solid $accent
+		color: $accent
+		width: 20px
+		height: 20px
+		text-align: center
+		line-height: 1.3
+		cursor: pointer					
+		.fas						
+			font-size: 13px
+											
+
+	.commodity-text					
+		text-transform: uppercase				
+		font-size: 14px												
+		margin-top: 18px
+	.commodity-buttons		
+		display: flex							
+		text-align: center						
+		text-transform: uppercase				
+		color: #fff						
+		margin-top: 20px
+		a
+			color: #fff												
+		.commodity-buttons__first
+			display: block												
+			width: 250px												
+			background: $accent															
+			padding: 8px 0px												
+			cursor: pointer										
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)					
+				transition: box-shadow .25s ease
+		.commodity-buttons__second
+			display: block						
+			width: 250px
+			background: rgba($accent, .2)																			
+			padding: 8px 0px
+			cursor: pointer			
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)
+				transition: box-shadow .25s ease
+		.commodity-buttons__third
+			display: block
+			width: 250px
+			background: rgba($accent, .4)
+			padding: 8px 0px
 			cursor: pointer
-			.fas
-				font-size: 13px
-		.commodity-quantity__number
-			text-transform: uppercase
-			font-size: 30px
-			color: $accent
-			line-height: 0.8
-			box-sizing: border-box
-			padding: 0px 10px 5px 10px
-		.commodity-quantity__minus
-			border: 1px solid $accent
-			color: $accent
-			width: 20px
-			height: 20px
-			text-align: center
-			line-height: 1.3
-			cursor: pointer					
-			.fas						
-				font-size: 13px
-												
-
-		.commodity-text					
-			text-transform: uppercase				
-			font-weight: bold
-			font-size: 14px												
-			margin-top: 18px
-		.commodity-buttons		
-			display: flex							
-			text-align: center						
-			text-transform: uppercase				
-			color: #fff						
-			margin-top: 20px
-			a
-				color: #fff												
-			.commodity-buttons__first
-				display: block												
-				width: 250px												
-				background: $accent															
-				padding: 8px 0px												
-				cursor: pointer										
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)					
-					transition: box-shadow .25s ease
-			.commodity-buttons__second
-				display: block						
-				width: 250px
-				background: rgba($accent, .2)																			
-				padding: 8px 0px
-				cursor: pointer			
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)
-					transition: box-shadow .25s ease
-			.commodity-buttons__third
-				display: block
-				width: 250px
-				background: rgba($accent, .4)
-				padding: 8px 0px
-				cursor: pointer
-				&:hover
-					box-shadow: 5px 5px 0px rgba($accent, .3)
-					transition: box-shadow .25s ease
+			&:hover
+				box-shadow: 5px 5px 0px rgba($accent, .3)
+				transition: box-shadow .25s ease
 
 	.commodity-table
 		display: flex
+		justify-content: center
 	.commodity-table-block
-		width: 380px
+		width: 75%
 		box-sizing: border-box
 		display: flex
-		padding: 20px 35px
+		padding: 15px 15px
 		border: 1px solid $accent
 		text-transform: uppercase
 		color: #000
-		letter-spacing: 2px
 		.feature-value
 			display: block
 			width: 100%
 			li
-				padding: 6px 0px
+				padding: 10px 0px
 				width: 100%
 				display: flex
 				justify-content: space-between
-				span
-					display: inline-block
+				line-height: 1
+				font-size: 16px
+				div
+					width: 45%
+					display: flex
+					align-items: center
+					&:last-child
+						text-align: right
+						justify-content: flex-end
+						span
+							font-weight: 700
+
+						
 	.commodity-table-block:nth-child(2)
 		border-left: 1px solid transparent
-		border-right: 1px solid transparent
 
 
 	
@@ -2299,108 +2511,122 @@ b, strong
 // Postcommodity
 
 .section-postcommodity
-	.postcommodity-title
+.postcommodity-title
+	text-align: center
+	position: relative
+	font-size: 25px
+	.line
+		overflow: hidden
 		text-align: center
+		text-transform: uppercase
+		letter-spacing: 3px
+		color: $accent
+		padding-top: 60px
+		padding-bottom: 40px
+	.line-text 
+		display: inline-block
 		position: relative
-		.line
-			overflow: hidden
-			text-align: center
-			text-transform: uppercase
-			letter-spacing: 3px
-			color: $accent
-			padding-top: 60px
-			padding-bottom: 40px
-		.line-text 
-			display: inline-block
-			position: relative
-			padding: 0 10px
-			vertical-align: middle
-		.line-text:before,
-		.line-text:after
-			content: ""
-			position: absolute
-			top: 50%
-			width: 5000px
-			height: 2px
-			margin: -1px 0 0
-			background: $accent
-		.line-text:before 
-			right: 100%
-		.line-text:after 
-			left: 100%
-	.postcommodity-wrapper
-		margin-bottom: 190px
-	.postcommodity
+		padding: 0 10px
+		vertical-align: middle
+	.line-text:before,
+	.line-text:after
+		content: ""
+		position: absolute
+		top: 50%
+		width: 5000px
+		height: 2px
+		margin: -1px 0 0
+		background: $accent
+	.line-text:before 
+		right: 100%
+	.line-text:after 
+		left: 100%
+.postcommodity-wrapper
+	margin-bottom: 190px
+.postcommodity
 
-	.postcommodity-blocks
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-	.postcommodity-block
-		padding: 15px
-		background: #efefef
-		width: 226px
-	.postcommodity-block__img
+.postcommodity-blocks
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+.postcommodity-block
+	padding: 15px
+	background: #efefef
+	width: 226px
+.postcommodity-block__img
+	width: 210px
+	height: 210px
+	img
 		width: 210px
 		height: 210px
-		img
-			width: 210px
-			height: 210px
-			box-shadow: 15px 15px 0px rgba(#fff, .5)
+		box-shadow: 15px 15px 0px rgba(#fff, .5)
 
-	.postcommodity-block-info
-	.postcommodity-block__title
-		+font('FuturaDemiC', 600, 17px)
+.postcommodity-block-info
+.postcommodity-block__title
+	+font('FuturaDemiC', 600, 17px)
+	text-align: center
+	color: #27598d
+	margin-top: 20px
+	text-transform: uppercase
+	height: 90px
+	line-height: 1.1
+	display: table
+	span
+		display: table-cell
+		vertical-align: middle
 		text-align: center
-		color: #27598d
-		margin-top: 20px
+.postcommodity-block__manufacturer
+	display: flex
+	justify-content: space-between
+	margin-top: 10px
+	.manufacturer-title
 		text-transform: uppercase
-	.postcommodity-block__manufacturer
-		display: flex
-		justify-content: space-between
-		margin-top: 10px
-		.manufacturer-title
-			text-transform: uppercase
-			font-size: 14px
-			color: #7697ac
-		.manufacturer-img
-			img
-				width: 90px
-				height: 22px
-
-	.postcommodity-block__code
-		display: flex
-		justify-content: space-between
 		font-size: 14px
-		.code-title
-			text-transform: uppercase
-			color: #7697ac
-		.code-vendorcode
-			text-transform: uppercase
-			color: #7697ac
-	
-	.postcommodity-block__buttons
+		color: #7697ac
+		align-self: center
+	.manufacturer-img
+		min-height: 43px
+		position: relative
 		display: flex
-		text-align: center
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 110px
+			max-height: 43px
+
+.postcommodity-block__code
+	display: flex
+	justify-content: space-between
+	font-size: 14px
+	.code-title
 		text-transform: uppercase
-		+font('FuturaDemiC', 600, 12px)
-		margin-top: 5px
-		.buttons-first
-			display: block
-			padding: 8px 0px
-			width: 128px
-			background: $accent
-			color: #fff
-			line-height: 1.9
-			cursor: pointer
-		.buttons-second
-			display: block
-			padding: 9px 0px
-			width: 128px
-			background: transparent
-			border: 1px solid $accent
-			color: rgba($accent, .8)
-			cursor: pointer
+		color: #7697ac
+	.code-vendorcode
+		text-transform: uppercase
+		color: #7697ac
+
+.postcommodity-block__buttons
+	display: flex
+	text-align: center
+	text-transform: uppercase
+	+font('FuturaDemiC', 600, 12px)
+	margin-top: 5px
+	.buttons-first
+		display: block
+		padding: 8px 0px
+		width: 128px
+		background: $accent
+		color: #fff
+		line-height: 1.9
+		cursor: pointer
+	.buttons-second
+		display: block
+		padding: 9px 0px
+		width: 128px
+		background: transparent
+		border: 1px solid $accent
+		color: rgba($accent, .8)
+		cursor: pointer
 
 
 	
@@ -2409,223 +2635,239 @@ b, strong
 // Tiles
 
 .section-tiles
-	.tiles-page
-		.h3-page
-			color: #000
-			font-size: 16px
-			padding: 30px 0px 10px 0px
-			text-transform: none
-			letter-spacing: 2px
-			font-weight: 600
-			a
-				color: #000000
-	.tiles-title
+.tiles-page
+	.h3-page
+		color: #000
+		font-size: 16px
+		padding: 30px 0px 10px 0px
+		text-transform: none
+		letter-spacing: 2px
+		a
+			color: #000000
+.tiles-title
+	text-align: center
+	position: relative
+	font-size: 25px
+	.line
+		overflow: hidden
 		text-align: center
-		position: relative
-		.line
-			overflow: hidden
-			text-align: center
-			text-transform: uppercase
-			letter-spacing: 3px
-			color: $accent
-		.line-text 
-			display: inline-block
-			position: relative
-			padding: 0 10px
-			vertical-align: middle
-		.line-text:before,
-		.line-text:after
-			content: ""
-			position: absolute
-			top: 50%
-			width: 5000px
-			height: 2px
-			margin: -1px 0 0
-			background: $accent
-		.line-text:before 
-			right: 100%
-		.line-text:after 
-			left: 100%
-
-
-
-	.dn-tiles-wrapper
-		display: none
-
-
-	.tiles-wrapper
-		margin-top: 20px
-		padding-bottom: 150px
-	.tiles
-	.tiles-flex
-		display: flex
-
-
-	.tiles-sidebar
-		width: 270px
-	.tiles-sidebar__button
-		width: 267px
-		padding: 14px 0px
-		border: 2px solid $accent
-		background: transparent
 		text-transform: uppercase
+		letter-spacing: 3px
 		color: $accent
-		text-align: center
-		font-size: 18px
-		cursor: pointer
-		margin-bottom: 15px
-	.tiles-sidebar__list
-		.accordion-wrapper
-			border: 1px solid $accent
-		.accordion
-			border: 1px solid $accent
-			line-height: 1.65
-		.accordion-title
-		.accordion-content
+	.line-text 
+		display: inline-block
+		position: relative
+		padding: 0 10px
+		vertical-align: middle
+	.line-text:before,
+	.line-text:after
+		content: ""
+		position: absolute
+		top: 50%
+		width: 5000px
+		height: 2px
+		margin: -1px 0 0
+		background: $accent
+	.line-text:before 
+		right: 100%
+	.line-text:after 
+		left: 100%
+
+
+
+.dn-tiles-wrapper
+	display: none
+
+
+.tiles-wrapper
+	margin-top: 20px
+	padding-bottom: 150px
+.tiles
+.tiles-flex
+	display: flex
+
+
+.tiles-sidebar
+	margin-right: 40px
+	width: 270px
+	flex: 0 0 270px
+.tiles-sidebar__button
+	width: 267px
+	padding: 14px 0px
+	border: 2px solid $accent
+	background: transparent
+	text-transform: uppercase
+	color: $accent
+	text-align: center
+	font-size: 18px
+	cursor: pointer
+	margin-bottom: 15px
+.tiles-sidebar__list
+	.accordion-wrapper
+		border: 1px solid $accent
+	.accordion
+		border: 1px solid $accent
+		line-height: 1.65
+	.accordion-title
+	.accordion-content
 
 						
 
 
 
 
-	.tiles-catalog
-		margin-left: 40px
-		width: 100%
-	.tiles-catalog__settings
-		padding: 15px 15px
-		display: flex
-		background: #7697ac
-		box-shadow: 0px 0px 60px rgba(#000, .1)
-		select
-			background: transparent
-			border: 1px solid #fff
-			color: #fff
-			margin-left: 10px
-			text-transform: uppercase
-			font-size: 14px
-			outline: none
-			option
-				background: #7697ac
-				outline: none
-	.settings-sorting
-		display: flex
-		justify-content: space-between
+.tiles-catalog
+	width: 100%
+.tiles-catalog__settings
+	padding: 15px 15px
+	display: flex
+	background: #7697ac
+	box-shadow: 0px 0px 60px rgba(#000, .1)
+	select
+		background: transparent
+		border: 1px solid #fff
 		color: #fff
-		width: 293px
-		select
-			width: 130px
-	.settings-sorting__title
+		margin-left: 5px
 		text-transform: uppercase
-		font-size: 18px
-		letter-spacing: 2px
-		white-space: nowrap
-	.settings-display
-		display: flex
-		justify-content: space-between
-		color: #fff
-		width: 280px
-		margin-left: 28px
-		.fas
-			font-size: 24px
-			color: #9bbbcf
-			margin-left: 6px
-			margin-top: 2px
-			cursor: pointer
-			&.list-active
-				color: #fff
-
-	.settings-display__title
-		+font('FuturaDemiC', 600, 16px)
-		text-transform: uppercase
-		letter-spacing: 2px
-		white-space: nowrap
-		padding-top: 2px
-		box-sizing: border-box
-	.settings-display__buttons
-		line-height: 1.5
-	.settings-displaynumber
-		display: flex
-		color: #fff
-		margin-left: 28px
-		select
-			width: 44px
-	.settings-displaynumber__title
-		text-transform: uppercase
-		letter-spacing: 2px
-
-
-	.tiles-catalog__cards-wrapper
-		margin-top: 15px
-	.tiles-catalog__cards
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-	.tiles-block
-		padding: 15px
-		background: #efefef
-		width: 235px
-		margin-bottom: 25px
-	.tiles-block__img
-		width: 219px
-		height: 219px
-		img
-			width: 219px
-			height: 219px
-			box-shadow: 15px 15px 0px rgba(#fff, .5)
-
-	.tiles-block-info
-	.tiles-block__title
-		+font('FuturaDemiC', 600, 17px)
-		text-align: center
-		color: #27598d
-		margin-top: 20px
-		text-transform: uppercase
-	.tiles-block__manufacturer
-		display: flex
-		justify-content: space-between
-		margin-top: 10px
-		.manufacturer-title
-			text-transform: uppercase
-			font-size: 14px
-			color: #7697ac
-		.manufacturer-img
-			img
-				width: 90px
-				height: 22px
-
-	.tiles-block__code
-		display: flex
-		justify-content: space-between
 		font-size: 14px
-		.code-title
-			text-transform: uppercase
-			color: #7697ac
-		.code-vendorcode
-			text-transform: uppercase
-			color: #7697ac
-	
-	.tiles-block__buttons
-		display: flex
-		text-align: center
-		text-transform: uppercase
-		+font('FuturaDemiC', 600, 12px)
-		margin-top: 5px
-		.buttons-first
-			display: block
-			padding: 8px 0px
-			width: 128px
-			background: $accent
+		outline: none
+		option
+			background: #7697ac
+			outline: none
+
+.settings-sorting
+	display: flex
+	justify-content: space-between
+	color: #fff
+	width: 293px
+	select
+		width: 130px
+.settings-sorting__title
+	text-transform: uppercase
+	font-size: 18px
+	letter-spacing: 2px
+	white-space: nowrap
+.settings-display
+	display: flex
+	justify-content: space-between
+	color: #fff
+	width: 280px
+	margin-left: 28px
+	.fas
+		font-size: 24px
+		color: #9bbbcf
+		margin-left: 6px
+		margin-top: 2px
+		cursor: pointer
+		&.list-active
 			color: #fff
-			line-height: 1.9
-			cursor: pointer
-		.buttons-second
-			display: block
-			padding: 9px 0px
-			width: 128px
-			background: transparent
-			border: 1px solid $accent
-			color: rgba($accent, .8)
-			cursor: pointer
+
+.settings-display__title
+	+font('FuturaDemiC', 600, 16px)
+	text-transform: uppercase
+	letter-spacing: 2px
+	white-space: nowrap
+	padding-top: 2px
+	box-sizing: border-box
+.settings-display__buttons
+	line-height: 1.5
+.settings-displaynumber
+	display: flex
+	color: #fff
+	margin-left: 28px
+	select
+		width: 49px
+		flex: 0 0 49px
+.settings-displaynumber__title
+	text-transform: uppercase
+	letter-spacing: 2px
+
+
+.tiles-catalog__cards-wrapper
+	margin-top: 15px
+.tiles-catalog__cards
+	display: flex
+	flex-wrap: wrap
+.tiles-block
+	padding: 15px
+	background: #efefef
+	width: 240px
+	margin: 0px 4px 25px 4px
+.tiles-block__img
+	width: 224px
+	height: 219px
+	img
+		width: 224px
+		height: 219px
+		box-shadow: 15px 15px 0px rgba(#fff, .5)
+
+.tiles-block-info
+.tiles-block__title
+	+font('FuturaDemiC', 600, 17px)
+	text-align: center
+	color: #27598d
+	margin-top: 20px
+	text-transform: uppercase
+	height: 90px
+	line-height: 1.1
+	display: table
+	span
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+.tiles-block__manufacturer
+	display: flex
+	justify-content: space-between
+	margin-top: 10px
+	.manufacturer-title
+		text-transform: uppercase
+		font-size: 14px
+		color: #7697ac
+		align-self: center
+	.manufacturer-img
+		min-height: 43px
+		position: relative
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 110px
+			max-height: 43px
+
+.tiles-block__code
+	display: flex
+	justify-content: space-between
+	font-size: 14px
+	margin-top: 4px
+	.code-title
+		text-transform: uppercase
+		color: #7697ac
+	.code-vendorcode
+		text-transform: uppercase
+		color: #7697ac
+
+.tiles-block__buttons
+	display: flex
+	text-align: center
+	text-transform: uppercase
+	+font('FuturaDemiC', 600, 12px)
+	margin-top: 5px
+	.buttons-first
+		display: block
+		padding: 8px 0px
+		width: 128px
+		background: $accent
+		color: #fff
+		line-height: 1.9
+		cursor: pointer
+	.buttons-second
+		display: block
+		padding: 9px 0px
+		width: 128px
+		background: transparent
+		border: 1px solid $accent
+		color: rgba($accent, .8)
+		cursor: pointer
 
 	
 .tiles-catalog-togglepages
@@ -2646,17 +2888,23 @@ b, strong
 			color: $accent
 			font-weight: bold
 
-	.tiles-catalog-seoblock
-		margin-top: 30px
-		.seoblock-title
-			+font('FuturaDemiC', 600, 22px)
-			text-transform: uppercase
-			color: $accent
-		.seoblock-text
-			font-weight: bold
-		span
-			display: block
-			margin-top: 10px
+.tiles-catalog-seoblock
+	margin-top: 30px
+	.seoblock-title
+		text-align: center
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	h1
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	.seoblock-text
+		font-weight: bold
+		line-height: 1.4
+	span
+		display: block
+		margin-top: 10px
 
 
 
@@ -2665,223 +2913,192 @@ b, strong
 // Tilesrow
 
 .section-tilesrow
-	.tilesrow-page
-		.h3-page
-			color: #000
-			font-size: 16px
-			padding: 30px 0px 10px 0px
-			text-transform: none
-			letter-spacing: 2px
-			font-weight: 600
-			a
-				color: #000000
-	.tilesrow-title
+.tilesrow-page
+	.h3-page
+		color: #000
+		font-size: 16px
+		padding: 30px 0px 10px 0px
+		text-transform: none
+		letter-spacing: 2px
+		a
+			color: #000000
+.tilesrow-title
+	text-align: center
+	position: relative
+	font-size: 25px
+	.line
+		overflow: hidden
 		text-align: center
-		position: relative
-		.line
-			overflow: hidden
-			text-align: center
-			text-transform: uppercase
-			letter-spacing: 3px
-			color: $accent
-		.line-text 
-			display: inline-block
-			position: relative
-			padding: 0 10px
-			vertical-align: middle
-		.line-text:before,
-		.line-text:after
-			content: ""
-			position: absolute
-			top: 50%
-			width: 5000px
-			height: 2px
-			margin: -1px 0 0
-			background: $accent
-		.line-text:before 
-			right: 100%
-		.line-text:after 
-			left: 100%
-
-
-
-	.dn-tilesrow-wrapper
-		display: none
-
-
-	.tilesrow-wrapper
-		margin-top: 20px
-		padding-bottom: 150px
-	.tilesrow
-	.tilesrow-flex
-		display: flex
-
-
-	.tilesrow-sidebar
-		width: 270px
-	.tilesrow-sidebar__button
-		width: 268px
-		padding: 14px 0px
-		border: 2px solid $accent
-		background: transparent
 		text-transform: uppercase
+		letter-spacing: 3px
 		color: $accent
-		text-align: center
-		font-size: 18px
-		cursor: pointer
-		margin-bottom: 15px
+	.line-text 
+		display: inline-block
+		position: relative
+		padding: 0 10px
+		vertical-align: middle
+	.line-text:before,
+	.line-text:after
+		content: ""
+		position: absolute
+		top: 50%
+		width: 5000px
+		height: 2px
+		margin: -1px 0 0
+		background: $accent
+	.line-text:before 
+		right: 100%
+	.line-text:after 
+		left: 100%
+
+
+
+.dn-tilesrow-wrapper
+	display: none
+
+
+.tilesrow-wrapper
+	margin-top: 20px
+	padding-bottom: 150px
+.tilesrow
+.tilesrow-flex
+	display: flex
+
+
+.tilesrow-sidebar
+	margin-right: 40px
+	width: 270px
+	flex: 0 0 270px
+.tilesrow-sidebar__button
+	width: 268px
+	padding: 14px 0px
+	border: 2px solid $accent
+	background: transparent
+	text-transform: uppercase
+	color: $accent
+	text-align: center
+	font-size: 18px
+	cursor: pointer
+	margin-bottom: 15px
 					
 
 
-	.tilesrow-catalog
-		margin-left: 40px
-		width: 100%
+.tilesrow-catalog
+	width: 100%
+	
 
-
-	.tilesrow-catalog__settings
-		padding: 15px 15px
-		display: flex
-		background: #7697ac
-		box-shadow: 0px 0px 60px rgba(#000, .1)
-		select
-			background: transparent
-			border: 1px solid #fff
-			color: #fff
-			margin-left: 10px
-			text-transform: uppercase
-			font-size: 14px
+.tilesrow-catalog__settings
+	padding: 15px 15px
+	display: flex
+	background: #7697ac
+	box-shadow: 0px 0px 60px rgba(#000, .1)
+	select
+		background: transparent
+		border: 1px solid #fff
+		color: #fff
+		margin-left: 5px
+		text-transform: uppercase
+		font-size: 14px
+		outline: none
+		option
+			background: #7697ac
 			outline: none
-			option
-				background: #7697ac
-				outline: none
-	.settings-sorting
-		display: flex
-		justify-content: space-between
-		color: #fff
-		width: 293px
-		select
-			width: 130px
-	.settings-sorting__title
-		text-transform: uppercase
-		font-size: 18px
-		letter-spacing: 2px
-		white-space: nowrap
-	.settings-display
-		display: flex
-		justify-content: space-between
-		color: #fff
-		width: 280px
-		margin-left: 28px
-		.fas
-			font-size: 24px
-			color: #9bbbcf
-			margin-left: 6px
-			margin-top: 2px
-			cursor: pointer
-			&.list-active
-				color: #fff
-
-	.settings-display__title
-		+font('FuturaDemiC', 600, 16px)
-		text-transform: uppercase
-		letter-spacing: 2px
-		white-space: nowrap
-		padding-top: 2px
-		box-sizing: border-box
-	.settings-display__buttons
-		line-height: 1.5
-	.settings-displaynumber
-		display: flex
-		color: #fff
-		margin-left: 28px
-		select
-			width: 44px
-	.settings-displaynumber__title
-		text-transform: uppercase
-		letter-spacing: 2px
 
 
-	.tilesrow-catalog__cards-wrapper
-		margin-top: 15px
-	.tilesrow-catalog__cards
-	.tilesrow-block
-		padding: 20px 20px 35px 20px
-		background: #efefef
-		width: 800px
-		margin-bottom: 25px
-		display: flex
-	.tilesrow-block__img
+.tilesrow-catalog__cards-wrapper
+	margin-top: 15px
+.tilesrow-catalog__cards
+.tilesrow-block
+	padding: 20px 20px 35px 20px
+	background: #efefef
+	width: 800px
+	margin-bottom: 25px
+	display: flex
+.tilesrow-block__img
+	width: 219px
+	height: 219px
+	img
 		width: 219px
 		height: 219px
-		img
-			width: 219px
-			height: 219px
-			box-shadow: 15px 15px 0px rgba(#fff, .5)
+		box-shadow: 15px 15px 0px rgba(#fff, .5)
 
-	.tilesrow-block-info
-		margin-left: 30px
-	.tilesrow-block__title
-		+font('FuturaDemiC', 600, 18px)
-		color: #27598d
+.tilesrow-block-info
+	margin-left: 30px
+.tilesrow-block__title
+	+font('FuturaDemiC', 600, 18px)
+	color: #27598d
+	text-transform: uppercase
+	line-height: 1.1
+	height: 65px
+	display: table
+	span
+		display: table-cell
+		vertical-align: middle
+.tilesrow-block__manufacturer
+	display: flex
+	justify-content: space-between
+	margin-top: 10px
+	width: 300px
+	.manufacturer-title
 		text-transform: uppercase
-	.tilesrow-block__manufacturer
-		display: flex
-		justify-content: space-between
-		margin-top: 10px
-		width: 245px
-		.manufacturer-title
-			text-transform: uppercase
-			font-size: 17px
-			color: #7697ac
-		.manufacturer-img
-			img
-				width: 90px
-				height: 22px
-
-	.tilesrow-block__code
-		display: flex
-		justify-content: space-between
 		font-size: 17px
-		width: 245px
-		.code-title
-			text-transform: uppercase
-			color: #7697ac
-		.code-vendorcode
-			text-transform: uppercase
-			color: #7697ac
-	.tilesrow-block__description
-		margin-top: 16px
-		margin-bottom: 20px
-		line-height: 1.4
-		+font('FuturaLightC', 200, 14px)
-		text-transform: uppercase
-		width: 380px
-	.tilesrow-block__buttons
+		color: #7697ac
+		align-self: center
+	.manufacturer-img
+		min-height: 43px
+		position: relative
 		display: flex
-		justify-content: space-between
-		text-align: center
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 110px
+			max-height: 43px
+
+.tilesrow-block__code
+	display: flex
+	justify-content: space-between
+	font-size: 17px
+	width: 300px
+	margin-top: 2px
+	.code-title
 		text-transform: uppercase
-		+font('FuturaDemiC', 600, 12px)
-		margin-top: 5px
-		font-size: 15px
-		letter-spacing: 2px
-		width: 510px
-		.buttons-first
-			display: block
-			padding: 8px 0px
-			width: 230px
-			background: $accent
-			color: #fff
-			line-height: 1.9
-			cursor: pointer
-		.buttons-second
-			display: block
-			padding: 9px 0px
-			width: 230px
-			background: transparent
-			border: 1px solid $accent
-			color: rgba($accent, .8)
-			cursor: pointer
+		color: #7697ac
+	.code-vendorcode
+		text-transform: uppercase
+		color: #7697ac
+.tilesrow-block__description
+	margin-top: 16px
+	margin-bottom: 20px
+	line-height: 1.4
+	+font('FuturaLightC', 200, 14px)
+	text-transform: uppercase
+	width: 380px
+.tilesrow-block__buttons
+	display: flex
+	justify-content: space-between
+	text-align: center
+	text-transform: uppercase
+	+font('FuturaDemiC', 600, 12px)
+	margin-top: 5px
+	font-size: 15px
+	letter-spacing: 2px
+	width: 510px
+	.buttons-first
+		display: block
+		padding: 8px 0px
+		width: 230px
+		background: $accent
+		color: #fff
+		line-height: 1.9
+		cursor: pointer
+	.buttons-second
+		display: block
+		padding: 9px 0px
+		width: 230px
+		background: transparent
+		border: 1px solid $accent
+		color: rgba($accent, .8)
+		cursor: pointer
 
 	
 .tilesrow-catalog-togglepages
@@ -2902,17 +3119,17 @@ b, strong
 			color: $accent
 			font-weight: bold
 
-	.tilesrow-catalog-seoblock
-		margin-top: 30px
-		.seoblock-title
-			+font('FuturaDemiC', 600, 22px)
-			text-transform: uppercase
-			color: $accent
-		.seoblock-text
-			font-weight: bold
-		span
-			display: block
-			margin-top: 10px
+.tilesrow-catalog-seoblock
+	margin-top: 30px
+	.seoblock-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	.seoblock-text
+		font-weight: bold
+	span
+		display: block
+		margin-top: 10px
 
 // Tilesrow_
 
@@ -2926,12 +3143,13 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
+
 			a
 				color: #000000
 	.tilescouches-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		.line
 			overflow: hidden
 			text-align: center
@@ -2967,13 +3185,17 @@ b, strong
 	.tilescouches-wrapper
 		margin-top: 20px
 		padding-bottom: 150px
+		.direction-card-content-rightside
+			display: none
 	.tilescouches
 	.tilescouches-flex
 		display: flex
 
 
 	.tilescouches-sidebar
+		margin-right: 40px
 		width: 270px
+		flex: 0 0 270px
 	.tilescouches-sidebar__button
 		width: 268px
 		padding: 14px 0px
@@ -2989,12 +3211,11 @@ b, strong
 
 
 	.tilescouches-catalog
-		margin-left: 40px
 		width: 100%
 	.tilescouches-catalog__cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: space-around
 	.tilescouches-block
 		position: relative
 		width: 235px
@@ -3073,17 +3294,23 @@ b, strong
 
 
 	
-	.tilescouches-catalog-seoblock
-		margin-top: 30px
-		.seoblock-title
-			+font('FuturaDemiC', 600, 22px)
-			text-transform: uppercase
-			color: $accent
-		.seoblock-text
-			font-weight: bold
-		span
-			display: block
-			margin-top: 10px
+.tilescouches-catalog-seoblock
+	margin-top: 30px
+	text-align: center
+	width: 100%
+	.seoblock-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	h1
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	.seoblock-text
+		font-weight: bold
+	span
+		display: block
+		margin-top: 10px
 	
 // Tilescouches_
 
@@ -3091,6 +3318,10 @@ b, strong
 // Dixion
 
 .section-dixion
+	.dixion
+		padding-bottom: 80px
+		.direction-card-content-rightside
+			display: none
 	.dixion-page
 		.h3-page
 			color: #000
@@ -3098,12 +3329,13 @@ b, strong
 			padding: 30px 0px 10px 0px
 			text-transform: none
 			letter-spacing: 2px
-			font-weight: 600
+
 			a
 				color: #000000
 	.dixion-title
 		text-align: center
 		position: relative
+		font-size: 25px
 		em
 			font-style: normal
 			+font1('FuturaDemiC', 600)
@@ -3138,33 +3370,40 @@ b, strong
 		margin-top: 40px
 		margin-bottom: 40px
 	.dixion-logo
-		width: 470px
-		height: 185px
-		box-shadow: 0px 0px 80px rgba(#000, .15)
+		min-height: 185px
 		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
 		img
-			width: 470px
-			height: 185px
+			display: block
+			width: 100%
+		& > div
+			max-width: 470px
+			max-height: 185px
 			position: relative
-		&:before
-			content: ""
-			position: absolute
-			top: 15px
-			left: 15px
-			width: 470px
-			height: 185px
-			border: 1px solid #3392bc
-			transition-duration: 0.2s
+			box-shadow: 0px 0px 80px rgba(#000, .15)
+			&:before
+				content: ""
+				position: absolute
+				top: 15px
+				left: 15px
+				width: 100%
+				height: 100%
+				border: 1px solid #3392bc
+				transition-duration: 0.2s
+				z-index: -2
 
 	.dixion-text
 		width: 600px
+		line-height: 1.4
 
 
 	.dixion-blocks-wrapper
 	.dixion-blocks
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: space-around
 		padding-bottom: 90px
 	.dixion-block
 		position: relative
@@ -3207,14 +3446,17 @@ b, strong
 		color: #fff
 		position: absolute
 		bottom: 15px
-		left: 38px
+		left: 21px
 		letter-spacing: 1px
 	.info-title
 		text-transform: uppercase
 		+font('FuturaMediumC', 500, 21px)
 		text-align: center
 		border: 1px solid #fff
-		padding: 8px 15px
+		padding: 8px 3px
+		width: 300px
+		box-sizing: border-box
+		line-height: 1.1
 	.info-more
 		text-transform: uppercase
 		text-decoration: underline
@@ -3225,12 +3467,12 @@ b, strong
 	.dixion-block__img
 		position: absolute
 		top: 30px
-		left: 53px
-		width: 240px
-		height: 153px
+		left: 76px
+		width: 195px
+		height: 125px
 		img
-			width: 240px
-			height: 153px
+			width: 195px
+			height: 125px
 
 // Dixion_
 
@@ -3238,367 +3480,436 @@ b, strong
 // Search
 
 .section-search
-	.search-page
-		.h3-page
-			color: #000
-			font-size: 16px
-			padding: 30px 0px 10px 0px
-			text-transform: none
-			letter-spacing: 2px
-			font-weight: 600
-			a
-				color: #000000
-	.search-title
+.search-page
+	.h3-page
+		color: #000
+		font-size: 16px
+		padding: 30px 0px 10px 0px
+		text-transform: none
+		letter-spacing: 2px
+		a
+			color: #000000
+.search-title
+	text-align: center
+	position: relative
+	font-size: 25px
+	.line
+		overflow: hidden
 		text-align: center
+		text-transform: uppercase
+		letter-spacing: 3px
+		color: $accent
+	.line-text 
+		display: inline-block
 		position: relative
-		.line
-			overflow: hidden
-			text-align: center
-			text-transform: uppercase
-			letter-spacing: 3px
-			color: $accent
-		.line-text 
-			display: inline-block
-			position: relative
-			padding: 0 10px
-			vertical-align: middle
-		.line-text:before,
-		.line-text:after
-			content: ""
-			position: absolute
-			top: 50%
-			width: 5000px
-			height: 2px
-			margin: -1px 0 0
-			background: $accent
-		.line-text:before 
-			right: 100%
-		.line-text:after 
-			left: 100%
+		padding: 0 10px
+		vertical-align: middle
+	.line-text:before,
+	.line-text:after
+		content: ""
+		position: absolute
+		top: 50%
+		width: 5000px
+		height: 2px
+		margin: -1px 0 0
+		background: $accent
+	.line-text:before 
+		right: 100%
+	.line-text:after 
+		left: 100%
 
-	.search-wrapper
-		margin-top: 20px
-		padding-bottom: 150px
+.search-wrapper
+	margin-top: 20px
+	padding-bottom: 150px
 
-	.search-flex
-		display: flex
+.search-flex
+	display: flex
 
 
-	.search-sidebar
-		width: 271px
-		.search-sidebar__button
-			width: 269px
-			padding: 14px 0px
-			border: 2px solid $accent
-			background: transparent
-			text-transform: uppercase
-			color: $accent
-			text-align: center
-			font-size: 18px
-			cursor: pointer
-			margin-bottom: 15px
-		.search-sidebar__properties
-			border: 1px solid $accent
-			padding: 7px 25px
-			.properties-manufacturer
-			.manufacturer-title
-				+font('FuturaDemiC', 600, 18px)
-				text-transform: uppercase
-				color: #27598d
-			.manufacturer-checkbox
-				display: flex
-				flex-direction: column
-				input
-					margin-top: 6.5px
-					margin-right: 8px
-				& > div
-					display: flex
-				label
-					line-height: 1.2
-					margin-top: 10px
-					text-transform: uppercase
-					font-size: 14.5px
-					font-weight: bold
-					align-self: flex-start
-
-					
-			.properties-other
-				margin-top: 35px
-			.other-title
-				+font('FuturaDemiC', 600, 18px)
-				text-transform: uppercase
-				color: #27598d
-			.other-checkbox
-				display: flex
-				flex-direction: column
-				input
-					margin-top: 6.5px
-					margin-right: 8px
-				& > div
-					display: flex
-				label
-					line-height: 1.2
-					margin-top: 10px
-					text-transform: uppercase
-					font-size: 14.5px
-					font-weight: bold
-					align-self: flex-start
-
-
-			.properties-range
-				margin-top: 35px
-			.range-title
-				+font('FuturaDemiC', 600, 17px)
-				text-transform: uppercase
-				color: #27598d
-				white-space: nowrap
-			.range-inputs
-				margin-top: 7px
-				#slider-range
-					background: #b9d2e2
-				.ui-slider-range
-					background: #b9d2e2
-				.ui-button, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, html .ui-button.ui-state-disabled:active, html .ui-button.ui-state-disabled:hover
-					border: 2px solid $accent
-					background: transparent
-					border-radius: 10em
-					width: 0.7em
-					height: 0.7em
-					top: -.31em
-					margin-left: -.6em
-					outline: none
-			.ui-slider-horizontal
-				height: .4em
-				border: none
-				border-radius: 0px
-				box-shadow: 0px 0px 60px rgba(#000, .4)
-			.range-range
-				display: flex
-				justify-content: space-between
-				width: 200px
-				margin-bottom: 20px
-				input
-					width: 50px
-					padding: 3px
-					text-align: center
-					border: 1px solid $accent
-					margin-left: 7px
-			.nested-input
-				background: transparent
-				position: absolute
-				width: 30px
-				top: 18px
-				left: -10px
-				outline: none
-				border: none
-				text-align: center
-			#slider-range
-				box-shadow: 0px 0px 20px rgba(#000, 0.25)
-				span:nth-child(2)
-					.amount4
-						display: none
-				span:last-child
-					.amount3
-						display: none
-				
-		.properties-filter
-			text-align: center
-			letter-spacing: 1px
-			text-transform: uppercase
-			padding: 6px 20px
-			background: $accent
-			width: 150px
-			color: #fff
-			margin-top: 50px
-			margin-bottom: 8px
-			margin-left: auto
-			margin-right: auto
-			cursor: pointer
-
-
-				
-					
-					
-	.search-catalog
-		margin-left: 40px
-		width: 857px
-
-
-	.search-catalog__settings
-		padding: 15.5px 15px
-		display: flex
-		background: #7697ac
-		box-shadow: 0px 0px 60px rgba(#000, .1)
-		select
-			background: transparent
-			border: 1px solid #fff
-			color: #fff
-			margin-left: 10px
-			text-transform: uppercase
-			font-size: 14px
-			outline: none
-			option
-				background: #7697ac
-				outline: none
-	.settings-sorting
-		display: flex
-		justify-content: space-between
-		color: #fff
-		width: 293px
-		select
-			width: 130px
-	.settings-sorting__title
+.search-sidebar
+	margin-right: 40px
+	width: 271px
+	flex: 0 0 271px
+	.search-sidebar__button
+		width: 269px
+		padding: 14px 0px
+		border: 2px solid $accent
+		background: transparent
 		text-transform: uppercase
+		color: $accent
+		text-align: center
 		font-size: 18px
-		letter-spacing: 2px
-		white-space: nowrap
-	.settings-display
-		display: flex
-		justify-content: space-between
-		color: #fff
-		width: 280px
-		margin-left: 28px
-		.fas
-			font-size: 24px
-			color: #9bbbcf
-			margin-left: 6px
-			margin-top: 2px
-			cursor: pointer
-			&.list-active
-				color: #fff
+		cursor: pointer
+		margin-bottom: 15px
+	.search-sidebar__properties
+		border: 1px solid $accent
+		padding: 7px 25px
+		.properties-manufacturer
+		.manufacturer-title
+			+font('FuturaDemiC', 600, 18px)
+			text-transform: uppercase
+			color: #27598d
+		.manufacturer-checkbox
+			display: flex
+			flex-direction: column
+			input
+				margin-top: 6.5px
+				margin-right: 8px
+			& > div
+				display: flex
+			label
+				line-height: 1.2
+				margin-top: 10px
+				text-transform: uppercase
+				font-size: 14.5px
+				font-weight: bold
+				align-self: flex-start
 
-	.settings-display__title
-		+font('FuturaDemiC', 600, 16px)
+					
+		.properties-other
+			margin-top: 35px
+		.other-title
+			+font('FuturaDemiC', 600, 18px)
+			text-transform: uppercase
+			color: #27598d
+		.other-checkbox
+			display: flex
+			flex-direction: column
+			input
+				margin-top: 6.5px
+				margin-right: 8px
+			& > div
+				display: flex
+			label
+				line-height: 1.2
+				margin-top: 10px
+				text-transform: uppercase
+				font-size: 14.5px
+				font-weight: bold
+				align-self: flex-start
+
+
+		.properties-range
+			margin-top: 35px
+		.range-title
+			+font('FuturaDemiC', 600, 17px)
+			text-transform: uppercase
+			color: #27598d
+			white-space: nowrap
+		.range-inputs
+			margin-top: 7px
+			#slider-range
+				background: #b9d2e2
+			.ui-slider-range
+				background: #b9d2e2
+			.ui-button, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, html .ui-button.ui-state-disabled:active, html .ui-button.ui-state-disabled:hover
+				border: 2px solid $accent
+				background: transparent
+				border-radius: 10em
+				width: 0.7em
+				height: 0.7em
+				top: -.31em
+				margin-left: -.6em
+				outline: none
+		.ui-slider-horizontal
+			height: .4em
+			border: none
+			border-radius: 0px
+			box-shadow: 0px 0px 60px rgba(#000, .4)
+		.range-range
+			display: flex
+			justify-content: space-between
+			width: 200px
+			margin-bottom: 20px
+			input
+				width: 50px
+				padding: 3px
+				text-align: center
+				border: 1px solid $accent
+				margin-left: 7px
+		.nested-input
+			background: transparent
+			position: absolute
+			width: 30px
+			top: 18px
+			left: -10px
+			outline: none
+			border: none
+			text-align: center
+		#slider-range
+			box-shadow: 0px 0px 20px rgba(#000, 0.25)
+			span:nth-child(2)
+				.amount4
+					display: none
+			span:last-child
+				.amount3
+					display: none
+			
+	.properties-filter
+		text-align: center
+		letter-spacing: 1px
 		text-transform: uppercase
-		letter-spacing: 2px
-		white-space: nowrap
-		padding-top: 2px
-		box-sizing: border-box
-	.settings-display__buttons
-		line-height: 1.5
-	.settings-displaynumber
-		display: flex
+		padding: 6px 20px
+		background: $accent
+		width: 150px
 		color: #fff
-		margin-left: 28px
-		select
-			width: 44px
-	.settings-displaynumber__title
-		text-transform: uppercase
-		letter-spacing: 2px
+		margin-top: 50px
+		margin-bottom: 8px
+		margin-left: auto
+		margin-right: auto
+		cursor: pointer
 
 
-	.search-catalog__cards-wrapper
-		margin-top: 15px
-	.search-catalog__cards
-	.search-block
-		padding: 20px 20px 35px 20px
-		background: #efefef
-		width: 800px
-		margin-bottom: 25px
-		display: flex
-	.search-block__img
+				
+					
+					
+.search-catalog
+	width: 100%
+
+
+
+.search-catalog__cards-wrapper
+	margin-top: 15px
+.search-catalog__cards
+.search-block
+	padding: 20px 20px 35px 20px
+	background: #efefef
+	width: 800px
+	margin-bottom: 25px
+	display: flex
+.search-block__img
+	width: 219px
+	height: 219px
+	img
 		width: 219px
 		height: 219px
-		img
-			width: 219px
-			height: 219px
-			box-shadow: 15px 15px 0px rgba(#fff, .5)
+		box-shadow: 15px 15px 0px rgba(#fff, .5)
 
-	.search-block-info
-		margin-left: 30px
-	.search-block__title
-		+font('FuturaDemiC', 600, 18px)
-		color: #27598d
+.search-block-info
+	margin-left: 30px
+.search-block__title
+	+font('FuturaDemiC', 600, 18px)
+	color: #27598d
+	text-transform: uppercase
+	line-height: 1.1
+	height: 60px
+	display: table
+	span
+		display: table-cell
+		vertical-align: middle
+		
+.search-block__manufacturer
+	display: flex
+	justify-content: space-between
+	margin-top: 10px
+	width: 245px
+	.manufacturer-title
 		text-transform: uppercase
-	.search-block__manufacturer
-		display: flex
-		justify-content: space-between
-		margin-top: 10px
-		width: 245px
-		.manufacturer-title
-			text-transform: uppercase
-			font-size: 17px
-			color: #7697ac
-		.manufacturer-img
-			img
-				width: 90px
-				height: 22px
-
-	.search-block__code
-		display: flex
-		justify-content: space-between
 		font-size: 17px
-		width: 245px
-		.code-title
-			text-transform: uppercase
-			color: #7697ac
-		.code-vendorcode
-			text-transform: uppercase
-			color: #7697ac
-	.search-block__description
-		margin-top: 16px
-		margin-bottom: 20px
-		line-height: 1.4
-		+font('FuturaLightC', 200, 14px)
-		text-transform: uppercase
-		width: 380px
-	.search-block__buttons
+		color: #7697ac
+	.manufacturer-img
+		min-height: 43px
+		position: relative
 		display: flex
-		justify-content: space-between
-		text-align: center
+		justify-content: flex-end
+		align-items: center
+		img
+			max-width: 110px
+			max-height: 43px
+
+.search-block__code
+	display: flex
+	justify-content: space-between
+	font-size: 17px
+	width: 245px
+	.code-title
 		text-transform: uppercase
-		+font('FuturaDemiC', 600, 12px)
-		margin-top: 5px
-		font-size: 15px
-		letter-spacing: 2px
-		width: 510px
-		.buttons-first
-			padding: 8px 0px
-			width: 230px
-			background: $accent
-			color: #fff
-			line-height: 1.9
-			cursor: pointer
-			display: block
-		.buttons-second
-			padding: 9px 0px	
-			width: 230px
-			background: transparent
-			border: 1px solid $accent
-			color: rgba($accent, .8)
-			cursor: pointer
-			display: block
+		color: #7697ac
+	.code-vendorcode
+		text-transform: uppercase
+		color: #7697ac
+.search-block__description
+	margin-top: 16px
+	margin-bottom: 20px
+	line-height: 1.4
+	+font('FuturaLightC', 200, 14px)
+	text-transform: uppercase
+	width: 380px
+.search-block__buttons
+	display: flex
+	justify-content: space-between
+	text-align: center
+	text-transform: uppercase
+	+font('FuturaDemiC', 600, 12px)
+	margin-top: 5px
+	font-size: 15px
+	letter-spacing: 2px
+	width: 510px
+	.buttons-first
+		padding: 8px 0px
+		width: 230px
+		background: $accent
+		color: #fff
+		line-height: 1.9
+		cursor: pointer
+		display: block
+	.buttons-second
+		padding: 9px 0px	
+		width: 230px
+		background: transparent
+		border: 1px solid $accent
+		color: rgba($accent, .8)
+		cursor: pointer
+		display: block
 
 	
-	.search-catalog-togglepages
-		display: flex
-		justify-content: center
-		margin-top: 45px
-		.togglepages__button
-			color: #d1d1d1
-			font-size: 21px
-			width: 32px
-			height: 32px
-			text-align: center
-			line-height: 1.5
-			border: 1px solid transparent
-			cursor: pointer
-			&.toggle-active
-				border: 1px solid $accent
-				color: $accent
-				font-weight: bold
-
-	.search-catalog-seoblock
-		margin-top: 30px
-		.seoblock-title
-			+font('FuturaDemiC', 600, 22px)
-			text-transform: uppercase
+.search-catalog-togglepages
+	display: flex
+	justify-content: center
+	margin-top: 45px
+	.togglepages__button
+		color: #d1d1d1
+		font-size: 21px
+		width: 32px
+		height: 32px
+		text-align: center
+		line-height: 1.5
+		border: 1px solid transparent
+		cursor: pointer
+		&.toggle-active
+			border: 1px solid $accent
 			color: $accent
-		.seoblock-text
 			font-weight: bold
-		span
-			display: block
-			margin-top: 10px
+
+.search-catalog-seoblock
+	margin-top: 30px
+	.seoblock-title
+		+font('FuturaDemiC', 600, 22px)
+		text-transform: uppercase
+		color: $accent
+	.seoblock-text
+		font-weight: bold
+	span
+		display: block
+		margin-top: 10px
 
 // Search_	
+
+#call
+	display: none
+#returncall
+	display: none
+
+.tiles-sidebar__button
+	.smart-filter
+		box-sizing: border-box
+	.smart-filter-title
+		color: #fff
+		font-size: 19px
+	.smart-filter-parameters-box-title-text
+		color: #fff
+		font-size: 14px
+	.smart-filter-angles:after, .smart-filter-angles:before
+		background: #fff
+		width: 7px
+		height: 2px
+	.smart-filter-parameters-box-container
+		display: flex
+		justify-content: space-around
+		padding-top: 20px
+		.btn
+			border: 1px solid #fff
+			background: transparent
+			color: #fff
+			width: 45%
+			font-size: 14px
+			padding: 6px 0px
+			transition: all .5s ease
+			letter-spacing: 1px
+			&:hover
+				background: #fff
+				color: #000
+				transition: all .5s ease
+	.tiles-sidebar__button
+		.accordion-content
+			&:hover
+				background: $accent
+	.smart-filter-checkbox-text
+		font-size: 15px
+
+	
+	
+
+
+// Modall
+#returncall
+	width: 500px
+	.modal-title
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.modal-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+	.modal-dialog
+		width: 380px
+		margin: 0 auto
+	.modal-body
+		input
+			display: block
+			margin: 0 auto
+			width: 100%
+			padding: 0px 10px
+			font-size: 16px
+			border: 1px solid #1d4f84
+			color: #333
+			margin-top: 15px
+			height: 40px
+			letter-spacing: 2px
+			background: transparent
+			&::placeholder
+				text-transform: uppercase
+	.modal-footer
+		position: relative
+		button
+			background: #1d4f84
+			color: #fff
+			border: none
+			width: 100%
+			padding: 12px 0px
+			text-transform: uppercase
+			letter-spacing: 2px
+			text-align: center
+			margin-top: 40px
+
+#gkpmodal
+	.form-ok
+		font-size: 24px
+		text-align: center
+		color: #1d4f84
+	.error
+		font-size: 24px
+		text-align: center
+		color: #ef3e36
+		padding-bottom: 15px
+
+	
+
+
+
+
+
+// Modal_
+
 @import "_media"
+
+

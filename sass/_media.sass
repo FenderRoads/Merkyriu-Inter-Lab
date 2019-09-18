@@ -8,7 +8,7 @@
   .container
     width: 760px
   .section-header
-    height: 185px
+    height: 182px
     .top-line
       height: 67px
     .topline-fixed
@@ -20,7 +20,7 @@
       margin-left: -585px
       top: 67px
     .menu-wrapper-bg
-      height: 60px
+      height: 57px
       top: 67px
     .menu-wrapper-fixed
       margin-left: -393px
@@ -76,17 +76,18 @@
     .menu
       ul
         li
-          padding: 16px 20px
           a
             font-size: 14px
             white-space: nowrap
+            padding: 16px 20px
             
 
 
   .section-slider
-    .slider-item__title
-      letter-spacing: 2px
-      font-size: 10px
+    .slider-item
+      .slider-item__title
+        letter-spacing: 2px
+        font-size: 21px
     .left-side
       z-index: 10
     .slider-item
@@ -177,21 +178,10 @@
     .manufact-block
       align-self: flex-start
       .manufact-block__img
-        background-image: url('../img/@2x/philips-grey-new.png')
-        background-size: 110px 27px
-        background-position: center
-        width: 110px
-        height: 27px 
+        max-height: 52px
         img
-          width: 184px
-          height: 37px
-        &:hover
-          background-image: url('../img/@2x/philips-new.png')
-          background-repeat: no-repeat
-          background-size: 110px 27px
-          background-position: center
-          width: 110px
-          height: 27px 
+          max-width: 132px
+          max-height: 52px
         
 
 
@@ -252,7 +242,7 @@
             font-size: 14px
   .section-direction
     .direction-cards
-      justify-content: space-between
+      justify-content: space-around
     .direction-card
       height: 180px
     .direction-card-wrapper
@@ -325,6 +315,7 @@
         width: 180px
         font-size: 14px
         margin-top: 11px
+        margin-left: 8px
       .direction-card-content__icon
         img
           width: 55%
@@ -332,11 +323,11 @@
         font-size: 13px
         padding: 4px 5px
         width: 100px
+        margin-left: 7px
+        margin-bottom: 5px
       .direction-card-content__number
         margin-bottom: 5px
-        margin-left: 11px
-      .direction-card-content__button
-        margin-left: 11px
+        margin-left: 7px
       .direction-card__catalog
         height: 180px
         line-height: 6.05
@@ -373,10 +364,12 @@
   .section-basket
     .basket-block__info
       margin: 55px 0px 0px 45px
+      .line-text
+        font-size: 21px
       .info-title
-        width: 315px
+        width: 400px
         font-size: 16px
-        padding: 15px 30px
+        padding: 7px 0px
       .info-manufacturer
         width: 400px
         .info-manufacturer__img
@@ -466,6 +459,7 @@
     .reviews-block-leftside
       width: 185px
       height: 206px
+      flex: 0 0 185px
       img
         width: 185px
         height: 206px
@@ -499,6 +493,7 @@
       width: 265px
       height: 176px
       margin-top: 4px
+      flex: 0 0 265px
       img
         width: 265px
         height: auto
@@ -535,23 +530,15 @@
       box-shadow: 0px 0px 80px rgba(#000, .12)
       margin-bottom: 40px
       width: 235px
-      height: 220px
-    .service-card__bg-img
-      width: 235px
+      height: 232px
+    .service-card__img
+      width: 233px
       height: 162px
       box-shadow: 0px 50px 50px rgba(#000, .05)
+      border: 1px solid $accent
       img
-        width: 235px
-        height: 162px
-    .service-card__img
-      position: absolute
-      top: 26px
-      left: 15px
-      width: 80px
-      height: 120px
-      img
-        width: 80px
-        height: 120px
+        max-width: 175px
+        max-height: 142px
     .service-card__bottom
       .bottom-title
         text-align: center
@@ -560,19 +547,23 @@
         padding: 10px
         border: 1px solid $accent
         border-top: 1px solid $accent
+        height: 68px
+        width: 235px
+        box-sizing: border-box
 
 
   .section-commodity
     .commodity-block-img
+      flex: 0 0 250px
       img
         width: 250px
         height: 250px
     .commodity-block__info
       .commodity-quantity
-        width: 399px
+        width: 410px
       .commodity-title
         font-size: 14px
-        width: 453px
+        width: 407px
       .commodity-text
         font-size: 11px
       .commodity-buttons
@@ -583,6 +574,8 @@
           width: 151px
         .commodity-buttons__third
           width: 151px
+      .commodity-manufacturer
+        width: 410px
       .commodity-manufacturer__title
         font-size: 17px
       .commodity-quantity__title
@@ -590,112 +583,113 @@
       .commodity-quantity__buttons
         padding: 15px 0px 0px 0px
     .commodity-manufacturer__img
+      min-height: 47px
       img
-        width: 135px
-        height: 34px
+        max-width: 120px
+        max-height: 47px
     .commodity-table
       .commodity-table-block
         padding: 10px 11px
-        font-size: 12px
-        width: 253px
+        .feature-value
+          li
+            font-size: 13px
 
   .section-postcommodity
-    .postcommodity-blocks
-    .postcommodity-block
-      width: 150px
-      padding: 7px
-    .postcommodity-block__img
+  .postcommodity-blocks
+  .postcommodity-block
+    width: 150px
+    padding: 7px
+  .postcommodity-block__img
+    width: 135px
+    height: 135px
+    img
       width: 135px
       height: 135px
-      img
-        width: 135px
-        height: 135px
-        box-shadow: 15px 15px 0px rgba(#fff, .5) 
-    .postcommodity-block__title
-      font-size: 12px
-    .postcommodity-block__manufacturer
-      .manufacturer-title
-        font-size: 11px
-        line-height: 2
-      .manufacturer-img
-        img
-          width: 60px
-          height: 15px
-    .postcommodity-block__code
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .postcommodity-block__title
+    font-size: 12px
+    height: 65px
+  .postcommodity-block__manufacturer
+    .manufacturer-title
       font-size: 11px
-    .postcommodity-block__buttons
-      font-size: 9px 
+      line-height: 2
+    .manufacturer-img
+      min-height: 26px
+      img
+        max-width: 65px
+        max-height: 26px
+  .postcommodity-block__code
+    font-size: 11px
+  .postcommodity-block__buttons
+    font-size: 9px 
 
 
   .section-tiles
-    .tiles-wrapper
-      padding-bottom: 30px
-    .tiles-sidebar
-      width: 200px
-    .tiles-sidebar__button
+  .tiles-wrapper
+    padding-bottom: 30px
+  .tiles-sidebar
+    margin-right: 10px
+    width: 198px
+    flex: 0 0 198px
+  .tiles-sidebar__button
+    width: 99%
+    padding: 9px 0px
+    border: 2px solid $accent
+    font-size: 17px
+    margin-bottom: 15px
+  .accordion-wrapper
+    .accordion
       width: 198px
-      padding: 8px 0px
-      border: 2px solid $accent
-      font-size: 17px
-      margin-bottom: 15px
-    .accordion-wrapper
-      .accordion
-        .accordion-content
-          font-size: 13px
-          & > div
-            padding: 3px 9px
-          & > .accordion > .accordion-title-2
-            padding: 3px 0px
-          & > .accordion > .accordion-content-2 > div
-            padding: 3px 20px
-      .accordion-title
-        font-size: 12px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 7px
-
       .accordion-content
+        font-size: 13px
+        & > div
+          padding: 3px 9px
+        & > .accordion > .accordion-title-2
+          padding: 3px 0px
+        & > .accordion > .accordion-content-2 > div
+          padding: 3px 10px
+    .accordion-title
+      font-size: 12px
+    .accordion:nth-child(16), .accordion:nth-child(18), .accordion:nth-child(6), .accordion:nth-child(9), .accordion:nth-child(11), .accordion:nth-child(9)
+      &.accordion-title
+        padding-top: 8px
+
+  .accordion-content
 
 
-
-    .tiles-catalog
-      margin-left: 10px
-      width: 555px
-    .tiles-catalog__settings
-      padding: 15px 5px
-      display: flex
-      background: #7697ac
-      box-shadow: 0px 0px 60px rgba(#000, .1)
-      select
-        background: transparent
-        border: 1px solid #fff
-        color: #fff
-        margin-left: 0px
-        text-transform: uppercase
-        font-size: 9px
+  .tiles-catalog
+    width: 555px
+  .tiles-catalog__settings
+    padding: 15px 5px
+    display: flex
+    background: #7697ac
+    box-shadow: 0px 0px 60px rgba(#000, .1)
+    select
+      background: transparent
+      border: 1px solid #fff
+      color: #fff
+      margin-left: 0px
+      text-transform: uppercase
+      font-size: 9px
+      outline: none
+      align-self: flex-start
+      option
+        background: #7697ac
         outline: none
-        align-self: flex-start
-        option
-          background: #7697ac
-          outline: none
     .settings-sorting
       display: flex
       justify-content: space-between
       color: #fff
-      width: 293px
+      width: 260px
       select
         width: 94px
+        margin-top: 4px
     .settings-sorting__title
       text-transform: uppercase
       font-size: 10px
       letter-spacing: 2px
       white-space: nowrap
+      margin-top: 3px
     .settings-display
       display: flex
       justify-content: space-between
@@ -716,223 +710,154 @@
       text-transform: uppercase
       letter-spacing: 2px
       white-space: nowrap
-      padding-top: 2px
+      padding-top: 4px
       box-sizing: border-box
     .settings-display__buttons
       line-height: 1.5
       display: flex
+      margin-top: 4px
     .settings-displaynumber
       display: flex
       color: #fff
       margin-left: 10px
+      width: 125px
+      flex: 0 0 125px
       select
-        width: 30px
+        width: 40px
+        margin-top: 4px
+        flex: 0 0 40px
     .settings-displaynumber__title
       text-transform: uppercase
       letter-spacing: 2px
       font-size: 10px
-    
+      margin-top: 4px
+  
 
-    .tiles-block
+  .tiles-block
+    width: 165px
+    padding: 7px
+    margin: 0px 3px 25px 3px
+  .tiles-block__img
+    width: 150px
+    height: 150px
+    img
       width: 150px
-      padding: 7px
-    .tiles-block__img
-      width: 135px
-      height: 135px
-      img
-        width: 135px
-        height: 135px
-        box-shadow: 15px 15px 0px rgba(#fff, .5) 
-    .tiles-block__title
-      font-size: 12px
-    .tiles-block__manufacturer
-      .manufacturer-title
-        font-size: 11px
-        line-height: 2
-      .manufacturer-img
-        img
-          width: 60px
-          height: 15px
-    .tiles-block__code
+      height: 150px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .tiles-block__title
+    font-size: 12px
+    height: 65px
+  .tiles-block__manufacturer
+    .manufacturer-title
       font-size: 11px
-    .tiles-block__buttons
-      font-size: 9px 
+      line-height: 2
+    .manufacturer-img
+      min-height: 26px
+      img
+        max-width: 65px
+        max-height: 26px
+  .tiles-block__code
+    font-size: 11px
+  .tiles-block__buttons
+    font-size: 9px 
 
 
   .section-tilesrow
-    .tilesrow-sidebar
-      width: 200px
-    .tilesrow-sidebar__button
-      width: 198px
-      padding: 8px 0px
-      border: 2px solid $accent
-      font-size: 17px
-      margin-bottom: 15px
-    .tilesrow-wrapper
-      padding-bottom: 70px
-    .accordion-wrapper
-      .accordion
-        .accordion-content
-          font-size: 13px
-          & > div
-            padding: 3px 9px
-          & > .accordion > .accordion-title-2
-            padding: 3px 0px
-          & > .accordion > .accordion-content-2 > div
-            padding: 3px 20px
-      .accordion-title
-        font-size: 12px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 7px
+  .tilesrow-catalog
+    width: 555px
+  .tilesrow-sidebar
+    margin-right: 10px
+    width: 198px
+    flex: 0 0 198px
+  .tilesrow-sidebar__button
+    width: 99%
+    padding: 9px 0px
+    border: 2px solid $accent
+    font-size: 17px
+    margin-bottom: 15px
+  .tilesrow-wrapper
+    padding-bottom: 70px
+  
 
 
-    .tilesrow-catalog
-      margin-left: 10px
-      width: 555px
-    .tilesrow-catalog__settings
-      padding: 15px 5px
-      display: flex
-      background: #7697ac
-      box-shadow: 0px 0px 60px rgba(#000, .1)
-      select
-        background: transparent
-        border: 1px solid #fff
-        color: #fff
-        margin-left: 0px
-        text-transform: uppercase
-        font-size: 9px
+  .tilesrow-catalog__settings
+    padding: 15px 5px
+    display: flex
+    background: #7697ac
+    box-shadow: 0px 0px 60px rgba(#000, .1)
+    select
+      background: transparent
+      border: 1px solid #fff
+      color: #fff
+      margin-left: 0px
+      text-transform: uppercase
+      font-size: 9px
+      outline: none
+      align-self: flex-start
+      option
+        background: #7697ac
         outline: none
-        align-self: flex-start
-        option
-          background: #7697ac
-          outline: none
-    .settings-sorting
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 293px
-      select
-        width: 94px
-    .settings-sorting__title
-      text-transform: uppercase
-      font-size: 10px
-      letter-spacing: 2px
-      white-space: nowrap
-    .settings-display
-      display: flex
-      justify-content: space-between
-      color: #fff
-      width: 240px
-      margin-left: 10px
-      .fas
-        font-size: 16px
-        color: #9bbbcf
-        margin-left: 6px
-        margin-top: -1px
-        cursor: pointer
-        &.list-active
-          color: #fff
-
-    .settings-display__title
-      +font('FuturaDemiC', 600, 10px)
-      text-transform: uppercase
-      letter-spacing: 2px
-      white-space: nowrap
-      padding-top: 2px
-      box-sizing: border-box
-    .settings-display__buttons
-      line-height: 1.5
-      display: flex
-    .settings-displaynumber
-      display: flex
-      color: #fff
-      margin-left: 10px
-      select
-        width: 30px
-    .settings-displaynumber__title
-      text-transform: uppercase
-      letter-spacing: 2px
-      font-size: 10px
     
+  
 
-    .tilesrow-block
-      width: 515px
-    .tilesrow-block__img
+  .tilesrow-block
+    width: 515px
+  .tilesrow-block__img
+    width: 135px
+    height: 135px
+    img
       width: 135px
       height: 135px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .tilesrow-block__title
+    font-size: 13px
+    height: 50px
+  .tilesrow-block__manufacturer
+    font-size: 14px
+    .manufacturer-img
+      min-height: 35px
       img
-        width: 135px
-        height: 135px
-        box-shadow: 15px 15px 0px rgba(#fff, .5) 
-    .tilesrow-block__title
-      font-size: 13px
-    .tilesrow-block__manufacturer
-      font-size: 14px
-      .manufacturer-img
-    .tilesrow-block__code
-      font-size: 14px
-    .tilesrow-block__description
-      margin-top: 10px
-      margin-bottom: 13px
-      font-size: 13px
-      width: 330px
-    .tilesrow-block__buttons
-      height: 35px
-      width: 325px
-      font-size: 14px
-      .buttons-first
-        width: 150px
-        padding: 5px 0px
-      .buttons-second
-        width: 150px
-        padding: 5px 0px
+        max-width: 89px
+        max-height: 35px
+  .tilesrow-block__code
+    font-size: 14px
+    margin-top: 4px
+  .tilesrow-block__description
+    margin-top: 10px
+    margin-bottom: 13px
+    font-size: 13px
+    width: 330px
+  .tilesrow-block__buttons
+    height: 35px
+    width: 325px
+    font-size: 14px
+    .buttons-first
+      width: 150px
+      padding: 5px 0px
+    .buttons-second
+      width: 150px
+      padding: 5px 0px
   
   .section-tilescouches
     .tilescouches-sidebar
+      margin-right: 10px
       width: 200px
+      flex: 0 0 200px
     .tilescouches-sidebar__button
-      width: 198px
-      padding: 8px 0px
+      width: 99%
+      padding: 9px 0px
       border: 2px solid $accent
       font-size: 17px
       margin-bottom: 15px
-    .accordion-wrapper
-      .accordion
-        .accordion-content
-          font-size: 13px
-          & > div
-            padding: 3px 9px
-          & > .accordion > .accordion-title-2
-            padding: 3px 0px
-          & > .accordion > .accordion-content-2 > div
-            padding: 3px 20px
-      .accordion-title
-        font-size: 12px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 8px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 7px
+    
 
 
 
     .tilescouches-catalog
-      margin-left: 10px
     .tilescouches-catalog__cards
       display: flex
       flex-wrap: wrap
-      justify-content: space-between
+      justify-content: space-around
     .tilescouches-block
       position: relative
       width: 170px
@@ -986,23 +911,23 @@
       margin-top: 40px
       margin-bottom: 40px
     .dixion-logo
-      margin-top: 55px
-      width: 270px
-      height: 106px
-      box-shadow: 0px 0px 80px rgba(#000, .15)
+      margin-top: 0px
+      min-height: 106px
       img
-        width: 270px
-        height: 106px
-        position: relative
-      &:before
-        content: ""
-        position: absolute
-        top: 14px
-        left: 14px
-        width: 270px
-        height: 106px
-        border: 1px solid #3392bc
-        transition-duration: 0.2s
+        display: block
+        width: 100%
+      & > div
+        max-width: 270px
+        max-height: 106px
+        &:before
+          content: ""
+          position: absolute
+          top: 14px
+          left: 14px
+          width: 100%
+          height: 100%
+          border: 1px solid #3392bc
+          transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 455px
@@ -1023,197 +948,168 @@
         height: 201px
     .dixion-block__img
       position: absolute
-      top: 22px
-      left: 35px
-      width: 160px
-      height: 102px
+      top: 17px
+      left: 55px
+      width: 125px
+      height: 80px
       img
-        width: 160px
-        height: 102px
+        width: 125px
+        height: 80px
     .dixion-block__info
       bottom: 8px
-      left: 22px
+      left: 15px
       .info-title
         font-size: 12px
+        padding: 5px 3px
+        width: 190px
       .info-more
         font-size: 10px
     .dixion-wrapper
       padding-bottom: 30px
 
   .section-search
-    .search-page
-      .h3-page
-        color: #000
-        font-size: 16px
-        padding: 30px 0px 10px 0px
-        text-transform: none
-        letter-spacing: 2px
-    .search-title
+  .search-page
+    .h3-page
+      color: #000
+      font-size: 16px
+      padding: 30px 0px 10px 0px
+      text-transform: none
+      letter-spacing: 2px
+  .search-title
+    text-align: center
+    position: relative
+    .line
+      overflow: hidden
       text-align: center
+      text-transform: uppercase
+      letter-spacing: 3px
+      color: $accent
+    .line-text 
+      display: inline-block
       position: relative
-      .line
-        overflow: hidden
-        text-align: center
-        text-transform: uppercase
-        letter-spacing: 3px
-        color: $accent
-      .line-text 
-        display: inline-block
-        position: relative
-        padding: 0 10px
-        vertical-align: middle
-      .line-text:before,
-      .line-text:after
-        content: ""
-        position: absolute
-        top: 50%
-        width: 5000px
-        height: 2px
-        margin: -1px 0 0
-        background: $accent
-      .line-text:before 
-        right: 100%
-      .line-text:after 
-        left: 100%
-    
+      padding: 0 10px
+      vertical-align: middle
+    .line-text:before,
+    .line-text:after
+      content: ""
+      position: absolute
+      top: 50%
+      width: 5000px
+      height: 2px
+      margin: -1px 0 0
+      background: $accent
+    .line-text:before 
+      right: 100%
+    .line-text:after 
+      left: 100%
+  
 
-    .search-sidebar
-      width: 200px
-      .search-sidebar__button
-        width: 198px
-        padding: 7.5px 0px
-      .search-sidebar__properties
-        padding: 7px 10px
-        .properties-manufacturer
-          .manufacturer-title
-            font-size: 16px
-          .manufacturer-checkbox
-            .control-checkbox
-              font-size: 12px
-        .properties-other
-          .other-title
-            font-size: 16px
-          .other-checkbox
-            .control-checkbox
-              font-size: 12px
-        .properties-range
-          .range-title
-            font-size: 15px
-          .range-range
-            width: 171px
-            input
-              width: 40px
-              padding: 1px
-        .properties-filter
-          width: 138px
+  .search-sidebar
+    margin-right: 10px
+    width: 198px
+    flex: 0 0 198px
+    .search-sidebar__button
+      width: 99%
+      padding: 9px 0px
+    .search-sidebar__properties
+      padding: 7px 10px
+      .properties-manufacturer
+        .manufacturer-title
+          font-size: 16px
+        .manufacturer-checkbox
+          .control-checkbox
+            font-size: 12px
+      .properties-other
+        .other-title
+          font-size: 16px
+        .other-checkbox
+          .control-checkbox
+            font-size: 12px
+      .properties-range
+        .range-title
+          font-size: 15px
+        .range-range
+          width: 171px
+          input
+            width: 40px
+            padding: 1px
+      .properties-filter
+        width: 138px
           
 
         
 
-    .search-wrapper
-      margin-top: 20px
-      padding-bottom: 90px
+  .search-wrapper
+    margin-top: 20px
+    padding-bottom: 90px
 
-    .search-catalog
-      margin-left: 10px
-      width: 555px
-      .search-catalog__settings
-        padding: 15px 5px
-        display: flex
-        background: #7697ac
-        box-shadow: 0px 0px 60px rgba(#000, .1)
-        select
-          background: transparent
-          border: 1px solid #fff
-          color: #fff
-          margin-left: 0px
-          text-transform: uppercase
-          font-size: 9px
+  .search-catalog
+    width: 555px
+    .search-catalog__settings
+      padding: 15px 5px
+      display: flex
+      background: #7697ac
+      box-shadow: 0px 0px 60px rgba(#000, .1)
+      select
+        background: transparent
+        border: 1px solid #fff
+        color: #fff
+        margin-left: 0px
+        text-transform: uppercase
+        font-size: 9px
+        outline: none
+        align-self: flex-start
+        option
+          background: #7697ac
           outline: none
-          align-self: flex-start
-          option
-            background: #7697ac
-            outline: none
-      .settings-sorting
-        display: flex
-        justify-content: space-between
-        color: #fff
-        width: 280px
-        select
-          width: 94px
-      .settings-sorting__title
-        text-transform: uppercase
-        font-size: 10px
-        letter-spacing: 2px
-        white-space: nowrap
-      .settings-display
-        display: flex
-        justify-content: space-between
-        color: #fff
-        width: 240px
-        margin-left: 10px
-        .fas
-          font-size: 16px
-          color: #9bbbcf
-          margin-left: 6px
-          margin-top: -1px
-          cursor: pointer
-          &.list-active
-            color: #fff
-
-      .settings-display__title
-        +font('FuturaDemiC', 600, 10px)
-        text-transform: uppercase
-        letter-spacing: 2px
-        white-space: nowrap
-        padding-top: 2px
-        box-sizing: border-box
-      .settings-display__buttons
-        line-height: 1.5
-        display: flex
-      .settings-displaynumber
-        display: flex
-        color: #fff
-        margin-left: 10px
-        select
-          width: 30px
-      .settings-displaynumber__title
-        text-transform: uppercase
-        letter-spacing: 2px
-        font-size: 10px
       
 
-      .search-block
-        width: 515px
-      .search-block__img
+    .search-block
+      width: 515px
+    .search-block__img
+      width: 135px
+      height: 135px
+      img
         width: 135px
         height: 135px
+        box-shadow: 15px 15px 0px rgba(#fff, .5) 
+    .search-block__title
+      font-size: 13px
+      height: 50px
+    .search-block__manufacturer
+      font-size: 14px
+      .manufacturer-img
+        min-height: 26px
         img
-          width: 135px
-          height: 135px
-          box-shadow: 15px 15px 0px rgba(#fff, .5) 
-      .search-block__title
-        font-size: 13px
-      .search-block__manufacturer
-        font-size: 14px
-        .manufacturer-img
-      .search-block__code
-        font-size: 14px
-      .search-block__description
-        margin-top: 10px
-        margin-bottom: 13px
-        font-size: 13px
-        width: 330px
-      .search-block__buttons
-        height: 35px
-        width: 325px
-        font-size: 14px
-        .buttons-first
-          width: 150px
-          padding: 5px 0px
-        .buttons-second
-          width: 150px
-          padding: 5px 0px
+          max-width: 65px
+          max-height: 26px
+    .search-block__code
+      font-size: 14px
+    .search-block__description
+      margin-top: 10px
+      margin-bottom: 13px
+      font-size: 13px
+      width: 330px
+    .search-block__buttons
+      height: 35px
+      width: 325px
+      font-size: 14px
+      .buttons-first
+        width: 150px
+        padding: 5px 0px
+      .buttons-second
+        width: 150px
+        padding: 5px 0px
+
+  .smart-filter
+    width: 198px
+  .smart-filter-title
+    font-size: 15px
+  .smart-filter-parameters-box-title
+    font-size: 11px
+  .smart-filter-checkbox-text
+    font-size: 13px
+    line-height: 1.2
 
 
 @media only screen and (max-width: 780px) 
@@ -1254,6 +1150,7 @@
       display: block
       width: 100%
       background: $accent
+      z-index: 1000
     .menu-wrapper-fixed
       top: 106px
       margin-left: -174px
@@ -1271,6 +1168,7 @@
       left: 167px
     .dn-menu__twobuttons
       display: flex
+      flex: 1 0 auto
       .dn-menu__hamb
         width: 42px
         height: 42px
@@ -1322,9 +1220,11 @@
       .fas
         position: absolute
         transition: all .2s linear
-        top: 12px
+        top: 1px
         left: 13px
         color: #fff
+        width: 43px
+        height: 42px
       input
         width: 44px
         height: 44px
@@ -1335,7 +1235,7 @@
         box-sizing: border-box
         font-size: 17px
         padding-left: 7px
-        padding-right: 32px
+        padding-right: 47px
     
     .top-line
       display: none
@@ -1543,16 +1443,14 @@
     box-shadow: 0px 0px 280px 0px rgba(#000, .15) inset
     .section-inner 
       background: 0
-      height: 630px
     .map-title
       .line
         margin-bottom: 0px
       .line-text
         margin-top: 35px
+        margin-bottom: 15px
     .map-block
       width: 320px
-      top: 57px
-      box-shadow: 20px 30px 0 rgba(255,255,255,.7), 0px 0px 50px 0px rgba(#000, .15)
     .map-block-wrapper
       width: 320px
     .map-block-titleside
@@ -1566,15 +1464,10 @@
         font-size: 20px
         top: 2px
         left: -26px
-    .topblock-tel
+    .contacts-tel
       .fa-phone
         top: 2px
         left: -30px
-    .bottomblock-tel
-      .fa-phone
-        top: 2px
-        left: -30px
-
 
 
 
@@ -1589,6 +1482,10 @@
       text-align: center
     .dn-item
       display: block
+    .soc-bottomblock__button
+      font-size: 18px
+      padding: 7px 17px
+      margin-top: 6px
     .fourblocks-company
       text-align: center
       margin-bottom: 75px
@@ -1601,6 +1498,7 @@
             color: #000
     .fourblocks-specializations, .fourblocks-directions, .fourblocks-last
       display: none
+    
 
 
 
@@ -1623,6 +1521,8 @@
     .contacts-block-wrapper
       padding: 0px
       border: none
+      a
+        font-size: 12px
     .contacts-block__list-1
       li
         margin-top: 2px
@@ -1759,7 +1659,7 @@
       text-transform: uppercase
       display: block
       color: #000
-      font-size: 16px
+      font-size: 15px
       position: absolute
       top: 5px
       left: 0
@@ -1821,6 +1721,8 @@
       margin-bottom: 28px
     
   .section-basket
+    .basket-title
+      display: none
     .basket
       padding-bottom: 60px
       box-shadow: 0px -140px 80px rgba(#000, .05) inset
@@ -1883,6 +1785,7 @@
         border: none
         font-size: 19px
         margin-bottom: 15px
+        height: 110px 
       .info-close
         right: -3px
         top: -328px
@@ -1935,13 +1838,10 @@
           color: #fff
           background: $accent
           transition: all .5s ease
-    .news-block__text1
+    p
       font-size: 16px
       text-align: left
-    .news-block__text2
-      font-size: 16px
-      text-align: left
-    .news-block__title
+    h2, h3, h4
       text-align: center
     
   .section-newslist
@@ -2192,23 +2092,15 @@
       box-shadow: 0px 0px 80px rgba(#000, .12)
       margin-bottom: 40px
       width: 320px
-      height: 287px
-    .service-card__bg-img
-      width: 320px
+      height: 320px
+    .service-card__img
+      width: 316px
       height: 220px
       box-shadow: 0px 50px 50px rgba(#000, .05)
+      border: 2px solid $accent
       img
-        width: 320px
-        height: 220px
-    .service-card__img
-      position: absolute
-      top: 26px
-      left: 15px
-      width: 80px
-      height: 120px
-      img
-        width: 80px
-        height: 120px
+        max-width: 240px
+        max-height: 170px
     .service-card__bottom
       .bottom-title
         text-align: center
@@ -2217,9 +2109,13 @@
         padding: 10px
         border: 2px solid $accent
         border-top: 1px solid $accent
+        height: 100px
+        width: 320px
+        box-sizing: border-box
 
   .section-commodity
     .commodity-block-img
+      flex: 0 0 300px
       img
         width: 300px
         height: 300px
@@ -2235,7 +2131,7 @@
       .commodity-manufacturer
         width: 322px
       .commodity-quantity
-        width: 266px
+        width: 320px
       .commodity-title
         font-size: 14px
         width: 317px
@@ -2257,102 +2153,158 @@
       .commodity-quantity__title
         font-size: 17px
     .commodity-manufacturer__img
+      min-height: 47px
       img
-        width: 135px
-        height: 34px
+        max-width: 135px
+        max-height: 47px
     .commodity-table
+      flex-wrap: wrap
       .commodity-table-block
-        padding: 10px 20px
+        padding: 5px 8px
         font-size: 15px
-        width: 310px
+        width: 100%
         margin: 0 auto
-      .commodity-table-block:last-child, .commodity-table-block:nth-child(2)
-        display: none
+        .feature-value
+          li
+            font-size: 12px
+      .commodity-table-block:nth-child(2)
+        border-left: 1px solid $accent
+        margin-top: 10px
+        
 
 
   .section-postcommodity
-    .postcommodity-blocks
-    .postcommodity-wrapper
-      margin-bottom: 30px
-      padding-bottom: 30px
-      box-shadow: 0px 60px 80px rgba(#000, .1)
-    .postcommodity-block
-      width: 320px
-      padding: 15px
-      margin-bottom: 30px
-    .postcommodity-block__img
+  .postcommodity-blocks
+  .postcommodity-wrapper
+    margin-bottom: 30px
+    padding-bottom: 30px
+    box-shadow: 0px 60px 80px rgba(#000, .1)
+  .postcommodity-block
+    width: 320px
+    padding: 15px
+    margin-bottom: 30px
+  .postcommodity-block__img
+    width: 270px
+    height: 270px
+    img
       width: 270px
       height: 270px
-      img
-        width: 270px
-        height: 270px
-        box-shadow: 15px 15px 0px rgba(#fff, .5) 
-    .postcommodity-title
-      .line
-        font-size: 19px
-    .postcommodity-block__title
-      font-size: 20px
-      margin-top: 25px
-    .postcommodity-block__manufacturer
-      .manufacturer-title
-        font-size: 18px
-        line-height: 1.65
-      .manufacturer-img
-        img
-          width: 100px
-          height: 25px
-    .postcommodity-block__code
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .postcommodity-title
+    .line
+      font-size: 19px
+  .postcommodity-block__title
+    font-size: 20px
+    margin-top: 25px
+    height: 108px
+  .postcommodity-block__manufacturer
+    .manufacturer-title
       font-size: 18px
-    .postcommodity-block__buttons
-      font-size: 13px
-      .buttons-first
-        width: 143px
-      .buttons-second
-        width: 143px 
+      line-height: 1.65
+    .manufacturer-img
+      min-height: 41px
+      img
+        max-width: 105px
+        max-height: 41px
+  .postcommodity-block__code
+    font-size: 18px
+  .postcommodity-block__buttons
+    font-size: 13px
+    .buttons-first
+      width: 143px
+    .buttons-second
+      width: 143px 
     
   .section-tiles
-    .tiles-wrapper
-      box-shadow: 0px 60px 70px rgba(#000, .05)
-      padding-bottom: 50px
-    .tiles-title
-      display: none
-    .tiles-catalog
-      display: none
-    .tiles-flex
-    .tiles-sidebar
-      width: 100%
-    .tiles-sidebar__button
-      display: none
-    .accordion-wrapper 
-      .accordion-title
-        font-size: 16px
+  .tiles-wrapper
+    box-shadow: 0px 60px 70px rgba(#000, .05)
+    padding-bottom: 50px
+  .tiles-title
+    display: none
+  .tiles-catalog
+    display: block
+    width: 320px
+  .tiles-catalog__settings
+    display: none
+  .tiles-flex
+    flex-wrap: wrap
+  .tiles-sidebar
+    margin-right: 0px
+    width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
+  .tiles-sidebar__button
+    display: block
+  .accordion-wrapper 
+    .accordion-title
+      font-size: 16px
+  .tiles-block
+    width: 320px
+    padding: 15px
+    margin: 0px 0px 30px 0px
+  .tiles-block__img
+    width: 270px
+    height: 270px
+    img
+      width: 270px
+      height: 270px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .tiles-title
+    .line
+      font-size: 19px
+  .tiles-block__title
+    font-size: 20px
+    margin-top: 25px
+    height: 108px
+  .tiles-block__manufacturer
+    .manufacturer-title
+      font-size: 18px
+      line-height: 1.65
+    .manufacturer-img
+      min-height: 41px
+      img
+        max-width: 105px
+        max-height: 41px
+  .tiles-block__code
+    font-size: 18px
+  .tiles-block__buttons
+    font-size: 13px
+    .buttons-first
+      width: 143px
+    .buttons-second
+      width: 143px 
+
+
 
   .section-tilesrow
-    .tilesrow-wrapper
-      box-shadow: 0px 60px 70px rgba(#000, .05)
-      padding-bottom: 50px
-    .tilesrow-title
-      display: none
-    .tilesrow-catalog
-      display: none
-    .tilesrow-flex
-    .tilesrow-sidebar
-      width: 100%
-    .tilesrow-sidebar__button
-      display: none
-    .accordion-wrapper 
-      .accordion-title
-        font-size: 16px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 12px
+  .tilesrow-wrapper
+    box-shadow: 0px 60px 70px rgba(#000, .05)
+    padding-bottom: 50px
+  .tilesrow-title
+    display: none
+  .tilesrow-catalog
+    display: none
+  .tilesrow-catalog__settings
+  .tilesrow-flex
+    flex-wrap: wrap
+  .tilesrow-sidebar
+    margin-right: 0px
+    width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
+  .tilesrow-sidebar__button
+    display: block
+  .accordion-wrapper 
+    .accordion-title
+      font-size: 16px
+    
 
+    .accordion:nth-child(6), .accordion:nth-child(9), .accordion:nth-child(11)
+      .accordion-title
+        padding-top: 14px
+    .accordion:nth-child(16), .accordion:nth-child(18)
+      .accordion-title
+        padding-top: 5px
   .section-tilescouches
     .tilescouches-wrapper
       box-shadow: 0px 60px 70px rgba(#000, .05)
@@ -2360,49 +2312,49 @@
     .tilescouches-title
       display: none
     .tilescouches-catalog
-      display: none
+      display: block
+    .tilescouches-catalog__settings
     .tilescouches-flex
+      flex-wrap: wrap
     .tilescouches-sidebar
+      margin-right: 0px
       width: 100%
+      flex: 0 0 100%
+      margin-bottom: 20px
     .tilescouches-sidebar__button
-      display: none
+      display: block
+      width: 100%
     .accordion-wrapper 
       .accordion-title
         font-size: 16px
-      .accordion:nth-child(16)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(18)
-        .accordion-title
-          padding-top: 12px
-      .accordion:nth-child(9)
-        .accordion-title
-          padding-top: 12px
 
 
   .section-dixion
+    .dixion-title
+      .line
+        font-size: 18px
     .dixion-top
       display: block
       margin-top: 40px
       margin-bottom: 40px
     .dixion-logo
       margin-top: 35px
-      width: 320px
-        height: 126px
-      box-shadow: 0px 0px 80px rgba(#000, .15)
+      min-height: 126px
       img
-        width: 320px
-        height: 126px
-        position: relative
-      &:before
-        content: ""
-        position: absolute
-        top: 15px
-        left: 15px
-        width: 320px
-        height: 126px
-        border: 1px solid #3392bc
-        transition-duration: 0.2s
+        display: block
+        width: 100%
+      & > div
+        max-width: 320px
+        max-height: 126px
+        &:before
+          content: ""
+          position: absolute
+          top: 15px
+          left: 15px
+          width: 100%
+          height: 100%
+          border: 1px solid #3392bc
+          transition-duration: 0.2s
     .dixion-text
       font-size: 15px
       width: 100%
@@ -2425,69 +2377,129 @@
     .dixion-block__img
       position: absolute
       top: 22px
-      left: 35px
-      width: 160px
-      height: 102px
+      left: 71px
+      width: 180px
+      height: 115px
       img
-        width: 235px
-        height: 160px
+        width: 180px
+        height: 115px
     .dixion-block__info
       bottom: 9px
-      left: 30px
+      left: 15px
       .info-title
         font-size: 20px
+        width: 290px
       .info-more
         font-size: 15px
     .dixion-wrapper
       padding-bottom: 0px
 
   .section-search
-    .search-wrapper
-      box-shadow: 0px 60px 70px rgba(#000, .05)
-      padding-bottom: 50px
-    .search-title
-      display: none
-    .search-catalog
-      display: none
-    .search-flex
-    .search-sidebar__button
-      display: none
-    .search-sidebar__list
-      .main-list
-        & > li
-          font-size: 16px
+  .search-wrapper
+    box-shadow: 0px 60px 70px rgba(#000, .05)
+    padding-bottom: 50px
+  .search-title
+    display: none
+  .search-catalog
+    display: block
+  .search-catalog__settings
+    display: none
+  .search-flex
+    flex-wrap: wrap
+  .search-sidebar__button
+    display: block
+  .search-sidebar__list
+    .main-list
+      & > li
+        font-size: 16px
+  .search-block
+    width: 320px
+    padding: 15px
+    margin-bottom: 30px
+  .search-block__img
+    width: 270px
+    height: 270px
+    img
+      width: 270px
+      height: 270px
+      box-shadow: 15px 15px 0px rgba(#fff, .5) 
+  .search-title
+    .line
+      font-size: 19px
+  .search-block__title
+    font-size: 20px
+    margin-top: 25px
+    height: 108px
+  .search-block__manufacturer
+    .manufacturer-title
+      font-size: 18px
+      line-height: 1.65
+    .manufacturer-img
+      min-height: 41px
+      img
+        max-width: 105px
+        max-height: 41px
+  .search-block__code
+    font-size: 18px
+  .search-block__buttons
+    font-size: 13px
+    .buttons-first
+      width: 143px
+    .buttons-second
+      width: 143px 
 
 
-    .search-sidebar
+  .search-sidebar
+    margin-right: 0px
+    width: 100%
+    flex: 0 0 100%
+    margin-bottom: 20px
+    .search-sidebar__properties
+      padding: 7px 30px
+      .properties-manufacturer
+        .manufacturer-title
+          font-size: 18px
+        .manufacturer-checkbox
+          .control-checkbox
+            font-size: 14px
+      .properties-other
+        .other-title
+          font-size: 18px
+        .other-checkbox
+          .control-checkbox
+            font-size: 14px
+      .properties-range
+        text-align: center
+        .range-title
+          font-size: 18px
+        .range-range
+          width: 185px
+          margin-left: auto
+          margin-right: auto
+          input
+            width: 40px
+            padding: 1px
+      .properties-filter
+        width: 138px
+        margin-top: 50px
+  
+
+  .accordion-wrapper
+    .accordion
       width: 100%
-      .search-sidebar__properties
-        padding: 7px 30px
-        .properties-manufacturer
-          .manufacturer-title
-            font-size: 18px
-          .manufacturer-checkbox
-            .control-checkbox
-              font-size: 14px
-        .properties-other
-          .other-title
-            font-size: 18px
-          .other-checkbox
-            .control-checkbox
-              font-size: 14px
-        .properties-range
-          text-align: center
-          .range-title
-            font-size: 18px
-          .range-range
-            width: 185px
-            margin-left: auto
-            margin-right: auto
-            input
-              width: 40px
-              padding: 1px
-        .properties-filter
-          width: 138px
-          margin-top: 50px
+
+  .section-tiles,.section-tilescouches,.section-direction
+    .direction-cards .tilescouches-catalog__cards
+      display: none
+
+  #returncall
+    width: 100%
+    .modal-footer
+      .error
+        line-height: 1
+        margin-top: 15px
+  #gkpmodal
+    .form-block__bottom
 
 
 
