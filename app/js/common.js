@@ -18,51 +18,61 @@ $(function() {
 
   // Mobile menu
 
-  // $(".dn-menu__hamb").on("click", function() {
-  //   $(".drop-down-menu").toggle(500);
-  // });
+  $(".dn-menu__hamb").on("click", function() {
+    $(".drop-down-menu").toggle(500);
+  });
 
-  // $(".dn-menu__search").on("click", function() {
-  //   $('#mob-line__search-wrap').show();
-  //   $("#mob-title-search-input").focus();
-  //   $("#mob-title-search-input")
-  //     .css({
-  //       "-webkit-transition": "all .2s linear",
-  //       "width": "212px",
-  //       "font-size": "17px",
-  //     })
-  //     .focusout(function() {
-  //       $("#mob-title-search-input").css({
-  //         "-webkit-transition": "all .2s linear",
-  //         "width": "44px",
-  //         "font-size": "0px"
-  //       });
-  //       $("#searchfas, #searchfas2").css({
-  //         "-webkit-transition": "all .2s linear",
-  //         "left": "14px"
-  //       });
-  //       $('.dn-menu__vertline').css({
-  //         "-webkit-transition": "all .2s linear",
-  //         "opacity": "1"
-  //       });
-  //       $('#mob-line__search-wrap').hide();
-  //       $('.dn-menu__search #searchfas').show();
-  //     });
-  //     $('#mob-line__search-wrap .search-title-button').show();
-  //     $('.dn-menu__search #searchfas').hide();
-  //   $("#searchfas, #searchfas2")
-  //     .css({
-  //       "-webkit-transition": "all .2s linear",
-  //       "left": "166px"
-  //     });
-  //   $('.dn-menu__vertline').css({
-  //     "-webkit-transition": "all .2s linear",
-  //     "opacity": "0"
-  //   });
-  // });
+  $(".dn-menu__search").on("click", function() {
+    $('#mob-line__search-wrap').show();
+    $("#mob-title-search-input").focus();
+    $("#mob-title-search-input")
+      .css({
+        "-webkit-transition": "all .2s linear",
+        "width": "212px",
+        "font-size": "17px",
+      })
+      .focusout(function() {
+        $("#mob-title-search-input").css({
+          "-webkit-transition": "all .2s linear",
+          "width": "44px",
+          "font-size": "0px"
+        });
+        $("#searchfas, #searchfas2").css({
+          "-webkit-transition": "all .2s linear",
+          "left": "14px"
+        });
+        $('.dn-menu__vertline').css({
+          "-webkit-transition": "all .2s linear",
+          "opacity": "1"
+        });
+        $('#mob-line__search-wrap').hide();
+        $('.dn-menu__search #searchfas').show();
+      });
+      $('#mob-line__search-wrap .search-title-button').show();
+      $('.dn-menu__search #searchfas').hide();
+    $("#searchfas, #searchfas2")
+      .css({
+        "-webkit-transition": "all .2s linear",
+        "left": "166px"
+      });
+    $('.dn-menu__vertline').css({
+      "-webkit-transition": "all .2s linear",
+      "opacity": "0"
+    });
+  });
 
   // Mobile menu_
+  
 
+
+  // Disable filter on direction page
+
+  
+
+  // Disable filter on direction page_
+
+
+  
   // Button_up
   $(window).scroll(function() {
     if ($(this).scrollTop() > 300) {
@@ -88,11 +98,13 @@ $(function() {
       $(".top-line-bg").fadeIn(1);
       $(".menu-wrapper").addClass("menu-wrapper-fixed");
       $(".menu-wrapper-bg").fadeIn(1);
+      $('.section-header').css({'height': '207.05'});
     } else {
       $(".top-line").removeClass("topline-fixed");
       $(".top-line-bg").fadeOut(1);
       $(".menu-wrapper").removeClass("menu-wrapper-fixed");
       $(".menu-wrapper-bg").fadeOut(1);
+      $('.section-header').css({'height': 'auto'});
     }
   });
   // Menu-fixed
@@ -108,6 +120,8 @@ $(function() {
     singleOpen: true,
     transitionSpeed: 500
   });
+
+
   // Accordeon_
 
   // Range
@@ -135,7 +149,9 @@ $(function() {
 
   // Modal
 
-  $(".modalbox").fancybox()
+  $(".modalbox").fancybox({
+    touch: false
+  });
 
   // Modal_
 });

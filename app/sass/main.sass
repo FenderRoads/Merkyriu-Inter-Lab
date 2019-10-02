@@ -518,6 +518,7 @@ b, strong
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+		width: 100%
 	.direction-card
 		margin-bottom: 20px
 		overflow: hidden
@@ -534,6 +535,7 @@ b, strong
 			transition: background .5s ease
 	.img-wrapper
 		position: absolute
+		width: 100%
 		&:after
 			position: absolute
 			content: ''
@@ -972,6 +974,8 @@ b, strong
 	.map-block__tel
 		+font('FuturaBookC', bold, 28px)
 		color: $accent
+		a
+			color: $accent
 	.map-block__address
 		position: relative
 		display: flex
@@ -2891,7 +2895,7 @@ b, strong
 .tiles-catalog-seoblock
 	margin-top: 30px
 	.seoblock-title
-		text-align: center
+		text-align: left
 		+font('FuturaDemiC', 600, 22px)
 		text-transform: uppercase
 		color: $accent
@@ -2899,6 +2903,7 @@ b, strong
 		+font('FuturaDemiC', 600, 22px)
 		text-transform: uppercase
 		color: $accent
+		line-height: 1.2
 	.seoblock-text
 		font-weight: bold
 		line-height: 1.4
@@ -3215,7 +3220,7 @@ b, strong
 	.tilescouches-catalog__cards
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-around
+		justify-content: space-between
 	.tilescouches-block
 		position: relative
 		width: 235px
@@ -3296,7 +3301,6 @@ b, strong
 	
 .tilescouches-catalog-seoblock
 	margin-top: 30px
-	text-align: center
 	width: 100%
 	.seoblock-title
 		+font('FuturaDemiC', 600, 22px)
@@ -3306,6 +3310,7 @@ b, strong
 		+font('FuturaDemiC', 600, 22px)
 		text-transform: uppercase
 		color: $accent
+		line-height: 1.2
 	.seoblock-text
 		font-weight: bold
 	span
@@ -3803,6 +3808,10 @@ b, strong
 .tiles-sidebar__button
 	.smart-filter
 		box-sizing: border-box
+		cursor: default
+	.smart-filter.mb-4.bx-blue
+		&:hover
+			background: #27598d
 	.smart-filter-title
 		color: #fff
 		font-size: 19px
@@ -3817,6 +3826,8 @@ b, strong
 		display: flex
 		justify-content: space-around
 		padding-top: 20px
+		.form-check
+			margin: 3px 0px
 		.btn
 			border: 1px solid #fff
 			background: transparent
@@ -3826,6 +3837,7 @@ b, strong
 			padding: 6px 0px
 			transition: all .5s ease
 			letter-spacing: 1px
+			cursor: pointer
 			&:hover
 				background: #fff
 				color: #000
@@ -3878,6 +3890,20 @@ b, strong
 			background: transparent
 			&::placeholder
 				text-transform: uppercase
+		textarea
+			width: 100%
+			resize: none
+			padding: 5px 10px
+			font-size: 16px
+			border: 1px solid #1d4f84
+			color: #333
+			margin-top: 15px
+			height: 80px
+			letter-spacing: 2px
+			background: transparent
+			&::placeholder
+				text-transform: uppercase
+
 	.modal-footer
 		position: relative
 		button
@@ -3901,14 +3927,39 @@ b, strong
 		text-align: center
 		color: #ef3e36
 		padding-bottom: 15px
+	.modal-title
+		
 
 	
+.fancybox-content#citymodal
+	padding: 20px 30px
+	.modal-title
+		font-size: 24px
+		color: $accent
+		text-align: center
+	.cities
+		li
+			a
+				+font("FuturaMediumC", 400, 19px)
 
 
+.accordion.open
+	.accordion-content
+		overflow: visible !important
 
-
-
+.accordion
+	.accordion-content
+		overflow: hidden !important
 // Modal_
+
+
+.direction-cards.tilescouches-catalog__cards
+	justify-content: space-between
+	padding-left: 20px
+	padding-right: 20px
+	.direction-card
+		
+
 
 @import "_media"
 

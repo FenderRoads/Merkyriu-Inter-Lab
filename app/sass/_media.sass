@@ -174,7 +174,7 @@
     .section-inner
     .manufacts
     .manufacts-blocks
-      height: 250px
+      padding-bottom: 50px
     .manufact-block
       align-self: flex-start
       .manufact-block__img
@@ -1100,17 +1100,24 @@
       .buttons-second
         width: 150px
         padding: 5px 0px
+  .tiles-sidebar__button
+    .smart-filter
+      width: 198px
+    .smart-filter-title
+      font-size: 15px
+    .smart-filter-parameters-box-title
+      font-size: 11px
+    .smart-filter-checkbox-text
+      font-size: 13px
+      line-height: 1.2
 
-  .smart-filter
-    width: 198px
-  .smart-filter-title
-    font-size: 15px
-  .smart-filter-parameters-box-title
-    font-size: 11px
-  .smart-filter-checkbox-text
-    font-size: 13px
-    line-height: 1.2
 
+  .direction-cards.tilescouches-catalog__cards
+    justify-content: space-between
+    padding-left: 10px
+    padding-right: 10px
+    .direction-card
+      
 
 @media only screen and (max-width: 780px) 
   .container
@@ -2322,7 +2329,6 @@
       flex: 0 0 100%
       margin-bottom: 20px
     .tilescouches-sidebar__button
-      display: block
       width: 100%
     .accordion-wrapper 
       .accordion-title
@@ -2487,6 +2493,8 @@
   .accordion-wrapper
     .accordion
       width: 100%
+      .accordion-content
+        font-size: 15px
 
   .section-tiles,.section-tilescouches,.section-direction
     .direction-cards .tilescouches-catalog__cards
@@ -2494,12 +2502,35 @@
 
   #returncall
     width: 100%
+    min-width: 320px
+    max-width: 500px
     .modal-footer
       .error
         line-height: 1
         margin-top: 15px
+        font-size: 22px
+      .modal-ok
+        font-size: 22px
+    .modal-dialog
+      width: auto
+      max-width: 380px
   #gkpmodal
+    padding: 22px
+    max-width: 500px
     .form-block__bottom
+
+
+  .direction-cards.tilescouches-catalog__cards
+    justify-content: space-between
+    padding-left: 0px
+    padding-right: 0px
+    .direction-card
+
+
+  .tiles-sidebar__button
+    .smart-filter
+      margin: 5px auto
+      
 
 
 
